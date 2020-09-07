@@ -37,6 +37,8 @@ module m18VG(
     
     assign min1 = m1A < m2A ? m1A : m2A;
     assign q4q3q2q1q0[4] = m1A < m2A ? 0 : 1;
-    assign min2 = q4q3q2q1q0[4] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
-    assign q4q3q2q1q0[3:0] = q4q3q2q1q0[4] ? {1'b0,1'b0,1'b0,m2_q0} : m1_q3q2q1q0;   
+    assign min2 = m1A < m2A ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
+   // assign min2 = q4q3q2q1q0[4] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
+    assign q4q3q2q1q0[3:0] = m1A < m2A ? {1'b0,1'b0,1'b0,m2_q0} : m1_q3q2q1q0;   
+    //assign q4q3q2q1q0[3:0] = q4q3q2q1q0[4] ? {1'b0,1'b0,1'b0,m2_q0} : m1_q3q2q1q0;   
 endmodule

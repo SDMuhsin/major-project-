@@ -44,7 +44,9 @@ module m8VG(
     
     assign min1 = m1A < m2A ? m1A : m2A;
     assign q2q1q0[2] = m1A < m2A ? 0 : 1;
-    assign min2 = q2q1q0[2] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
-    assign q2q1q0[1:0] = q2q1q0[2] ? m2_q1q0 : m1_q1q0;
+    //assign min2 = q2q1q0[2] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
+    assign min2 = m1A < m2A ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
+   // assign q2q1q0[1:0] = q2q1q0[2] ? m2_q1q0 : m1_q1q0;
+    assign q2q1q0[1:0] = m1A < m2A ? m2_q1q0 : m1_q1q0;
     
 endmodule
