@@ -1,0 +1,4 @@
+Running: xsim.dir/CLA_ADDER_behav/xsimk.exe -simmode gui -wdb CLA_ADDER_behav.wdb -simrunnum 0 -socket 51285
+Design successfully loaded
+Design Loading Memory Usage: 8836 KB (Peak: 8836 KB)
+Design Loading CPU Usage: 46 ms

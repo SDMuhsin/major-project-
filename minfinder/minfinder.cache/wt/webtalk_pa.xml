@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Sep 02 13:18:33 2020">
+<application name="pa" timeStamp="Tue Sep 08 16:51:22 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="59d3a2a30e1e4f32ae05c20f67049e4c" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -19,7 +19,8 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AddSources" value="7" type="JavaHandler"/>
 <property name="EditDelete" value="1" type="JavaHandler"/>
-<property name="NewProject" value="1" type="JavaHandler"/>
+<property name="NewProject" value="2" type="JavaHandler"/>
+<property name="OpenProject" value="2" type="JavaHandler"/>
 <property name="RunSynthesis" value="1" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="2" type="JavaHandler"/>
 <property name="SetTopNode" value="5" type="JavaHandler"/>
@@ -30,101 +31,19 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ZoomFit" value="3" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="2" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, m18VG" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, m18VG_tb" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SET_AS_TOP, Set as Top" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="71" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="5" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, m16VG_tb (m16VG_tb.v" value="6" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, m18VG (m18VG.v" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, m18VG_tb (m18VG_tb.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, m18VG_tb (m18VG_tb.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1], 5" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources], 4" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="6" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/minfinder/minfinder.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, 10" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, 11, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="3" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="4" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, Untitled 1" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, q4q3q2q1q0[3:0]], 2" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, q4q3q2q1q0[3:0]], 2, true" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 257, 309" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 267, 472" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 454, 369" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 465, 458" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 500, 265" value="1" type="GuiResourceData"/>
-<property name="m16VG.v, 510, 448" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 11, 147" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 28, 108" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 318, 398" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 386, 470" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 498, 238" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 531, 415" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 617, 328" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 650, 233" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 654, 233" value="1" type="GuiResourceData"/>
-<property name="m16VG_tb.v, 890, 454" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 105, 348" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 11, 394" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 115, 201" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 116, 130" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 230, 467" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 316, 454" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 322, 454" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 353, 386" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 361, 450" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 362, 455" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 370, 422" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 399, 453" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 441, 455" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 457, 450" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 480, 452" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 482, 433" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 5, 422" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 504, 349" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 517, 358" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 517, 358, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 562, 417" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 7, 463" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 7, 463, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 75, 299" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 78, 448" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 81, 455" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 83, 416" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 84, 299" value="1" type="GuiResourceData"/>
-<property name="m18VG.v, 91, 215" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 155, 242" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 242, 155" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 392, 338" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 397, 423" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 433, 374" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 436, 182" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 465, 260" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 481, 448" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 529, 191" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 556, 227" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 63, 234" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 7, 213, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 76, 315" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 78, 232" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 84, 422" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 85, 425" value="1" type="GuiResourceData"/>
-<property name="m18VG_tb.v, 98, 224" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="7" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_NEW_PROJECT, New Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_OPEN_PROJECT, Open Project" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PartChooser_PARTS, xc7k160tffg676-1 ; 676 ; 325 ; 600 ; 202800 ; 0 ; 8 ; 400 ; 101400 ; 8 ; 1 ; 85 ; 0 ; 85 ; C ; 1.03 ; 0.97 ; 0.97 ; 8 ; 0, 276, xc7k160tffg676-1, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, adder" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="66" type="GuiMode"/>
+<property name="GuiMode" value="69" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="51" type="TclMode"/>
+<property name="TclMode" value="54" type="TclMode"/>
 </item>
 </section>
 </application>
