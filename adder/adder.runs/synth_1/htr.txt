@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log COVER_DEFAULT_ADDER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source COVER_DEFAULT_ADDER.tcl
+vivado -log addW2Cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source addW2Cover.tcl

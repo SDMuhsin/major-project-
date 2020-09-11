@@ -54,7 +54,7 @@ module CLA_ADDER(
     
     assign g6 = a[6]&b[6];
     assign p6 = a[6]^b[6];
-    assign carry_cout = g6|c5&p6;
+    assign carry_out = g6|c5&p6;
     
     assign sum_out[0] = p0^cin;
     assign sum_out[1] = p1^c0;

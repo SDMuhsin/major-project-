@@ -24,6 +24,7 @@ module addWCover(
         output reg [9:0]output_reg,
         input  [9:0]input1_ff_drive,
         input  [9:0]input2_ff_drive,
+        input cin_drive,
         input clk,
         input rst
     );
@@ -34,6 +35,8 @@ wire cout;
 wire [9:0]output_actual;
 reg [9:0]input1_actual;
 reg [9:0]input2_actual;
+reg cin_actual;
+
 always@(posedge clk)
     begin
       if(!rst)
@@ -44,6 +47,7 @@ always@(posedge clk)
         //inputs
         input1_actual <= 0;
         input2_actual <= 0;
+        cin_actual <= 0;
       end
       else
       begin
@@ -52,10 +56,11 @@ always@(posedge clk)
         //inputs
         input1_actual <= input1_ff_drive;
         input2_actual <= input2_ff_drive;
+        cin_actual <= cin_drive;
       end
  end   
  
 
  
- adderW a(cout, output_actual, input1_actual, input2_actual, 1'b0);
+ adderW a( output_actual, input1_actual, input2_actual, cin_actual);
 endmodule

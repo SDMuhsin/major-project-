@@ -19,9 +19,9 @@
 // //////////////////////////////////////////////////////////////////////////////////
 
 
-module adderW(carryout, sum, a, b, carryin);
+module adderW( /*carryout*/ sum, a, b, carryin);
 parameter W=10;
-output carryout;
+//output carryout;
 output reg[W-1:0] sum;
 input [W-1:0] a, b;
 input carryin;
@@ -30,7 +30,7 @@ wire [W:0] x,y,sum_inter;
 assign x = {a[W-1],a};
 assign y = {b[W-1],b};
 
-assign {carryout,sum_inter} = x+y+carryin;
+assign {sum_inter} = x+y+carryin;
 
 always@(sum_inter)
 begin

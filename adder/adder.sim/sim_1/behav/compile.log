@@ -1,21 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module CLA_ADDER
-INFO: [VRFC 10-2458] undeclared symbol g0, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:31]
-INFO: [VRFC 10-2458] undeclared symbol p0, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:32]
-INFO: [VRFC 10-2458] undeclared symbol c0, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:33]
-INFO: [VRFC 10-2458] undeclared symbol g1, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:35]
-INFO: [VRFC 10-2458] undeclared symbol p1, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:36]
-INFO: [VRFC 10-2458] undeclared symbol c1, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:37]
-INFO: [VRFC 10-2458] undeclared symbol g2, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:39]
-INFO: [VRFC 10-2458] undeclared symbol p2, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:40]
-INFO: [VRFC 10-2458] undeclared symbol c2, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:41]
-INFO: [VRFC 10-2458] undeclared symbol g3, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:43]
-INFO: [VRFC 10-2458] undeclared symbol p3, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:44]
-INFO: [VRFC 10-2458] undeclared symbol c3, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:45]
-INFO: [VRFC 10-2458] undeclared symbol g4, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:47]
-INFO: [VRFC 10-2458] undeclared symbol p4, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:48]
-INFO: [VRFC 10-2458] undeclared symbol c4, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:49]
-INFO: [VRFC 10-2458] undeclared symbol g5, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:51]
-INFO: [VRFC 10-2458] undeclared symbol p5, assumed default net type wire [C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/CLA_ADDER.v:52]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.srcs/sources_1/new/adderW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adderW
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

@@ -1,40 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k160tffg676-1" LaunchTime="1599642251">
-  <File Type="RDS-PROPCONSTRS" Name="COVER_DEFAULT_ADDER_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="COVER_DEFAULT_ADDER.tcl"/>
-  <File Type="RDS-RDS" Name="COVER_DEFAULT_ADDER.vds"/>
-  <File Type="RDS-UTIL" Name="COVER_DEFAULT_ADDER_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="COVER_DEFAULT_ADDER_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="COVER_DEFAULT_ADDER.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="COVER_DEFAULT_ADDER_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="COVER_DEFAULT_ADDER_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k160tffg676-1" LaunchTime="1599754033">
+  <File Type="RDS-PROPCONSTRS" Name="addW2Cover_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="addW2Cover.tcl"/>
+  <File Type="RDS-RDS" Name="addW2Cover.vds"/>
+  <File Type="RDS-UTIL" Name="addW2Cover_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="addW2Cover_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="addW2Cover.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="addW2Cover_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="addW2Cover_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/DEFAULT_ADDER.v">
+    <File Path="$PSRCDIR/sources_1/new/adderW2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/COVER_DEFAULT_ADDER.v">
+    <File Path="$PSRCDIR/sources_1/new/addW2Cover.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/CLA_ADDER.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/COVER_CLA_ADDER.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -56,9 +40,41 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CLA_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DEFAULT_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COVER_DEFAULT_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COVER_CLA_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="COVER_DEFAULT_ADDER"/>
+      <Option Name="TopModule" Val="addW2Cover"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

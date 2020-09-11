@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log COVER_DEFAULT_ADDER.vdi -applog -m64 -messageDb vivado.pb -mode batch -source COVER_DEFAULT_ADDER.tcl -notrace
+EAStep vivado -log addW2Cover.vdi -applog -m64 -messageDb vivado.pb -mode batch -source addW2Cover.tcl -notrace
 
 
