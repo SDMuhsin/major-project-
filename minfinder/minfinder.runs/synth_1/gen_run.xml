@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1598981127">
-  <File Type="RDS-PROPCONSTRS" Name="m16VG_tb_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="m16VG_tb.tcl"/>
-  <File Type="RDS-RDS" Name="m16VG_tb.vds"/>
-  <File Type="RDS-UTIL" Name="m16VG_tb_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="m16VG_tb_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="m16VG_tb.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="m16VG_tb_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="m16VG_tb_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1599887796">
+  <File Type="RDS-PROPCONSTRS" Name="m18VGCOVER_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="m18VGCOVER.tcl"/>
+  <File Type="RDS-RDS" Name="m18VGCOVER.vds"/>
+  <File Type="RDS-UTIL" Name="m18VGCOVER_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="m18VGCOVER_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="m18VGCOVER.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="m18VGCOVER_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="m18VGCOVER_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/m2VG.v">
@@ -38,8 +38,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/m18VG.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/minfinderCover.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/m16VG_tb.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/m18VG_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,20 +70,25 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="m16VG_tb"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="m18VGCOVER"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../../Documents and downloads/design_constr.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
-    <Step Id="synth_design"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design">
+      <Option Id="FlattenHierarchy">1</Option>
+    </Step>
   </Strategy>
 </GenRun>

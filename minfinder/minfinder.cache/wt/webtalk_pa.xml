@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Sep 08 16:51:22 2020">
+<application name="pa" timeStamp="Sat Sep 12 10:47:47 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="59d3a2a30e1e4f32ae05c20f67049e4c" type="ProjectID"/>
-<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+<property name="ProjectIteration" value="3" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -17,33 +17,20 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="7" type="JavaHandler"/>
+<property name="AddSources" value="9" type="JavaHandler"/>
 <property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="NewProject" value="2" type="JavaHandler"/>
 <property name="OpenProject" value="2" type="JavaHandler"/>
-<property name="RunSynthesis" value="1" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
+<property name="RunImplementation" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="3" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="2" type="JavaHandler"/>
-<property name="SetTopNode" value="5" type="JavaHandler"/>
+<property name="SetTopNode" value="6" type="JavaHandler"/>
 <property name="SimulationRelaunch" value="1" type="JavaHandler"/>
 <property name="SimulationRun" value="13" type="JavaHandler"/>
 <property name="SimulationRunForTime" value="86" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="2" type="JavaHandler"/>
 <property name="ZoomFit" value="3" type="JavaHandler"/>
-</item>
-<item name="Gui Resources Info">
-<property name="NEXT, Next " value="7" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_NEW_PROJECT, New Project..." value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_OPEN_PROJECT, Open Project" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PartChooser_PARTS, xc7k160tffg676-1 ; 676 ; 325 ; 600 ; 202800 ; 0 ; 8 ; 400 ; 101400 ; 8 ; 1 ; 85 ; 0 ; 85 ; C ; 1.03 ; 0.97 ; 0.97 ; 8 ; 0, 276, xc7k160tffg676-1, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, adder" value="1" type="GuiResourceData"/>
-</item>
-<item name="Other">
-<property name="GuiMode" value="69" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="54" type="TclMode"/>
 </item>
 </section>
 </application>

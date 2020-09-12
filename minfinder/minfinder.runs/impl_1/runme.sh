@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/synth_1'
+HD_PWD='C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log m18VGCOVER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VGCOVER.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log m18VGCOVER.vdi -applog -m64 -messageDb vivado.pb -mode batch -source m18VGCOVER.tcl -notrace
+
+
