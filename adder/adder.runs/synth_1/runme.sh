@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log addW2Cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source addW2Cover.tcl
+EAStep vivado -log addWCover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source addWCover.tcl

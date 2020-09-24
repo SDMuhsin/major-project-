@@ -4,7 +4,7 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-create_project -in_memory -part xc7k70tfbv676-1
+create_project -in_memory -part xc7k160tffv676-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -28,7 +28,7 @@ read_xdc {{C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc}}]
 
 
-synth_design -top m18VGCOVER -part xc7k70tfbv676-1 -flatten_hierarchy none
+synth_design -top m18VGCOVER -part xc7k160tffv676-1 -flatten_hierarchy none
 
 
 write_checkpoint -force -noxdef m18VGCOVER.dcp

@@ -1,81 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k160tffg676-1" LaunchTime="1599754087">
-  <File Type="OPT-DCP" Name="addW2Cover_opt.dcp"/>
-  <File Type="ROUTE-STATUS-PB" Name="addW2Cover_route_status.pb"/>
-  <File Type="PA-TCL" Name="addW2Cover.tcl"/>
-  <File Type="RDI-RDI" Name="addW2Cover.vdi"/>
-  <File Type="PWROPT-DRC" Name="addW2Cover_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="addW2Cover_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="addW2Cover_timing_summary_init.rpt"/>
-  <File Type="OPT-DRC" Name="addW2Cover_drc_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="addW2Cover_pwropt.dcp"/>
-  <File Type="OPT-HWDEF" Name="addW2Cover.hwdef"/>
-  <File Type="OPT-TIMING" Name="addW2Cover_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="addW2Cover_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="addW2Cover_placed.dcp"/>
-  <File Type="PLACE-IO" Name="addW2Cover_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="addW2Cover_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="addW2Cover_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="addW2Cover_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="addW2Cover_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="addW2Cover_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="addW2Cover_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="addW2Cover_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="addW2Cover_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="addW2Cover_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="addW2Cover_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="addW2Cover_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="addW2Cover_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-DCP" Name="addW2Cover_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="addW2Cover_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="addW2Cover_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="addW2Cover_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="addW2Cover_methodology_drc_routed.rpt"/>
-  <File Type="BG-BIT" Name="addW2Cover.bit"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="addW2Cover_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="addW2Cover_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="addW2Cover_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="addW2Cover_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="addW2Cover_route_status.rpt"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="addW2Cover_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="addW2Cover_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="addW2Cover_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="addW2Cover_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="addW2Cover_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="addW2Cover_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="addW2Cover_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="addW2Cover_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="addW2Cover_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="addW2Cover_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BG-BIN" Name="addW2Cover.bin"/>
-  <File Type="BITSTR-MSK" Name="addW2Cover.msk"/>
-  <File Type="BITSTR-RBT" Name="addW2Cover.rbt"/>
-  <File Type="BITSTR-NKY" Name="addW2Cover.nky"/>
-  <File Type="BITSTR-BMM" Name="addW2Cover_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="addW2Cover.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="addW2Cover.sysdef"/>
-  <File Type="BG-BGN" Name="addW2Cover.bgn"/>
-  <File Type="BG-DRC" Name="addW2Cover.drc"/>
+<GenRun Id="impl_1" LaunchPart="xc7k160tffg676-1" LaunchTime="1599929963">
+  <File Type="ROUTE-STATUS-PB" Name="addWCover_route_status.pb"/>
+  <File Type="PA-TCL" Name="addWCover.tcl"/>
+  <File Type="OPT-DCP" Name="addWCover_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="addWCover_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="addWCover_methodology_drc_opted.rpt"/>
+  <File Type="RDI-RDI" Name="addWCover.vdi"/>
+  <File Type="PWROPT-DRC" Name="addWCover_drc_pwropted.rpt"/>
+  <File Type="OPT-DRC" Name="addWCover_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="addWCover_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="addWCover.hwdef"/>
+  <File Type="OPT-TIMING" Name="addWCover_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="addWCover_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="addWCover_placed.dcp"/>
+  <File Type="PLACE-IO" Name="addWCover_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="addWCover_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="addWCover_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="addWCover_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="addWCover_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="addWCover_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="addWCover_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="addWCover_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="addWCover_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="addWCover_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="addWCover_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="addWCover_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="addWCover_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="addWCover_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="addWCover_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="addWCover_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="addWCover_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="addWCover_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="addWCover_methodology_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="addWCover.bit"/>
+  <File Type="ROUTE-PWR" Name="addWCover_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="addWCover_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="addWCover_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="addWCover_route_status.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="addWCover_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="addWCover_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="addWCover_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="addWCover_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="addWCover_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="addWCover_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="addWCover_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="addWCover_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="addWCover_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="addWCover_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIN" Name="addWCover.bin"/>
+  <File Type="BITSTR-MSK" Name="addWCover.msk"/>
+  <File Type="BITSTR-RBT" Name="addWCover.rbt"/>
+  <File Type="BITSTR-NKY" Name="addWCover.nky"/>
+  <File Type="BITSTR-BMM" Name="addWCover_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="addWCover.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="addWCover.sysdef"/>
+  <File Type="BG-BGN" Name="addWCover.bgn"/>
+  <File Type="BG-DRC" Name="addWCover.drc"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/adderW2.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/addW2Cover.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/adderW.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -83,15 +68,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/addWCover.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/CLA_ADDER.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -113,7 +89,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CLA_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/COVER_CLA_ADDER.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/adderW2.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/addW2Cover.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -123,7 +123,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="addW2Cover"/>
+      <Option Name="TopModule" Val="addWCover"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

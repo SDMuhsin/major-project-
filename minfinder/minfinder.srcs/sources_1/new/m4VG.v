@@ -38,10 +38,10 @@ module m4VG(
     m2VG m2(m2A,m2B,cp2,x2,x3);
     
 
-    assign min1 = m1A < m2A ? m1A : m2A;
-    assign q1q0[1] = m1A < m2A ? 0 : 1;
+    assign min1 = m1A > m2A ?  m2A :m1A ;
+    assign q1q0[1] = m1A > m2A ?  1 : 0;
     //assign min2 = q1q0[1] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;   
-    assign min2 = m1A < m2A ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;   
+    assign min2 = m1A > m2A ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;   
     //assign q1q0[0] = q1q0[1] ? cp2 : cp1;
-    assign q1q0[0] = m1A < m2A ? cp2 : cp1;
+    assign q1q0[0] = m1A > m2A ? cp2 : cp1;
 endmodule

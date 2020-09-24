@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log addW2Cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source addW2Cover.tcl" );
+         "-log addWCover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source addWCover.tcl" );
 
 
 

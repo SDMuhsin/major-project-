@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log addW2Cover.vdi -applog -m64 -messageDb vivado.pb -mode batch -source addW2Cover.tcl -notrace" );
+         "-log addWCover.vdi -applog -m64 -messageDb vivado.pb -mode batch -source addWCover.tcl -notrace" );
 
 
 

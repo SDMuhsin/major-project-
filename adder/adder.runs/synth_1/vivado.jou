@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Sep 10 21:37:22 2020
-# Process ID: 23436
+# Start of session at: Sat Sep 12 22:26:42 2020
+# Process ID: 36544
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.runs/synth_1
-# Command line: vivado.exe -log addW2Cover.vds -mode batch -messageDb vivado.pb -notrace -source addW2Cover.tcl
-# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.runs/synth_1/addW2Cover.vds
+# Command line: vivado.exe -log addWCover.vds -mode batch -messageDb vivado.pb -notrace -source addWCover.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.runs/synth_1/addWCover.vds
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/adder/adder.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source addW2Cover.tcl -notrace
+source addWCover.tcl -notrace
