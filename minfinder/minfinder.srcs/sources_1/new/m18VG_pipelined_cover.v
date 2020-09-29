@@ -21,9 +21,9 @@
 
 
 module m18VG_pipelined_cover(
-    output reg [4:0]min1_s,
-    output reg [4:0]min2_s,
-    output reg [4:0]q4q3q2q1q0_s,
+    output  [4:0]min1_s,
+    output  [4:0]min2_s,
+    output  [4:0]q4q3q2q1q0_s,
     input [4:0]x0_s,x1_s,x2_s,x3_s,x4_s,x5_s,x6_s,x7_s,x8_s,x9_s,x10_s,x11_s,x12_s,x13_s,x14_s,x15_s,x16_s,x17_s,
     input rst,clk
 
@@ -38,9 +38,9 @@ module m18VG_pipelined_cover(
     begin
     if(rst)
     begin
-    min1_s<=4'b0;
-    min2_s<=4'b0;
-    q4q3q2q1q0_s<=4'b0;
+    //min1_s<=4'b0;
+    //min2_s<=4'b0;
+    //q4q3q2q1q0_s<=4'b0;
     
     x0<=4'b0;
     x1<=4'b0;
@@ -63,9 +63,9 @@ module m18VG_pipelined_cover(
     
     else
     begin
-    min1_s<=min1;
-    min2_s<=min2;
-    q4q3q2q1q0_s<=q4q3q2q1q0;
+    //min1_s<=min1;
+    //min2_s<=min2;
+    //q4q3q2q1q0_s<=q4q3q2q1q0;
     
     x0<=x0_s;
     x1<=x1_s;
@@ -86,5 +86,5 @@ module m18VG_pipelined_cover(
     end
     end
     
-    m18VG_pipelined g1(min1,min2,q4q3q2q1q0,x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,clk,rst);
+    m18VG_pipelined g1(min1_s,min2_s,q4q3q2q1q0_s,x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,clk,rst);
 endmodule

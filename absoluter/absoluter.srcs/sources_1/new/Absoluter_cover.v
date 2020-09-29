@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Absoluter_cover(
+module Absoluter_2_cover(
         output reg sign_ff,
         output reg [4:0]mag_ff,
         input [5:0]in,
@@ -55,5 +55,6 @@ module Absoluter_cover(
     //Absoluter_primitive a(sign_op,mag_op,in_ff);
     
    //original
+   defparam a.W = 6;
    absW a(sign_op,mag_op,in_ff);
 endmodule

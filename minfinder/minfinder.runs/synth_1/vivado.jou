@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Sep 24 14:06:50 2020
-# Process ID: 5636
+# Start of session at: Fri Sep 25 10:38:11 2020
+# Process ID: 9152
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/synth_1
-# Command line: vivado.exe -log m18VGCOVER.vds -mode batch -messageDb vivado.pb -notrace -source m18VGCOVER.tcl
-# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/synth_1/m18VGCOVER.vds
+# Command line: vivado.exe -log m18VG_pipelined_cover.vds -mode batch -messageDb vivado.pb -notrace -source m18VG_pipelined_cover.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/synth_1/m18VG_pipelined_cover.vds
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source m18VGCOVER.tcl -notrace
+source m18VG_pipelined_cover.tcl -notrace

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log m18VGCOVER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VGCOVER.tcl
+EAStep vivado -log m18VG_pipelined_cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VG_pipelined_cover.tcl

@@ -1,0 +1,22 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto fd8e8b309cb94728b1a5c4adcb2ba8b0 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot emsggen_cover_behav xil_defaultlib.emsggen_cover xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 36 differs from formal bit length 33 for port ecomp [C:/Users/sayed/Desktop/Documents and downloads/emsggen_cover.v:48]
+WARNING: [VRFC 10-278] actual bit length 18 differs from formal bit length 32 for port signL [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:40]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.absW(W=10)
+Compiling module xil_defaultlib.Absoluter_default
+Compiling module xil_defaultlib.m2VG_pipelined
+Compiling module xil_defaultlib.m4VG_pipelined
+Compiling module xil_defaultlib.m8VG_pipelined
+Compiling module xil_defaultlib.m16VG_pipelined
+Compiling module xil_defaultlib.m18VG_pipelined
+Compiling module xil_defaultlib.emsggen
+Compiling module xil_defaultlib.emsggen_cover
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot emsggen_cover_behav

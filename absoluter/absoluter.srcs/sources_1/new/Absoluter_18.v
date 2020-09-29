@@ -34,8 +34,8 @@ input [wc*w-1:0]in;
 
 genvar i;
 generate for(i=0;i<wc;i=i+1) begin :loop1
-
-    Absoluter_case_statement a( sign[i], mag[ (i + 1)*(w-1) -1 : i * (w - 1)], in[(i + 1)*w -1 : i * w]);
+    defparam a.w = w;
+    Absoluter_adder a( sign[i], mag[ (i + 1)*(w-1) -1 : i * (w - 1)], in[(i + 1)*w -1 : i * w]);
 end
 endgenerate
 

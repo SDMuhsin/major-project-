@@ -21,23 +21,28 @@
 
 
 module Absoluter_adder(
-        output sign,
-        output reg [4:0]mag,
-        input [5:0]in
+        sign,
+        mag,
+        in
     );
+    parameter w = 6;
     
-    assign sign = in[5];
+    output sign;
+    output reg [w-2:0]mag;
+    input [w-1:0]in;
+    
+    assign sign = in[w-1];
     always @(*)begin
-        if(in[5])begin
-            if( in[4:0] == 5'b10000) begin
-                mag = 5'b01111;
+        if(in[w-1])begin
+            if( in[w-2:0] == {1'b1,(w-2)*{1'b0}}) begin
+                mag = {1'b0,(w-2)*{1'b1}};
             end
             else begin
-                mag = ~in[4:0] + 1'b1;
+                mag = ~in[w-2:0] + 1'b1;
             end
         end
         else begin
-            mag = in[4:0];
+            mag = in[w-2:0];
         end
     end
 endmodule

@@ -1,0 +1,7 @@
+Running: xsim.dir/emsggen_cover_behav/xsimk.exe -simmode gui -wdb emsggen_cover_behav.wdb -simrunnum 0 -socket 57711
+Design successfully loaded
+Design Loading Memory Usage: 9864 KB (Peak: 9864 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 10536 KB (Peak: 10536 KB)
+Simulation CPU Usage: 61 ms

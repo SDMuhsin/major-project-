@@ -66,7 +66,7 @@ wire [W-1:0] Larray[Wc-1:0];
 wire [W-2:0] magL[Wc-1:0];
 genvar i;
 generate for(i=0;i<=Wc-1;i=i+1) begin : absloop
-  assign Larray[i] = L[((i+1)*W)-1:(i*W)]; //split bitvec into array
+ assign Larray[i] = L[((i+1)*W)-1:(i*W)]; //split bitvec into array
   
 //  defparam posnegLdut.W = W;
 //  posnegX posnegLdut(posL[i], negL[i], Larray[i]);
@@ -74,8 +74,8 @@ generate for(i=0;i<=Wc-1;i=i+1) begin : absloop
 //  assign magL[i] = posL[i][W-1] ? negL[i][W-2:0] : posL[i][W-2:0];
 //  assign signL[i] = posL[i][W-1];
   
-  defparam absoluterdut.W = W;
-  absW absoluterdut(signL[i],magL[i], Larray[i]);
+ defparam absoluterdut.W = W;
+ absW absoluterdut(signL[i],magL[i], Larray[i]);
   
  assign absL[((i+1)*(W-1))-1:(i*(W-1))] = magL[i]; //combine bitvec into array
 end

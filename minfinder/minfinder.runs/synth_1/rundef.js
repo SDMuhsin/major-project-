@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log m18VGCOVER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VGCOVER.tcl" );
+         "-log m18VG_pipelined_cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VG_pipelined_cover.tcl" );
 
 
 

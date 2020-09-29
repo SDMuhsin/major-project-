@@ -21,7 +21,7 @@
 
 
 module absW(SignX, MagX, X);
-parameter W = 10;
+parameter W = 6;
 output SignX;
 output [W-2:0] MagX;
 input [W-1:0] X;

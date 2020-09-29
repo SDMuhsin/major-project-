@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Sep 22 22:04:30 2020">
+<application name="pa" timeStamp="Fri Sep 25 16:29:07 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="95e810e253464bbeaf7dc1b3403fc52f" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -21,156 +21,37 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OpenInNewWindowProjectManager" value="1" type="JavaHandler"/>
 <property name="OpenProject" value="1" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
-<property name="ReportTimingSummary" value="7" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="8" type="JavaHandler"/>
 <property name="ResetLayout" value="1" type="JavaHandler"/>
-<property name="RunSynthesis" value="7" type="JavaHandler"/>
-<property name="SetTopNode" value="9" type="JavaHandler"/>
-<property name="ShowView" value="1" type="JavaHandler"/>
-<property name="SimulationClose" value="2" type="JavaHandler"/>
-<property name="SimulationRun" value="10" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="29" type="JavaHandler"/>
+<property name="RunSynthesis" value="8" type="JavaHandler"/>
+<property name="SetTopNode" value="14" type="JavaHandler"/>
+<property name="ShowView" value="2" type="JavaHandler"/>
+<property name="SimulationClose" value="3" type="JavaHandler"/>
+<property name="SimulationRun" value="14" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="32" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="5" type="JavaHandler"/>
 <property name="ZoomFit" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="Absoluter.v, 117, 233" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 123, 147" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 134, 230" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 139, 162" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 140, 114" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 145, 145" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 146, 231" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 16, 132" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 16, 133" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 166, 129" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 192, 143" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 193, 137" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 203, 132" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 232, 165" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 232, 165, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 240, 351" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 261, 128" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 315, 212" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 317, 352" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 324, 367" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 347, 129" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 48, 355" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 50, 131" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 52, 129" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 55, 125" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 56, 210" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 66, 229" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 70, 145" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 77, 114" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 87, 146" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 88, 228" value="1" type="GuiResourceData"/>
-<property name="Absoluter.v, 94, 163" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 101, 231" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 102, 231" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 102, 400" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 103, 431" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 105, 252" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 105, 406" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 105, 434" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 106, 227" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 106, 246" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 108, 416" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 115, 438" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 118, 247" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 120, 399" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 121, 151" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 138, 434" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 139, 420" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 145, 348" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 156, 434" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 193, 436" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 222, 440" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 254, 432" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 263, 435" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 267, 100" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 283, 11" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 467, 435" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 482, 431" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 49, 412" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 511, 438" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 515, 438" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 52, 401" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 552, 438" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 559, 436" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 62, 403" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 667, 435" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 731, 433" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 75, 435" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 81, 430" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 81, 439" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 94, 429" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 98, 231" value="1" type="GuiResourceData"/>
-<property name="Absoluter_18.v, 98, 387" value="1" type="GuiResourceData"/>
-<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="2" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, Absoluter_18" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, Absoluter_18_cover" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 108, 194" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 221, 76" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 239, 67" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 282, 87" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 300, 36" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 312, 32" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 75, 185" value="1" type="GuiResourceData"/>
+<property name="Absoluter.v, 79, 91" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="3" type="GuiResourceData"/>
 <property name="PAResourceCommand.PACommandNames_SET_AS_TOP, Set as Top" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="16" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Absoluter (Absoluter.v" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Absoluter_18 (Absoluter_18.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Absoluter_adder_tb (Absoluter_adder_tb.v" value="5" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Absoluter_cover (Absoluter_cover.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, Absoluter_18 (Absoluter_18.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1], 12" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources], 11" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, -12" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, -31" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, -32" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, -63" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, -64" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 1" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 15" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 31" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 4" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 61" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 63" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_VALUE_RADIX, Binary, 0" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_VALUE_RADIX, Signed Decimal, 3" value="12" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_VALUE_RADIX, Unsigned Decimal, 2" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="20" type="GuiResourceData"/>
-<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, Untitled 3*" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [0]], 19, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [0]], 19, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [10]], 12, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [11]], 11, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [11]], 11, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0], [5]], 14, false" value="3" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0]], 2" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0]], 2, true" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0]], 2, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[11:0]], 7, true, false, false, false, true, false" value="4" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[5:0]], 2" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[5:0]], 2, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[5:0]], 2, true, false, false, false, true, false" value="9" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, in[5:0]], 7, true, false, false, false, true, false" value="3" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, mag[4:0]], 1" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, mag[9:0], [5]], 6, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, mag[9:0]], 1" value="3" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, mag[9:0]], 1, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, sign[1:0]], 0" value="4" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, sign[1:0]], 0, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, w[31:0]], 20" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, w[31:0]], 3, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wc[31:0]], 4, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Absoluter_18_cover (Absoluter_18_cover.v" value="6" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/absoluter/absoluter.xpr, 2" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="3" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="81" type="GuiMode"/>
+<property name="GuiMode" value="88" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="66" type="TclMode"/>
+<property name="TclMode" value="72" type="TclMode"/>
 </item>
 </section>
 </application>

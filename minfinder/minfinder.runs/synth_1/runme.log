@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log m18VGCOVER.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VGCOVER.tcl
+    with args -log m18VG_pipelined_cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m18VG_pipelined_cover.tcl
 
 
 ****** Vivado v2016.2 (64-bit)
@@ -8,42 +8,42 @@
   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source m18VGCOVER.tcl -notrace
-Command: synth_design -top m18VGCOVER -part xc7k160tffv676-1 -flatten_hierarchy none
+source m18VG_pipelined_cover.tcl -notrace
+Command: synth_design -top m18VG_pipelined_cover -part xc7k160tffv676-1 -flatten_hierarchy none
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9768 
+INFO: Helper process launched with PID 8288 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 272.676 ; gain = 65.824
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 273.125 ; gain = 66.773
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'm18VGCOVER' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:23]
-INFO: [Synth 8-638] synthesizing module 'm18VG' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG.v:23]
-INFO: [Synth 8-638] synthesizing module 'm16VG' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG.v:23]
-INFO: [Synth 8-638] synthesizing module 'm8VG' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG.v:23]
-INFO: [Synth 8-638] synthesizing module 'm4VG' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG.v:23]
-INFO: [Synth 8-638] synthesizing module 'm2VG' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'm2VG' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'm4VG' (2#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'm8VG' (3#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'm16VG' (4#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'm18VG' (5#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG.v:23]
-WARNING: [Synth 8-3848] Net x16 in module/entity m18VGCOVER does not have driver. [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:34]
-WARNING: [Synth 8-3848] Net x17 in module/entity m18VGCOVER does not have driver. [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:34]
-INFO: [Synth 8-256] done synthesizing module 'm18VGCOVER' (6#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:23]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[4]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[3]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[2]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[1]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[0]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[4]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[3]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[2]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[1]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[0]
+INFO: [Synth 8-638] synthesizing module 'm18VG_pipelined_cover' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:23]
+INFO: [Synth 8-638] synthesizing module 'm18VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm16VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm8VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm4VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm2VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm2VG_pipelined' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm4VG_pipelined' (2#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm8VG_pipelined' (3#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm16VG_pipelined' (4#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm18VG_pipelined' (5#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined.v:23]
+WARNING: [Synth 8-3848] Net x16 in module/entity m18VG_pipelined_cover does not have driver. [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:35]
+WARNING: [Synth 8-3848] Net x17 in module/entity m18VG_pipelined_cover does not have driver. [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:35]
+INFO: [Synth 8-256] done synthesizing module 'm18VG_pipelined_cover' (6#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:23]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[4]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[3]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[2]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[1]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[0]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[4]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[3]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[2]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[1]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 309.949 ; gain = 103.098
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 309.652 ; gain = 103.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -52,18 +52,18 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin g1:x16[4] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x16[3] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x16[2] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x16[1] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x16[0] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x17[4] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x17[3] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x17[2] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x17[1] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
-WARNING: [Synth 8-3295] tying undriven pin g1:x17[0] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/minfinderCover.v:88]
+WARNING: [Synth 8-3295] tying undriven pin g1:x16[4] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x16[3] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x16[2] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x16[1] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x16[0] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x17[4] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x17[3] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x17[2] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x17[1] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
+WARNING: [Synth 8-3295] tying undriven pin g1:x17[0] to constant 0 [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined_cover.v:89]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 309.949 ; gain = 103.098
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 309.652 ; gain = 103.301
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k160tffv676-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,25 +77,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.208 . Memory (MB): peak = 625.195 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 625.023 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k160tffv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -108,13 +108,17 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	                5 Bit    Registers := 19    
+	                5 Bit    Registers := 105   
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 36    
 +---Muxes : 
-	   2 Input      5 Bit        Muxes := 50    
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 51    
+	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 19    
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -122,37 +126,52 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module m18VGCOVER 
+Module m18VG_pipelined_cover 
 Detailed RTL Component Info : 
 +---Registers : 
-	                5 Bit    Registers := 19    
-Module m2VG 
+	                5 Bit    Registers := 16    
+Module m2VG_pipelined 
 Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 8     
+	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
-Module m4VG 
+	   2 Input      1 Bit        Muxes := 1     
+Module m4VG_pipelined 
 Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module m8VG 
+Module m8VG_pipelined 
 Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 2     
-Module m16VG 
+Module m16VG_pipelined 
 Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-Module m18VG 
+Module m18VG_pipelined 
 Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      5 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -166,24 +185,24 @@ BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 625.195 ; gain = 418.344
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[4]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[3]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[2]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[1]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x16_s[0]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[4]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[3]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[2]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[1]
-WARNING: [Synth 8-3331] design m18VGCOVER has unconnected port x17_s[0]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[4]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[3]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[2]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[1]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x16_s[0]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[4]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[3]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[2]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[1]
+WARNING: [Synth 8-3331] design m18VG_pipelined_cover has unconnected port x17_s[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:40 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:40 . Memory (MB): peak = 625.023 ; gain = 418.672
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -193,20 +212,159 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'min2_s_reg[0]' (FDR) to 'min2_s_reg[1]'
-INFO: [Synth 8-3886] merging instance 'min2_s_reg[1]' (FDR) to 'min2_s_reg[2]'
-INFO: [Synth 8-3886] merging instance 'min2_s_reg[2]' (FDR) to 'min2_s_reg[3]'
-INFO: [Synth 8-3886] merging instance 'min2_s_reg[3]' (FDR) to 'min2_s_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\min2_s_reg[4] )
-WARNING: [Synth 8-3332] Sequential element (min2_s_reg[4]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min2_s_reg[3]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min2_s_reg[2]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min2_s_reg[1]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min2_s_reg[0]) is unused and will be removed from module m18VGCOVER.
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_1_reg[0]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_1_reg[1]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_1_reg[2]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_1_reg[3]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_1_reg[4]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_1_reg[0]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_1_reg[1]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_1_reg[2]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_1_reg[3]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (g1/m2/\min1_1_reg[4] )
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_2_reg[0]' (FDR) to 'g1/m2/min2_2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_2_reg[1]' (FDR) to 'g1/m2/min2_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_2_reg[2]' (FDR) to 'g1/m2/min2_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_2_reg[3]' (FDR) to 'g1/m2/min2_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_2_reg[4]' (FDR) to 'g1/m2/min1_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_2_reg[0]' (FDR) to 'g1/m2/min1_2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_2_reg[1]' (FDR) to 'g1/m2/min1_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_2_reg[2]' (FDR) to 'g1/m2/min1_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_2_reg[3]' (FDR) to 'g1/m2/min1_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_2_reg[4]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_3_reg[0]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_3_reg[1]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_3_reg[2]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_3_reg[3]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_3_reg[4]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_3_reg[0]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_3_reg[1]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_3_reg[2]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_3_reg[3]' (FDR) to 'g1/m2/min1_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_4_reg[0]' (FDR) to 'g1/m2/min2_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_4_reg[1]' (FDR) to 'g1/m2/min2_4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_4_reg[2]' (FDR) to 'g1/m2/min2_4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_4_reg[3]' (FDR) to 'g1/m2/min2_4_reg[4]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min2_4_reg[4]' (FDR) to 'g1/m2/min1_4_reg[0]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_4_reg[0]' (FDR) to 'g1/m2/min1_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_4_reg[1]' (FDR) to 'g1/m2/min1_4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_4_reg[2]' (FDR) to 'g1/m2/min1_4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_4_reg[3]' (FDR) to 'g1/m2/min1_4_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (g1/m2/\min1_1_reg[4] )
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_3_reg[4]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (g1/m2/\min1_1_reg[4] )
+INFO: [Synth 8-3886] merging instance 'g1/m2/min1_4_reg[4]' (FDR) to 'g1/m2/min1_1_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (g1/m2/\min1_1_reg[4] )
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[4]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[3]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[2]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[1]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[0]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[4]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[3]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[2]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[1]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[0]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[4]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[3]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[2]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[1]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[0]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[4]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[3]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[2]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[1]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[0]) is unused and will be removed from module m2VG_pipelined__8.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[4]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[3]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[2]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[1]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[0]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[4]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[3]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[2]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[1]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[0]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[4]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[3]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[2]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[1]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[0]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[4]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[3]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[2]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[1]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[0]) is unused and will be removed from module m2VG_pipelined__7.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[4]) is unused and will be removed from module m4VG_pipelined__3.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[3]) is unused and will be removed from module m4VG_pipelined__3.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[2]) is unused and will be removed from module m4VG_pipelined__3.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[1]) is unused and will be removed from module m4VG_pipelined__3.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[0]) is unused and will be removed from module m4VG_pipelined__3.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[4]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[3]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[2]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[1]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[0]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[4]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[3]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[2]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[1]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[0]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[4]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[3]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[2]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[1]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[0]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[4]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[3]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[2]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[1]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[0]) is unused and will be removed from module m2VG_pipelined__6.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[4]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[3]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[2]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[1]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[0]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[4]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[3]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[2]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[1]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_2_reg[0]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[4]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[3]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[2]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[1]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_3_reg[0]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[4]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[3]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[2]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[1]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_4_reg[0]) is unused and will be removed from module m2VG_pipelined__5.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[4]) is unused and will be removed from module m4VG_pipelined__2.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[3]) is unused and will be removed from module m4VG_pipelined__2.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[2]) is unused and will be removed from module m4VG_pipelined__2.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[1]) is unused and will be removed from module m4VG_pipelined__2.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[0]) is unused and will be removed from module m4VG_pipelined__2.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[4]) is unused and will be removed from module m8VG_pipelined__1.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[3]) is unused and will be removed from module m8VG_pipelined__1.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[2]) is unused and will be removed from module m8VG_pipelined__1.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[1]) is unused and will be removed from module m8VG_pipelined__1.
+WARNING: [Synth 8-3332] Sequential element (min2_reg[0]) is unused and will be removed from module m8VG_pipelined__1.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[4]) is unused and will be removed from module m2VG_pipelined__4.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[3]) is unused and will be removed from module m2VG_pipelined__4.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[2]) is unused and will be removed from module m2VG_pipelined__4.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[1]) is unused and will be removed from module m2VG_pipelined__4.
+WARNING: [Synth 8-3332] Sequential element (min2_1_reg[0]) is unused and will be removed from module m2VG_pipelined__4.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'g1/min1_reg[0]' (FDR) to 'g1/min1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'g1/min1_reg[1]' (FDR) to 'g1/min1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'g1/min1_reg[2]' (FDR) to 'g1/min1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'g1/min1_reg[3]' (FDR) to 'g1/min1_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (g1/\min1_reg[4] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 625.023 ; gain = 418.672
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -220,10 +378,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,27 +392,17 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'min1_s_reg[0]' (FDR) to 'min1_s_reg[4]'
-INFO: [Synth 8-3886] merging instance 'min1_s_reg[1]' (FDR) to 'min1_s_reg[4]'
-INFO: [Synth 8-3886] merging instance 'min1_s_reg[2]' (FDR) to 'min1_s_reg[4]'
-INFO: [Synth 8-3886] merging instance 'min1_s_reg[3]' (FDR) to 'min1_s_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\min1_s_reg[4] )
-WARNING: [Synth 8-3332] Sequential element (min1_s_reg[4]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min1_s_reg[3]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min1_s_reg[2]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min1_s_reg[1]) is unused and will be removed from module m18VGCOVER.
-WARNING: [Synth 8-3332] Sequential element (min1_s_reg[0]) is unused and will be removed from module m18VGCOVER.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:52 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:52 . Memory (MB): peak = 625.023 ; gain = 418.672
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:52 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -265,7 +413,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -278,7 +426,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,7 +438,21 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 625.023 ; gain = 418.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name    | RTL Name      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|m2VG_pipelined | min1_4_reg[4] | 4      | 40    | YES          | NO                 | YES               | 40     | 0       | 
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -303,47 +465,51 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     1|
-|2     |LUT2 |    30|
-|3     |LUT4 |    30|
-|4     |LUT5 |     1|
-|5     |LUT6 |   105|
-|6     |FDRE |    85|
-|7     |IBUF |    82|
-|8     |OBUF |    15|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |LUT1   |     1|
+|3     |LUT2   |    70|
+|4     |LUT3   |     1|
+|5     |LUT4   |    30|
+|6     |LUT5   |     1|
+|7     |LUT6   |   106|
+|8     |SRL16E |    40|
+|9     |FDRE   |   278|
+|10    |IBUF   |    82|
+|11    |OBUF   |    15|
++------+-------+------+
 
 Report Instance Areas: 
-+------+-------------+--------+------+
-|      |Instance     |Module  |Cells |
-+------+-------------+--------+------+
-|1     |top          |        |   349|
-|2     |  g1         |m18VG   |   166|
-|3     |    m1       |m16VG   |   161|
-|4     |      m1     |m8VG__1 |    74|
-|5     |        m1   |m4VG__3 |    31|
-|6     |          m1 |m2VG__8 |    10|
-|7     |          m2 |m2VG__7 |    10|
-|8     |        m2   |m4VG__2 |    31|
-|9     |          m1 |m2VG__6 |    10|
-|10    |          m2 |m2VG__5 |    10|
-|11    |      m2     |m8VG    |    74|
-|12    |        m1   |m4VG__1 |    31|
-|13    |          m1 |m2VG__4 |    10|
-|14    |          m2 |m2VG__3 |    10|
-|15    |        m2   |m4VG    |    31|
-|16    |          m1 |m2VG__1 |    10|
-|17    |          m2 |m2VG__2 |    10|
-+------+-------------+--------+------+
++------+-------------+------------------+------+
+|      |Instance     |Module            |Cells |
++------+-------------+------------------+------+
+|1     |top          |                  |   625|
+|2     |  g1         |m18VG_pipelined   |   447|
+|3     |    m1       |m16VG_pipelined   |   430|
+|4     |      m1     |m8VG_pipelined__1 |   204|
+|5     |        m1   |m4VG_pipelined__3 |    92|
+|6     |          m1 |m2VG_pipelined__8 |    37|
+|7     |          m2 |m2VG_pipelined__7 |    37|
+|8     |        m2   |m4VG_pipelined__2 |    92|
+|9     |          m1 |m2VG_pipelined__6 |    37|
+|10    |          m2 |m2VG_pipelined__5 |    37|
+|11    |      m2     |m8VG_pipelined    |   204|
+|12    |        m1   |m4VG_pipelined__1 |    92|
+|13    |          m1 |m2VG_pipelined__4 |    37|
+|14    |          m2 |m2VG_pipelined__3 |    37|
+|15    |        m2   |m4VG_pipelined    |    92|
+|16    |          m1 |m2VG_pipelined__1 |    37|
+|17    |          m2 |m2VG_pipelined__2 |    37|
+|18    |    m2       |m2VG_pipelined    |     5|
++------+-------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 625.195 ; gain = 418.344
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 625.023 ; gain = 418.672
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 625.195 ; gain = 103.098
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 625.195 ; gain = 418.344
+Synthesis finished with 0 errors, 0 critical warnings and 255 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 625.023 ; gain = 103.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:53 . Memory (MB): peak = 625.023 ; gain = 418.672
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -353,8 +519,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 625.195 ; gain = 418.344
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.309 . Memory (MB): peak = 625.195 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 14:07:39 2020...
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:52 . Memory (MB): peak = 625.023 ; gain = 418.672
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 625.023 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 10:39:08 2020...

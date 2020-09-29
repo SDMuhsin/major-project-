@@ -1,0 +1,427 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Sep 25 12:09:20 2020
+# Process ID: 5080
+# Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log emsggen_cover.vds -mode batch -messageDb vivado.pb -notrace -source emsggen_cover.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/project_1/project_1.runs/synth_1/emsggen_cover.vds
+# Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source emsggen_cover.tcl -notrace
+Command: synth_design -top emsggen_cover -part xc7k160tffv676-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9348 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 272.762 ; gain = 65.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'emsggen_cover' [C:/Users/sayed/Desktop/Documents and downloads/emsggen_cover.v:23]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'emsggen' [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:22]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Absoluter' [C:/Users/sayed/Desktop/Programing/major project/major-project-/absoluter/absoluter.srcs/sources_1/new/Absoluter.v:23]
+	Parameter W bound to: 10 - type: integer 
+	Parameter Wc bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'absW' [C:/Users/sayed/Desktop/Programing/major project/major-project-/absoluter/absoluter.srcs/sources_1/new/absW.v:23]
+	Parameter W bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'absW' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/absoluter/absoluter.srcs/sources_1/new/absW.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Absoluter' (2#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/absoluter/absoluter.srcs/sources_1/new/Absoluter.v:23]
+WARNING: [Synth 8-689] width (18) of port connection 'signL' does not match port width (32) of module 'Absoluter' [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:40]
+WARNING: [Synth 8-689] width (90) of port connection 'absL' does not match port width (288) of module 'Absoluter' [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:40]
+WARNING: [Synth 8-689] width (108) of port connection 'L' does not match port width (320) of module 'Absoluter' [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:40]
+INFO: [Synth 8-638] synthesizing module 'm18VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm16VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm8VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm4VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'm2VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm2VG_pipelined' (3#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m2VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm4VG_pipelined' (4#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m4VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm8VG_pipelined' (5#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m8VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm16VG_pipelined' (6#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m16VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm18VG_pipelined' (7#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder/minfinder.srcs/sources_1/new/m18VG_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'emsggen' (8#1) [C:/Users/sayed/Desktop/Documents and downloads/emsggen.v:22]
+WARNING: [Synth 8-689] width (36) of port connection 'ecomp' does not match port width (33) of module 'emsggen' [C:/Users/sayed/Desktop/Documents and downloads/emsggen_cover.v:48]
+INFO: [Synth 8-256] done synthesizing module 'emsggen_cover' (9#1) [C:/Users/sayed/Desktop/Documents and downloads/emsggen_cover.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 310.180 ; gain = 103.074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 310.180 ; gain = 103.074
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tffv676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc]
+Finished Parsing XDC File [C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 627.176 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     10 Bit         XORs := 32    
+	   2 Input      1 Bit         XORs := 18    
++---XORs : 
+	               18 Bit    Wide XORs := 1     
++---Registers : 
+	              108 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	                5 Bit    Registers := 89    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 36    
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 32    
+	   3 Input      9 Bit        Muxes := 32    
+	   2 Input      5 Bit        Muxes := 51    
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module emsggen_cover 
+Detailed RTL Component Info : 
++---Registers : 
+	              108 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+Module absW 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     10 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+Module m2VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 8     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m4VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m8VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+Module m16VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module m18VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+Module emsggen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 18    
++---XORs : 
+	               18 Bit    Wide XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 627.176 ; gain = 420.070
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[10]' (FDR) to 'ecomp_s_reg[11]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[11]' (FDR) to 'ecomp_s_reg[12]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[12]' (FDR) to 'ecomp_s_reg[13]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[13]' (FDR) to 'ecomp_s_reg[14]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[14]' (FDR) to 'ecomp_s_reg[15]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[15]' (FDR) to 'ecomp_s_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[16]' (FDR) to 'ecomp_s_reg[17]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[33]' (FDR) to 'ecomp_s_reg[35]'
+INFO: [Synth 8-3886] merging instance 'ecomp_s_reg[34]' (FDR) to 'ecomp_s_reg[35]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ecomp_s_reg[35] )
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[35]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[34]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[33]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[16]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[15]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[14]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[13]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[12]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[11]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (ecomp_s_reg[10]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[107]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[106]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[105]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[104]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[103]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[102]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[101]) is unused and will be removed from module emsggen_cover.
+WARNING: [Synth 8-3332] Sequential element (x_reg[100]) is unused and will be removed from module emsggen_cover.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 627.176 ; gain = 420.070
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 627.176 ; gain = 420.070
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name    | RTL Name      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|m2VG_pipelined | min1_4_reg[4] | 4      | 45    | YES          | NO                 | YES               | 45     | 0       | 
+|m2VG_pipelined | min2_4_reg[4] | 4      | 45    | YES          | NO                 | YES               | 45     | 0       | 
++---------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |LUT1   |     8|
+|3     |LUT2   |   133|
+|4     |LUT3   |    57|
+|5     |LUT4   |    60|
+|6     |LUT5   |    72|
+|7     |LUT6   |   253|
+|8     |SRL16E |    90|
+|9     |FDRE   |   472|
+|10    |IBUF   |   102|
+|11    |OBUF   |    36|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------+------------------+------+
+|      |Instance                        |Module            |Cells |
++------+--------------------------------+------------------+------+
+|1     |top                             |                  |  1284|
+|2     |  u1                            |emsggen           |  1019|
+|3     |    m1                          |Absoluter         |   130|
+|4     |      \absloop[0].absoluterdut  |absW__1           |    13|
+|5     |      \absloop[1].absoluterdut  |absW__2           |    13|
+|6     |      \absloop[2].absoluterdut  |absW__3           |    13|
+|7     |      \absloop[3].absoluterdut  |absW__4           |    13|
+|8     |      \absloop[4].absoluterdut  |absW__5           |    13|
+|9     |      \absloop[5].absoluterdut  |absW__6           |    13|
+|10    |      \absloop[6].absoluterdut  |absW__7           |    13|
+|11    |      \absloop[7].absoluterdut  |absW__8           |    13|
+|12    |      \absloop[8].absoluterdut  |absW__9           |    13|
+|13    |      \absloop[9].absoluterdut  |absW__10          |    13|
+|14    |    m2                          |m18VG_pipelined   |   876|
+|15    |      m1                        |m16VG_pipelined   |   770|
+|16    |        m1                      |m8VG_pipelined__1 |   364|
+|17    |          m1                    |m4VG_pipelined__3 |   162|
+|18    |            m1                  |m2VG_pipelined__8 |    62|
+|19    |            m2                  |m2VG_pipelined__7 |    62|
+|20    |          m2                    |m4VG_pipelined__2 |   162|
+|21    |            m1                  |m2VG_pipelined__6 |    62|
+|22    |            m2                  |m2VG_pipelined__5 |    62|
+|23    |        m2                      |m8VG_pipelined    |   364|
+|24    |          m1                    |m4VG_pipelined__1 |   162|
+|25    |            m1                  |m2VG_pipelined__4 |    62|
+|26    |            m2                  |m2VG_pipelined__3 |    62|
+|27    |          m2                    |m4VG_pipelined    |   162|
+|28    |            m1                  |m2VG_pipelined__1 |    62|
+|29    |            m2                  |m2VG_pipelined__2 |    62|
+|30    |      m2                        |m2VG_pipelined    |    62|
++------+--------------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 627.176 ; gain = 420.070
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 627.176 ; gain = 103.074
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 627.176 ; gain = 420.070
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 627.176 ; gain = 420.070
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 627.176 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 12:10:00 2020...
