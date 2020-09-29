@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1600964191">
-  <File Type="PA-TCL" Name="Absoluter_cover.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Absoluter_cover_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Absoluter_cover.tcl"/>
   <File Type="RDS-RDS" Name="Absoluter_cover.vds"/>
   <File Type="RDS-UTIL" Name="Absoluter_cover_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Absoluter_cover_utilization_synth.pb"/>
