@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Sep 25 12:42:39 2020
+# Process ID: 5992
+# Current directory: C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18492 C:\Users\Sankar\Desktop\final proj\recovertest2\recoverpipeline\recoverpipeline.xpr
+# Log file: C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/vivado.log
+# Journal file: C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source coverrecover_tb.tcl
+add_bp {C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sources_1/new/negandpos.v} 48
+remove_bps -file {C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sources_1/new/negandpos.v} -line 48
+close_sim
+launch_simulation
+source coverrecover_tb.tcl
+close_sim
+launch_simulation
+source coverrecover_tb.tcl
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
