@@ -1,9 +1,0 @@
-0.6
-2018.1
-Apr  4 2018
-19:30:32
-C:/Users/Sankar/Desktop/final proj/recovertest2/coverrecover.v,1601018655,verilog,,C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sources_1/new/negandpos.v,,coverrecover,,,,,,,,
-C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
-C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sim_1/new/coverrecover_tb.v,1601018086,verilog,,,,coverrecover_tb,,,,,,,,
-C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sources_1/new/negandpos.v,1601012479,verilog,,C:/Users/Sankar/Desktop/final proj/recovertest2/recovunit_dp.v,,negandpos,,,,,,,,
-C:/Users/Sankar/Desktop/final proj/recovertest2/recovunit_dp.v,1601012804,verilog,,C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline/recoverpipeline.srcs/sim_1/new/coverrecover_tb.v,,recovunit_ne,,,,,,,,
