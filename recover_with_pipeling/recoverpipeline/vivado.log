@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Oct  1 20:47:01 2020
+# Process ID: 19452
+# Current directory: C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14480 C:\Users\Sankar\Desktop\final proj\recoverwithpipeling\recoverpipeline\recoverpipeline.xpr
+# Log file: C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/vivado.log
+# Journal file: C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/recoverpipeline.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Sankar/Desktop/final proj/recovertest2/recoverpipeline' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recovunit_dp.v', nor could it be found using path 'C:/Users/Sankar/Desktop/final proj/recovertest2/recovunit_dp.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/coverrecover.v', nor could it be found using path 'C:/Users/Sankar/Desktop/final proj/recovertest2/coverrecover.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1059.168 ; gain = 331.109
+update_compile_order -fileset sources_1
+update_files -from_files {{C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/recoverpipeline.srcs/sources_1/new/coverrecover.v}} -to_files {{C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/coverrecover.v}} -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/coverrecover.v' with file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/recoverpipeline.srcs/sources_1/new/coverrecover.v'.
+update_files -from_files {{C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/recoverpipeline.srcs/sources_1/new/recovunit_dp.v}} -to_files {{C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recovunit_dp.v}} -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recovunit_dp.v' with file 'C:/Users/Sankar/Desktop/final proj/recoverwithpipeling/recoverpipeline/recoverpipeline.srcs/sources_1/new/recovunit_dp.v'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  1 20:50:59 2020...

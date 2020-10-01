@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Sep 25 12:37:12 2020
+# Process ID: 7724
+# Current directory: C:/Users/Sankar/Desktop/final proj/recover test1/recovertest1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17984 C:\Users\Sankar\Desktop\final proj\recover test1\recovertest1\recovertest1.xpr
+# Log file: C:/Users/Sankar/Desktop/final proj/recover test1/recovertest1/vivado.log
+# Journal file: C:/Users/Sankar/Desktop/final proj/recover test1/recovertest1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Sankar/Desktop/final proj/recover test1/recovertest1/recovertest1.xpr}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/Sankar/Desktop/final proj/recover test1/coverrecover_tb.v}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  {{C:/Users/Sankar/Desktop/final proj/recover test1/posnegX.v}}]
+launch_simulation
+source coverrecover_tb.tcl
+close_sim
+launch_simulation
+source coverrecover_tb.tcl
+close_sim
