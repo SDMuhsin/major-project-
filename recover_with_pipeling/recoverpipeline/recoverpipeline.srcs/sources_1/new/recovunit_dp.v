@@ -23,7 +23,7 @@
 
 module recovunit_mux(Euncomp,min1pos,min1neg,min2pos,min2neg,hotpos,UpdatedSign);
 parameter Wc=18;
-parameter Wcbits = 6;
+parameter Wcbits = 5;
 parameter W=6;
 parameter Wabs=W-1;
 parameter ECOMPSIZE = (2*(W-1))+Wcbits+Wc;
