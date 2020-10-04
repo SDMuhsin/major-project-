@@ -1,6 +1,6 @@
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto c0b00ded18fc48e08035d4211c761869 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RowUnit_behav xil_defaultlib.RowUnit xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto c0b00ded18fc48e08035d4211c761869 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RowUnitStageIII_tb_behav xil_defaultlib.RowUnitStageIII_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -20,6 +20,7 @@ Compiling module xil_defaultlib.m18VG_pipelined
 Compiling module xil_defaultlib.emsggen
 Compiling module xil_defaultlib.adderW2(W=6)
 Compiling module xil_defaultlib.AdderWc_default
-Compiling module xil_defaultlib.RowUnit
+Compiling module xil_defaultlib.RowUnit_default
+Compiling module xil_defaultlib.RowUnitStageIII_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot RowUnit_behav
+Built simulation snapshot RowUnitStageIII_tb_behav

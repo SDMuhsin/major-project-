@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tffv676-1" LaunchTime="1601010488">
-  <File Type="RDS-PROPCONSTRS" Name="m18VG_pipelined_cover_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="m18VG_pipelined_cover.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="m18VG_pipelined_cover_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="m18VG_pipelined_cover.vds"/>
   <File Type="RDS-UTIL" Name="m18VG_pipelined_cover_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="m18VG_pipelined_cover_utilization_synth.pb"/>
