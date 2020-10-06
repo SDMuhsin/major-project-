@@ -59,8 +59,8 @@ module m4VG_pipelined(
             q1q0 <= q1q0_wire;          
         end
     end    
-    m2VG_pipelined m1(m1A,m1B,cp1,x[2*(W-1)-1:0],clk,rst);
-    m2VG_pipelined m2(m2A,m2B,cp2,x[4*(W-1)-1:2*(W-1)],clk,rst);
+    m2VG_pipelined_2 m1(m1A,m1B,cp1,x[2*(W-1)-1:0],clk,rst);
+    m2VG_pipelined_2 m2(m2A,m2B,cp2,x[4*(W-1)-1:2*(W-1)],clk,rst);
     
     
     assign min1_wire = m1A > m2A ?  m2A :m1A ;

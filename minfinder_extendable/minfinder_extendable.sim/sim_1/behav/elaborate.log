@@ -7,7 +7,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.m2VG_pipelined
+Compiling module xil_defaultlib.m2VG_pipelined_2
 Compiling module xil_defaultlib.m4VG_pipelined
 Compiling module xil_defaultlib.m8VG_pipelined
 Compiling module xil_defaultlib.m16VG_pipelined

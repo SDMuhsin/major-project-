@@ -2,3 +2,6 @@ Running: xsim.dir/RowUnitStageIII_tb_behav/xsimk.exe -simmode gui -wdb RowUnitSt
 Design successfully loaded
 Design Loading Memory Usage: 9176 KB (Peak: 9176 KB)
 Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 9900 KB (Peak: 9900 KB)
+Simulation CPU Usage: 30 ms
