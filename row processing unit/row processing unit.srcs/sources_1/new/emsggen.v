@@ -36,8 +36,9 @@ input clk,rst;
     wire [2*(w-1)+5+wc-1:0] etemp;
     wire signparity;
     wire [wc-1:0] updatedsign;
+    reg [wc-1:0]updated_sign_reg;
     
-    Absoluter_18 m1(signbit,abs,x);
+    Absoluter_18_pipelined m1(signbit,abs,x);
     m18VG_pipelined m2(min1,min2,pos,abs,clk,rst);
     
     //x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15],x[16],x[17]
@@ -51,5 +52,14 @@ input clk,rst;
     assign updatedsign[i]=signbit[i]^signparity;
     end
     endgenerate
-    assign ecomp={min1,min2,pos,updatedsign};
+    
+    always@(posedge clk)
+    begin
+    if(rst)
+    updated_sign_reg<=0;
+    else
+    updated_sign_reg<=updatedsign;
+    end
+    
+    assign ecomp={min1,min2,pos,updated_sign_reg};
 endmodule
