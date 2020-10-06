@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2016.2\\bin
-call %xv_path%/xsim RowUnitStageIII_tb_behav -key {Behavioral:sim_1:Functional:RowUnitStageIII_tb} -tclbatch RowUnitStageIII_tb.tcl -log simulate.log
+call %xv_path%/xsim RowUnit_tb_behav -key {Behavioral:sim_1:Functional:RowUnit_tb} -tclbatch RowUnit_tb.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

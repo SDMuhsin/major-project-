@@ -38,28 +38,43 @@ input clk,rst;
     wire [wc-1:0] updatedsign;
     reg [wc-1:0]updated_sign_reg;
     
-    Absoluter_18_pipelined m1(signbit,abs,x);
+    Absoluter_18 m1(signbit,abs,x);
     m18VG_pipelined m2(min1,min2,pos,abs,clk,rst);
+    
+    reg [wc-1:0]signbit_1,signbit_2,signbit_3,signbit_4,signbit_5;
     
     //x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15],x[16],x[17]
     //m18VG_pipelined_cover m2(min1,min2,pos,abs[4:0],abs[9:5],abs[14:10],abs[19:15],abs[24:20],abs[29:25],abs[34:30],abs[39:35],abs[44:40],abs[49:45],abs[54:50],abs[59:55],abs[64:60],abs[69:65],abs[74:70],abs[79:75],abs[84:80],abs[89:85],clk,rst);
     //abs[0],abs[1],abs[2],abs[3],abs[4],abs[5],abs[6],abs[7],abs[8],abs[9],abs[10],abs[11],abs[12],abs[13],abs[14],abs[15],abs[16],abs[17]
-    assign signparity=^signbit[17:0];
+    assign signparity=^signbit_5[17:0];
     genvar i;
     generate
     for(i=0;i<18;i=i+1)
     begin
-    assign updatedsign[i]=signbit[i]^signparity;
+    assign updatedsign[i]=signbit_5[i]^signparity;
     end
     endgenerate
     
     always@(posedge clk)
     begin
-    if(rst)
-    updated_sign_reg<=0;
-    else
-    updated_sign_reg<=updatedsign;
+    if(rst)begin
+        updated_sign_reg<=0;
+        
+        signbit_1 <= 0;
+        signbit_2 <= 0;
+        signbit_3 <= 0;
+        signbit_4 <= 0;
+        signbit_5 <= 0;
     end
-    
+    else begin
+        updated_sign_reg<=updatedsign;
+        
+        signbit_1 <= signbit;
+        signbit_2 <= signbit_1;
+        signbit_3 <= signbit_2;
+        signbit_4 <= signbit_3;
+        signbit_5 <= signbit_4;
+    end
+    end
     assign ecomp={min1,min2,pos,updated_sign_reg};
 endmodule

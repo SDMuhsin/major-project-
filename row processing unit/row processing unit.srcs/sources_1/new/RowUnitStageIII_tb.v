@@ -64,14 +64,24 @@ module RowUnit_tb(
         //assign ABS_DISPLAY[i][W-2:0] = ABS[(i+1)*(W-1)-1:i*(W-1)];
     end
     endgenerate
-
+    
     RowUnit ru(LLR_OUT,E_MEM_OUT,E_MEM_IN,LLR_IN,clk,rst);
+    
+    integer k;
     initial begin
         LLR_IN = 0;
         E_MEM_IN = 0;
         
         clk = 0;
         rst = 0;
+        
+        
+        for(k=0;k<Wc;k=k+1)begin:lab
+            LLR_IN[Wc*W-1-W*(k+1)+1] = 1'b1;
+        end
     end
     always #5 clk = ~clk;
+    
+    wire [Wc*W-1:0]SUB_OUT = RowUnit.SUB_OUT;
+    wire [Wc*W-1:0]SUB_OUT_5 = RowUnit.SUB_OUT_5;
 endmodule

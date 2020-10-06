@@ -51,16 +51,29 @@ module RowUnit(
  
  //To subtractor
  wire [Wc*W-1:0]SUB_OUT;
+ reg [Wc*W-1:0]SUB_OUT_1,SUB_OUT_2,SUB_OUT_3,SUB_OUT_4,SUB_OUT_5;
  subtractor_18 s1( SUB_OUT ,LLR_IN,REC_1_OUT);
 
+ always@(posedge clk)begin
+    if(rst)begin
+        SUB_OUT_1 <= 0;
+        SUB_OUT_2 <= 0;
+        SUB_OUT_3 <= 0;
+        SUB_OUT_4 <= 0;
+        SUB_OUT_5 <= 0;
+    end
+    else begin
+        SUB_OUT_1 <= SUB_OUT;
+        SUB_OUT_2 <= SUB_OUT_1;
+        SUB_OUT_3 <= SUB_OUT_2;
+        SUB_OUT_4 <= SUB_OUT_3;
+        SUB_OUT_5 <= SUB_OUT_4;  
+    end
+ end
  //To Absoluter...
  //output [Wc-1:0]ABS_SIGN_OUT;
 // output [Wc*(W-1)-1:0]ABS_MAG_OUT;
- 
- //    ABSOLUTER ALONE
- //wire [Wc-1:0]ABS_SIGN_OUT;
- //wire [Wc*(W-1)-1:0]ABS_MAG_OUT;
- //Absoluter_18 abs1(ABS_SIGN_OUT,ABS_MAG_OUT,SUB_OUT);
+
  
  //STAGE IV ...
  // ABSOLUTER + MINFINDER + ECOMP GEN
@@ -70,11 +83,11 @@ module RowUnit(
  
  //STAGE V
  //recover
-  wire [W*Wc-1:0]REC_2_OUT;
-  recovunit_ne rec2(REC_2_OUT,E_COMP);
+ wire [W*Wc-1:0]REC_2_OUT;
+ recovunit_ne rec2(REC_2_OUT,E_COMP);
   
-  //adder
-  AdderWc add1(LLR_OUT,SUB_OUT,REC_2_OUT);
-  assign E_MEM_OUT = E_COMP;
+ //adder
+ AdderWc add1(LLR_OUT,SUB_OUT_5,REC_2_OUT);
+ assign E_MEM_OUT = E_COMP;
   
 endmodule

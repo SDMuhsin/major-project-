@@ -1,15 +1,22 @@
 Exception at PC 0x00007FFBB7383B29
 Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
-Unable to capture context for thread 10652 in process 11964, can not generate back trace
-Unable to capture context for thread 9792 in process 11964, can not generate back trace
-Exception at PC 0x00007FFBB7383B29
-Unable to capture context for thread 10652 in process 11964, can not generate back trace
-Unable to capture context for thread 444 in process 11964, can not generate back trace
+Unable to capture context for thread 4996 in process 8560, can not generate back trace
+Unable to capture context for thread 5972 in process 8560, can not generate back trace
+Unable to capture context for thread 10216 in process 8560, can not generate back trace
 Exception at PC 0x00007FFB4911BB93
 Printing stacktrace...
 
-Unable to capture context for thread 444 in process 11964, can not generate back trace
+Unable to capture context for thread 4996 in process 8560, can not generate back trace
+Unable to capture context for thread 5972 in process 8560, can not generate back trace
+Unable to capture context for thread 10216 in process 8560, can not generate back trace
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
+Exception at PC 0x00007FFBB7383B29
 Exception at PC 0x00007FFBB7383B29
 Exception at PC 0x00007FFBB7383B29
 Exception at PC 0x00007FFBB7383B29
@@ -35,9 +42,3 @@ Exception at PC 0x00007FFBB7383B29
 [12] (BaseThreadInitThunk+0x14) [0x00007FFBB8807BD4]
 [13] (RtlUserThreadStart+0x21) [0x00007FFBB95ACE51]
 Done
-Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
-Exception at PC 0x00007FFBB7383B29
