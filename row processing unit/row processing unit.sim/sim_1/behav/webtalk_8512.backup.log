@@ -2,10 +2,10 @@
 # Webtalk v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Oct 06 15:04:52 2020
-# Process ID: 8628
+# Start of session at: Tue Oct 06 15:04:50 2020
+# Process ID: 8512
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.sim/sim_1/behav/xsim.dir/emsggen_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.sim/sim_1/behav/xsim.dir/RowUnit_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.sim/sim_1/behav/webtalk.log
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
@@ -15,4 +15,4 @@ ambiguous command name "******": after append apply array auto_execok auto_impor
     while executing
 "****** Webtalk v2016.2 (64-bit)"
     (file "C:/Users/sayed/Desktop/Programing/major" line 2)
-INFO: [Common 17-206] Exiting Webtalk at Tue Oct 06 15:04:53 2020...
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 06 15:04:50 2020...

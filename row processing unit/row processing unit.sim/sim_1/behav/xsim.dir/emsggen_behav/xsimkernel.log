@@ -2,3 +2,6 @@ Running: xsim.dir/emsggen_behav/xsimk.exe -simmode gui -wdb emsggen_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 9024 KB (Peak: 9024 KB)
 Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 9804 KB (Peak: 9804 KB)
+Simulation CPU Usage: 343 ms

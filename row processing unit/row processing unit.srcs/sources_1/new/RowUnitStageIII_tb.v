@@ -82,6 +82,11 @@ module RowUnit_tb(
     end
     always #5 clk = ~clk;
     
+    always @(negedge clk)begin
+        #1;
+        LLR_IN = LLR_IN + $random;   
+    end 
+    
     wire [Wc*W-1:0]SUB_OUT = RowUnit.SUB_OUT;
     wire [Wc*W-1:0]SUB_OUT_5 = RowUnit.SUB_OUT_5;
 endmodule

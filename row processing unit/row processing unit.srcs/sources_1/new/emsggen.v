@@ -58,7 +58,7 @@ input clk,rst;
     always@(posedge clk)
     begin
     if(rst)begin
-        updated_sign_reg<=0;
+        //updated_sign_reg<=0;
         
         signbit_1 <= 0;
         signbit_2 <= 0;
@@ -67,7 +67,7 @@ input clk,rst;
         signbit_5 <= 0;
     end
     else begin
-        updated_sign_reg<=updatedsign;
+        //updated_sign_reg<=updatedsign;
         
         signbit_1 <= signbit;
         signbit_2 <= signbit_1;
@@ -76,5 +76,5 @@ input clk,rst;
         signbit_5 <= signbit_4;
     end
     end
-    assign ecomp={min1,min2,pos,updated_sign_reg};
+    assign ecomp={min1,min2,pos,updatedsign};
 endmodule
