@@ -109,6 +109,6 @@ module m18VG_pipelined(
     assign q4q3q2q1q0_wire[4] = m1A > min1_3 ?  1 : 0;
     assign min2_wire = m1A > min1_3 ? m1A < min2_3 ? m1A : min2_3 : m1B < min1_3 ? m1B : min1_3;
    // assign min2 = q4q3q2q1q0[4] ? m1A < m2B ? m1A : m2B : m1B < m2A ? m1B : m2A;
-    assign q4q3q2q1q0_wire[3:0] = m1A > min1_3 ? {1'b0,1'b0,1'b0,cp_4} : m1_q3q2q1q0;   
+    assign q4q3q2q1q0_wire[3:0] = m1A > min1_3 ? {1'b0,1'b0,1'b0,cp_3} : m1_q3q2q1q0;   
     //assign q4q3q2q1q0[3:0] = q4q3q2q1q0[4] ? {1'b0,1'b0,1'b0,m2_q0} : m1_q3q2q1q0;  
 endmodule

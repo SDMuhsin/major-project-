@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k160tffv676-1" LaunchTime="1601659785">
-  <File Type="PA-TCL" Name="rowunit_cover.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="rowunit_cover_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="rowunit_cover.tcl"/>
   <File Type="RDS-RDS" Name="rowunit_cover.vds"/>
   <File Type="RDS-UTIL" Name="rowunit_cover_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rowunit_cover_utilization_synth.pb"/>

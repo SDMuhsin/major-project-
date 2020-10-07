@@ -76,17 +76,39 @@ module RowUnit_tb(
         rst = 0;
         
         
-        for(k=0;k<Wc;k=k+1)begin:lab
-            LLR_IN[Wc*W-1-W*(k+1)+1] = 1'b1;
-        end
+        LLR_IN[5:0] = 31;
+        LLR_IN[11:6] = 30;
+        LLR_IN[17:12] = 29;
+        LLR_IN[25:18] = 28;
+        LLR_IN[31:24] = 27;
+        LLR_IN[37:30] = 26;
+        LLR_IN[43:36] = 25;
+        LLR_IN[49:42] = 24;
+        LLR_IN[55:48] = 23;
+        LLR_IN[61:54] = 22;
+        LLR_IN[67:60] = 21;
+        LLR_IN[73:66] = 20;
+        LLR_IN[79:72] = 19;
+        LLR_IN[83:78] = 18;
+        LLR_IN[89:84] = 17;
+        LLR_IN[95:90] = 16;
+        LLR_IN[101:96] = 15;
+        LLR_IN[107:102] = 14;
+
     end
     always #5 clk = ~clk;
     
     always @(negedge clk)begin
         #1;
-        LLR_IN = LLR_IN + $random;   
+        LLR_IN = LLR_IN + 3'b101;   
+        //#0.1;
+        //LLR_IN[Wc*W-1:Wc*W-1-5*W] = LLR_IN[Wc*W-1:Wc*W-1- 5*W] + $random; 
+        //#0.1;
+        //LLR_IN[6*W:4*W] = LLR_IN[ 6*W: 4*W] + 64'b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111;
+        //#0.1;
+        //LLR_IN = LLR_IN + 64'b11111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111;
     end 
     
-    wire [Wc*W-1:0]SUB_OUT = RowUnit.SUB_OUT;
+    //wire [Wc*W-1:0]SUB_OUT = RowUnit.SUB_OUT;
     wire [Wc*W-1:0]SUB_OUT_5 = RowUnit.SUB_OUT_5;
 endmodule
