@@ -14,19 +14,19 @@ set_property parent.project_path {C:/Users/sayed/Desktop/Programing/major projec
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
-  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m2VG.v}
+  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m2VG_pipelined_2.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m4VG.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m8VG.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m16VG.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/Absoluter_adder.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/subtract_2.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/m18VG.v}
-  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/adderW2.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/Absoluter_18.v}
+  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/adderW2.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/subtractor_18.v}
+  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/recovunit_dp.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/emsggen.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/AdderWc.v}
-  {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/recovunit_dp.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/RowUnit.v}
   {C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.srcs/sources_1/new/rowunit_cover.v}
 }

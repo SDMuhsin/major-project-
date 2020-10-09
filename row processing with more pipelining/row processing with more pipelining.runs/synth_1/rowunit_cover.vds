@@ -1,0 +1,722 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Oct 09 23:10:46 2020
+# Process ID: 8976
+# Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.runs/synth_1
+# Command line: vivado.exe -log rowunit_cover.vds -mode batch -messageDb vivado.pb -notrace -source rowunit_cover.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.runs/synth_1/rowunit_cover.vds
+# Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source rowunit_cover.tcl -notrace
+Command: synth_design -top rowunit_cover -part xc7k160tffv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3896 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 272.754 ; gain = 65.395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rowunit_cover' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/rowunit_cover.v:23]
+	Parameter Wc bound to: 18 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter ECOMPSIZE bound to: 33 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RowUnit' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/RowUnit.v:23]
+	Parameter Wc bound to: 18 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter ECOMPSIZE bound to: 33 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'recovunit_ne' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/recovunit_dp.v:24]
+	Parameter Wc bound to: 18 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wabs bound to: 5 - type: integer 
+	Parameter ECOMPSIZE bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'recovunit_ne' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/recovunit_dp.v:24]
+INFO: [Synth 8-638] synthesizing module 'subtractor_18' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/subtractor_18.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'subtract_2' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/subtract_2.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'subtract_2' (2#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/subtract_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'subtractor_18' (3#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/subtractor_18.v:23]
+INFO: [Synth 8-638] synthesizing module 'emsggen' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/emsggen.v:22]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Absoluter_18' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/Absoluter_18.v:23]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Absoluter_adder' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/Absoluter_adder.v:23]
+	Parameter w bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Absoluter_adder' (4#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/Absoluter_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Absoluter_18' (5#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/Absoluter_18.v:23]
+INFO: [Synth 8-638] synthesizing module 'm18VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m18VG.v:22]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm16VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m16VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm8VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m8VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm4VG_pipelined' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m4VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm2VG_pipelined_2' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m2VG_pipelined_2.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'm2VG_pipelined_2' (6#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m2VG_pipelined_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm4VG_pipelined' (7#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m4VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm8VG_pipelined' (8#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m8VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm16VG_pipelined' (9#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m16VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm18VG_pipelined' (10#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/m18VG.v:22]
+INFO: [Synth 8-256] done synthesizing module 'emsggen' (11#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/emsggen.v:22]
+INFO: [Synth 8-638] synthesizing module 'AdderWc' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/AdderWc.v:23]
+	Parameter Wc bound to: 18 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'adderW2' [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/adderW2.v:22]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adderW2' (12#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/adderW2.v:22]
+INFO: [Synth 8-256] done synthesizing module 'AdderWc' (13#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/AdderWc.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RowUnit' (14#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/RowUnit.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rowunit_cover' (15#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing with more pipelining/row processing with more pipelining.srcs/sources_1/new/rowunit_cover.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 310.258 ; gain = 102.898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 310.258 ; gain = 102.898
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tffv676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc]
+Finished Parsing XDC File [C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 629.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 18    
+	   2 Input      7 Bit       Adders := 18    
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 18    
++---XORs : 
+	   2 Input      1 Bit         XORs := 18    
++---XORs : 
+	               18 Bit    Wide XORs := 1     
++---Registers : 
+	              108 Bit    Registers := 7     
+	               90 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               18 Bit    Registers := 5     
+	                5 Bit    Registers := 44    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 36    
+	   3 Input      6 Bit        Muxes := 36    
+	   2 Input      5 Bit        Muxes := 68    
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rowunit_cover 
+Detailed RTL Component Info : 
++---Registers : 
+	              108 Bit    Registers := 2     
+	               33 Bit    Registers := 2     
+Module recovunit_ne 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 18    
+Module subtract_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
++---Muxes : 
+	   3 Input      6 Bit        Muxes := 1     
+Module Absoluter_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module m2VG_pipelined_2 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m4VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m8VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+Module m16VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module m18VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 12    
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module emsggen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 18    
++---XORs : 
+	               18 Bit    Wide XORs := 1     
++---Registers : 
+	               90 Bit    Registers := 1     
+	               18 Bit    Registers := 5     
+Module adderW2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Muxes : 
+	   3 Input      6 Bit        Muxes := 1     
+Module RowUnit 
+Detailed RTL Component Info : 
++---Registers : 
+	              108 Bit    Registers := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 629.164 ; gain = 421.805
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[80]' (FDR) to 'm1/SUB_OUT_1_reg[96]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[85]' (FDR) to 'm1/SUB_OUT_1_reg[102]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[70]' (FDR) to 'm1/SUB_OUT_1_reg[84]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[75]' (FDR) to 'm1/SUB_OUT_1_reg[90]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[60]' (FDR) to 'm1/SUB_OUT_1_reg[72]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[65]' (FDR) to 'm1/SUB_OUT_1_reg[78]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[50]' (FDR) to 'm1/SUB_OUT_1_reg[60]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[55]' (FDR) to 'm1/SUB_OUT_1_reg[66]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[40]' (FDR) to 'm1/SUB_OUT_1_reg[48]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[45]' (FDR) to 'm1/SUB_OUT_1_reg[54]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[30]' (FDR) to 'm1/SUB_OUT_1_reg[36]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[35]' (FDR) to 'm1/SUB_OUT_1_reg[42]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[20]' (FDR) to 'm1/SUB_OUT_1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[25]' (FDR) to 'm1/SUB_OUT_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[10]' (FDR) to 'm1/SUB_OUT_1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[15]' (FDR) to 'm1/SUB_OUT_1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[0]' (FDR) to 'm1/SUB_OUT_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/absmin/abs_1_reg[5]' (FDR) to 'm1/SUB_OUT_1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[5]' (FDR) to 'm1/absmin/signbit_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[11]' (FDR) to 'm1/absmin/signbit_1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[17]' (FDR) to 'm1/absmin/signbit_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[23]' (FDR) to 'm1/absmin/signbit_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[29]' (FDR) to 'm1/absmin/signbit_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[35]' (FDR) to 'm1/absmin/signbit_1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[41]' (FDR) to 'm1/absmin/signbit_1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[47]' (FDR) to 'm1/absmin/signbit_1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[53]' (FDR) to 'm1/absmin/signbit_1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[59]' (FDR) to 'm1/absmin/signbit_1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[65]' (FDR) to 'm1/absmin/signbit_1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[71]' (FDR) to 'm1/absmin/signbit_1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[77]' (FDR) to 'm1/absmin/signbit_1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[83]' (FDR) to 'm1/absmin/signbit_1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[89]' (FDR) to 'm1/absmin/signbit_1_reg[14]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[95]' (FDR) to 'm1/absmin/signbit_1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[101]' (FDR) to 'm1/absmin/signbit_1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_1_reg[107]' (FDR) to 'm1/absmin/signbit_1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[5]' (FDR) to 'm1/absmin/signbit_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[11]' (FDR) to 'm1/absmin/signbit_2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[17]' (FDR) to 'm1/absmin/signbit_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[23]' (FDR) to 'm1/absmin/signbit_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[29]' (FDR) to 'm1/absmin/signbit_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[35]' (FDR) to 'm1/absmin/signbit_2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[41]' (FDR) to 'm1/absmin/signbit_2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[47]' (FDR) to 'm1/absmin/signbit_2_reg[7]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[53]' (FDR) to 'm1/absmin/signbit_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[59]' (FDR) to 'm1/absmin/signbit_2_reg[9]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[65]' (FDR) to 'm1/absmin/signbit_2_reg[10]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[71]' (FDR) to 'm1/absmin/signbit_2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[77]' (FDR) to 'm1/absmin/signbit_2_reg[12]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[83]' (FDR) to 'm1/absmin/signbit_2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[89]' (FDR) to 'm1/absmin/signbit_2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[95]' (FDR) to 'm1/absmin/signbit_2_reg[15]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[101]' (FDR) to 'm1/absmin/signbit_2_reg[16]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_2_reg[107]' (FDR) to 'm1/absmin/signbit_2_reg[17]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[5]' (FDR) to 'm1/absmin/signbit_3_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[11]' (FDR) to 'm1/absmin/signbit_3_reg[1]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[17]' (FDR) to 'm1/absmin/signbit_3_reg[2]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[23]' (FDR) to 'm1/absmin/signbit_3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[29]' (FDR) to 'm1/absmin/signbit_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[35]' (FDR) to 'm1/absmin/signbit_3_reg[5]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[41]' (FDR) to 'm1/absmin/signbit_3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[47]' (FDR) to 'm1/absmin/signbit_3_reg[7]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[53]' (FDR) to 'm1/absmin/signbit_3_reg[8]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[59]' (FDR) to 'm1/absmin/signbit_3_reg[9]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[65]' (FDR) to 'm1/absmin/signbit_3_reg[10]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[71]' (FDR) to 'm1/absmin/signbit_3_reg[11]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[77]' (FDR) to 'm1/absmin/signbit_3_reg[12]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[83]' (FDR) to 'm1/absmin/signbit_3_reg[13]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[89]' (FDR) to 'm1/absmin/signbit_3_reg[14]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[95]' (FDR) to 'm1/absmin/signbit_3_reg[15]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[101]' (FDR) to 'm1/absmin/signbit_3_reg[16]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_3_reg[107]' (FDR) to 'm1/absmin/signbit_3_reg[17]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[5]' (FDR) to 'm1/absmin/signbit_4_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[11]' (FDR) to 'm1/absmin/signbit_4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[17]' (FDR) to 'm1/absmin/signbit_4_reg[2]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[23]' (FDR) to 'm1/absmin/signbit_4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[29]' (FDR) to 'm1/absmin/signbit_4_reg[4]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[35]' (FDR) to 'm1/absmin/signbit_4_reg[5]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[41]' (FDR) to 'm1/absmin/signbit_4_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[47]' (FDR) to 'm1/absmin/signbit_4_reg[7]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[53]' (FDR) to 'm1/absmin/signbit_4_reg[8]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[59]' (FDR) to 'm1/absmin/signbit_4_reg[9]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[65]' (FDR) to 'm1/absmin/signbit_4_reg[10]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[71]' (FDR) to 'm1/absmin/signbit_4_reg[11]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[77]' (FDR) to 'm1/absmin/signbit_4_reg[12]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[83]' (FDR) to 'm1/absmin/signbit_4_reg[13]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[89]' (FDR) to 'm1/absmin/signbit_4_reg[14]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[95]' (FDR) to 'm1/absmin/signbit_4_reg[15]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[101]' (FDR) to 'm1/absmin/signbit_4_reg[16]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_4_reg[107]' (FDR) to 'm1/absmin/signbit_4_reg[17]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[5]' (FDR) to 'm1/absmin/signbit_5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[11]' (FDR) to 'm1/absmin/signbit_5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[17]' (FDR) to 'm1/absmin/signbit_5_reg[2]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[23]' (FDR) to 'm1/absmin/signbit_5_reg[3]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[29]' (FDR) to 'm1/absmin/signbit_5_reg[4]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[35]' (FDR) to 'm1/absmin/signbit_5_reg[5]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[41]' (FDR) to 'm1/absmin/signbit_5_reg[6]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[47]' (FDR) to 'm1/absmin/signbit_5_reg[7]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[53]' (FDR) to 'm1/absmin/signbit_5_reg[8]'
+INFO: [Synth 8-3886] merging instance 'm1/SUB_OUT_5_reg[59]' (FDR) to 'm1/absmin/signbit_5_reg[9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[80]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[85]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[70]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[75]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[60]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[65]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[50]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[55]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[40]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[45]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[30]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[20]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[25]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[10]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[15]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[0]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/absmin/abs_1_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[11]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[17]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[23]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[29]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[41]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[47]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[53]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[59]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[65]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[71]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[77]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[83]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[89]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[95]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[101]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_1_reg[107]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[11]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[17]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[23]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[29]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[41]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[47]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[53]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[59]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[65]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[71]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[77]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[83]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[89]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[95]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[101]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_2_reg[107]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[11]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[17]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[23]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[29]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[41]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[47]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[53]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[59]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[65]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[71]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[77]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[83]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[89]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[95]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[101]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_3_reg[107]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[11]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[17]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[23]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[29]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[41]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[47]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[53]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[59]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[65]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[71]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[77]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[83]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[89]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[95]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[101]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_4_reg[107]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[5]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[11]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[17]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[23]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[29]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[35]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[41]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[47]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[53]) is unused and will be removed from module rowunit_cover.
+WARNING: [Synth 8-3332] Sequential element (m1/SUB_OUT_5_reg[59]) is unused and will be removed from module rowunit_cover.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 629.164 ; gain = 421.805
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 629.164 ; gain = 421.805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 654.090 ; gain = 446.730
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 657.461 ; gain = 450.102
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|rowunit_cover | m1/absmin/m2/min1_3_reg[4] | 4      | 5     | YES          | NO                 | YES               | 5      | 0       | 
+|rowunit_cover | m1/absmin/m2/min2_3_reg[4] | 4      | 5     | YES          | NO                 | YES               | 5      | 0       | 
+|rowunit_cover | m1/SUB_OUT_5_reg[106]      | 5      | 72    | YES          | NO                 | YES               | 72     | 0       | 
+|rowunit_cover | m1/SUB_OUT_5_reg[102]      | 4      | 18    | YES          | NO                 | YES               | 18     | 0       | 
+|rowunit_cover | m1/absmin/signbit_5_reg[0] | 5      | 18    | YES          | NO                 | YES               | 18     | 0       | 
++--------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    72|
+|3     |LUT1   |    79|
+|4     |LUT2   |   236|
+|5     |LUT3   |   361|
+|6     |LUT4   |    93|
+|7     |LUT5   |   214|
+|8     |LUT6   |   246|
+|9     |SRL16E |   118|
+|10    |FDRE   |   807|
+|11    |IBUF   |   143|
+|12    |OBUF   |   141|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+--------------------+------+
+|      |Instance              |Module              |Cells |
++------+----------------------+--------------------+------+
+|1     |top                   |                    |  2511|
+|2     |  m1                  |RowUnit             |  1944|
+|3     |    absmin            |emsggen             |   960|
+|4     |      m2              |m18VG_pipelined     |   773|
+|5     |        m1            |m16VG_pipelined     |   504|
+|6     |          m1          |m8VG_pipelined      |   216|
+|7     |            m1        |m4VG_pipelined_40   |    91|
+|8     |              m1      |m2VG_pipelined_2_44 |    28|
+|9     |              m2      |m2VG_pipelined_2_45 |    47|
+|10    |            m2        |m4VG_pipelined_41   |   109|
+|11    |              m1      |m2VG_pipelined_2_42 |    28|
+|12    |              m2      |m2VG_pipelined_2_43 |    47|
+|13    |          m2          |m8VG_pipelined_34   |   237|
+|14    |            m1        |m4VG_pipelined      |    91|
+|15    |              m1      |m2VG_pipelined_2_38 |    28|
+|16    |              m2      |m2VG_pipelined_2_39 |    47|
+|17    |            m2        |m4VG_pipelined_35   |   109|
+|18    |              m1      |m2VG_pipelined_2_36 |    28|
+|19    |              m2      |m2VG_pipelined_2_37 |    47|
+|20    |        m2            |m2VG_pipelined_2    |     5|
+|21    |    add1              |AdderWc             |   144|
+|22    |      \label[0].a     |adderW2             |     8|
+|23    |      \label[10].a    |adderW2_17          |     8|
+|24    |      \label[11].a    |adderW2_18          |     8|
+|25    |      \label[12].a    |adderW2_19          |     8|
+|26    |      \label[13].a    |adderW2_20          |     8|
+|27    |      \label[14].a    |adderW2_21          |     8|
+|28    |      \label[15].a    |adderW2_22          |     8|
+|29    |      \label[16].a    |adderW2_23          |     8|
+|30    |      \label[17].a    |adderW2_24          |     8|
+|31    |      \label[1].a     |adderW2_25          |     8|
+|32    |      \label[2].a     |adderW2_26          |     8|
+|33    |      \label[3].a     |adderW2_27          |     8|
+|34    |      \label[4].a     |adderW2_28          |     8|
+|35    |      \label[5].a     |adderW2_29          |     8|
+|36    |      \label[6].a     |adderW2_30          |     8|
+|37    |      \label[7].a     |adderW2_31          |     8|
+|38    |      \label[8].a     |adderW2_32          |     8|
+|39    |      \label[9].a     |adderW2_33          |     8|
+|40    |    s1                |subtractor_18       |   458|
+|41    |      \loop[101].sb1  |subtract_2          |    25|
+|42    |      \loop[107].sb1  |subtract_2_0        |    25|
+|43    |      \loop[11].sb1   |subtract_2_1        |    25|
+|44    |      \loop[17].sb1   |subtract_2_2        |    29|
+|45    |      \loop[23].sb1   |subtract_2_3        |    25|
+|46    |      \loop[29].sb1   |subtract_2_4        |    25|
+|47    |      \loop[35].sb1   |subtract_2_5        |    25|
+|48    |      \loop[41].sb1   |subtract_2_6        |    25|
+|49    |      \loop[47].sb1   |subtract_2_7        |    25|
+|50    |      \loop[53].sb1   |subtract_2_8        |    25|
+|51    |      \loop[59].sb1   |subtract_2_9        |    25|
+|52    |      \loop[5].sb1    |subtract_2_10       |    25|
+|53    |      \loop[65].sb1   |subtract_2_11       |    25|
+|54    |      \loop[71].sb1   |subtract_2_12       |    25|
+|55    |      \loop[77].sb1   |subtract_2_13       |    25|
+|56    |      \loop[83].sb1   |subtract_2_14       |    25|
+|57    |      \loop[89].sb1   |subtract_2_15       |    25|
+|58    |      \loop[95].sb1   |subtract_2_16       |    29|
++------+----------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 108 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 657.461 ; gain = 131.195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 657.461 ; gain = 450.102
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 215 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 657.461 ; gain = 450.102
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 657.461 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 09 23:11:30 2020...
