@@ -1,7 +1,7 @@
 Row processing unit as of oct 15 
 9 pipeline stages
 doesnot contains modules of adder and subtractor without clk and rst as the naming clashes occur
-file named MVG has also been removed
+file named MVG4 has also been removed
 all the removed files are availabe on the "row processing with more pipeling" folder
 
 Critical path delay(total delay)
