@@ -51,7 +51,7 @@ module RowUnit(
  
  //To subtractor
  wire [Wc*W-1:0]SUB_OUT;
- reg [Wc*W-1:0]SUB_OUT_1,SUB_OUT_2,SUB_OUT_3,SUB_OUT_4,SUB_OUT_5;
+ reg [Wc*W-1:0]SUB_OUT_1,SUB_OUT_2,SUB_OUT_3,SUB_OUT_4,SUB_OUT_5,SUB_OUT_6;
  subtractor_18 s1( SUB_OUT ,LLR_IN,REC_1_OUT,clk,rst);
 
  always@(posedge clk)begin
@@ -61,6 +61,7 @@ module RowUnit(
         SUB_OUT_3 <= 0;
         SUB_OUT_4 <= 0;
         SUB_OUT_5 <= 0;
+	SUB_OUT_6 <= 0;
     end
     else begin
         SUB_OUT_1 <= SUB_OUT;
@@ -68,6 +69,7 @@ module RowUnit(
         SUB_OUT_3 <= SUB_OUT_2;
         SUB_OUT_4 <= SUB_OUT_3;
         SUB_OUT_5 <= SUB_OUT_4;  
+	SUB_OUT_6 <= SUB_OUT_6; 
     end
  end
  //To Absoluter...
@@ -87,7 +89,7 @@ module RowUnit(
  recovunit_ne rec2(REC_2_OUT,E_COMP);
   
  //adder
- AdderWc add1(LLR_OUT,SUB_OUT_5,REC_2_OUT,clk,rst);
+ AdderWc add1(LLR_OUT,SUB_OUT_6,REC_2_OUT,clk,rst);
  assign E_MEM_OUT = E_COMP;
   
 endmodule
