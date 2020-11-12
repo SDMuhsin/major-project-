@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Oct 09 22:49:02 2020">
+<application name="pa" timeStamp="Fri Oct 09 23:30:29 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="9aa4802a1c5e423ea02fc0946f5de970" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -20,9 +20,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSources" value="3" type="JavaHandler"/>
 <property name="EditUndo" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenProject" value="5" type="JavaHandler"/>
+<property name="OpenProject" value="6" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="2" type="JavaHandler"/>
-<property name="ReportTimingSummary" value="1" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="2" type="JavaHandler"/>
 <property name="RunSchematic" value="1" type="JavaHandler"/>
 <property name="RunSynthesis" value="2" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
@@ -36,40 +36,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ZoomIn" value="4" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="BACK,  Back" value="1" type="GuiResourceData"/>
-<property name="NEXT, Next " value="8" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_NEW_PROJECT, New Project..." value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SCHEMATIC, Schematic" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, rowunit_cover (rowunit_cover.v" value="7" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Implementation, Open Implemented Design], 22" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design, Report Timing Summary], 22, false" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design], 18" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="2" type="GuiResourceData"/>
 <property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="2" type="GuiResourceData"/>
 <property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths, clk, Setup 34.821 ns], 7, false" value="1" type="GuiResourceData"/>
 <property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths, clk], 6" value="1" type="GuiResourceData"/>
 <property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths], 5" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_PATH_TABLE, Path Table" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_SCHEMATIC, Schematic" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PartChooser_PARTS, xc7k160tffv676-1 ; 676 ; 325 ; 600 ; 202800 ; 0 ; 8 ; 400 ; 101400 ; 8 ; 1 ; 85 ; 0 ; 85 ; C ; 1.03 ; 0.97 ; 0.97 ; 8 ; 0, 0, 676, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PathMenu_SET_FALSE_PATH, Set False Path" value="4" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PathMenu_SET_MULTICYCLE_PATH, Set Multicycle Path" value="2" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, row processing with more pipelining" value="1" type="GuiResourceData"/>
 <property name="PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight" value="4" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SelectMenu_MARK, Mark" value="3" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TimingDialogUtils_RESULTS_NAME, weq" value="1" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, Floorplanning" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 34.82065 ; 9 ; 40 ; E_MEM_IN_reg[23]/C ; m1/absmin/m2/min2_1_reg[2]_srl2___m1_SUB_OUT_2_reg_r/D ; 4.9729996 ; 1.2420001 ; 3.7310004 ; 40.0 ; clk ; clk ; , 0, 34.82065, 1" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 34.82065 ; 9 ; 40 ; E_MEM_IN_reg[23]/C ; m1/absmin/m2/min2_1_reg[2]_srl2___m1_SUB_OUT_2_reg_r/D ; 4.9729996 ; 1.2420001 ; 3.7310004 ; 40.0 ; clk ; clk ; , 0, 34.82065, 1, false, false, false, true, false" value="3" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TimingItemFlatTablePanel_VIEW_PATH_REPORT, View Path Report" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SelectMenu_MARK, Mark" value="4" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_FLOORPLANNING, Floorplanning" value="3" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 34.82065 ; 9 ; 40 ; E_MEM_IN_reg[23]/C ; m1/absmin/m2/min2_1_reg[2]_srl2___m1_SUB_OUT_2_reg_r/D ; 4.9729996 ; 1.2420001 ; 3.7310004 ; 40.0 ; clk ; clk ; , 0, 34.82065, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 34.82065 ; 9 ; 40 ; E_MEM_IN_reg[23]/C ; m1/absmin/m2/min2_1_reg[2]_srl2___m1_SUB_OUT_2_reg_r/D ; 4.9729996 ; 1.2420001 ; 3.7310004 ; 40.0 ; clk ; clk ; , 0, 34.82065, 1, false, false, false, true, false" value="1" type="GuiResourceData"/>
 <property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, Elide Setting" value="2" type="GuiResourceData"/>
-<property name="rowunit_cover.v, 56, 205" value="1" type="GuiResourceData"/>
-<property name="rowunit_cover.v, 58, 200" value="1" type="GuiResourceData"/>
-<property name="rowunit_cover.v, 66, 198" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, Elide Setting" value="3" type="GuiResourceData"/>
 </item>
 <item name="Other">
 <property name="GuiMode" value="98" type="GuiMode"/>

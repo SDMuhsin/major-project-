@@ -38,7 +38,7 @@ read_xdc {{C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc}}
 set_property used_in_implementation false [get_files {{C:/Users/sayed/Desktop/Documents and downloads/design_constr.xdc}}]
 
 
-synth_design -top rowunit_cover -part xc7k160tffv676-1
+synth_design -top rowunit_cover -part xc7k160tffv676-1 -flatten_hierarchy none
 
 
 write_checkpoint -force -noxdef rowunit_cover.dcp

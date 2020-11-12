@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder_extendable/minfinder_extendable.hw/webtalk/
+webtalk_init -webtalk_dir C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.hw/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Oct 06 11:47:14 2020" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Oct 09 22:49:02 2020" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "Vivado v2016.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "1577090" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,13 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "a4f95021-942f-4e4b-8901-9eeb18df993f" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "291e34fe-5179-492a-bec5-b6e881f55398" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
-webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
-webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
-webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz" -context "user_environment"
-webtalk_add_data -client project -key cpu_speed -value "2594 MHz" -context "user_environment"
-webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
-webtalk_add_data -client project -key system_ram -value "4.000 GB" -context "user_environment"
+webtalk_add_data -client project -key project_iteration -value "6" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz" -context "user_environment"
@@ -44,6 +38,5 @@ webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool
 webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
 webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
 webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
-webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
-webtalk_transmit -clientid 1412584344 -regid "" -xml C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder_extendable/minfinder_extendable.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder_extendable/minfinder_extendable.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/sayed/Desktop/Programing/major project/major-project-/minfinder_extendable/minfinder_extendable.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_transmit -clientid 2202528601 -regid "" -xml C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/sayed/Desktop/Programing/major project/major-project-/row processing unit/row processing unit.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate
