@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Nov 11 23:03:54 2020">
+<application name="pa" timeStamp="Sat Nov 14 19:47:15 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="681df2789abe443a8db54a0483452b57" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,69 +17,28 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="1" type="JavaHandler"/>
+<property name="AddSources" value="2" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
+<property name="ReportUtilization" value="2" type="JavaHandler"/>
+<property name="RunSynthesis" value="5" type="JavaHandler"/>
+<property name="SetTopNode" value="2" type="JavaHandler"/>
+<property name="SimulationClose" value="3" type="JavaHandler"/>
+<property name="SimulationRun" value="6" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="16" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="FIFO_r_c_w.v, 100, 235" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 103, 104" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 103, 214" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 108, 248" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 112, 215, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 117, 225" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 122, 139" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 124, 205" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 132, 240" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 162, 213" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 165, 199" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 165, 200" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 187, 155" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 190, 165" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 191, 160" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 194, 87" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 212, 204" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 214, 93" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 233, 193" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 242, 212" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 244, 120" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 253, 211" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 257, 193" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 26, 29" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 27, 228" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 31, 144" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 40, 140" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 52, 89" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 53, 198" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 55, 85" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 6, 165" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 60, 98" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 61, 171" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 66, 226" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 67, 161" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 7, 141" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 74, 211" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 76, 214" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 77, 232" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 85, 192" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 87, 141" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 91, 233" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 92, 124" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 96, 246" value="1" type="GuiResourceData"/>
-<property name="FIFO_r_c_w.v, 98, 98" value="1" type="GuiResourceData"/>
-<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="8" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, FIFO_r_c_w" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, FIFO_r_c_w (FIFO_r_c_w.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, Create New Project" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, dmem_readalign_manual" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Run Synthesis], 17, false" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 1, 199" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 153, 157" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 192, 141" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 216, 120" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 315, 99" value="1" type="GuiResourceData"/>
+<property name="ScriptedDMem.v, 97, 143" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="99" type="GuiMode"/>
+<property name="GuiMode" value="103" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="82" type="TclMode"/>
+<property name="TclMode" value="84" type="TclMode"/>
 </item>
 </section>
 </application>

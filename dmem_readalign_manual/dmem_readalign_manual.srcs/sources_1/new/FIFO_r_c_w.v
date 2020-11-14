@@ -70,7 +70,7 @@ always @(posedge clk) begin
     
         for(i=0;i<r;i=i+1)begin
            for(j=0;j<c;j=j+1)begin
-                fifoOut[i][j] = 0;
+                fifoOut[i][j] <= 0;
            end  
         end
         
@@ -80,13 +80,13 @@ always @(posedge clk) begin
         // Set (i,j)th value = (i,j-1)th value
         for(i = r-1; i > -1; i=i-1) begin
             for(j= c-1; j > 0; j=j-1)begin
-                fifoOut[i][j] =  fifoOut[i][j-1];       
+                fifoOut[i][j] <=  fifoOut[i][j-1];       
             end
         end
         
         // Load Inputs
         for(i = r-1; i > -1; i=i-1) begin
-            fifoOut[i][0] =  dMemInDummy[i];       
+            fifoOut[i][0] <=  dMemInDummy[i];       
         end
         
     end

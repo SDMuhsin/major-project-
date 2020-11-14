@@ -1,0 +1,325 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Nov 14 19:47:18 2020
+# Process ID: 14324
+# Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1
+# Command line: vivado.exe -log DMem511Scripted.vds -mode batch -messageDb vivado.pb -notrace -source DMem511Scripted.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1/DMem511Scripted.vds
+# Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source DMem511Scripted.tcl -notrace
+Command: synth_design -top DMem511Scripted -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4684 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 273.402 ; gain = 66.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DMem511Scripted' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:21]
+	Parameter r bound to: 52 - type: integer 
+	Parameter c bound to: 11 - type: integer 
+	Parameter w bound to: 6 - type: integer 
+	Parameter reaccessAddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:69]
+INFO: [Synth 8-256] done synthesizing module 'DMem511Scripted' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:21]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 316.418 ; gain = 109.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 316.418 ; gain = 109.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 316.418 ; gain = 109.691
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[0]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[1]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[2]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[3]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[4]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[5]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[6]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[7]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[8]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[9]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[10]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[11]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[12]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[13]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[14]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[15]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[16]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[17]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[18]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[19]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[20]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[21]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[22]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[23]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[24]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[25]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[26]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[27]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[28]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[29]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[30]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[31]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[32]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[33]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[34]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[35]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[36]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[37]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[38]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[39]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[40]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[41]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[42]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[43]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[44]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[45]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[46]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[47]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[48]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[49]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[50]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'muxOutWire_reg[51]' [C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v:41]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 348.594 ; gain = 141.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 407   
++---Muxes : 
+	  21 Input      6 Bit        Muxes := 52    
+	  21 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module DMem511Scripted 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 407   
++---Muxes : 
+	  21 Input      6 Bit        Muxes := 52    
+	  21 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 429.855 ; gain = 223.129
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 430.000 ; gain = 223.273
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 430.000 ; gain = 223.273
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 454.965 ; gain = 248.238
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 454.965 ; gain = 248.238
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 454.965 ; gain = 248.238
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 456.859 ; gain = 250.133
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|DMem511Scripted | fifoOut_reg[32][4][5] | 5      | 120   | YES          | NO                 | YES               | 120    | 0       | 
+|DMem511Scripted | fifoOut_reg[26][3][5] | 4      | 36    | YES          | NO                 | YES               | 36     | 0       | 
+|DMem511Scripted | fifoOut_reg[3][10][5] | 11     | 138   | YES          | NO                 | YES               | 138    | 0       | 
+|DMem511Scripted | fifoOut_reg[0][9][5]  | 10     | 18    | YES          | NO                 | YES               | 18     | 0       | 
++----------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |LUT2   |   312|
+|3     |LUT3   |     1|
+|4     |LUT6   |   312|
+|5     |SRL16E |   312|
+|6     |FDRE   |   634|
+|7     |LD     |   312|
+|8     |IBUF   |   319|
+|9     |OBUF   |   312|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  2516|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 456.859 ; gain = 250.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 456.859 ; gain = 250.133
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 631 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'DMem511Scripted' is not ideal for floorplanning, since the cellview 'DMem511Scripted' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 312 instances were transformed.
+  LD => LDCE: 312 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 518.754 ; gain = 312.027
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 518.754 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 14 19:47:42 2020...
