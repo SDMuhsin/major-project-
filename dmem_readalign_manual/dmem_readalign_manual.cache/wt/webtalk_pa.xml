@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sat Nov 14 19:47:15 2020">
+<application name="pa" timeStamp="Sat Nov 14 20:03:13 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="681df2789abe443a8db54a0483452b57" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -19,7 +19,7 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AddSources" value="2" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="ReportUtilization" value="2" type="JavaHandler"/>
+<property name="ReportUtilization" value="3" type="JavaHandler"/>
 <property name="RunSynthesis" value="5" type="JavaHandler"/>
 <property name="SetTopNode" value="2" type="JavaHandler"/>
 <property name="SimulationClose" value="3" type="JavaHandler"/>
@@ -27,13 +27,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SimulationRunForTime" value="16" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Run Synthesis], 17, false" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 1, 199" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 153, 157" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 192, 141" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 216, 120" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 315, 99" value="1" type="GuiResourceData"/>
-<property name="ScriptedDMem.v, 97, 143" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Synthesized Design, Report Utilization], 28, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, FF ; 946 ; 82000 ; 1.1536585, 2, 946, 1" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, IO ; 631 ; 300 ; 210.33333, 3, 631, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, LUT ; 781 ; 41000 ; 1.904878, 0, 781, 1, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, LUTRAM ; 312 ; 13400 ; 2.3283582, 1, 312, 1" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectTab_RELOAD, Reload" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Summary], 1, false" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
 <property name="GuiMode" value="103" type="GuiMode"/>
