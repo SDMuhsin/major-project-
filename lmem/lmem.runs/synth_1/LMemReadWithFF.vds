@@ -115,3 +115,217 @@ Finished Part Resource Summary
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:02:02 . Memory (MB): peak = 703.152 ; gain = 495.996
 INFO: Vivado Synthesis caught shared memory exception 'The system cannot find the file specified.'. Continuing without using shared memory (or continuing without helper parallel flow)
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:03:14 . Memory (MB): peak = 703.152 ; gain = 495.996
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:02:03 ; elapsed = 00:03:14 . Memory (MB): peak = 703.152 ; gain = 495.996
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     26000|
+|2     |LMemReadFF__GB1  |           1|     13000|
+|3     |LMemReadFF__GB2  |           1|     13000|
+|4     |LMemReadFF__GB3  |           1|     13000|
+|5     |LMemReadFF__GB4  |           1|     26000|
+|6     |LMemReadFF__GB5  |           1|     26000|
+|7     |LMemReadFF__GB6  |           1|     26000|
+|8     |LMemReadFF__GB7  |           1|     13000|
+|9     |LMemReadFF__GB8  |           1|     23250|
+|10    |LMemReadFF__GB9  |           1|     15770|
+|11    |LMemReadFF__GB10 |           1|     13189|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     18954|
+|2     |LMemReadFF__GB1  |           1|      9150|
+|3     |LMemReadFF__GB2  |           1|      9114|
+|4     |LMemReadFF__GB3  |           1|      9306|
+|5     |LMemReadFF__GB4  |           1|     17502|
+|6     |LMemReadFF__GB5  |           1|     18012|
+|7     |LMemReadFF__GB6  |           1|     17838|
+|8     |LMemReadFF__GB7  |           1|      8256|
+|9     |LMemReadFF__GB8  |           1|     16824|
+|10    |LMemReadFF__GB9  |           1|     11952|
+|11    |LMemReadFF__GB10 |           1|      9729|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     18954|
+|2     |LMemReadFF__GB1  |           1|      9150|
+|3     |LMemReadFF__GB2  |           1|      9114|
+|4     |LMemReadFF__GB3  |           1|      9306|
+|5     |LMemReadFF__GB4  |           1|     17502|
+|6     |LMemReadFF__GB5  |           1|     18012|
+|7     |LMemReadFF__GB6  |           1|     17838|
+|8     |LMemReadFF__GB7  |           1|      8256|
+|9     |LMemReadFF__GB8  |           1|     16824|
+|10    |LMemReadFF__GB9  |           1|     11952|
+|11    |LMemReadFF__GB10 |           1|      9729|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+get_param: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 783.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+
+Report RTL Partitions: 
++------+----------------+------------+----------+
+|      |RTL Partition   |Replication |Instances |
++------+----------------+------------+----------+
+|1     |LMemReadFF__GB0 |           1|      8924|
+|2     |LMemReadFF__GB4 |           1|      7616|
+|3     |LMemReadFF__GB5 |           1|      7442|
+|4     |LMemReadFF__GB6 |           1|      8522|
+|5     |LMemReadFF__GB8 |           1|      7501|
+|6     |LMemReadFF__GB9 |           1|      5784|
+|7     |\reg            |           1|     49056|
++------+----------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:47 ; elapsed = 00:06:32 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:48 ; elapsed = 00:06:34 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:51 ; elapsed = 00:06:36 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:51 ; elapsed = 00:06:37 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:19:31 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:19:32 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |    75|
+|3     |LUT3  |  3918|
+|4     |LUT4  |  1726|
+|5     |LUT5  |  5195|
+|6     |LUT6  | 48959|
+|7     |MUXF7 |  4921|
+|8     |MUXF8 |  1908|
+|9     |FDRE  | 49056|
+|10    |IBUF  | 49064|
+|11    |OBUF  |  4992|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+-------+
+|      |Instance |Module |Cells  |
++------+---------+-------+-------+
+|1     |top      |       | 169815|
++------+---------+-------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:19:32 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:19:31 ; elapsed = 00:21:50 . Memory (MB): peak = 853.418 ; gain = 646.262
+Synthesis Optimization Complete : Time (s): cpu = 00:19:32 ; elapsed = 00:21:56 . Memory (MB): peak = 853.418 ; gain = 646.262
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 49064 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'LMemReadWithFF' is not ideal for floorplanning, since the cellview 'LMemReadWithFF' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:20:08 ; elapsed = 00:22:37 . Memory (MB): peak = 881.781 ; gain = 674.625
+write_checkpoint: Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 881.781 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 881.781 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 28 20:09:24 2020...

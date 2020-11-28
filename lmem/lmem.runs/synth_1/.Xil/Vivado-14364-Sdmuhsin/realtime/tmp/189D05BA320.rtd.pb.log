@@ -1,4 +1,0 @@
-get_param: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 783.004 ; gain = 0.000
-No constraint files found.
-constraint file: whateverTopDoesnotMatter.sdc not found.
-xilinx rtfpga

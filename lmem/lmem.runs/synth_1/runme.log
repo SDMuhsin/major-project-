@@ -260,3 +260,70 @@ Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 Finished Renaming Generated Ports : Time (s): cpu = 00:04:51 ; elapsed = 00:06:37 . Memory (MB): peak = 853.418 ; gain = 646.262
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:19:31 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:19:32 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |    75|
+|3     |LUT3  |  3918|
+|4     |LUT4  |  1726|
+|5     |LUT5  |  5195|
+|6     |LUT6  | 48959|
+|7     |MUXF7 |  4921|
+|8     |MUXF8 |  1908|
+|9     |FDRE  | 49056|
+|10    |IBUF  | 49064|
+|11    |OBUF  |  4992|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+-------+
+|      |Instance |Module |Cells  |
++------+---------+-------+-------+
+|1     |top      |       | 169815|
++------+---------+-------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:19:32 ; elapsed = 00:21:42 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:19:31 ; elapsed = 00:21:50 . Memory (MB): peak = 853.418 ; gain = 646.262
+Synthesis Optimization Complete : Time (s): cpu = 00:19:32 ; elapsed = 00:21:56 . Memory (MB): peak = 853.418 ; gain = 646.262
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 49064 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'LMemReadWithFF' is not ideal for floorplanning, since the cellview 'LMemReadWithFF' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:20:08 ; elapsed = 00:22:37 . Memory (MB): peak = 881.781 ; gain = 674.625
+write_checkpoint: Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 881.781 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 881.781 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 28 20:09:24 2020...

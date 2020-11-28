@@ -139,17 +139,19 @@ for ly = 1:layersCount
   endfor
 endfor
 
-symbolAccessCounts = ones(1,M*blocksCount);
+symbolAccessCounts = zeros(1,M*blocksCount);
 for ly = [0,1]
   for i = 1:1:addressTableRows/layersCount
     toAccess = [];
     for j = 1:1:addressTableColumns
-      if( addressTable(ly*slicesPerLayer + i,j) ~= 0 && symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 1)
+      if( addressTable(ly*slicesPerLayer + i,j) ~= 0 && symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 0)
         
         toAccess = [toAccess, addressTable(ly*slicesPerLayer + i,j)];
-      elseif(addressTable(ly*slicesPerLayer + i,j) ~= 0 &&  symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 0)
-        symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) = 0;
-      end
+        symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) = 1;
+      else 
+        toAccess = [toAccess, 0];
+        
+      endif
     endfor     
     %-- PRINT --%
     fprintf(fid,sprintf("\t\t\t {1'b %d,5'd %d}:begin\n", ly,i-1));
@@ -158,7 +160,11 @@ for ly = [0,1]
       if( k > length(toAccess))
         fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = 0; \n",k-1));
       else
-        fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = muxInWire[%d]; \n",k-1,toAccess(k) - 1));
+        if( toAccess(k) == 0)
+          fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = 0; \n",k-1));          
+        else
+          fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = muxInWire[%d]; \n",k-1,toAccess(k) - 1));
+        endif
       endif
     endfor
     fprintf(fid,sprintf("end\n"));

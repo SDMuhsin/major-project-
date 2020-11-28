@@ -26,9 +26,9 @@ module LMemReadWithFF(
     sel,
     clk,
     rst
-    );
+);
     
-    input clk, rst;
+input clk, rst;
 parameter W = 6;
 parameter p = 26;
 parameter circSize = 511;
