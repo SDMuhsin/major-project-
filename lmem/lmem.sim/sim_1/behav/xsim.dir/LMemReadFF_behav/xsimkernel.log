@@ -1,0 +1,7 @@
+Running: xsim.dir/LMemReadFF_behav/xsimk.exe -simmode gui -wdb LMemReadFF_behav.wdb -simrunnum 0 -socket 63985
+Design successfully loaded
+Design Loading Memory Usage: 13380 KB (Peak: 13380 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 17964 KB (Peak: 17964 KB)
+Simulation CPU Usage: 218 ms

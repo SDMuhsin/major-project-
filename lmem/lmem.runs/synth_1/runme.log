@@ -1,0 +1,262 @@
+
+*** Running vivado
+    with args -log LMemReadWithFF.vds -m64 -mode batch -messageDb vivado.pb -notrace -source LMemReadWithFF.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source LMemReadWithFF.tcl -notrace
+Command: synth_design -top LMemReadWithFF -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11248 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 284.730 ; gain = 77.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LMemReadWithFF' [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadWithFF.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter p bound to: 26 - type: integer 
+	Parameter circSize bound to: 511 - type: integer 
+	Parameter blocksPerLayer bound to: 16 - type: integer 
+	Parameter symbolsPerAccessBits bound to: 4992 - type: integer 
+	Parameter sliceAddressSize bound to: 5 - type: integer 
+	Parameter totalSlices bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LMemReadFF' [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadFF.v:21]
+	Parameter W bound to: 6 - type: integer 
+	Parameter p bound to: 26 - type: integer 
+	Parameter circSize bound to: 511 - type: integer 
+	Parameter blocksPerLayer bound to: 16 - type: integer 
+	Parameter symbolsPerAccessBits bound to: 4992 - type: integer 
+	Parameter sliceAddressSize bound to: 5 - type: integer 
+	Parameter totalSlices bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'LMemReadFF' (1#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadFF.v:21]
+INFO: [Synth 8-256] done synthesizing module 'LMemReadWithFF' (2#1) [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadWithFF.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:01:08 ; elapsed = 00:01:17 . Memory (MB): peak = 501.395 ; gain = 294.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:21 . Memory (MB): peak = 501.395 ; gain = 294.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:21 . Memory (MB): peak = 501.395 ; gain = 294.238
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:43 ; elapsed = 00:01:55 . Memory (MB): peak = 703.152 ; gain = 495.996
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     26000|
+|2     |LMemReadFF__GB1  |           1|     13000|
+|3     |LMemReadFF__GB2  |           1|     13000|
+|4     |LMemReadFF__GB3  |           1|     13000|
+|5     |LMemReadFF__GB4  |           1|     26000|
+|6     |LMemReadFF__GB5  |           1|     26000|
+|7     |LMemReadFF__GB6  |           1|     26000|
+|8     |LMemReadFF__GB7  |           1|     13000|
+|9     |LMemReadFF__GB8  |           1|     23250|
+|10    |LMemReadFF__GB9  |           1|     15770|
+|11    |LMemReadFF__GB10 |           1|     13189|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memBlock_reg [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadWithFF.v:48]
+Detailed RTL Component Info : 
++---Registers : 
+	            49056 Bit    Registers := 1     
++---Muxes : 
+	  32 Input      6 Bit        Muxes := 17    
+	  41 Input      5 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register memBlock_reg [C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.srcs/sources_1/new/LMemReadWithFF.v:48]
+Hierarchical RTL Component report 
+Module LMemReadWithFF 
+Detailed RTL Component Info : 
++---Registers : 
+	            49056 Bit    Registers := 1     
+Module LMemReadFF 
+Detailed RTL Component Info : 
++---Muxes : 
+	  32 Input      6 Bit        Muxes := 17    
+	  41 Input      5 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:02:02 . Memory (MB): peak = 703.152 ; gain = 495.996
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:03:14 . Memory (MB): peak = 703.152 ; gain = 495.996
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:02:03 ; elapsed = 00:03:14 . Memory (MB): peak = 703.152 ; gain = 495.996
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     26000|
+|2     |LMemReadFF__GB1  |           1|     13000|
+|3     |LMemReadFF__GB2  |           1|     13000|
+|4     |LMemReadFF__GB3  |           1|     13000|
+|5     |LMemReadFF__GB4  |           1|     26000|
+|6     |LMemReadFF__GB5  |           1|     26000|
+|7     |LMemReadFF__GB6  |           1|     26000|
+|8     |LMemReadFF__GB7  |           1|     13000|
+|9     |LMemReadFF__GB8  |           1|     23250|
+|10    |LMemReadFF__GB9  |           1|     15770|
+|11    |LMemReadFF__GB10 |           1|     13189|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     18954|
+|2     |LMemReadFF__GB1  |           1|      9150|
+|3     |LMemReadFF__GB2  |           1|      9114|
+|4     |LMemReadFF__GB3  |           1|      9306|
+|5     |LMemReadFF__GB4  |           1|     17502|
+|6     |LMemReadFF__GB5  |           1|     18012|
+|7     |LMemReadFF__GB6  |           1|     17838|
+|8     |LMemReadFF__GB7  |           1|      8256|
+|9     |LMemReadFF__GB8  |           1|     16824|
+|10    |LMemReadFF__GB9  |           1|     11952|
+|11    |LMemReadFF__GB10 |           1|      9729|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:05:32 . Memory (MB): peak = 846.422 ; gain = 639.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |LMemReadFF__GB0  |           1|     18954|
+|2     |LMemReadFF__GB1  |           1|      9150|
+|3     |LMemReadFF__GB2  |           1|      9114|
+|4     |LMemReadFF__GB3  |           1|      9306|
+|5     |LMemReadFF__GB4  |           1|     17502|
+|6     |LMemReadFF__GB5  |           1|     18012|
+|7     |LMemReadFF__GB6  |           1|     17838|
+|8     |LMemReadFF__GB7  |           1|      8256|
+|9     |LMemReadFF__GB8  |           1|     16824|
+|10    |LMemReadFF__GB9  |           1|     11952|
+|11    |LMemReadFF__GB10 |           1|      9729|
+|12    |\reg             |           1|     49056|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+get_param: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 783.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+
+Report RTL Partitions: 
++------+----------------+------------+----------+
+|      |RTL Partition   |Replication |Instances |
++------+----------------+------------+----------+
+|1     |LMemReadFF__GB0 |           1|      8924|
+|2     |LMemReadFF__GB4 |           1|      7616|
+|3     |LMemReadFF__GB5 |           1|      7442|
+|4     |LMemReadFF__GB6 |           1|      8522|
+|5     |LMemReadFF__GB8 |           1|      7501|
+|6     |LMemReadFF__GB9 |           1|      5784|
+|7     |\reg            |           1|     49056|
++------+----------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:29 ; elapsed = 00:06:13 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:47 ; elapsed = 00:06:32 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:48 ; elapsed = 00:06:34 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:51 ; elapsed = 00:06:36 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:51 ; elapsed = 00:06:37 . Memory (MB): peak = 853.418 ; gain = 646.262
+---------------------------------------------------------------------------------

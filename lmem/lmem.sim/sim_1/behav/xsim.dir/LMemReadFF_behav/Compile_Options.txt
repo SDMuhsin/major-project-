@@ -1,0 +1,1 @@
+-wto "17db9a78cfa84d2e90b101fde013a183" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "LMemReadFF_behav" "xil_defaultlib.LMemReadFF" "xil_defaultlib.glbl" -log "elaborate.log" 

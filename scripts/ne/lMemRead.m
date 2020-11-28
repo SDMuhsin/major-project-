@@ -1,33 +1,41 @@
-## Copyright (C) 2020 sayed
-## 
-## This program is free software: you can redistribute it and/or modify it
-## under the terms of the GNU General Public License as published by
-## the Free Software Foundation, either version 3 of the License, or
-## (at your option) any later version.
-## 
-## This program is distributed in the hope that it will be useful, but
-## WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-## GNU General Public License for more details.
-## 
-## You should have received a copy of the GNU General Public License
-## along with this program.  If not, see
-## <https://www.gnu.org/licenses/>.
-
-## -*- texinfo -*- 
-## @deftypefn {} {@var{retval} =} lMemRead (@var{input1}, @var{input2})
-##
-## @seealso{}
-## @end deftypefn
-
-## Author: sayed <sayed@SDMUHSIN>
-## Created: 2020-11-27
-
 circSize = 511;
-filename = sprintf("DMem%dScripted.txt",circSize);
-fid = fopen (filename, "w");
-fprintf(fid,sprintf("module LMem%dScripted(\n\t\t muxOut,\n\t\t dMemIn,\n\t\t reaccessAddress,\n\t\t clk,rst \n );\n",circSize));
 
+% -- PRINT INITIAL VERILOG STUFF -- %
+% --------------------------------- %
+% --------------------------------- %
+filename = sprintf("LMem%dScripted.txt",circSize);
+fid = fopen (filename, "w");
+
+fprintf(fid,sprintf("`timescale 1ns / 1ps \n"));
+fprintf(fid,sprintf("module LMemReadFF(\n    muxOut,\n    muxIn,\n    sel\n\n);"));
+
+fprintf(fid,sprintf("parameter W = 6;\nparameter p = 26;\nparameter circSize = 511;\nparameter blocksPerLayer = 16;\nparameter symbolsPerAccessBits = 2 * W * p * blocksPerLayer; // Actually bits per access\nparameter sliceAddressSize = 5;\nparameter totalSlices = 20;\n"));
+fprintf(fid,sprintf("output wire [ symbolsPerAccessBits - 1: 0]muxOut; // 26 * 2 symbols per access \n"));
+fprintf(fid,sprintf("input [ 1 + sliceAddressSize - 1 : 0 ]sel;\n"));
+fprintf(fid,sprintf("input wire [ circSize * blocksPerLayer * W - 1 : 0 ]muxIn;\n"));
+fprintf(fid,sprintf("reg [W-1:0]muxOutWire[ 2 * p * blocksPerLayer - 1: 0 ];\n"));
+fprintf(fid,sprintf("wire [W-1:0]muxInWire[ circSize * blocksPerLayer - 1 : 0];\n"));
+fprintf(fid,sprintf("genvar i;\n"));
+fprintf(fid,sprintf("generate for( i = 0; i < 2*p*blocksPerLayer; i = i+1 ) begin : muxOutWiring \n"));
+fprintf(fid,sprintf("    assign muxOut[ (i+1)*W - 1:i*W] = muxOutWire[i]; \n"));
+fprintf(fid,sprintf("end\nendgenerate\n"));
+fprintf(fid,sprintf("genvar k;\n"));
+fprintf(fid,sprintf("generate for( k = 0; k < circSize * blocksPerLayer; k = k+1 ) begin : muxInWiring \n"));
+fprintf(fid,sprintf("    assign muxInWire[k] = muxIn[(k+1)*W - 1 : k*W]; \n"));
+fprintf(fid,sprintf("end \n"));
+fprintf(fid,sprintf("endgenerate \n"));
+fprintf(fid,sprintf("assign muxIn = 0; \n"));
+fprintf(fid,sprintf("wire lyWire; \n"));
+fprintf(fid,sprintf("wire [ sliceAddressSize - 1:0]sliceAddressWire; \n"));
+fprintf(fid,sprintf("assign lyWire = sel[sliceAddressSize]; \n"));
+fprintf(fid,sprintf("assign sliceAddressWire = sel[ sliceAddressSize - 1 : 0 ]; \n"));
+fprintf(fid,sprintf("integer v; \n"));
+fprintf(fid,sprintf("always @(*) begin \n"));
+fprintf(fid,sprintf("    case(sel) \n"));
+
+% -- END INITIAL VERILOG STUFF -- %
+% --------------------------------- %
+% --------------------------------- %
 
 M= 511;
 %h=zeros(2*M,16*M);
@@ -106,6 +114,7 @@ rowsPerLayer = 511;
 layersCount = 2;
 blocksCount = 16;
 offsetsPerCircCount = 2;
+slicesPerLayer = ceil( M / p);
 
 % -- GENERATE ADDRESS TABLE -- %
 addressTableRows = layersCount * ceil( M / p);
@@ -131,26 +140,42 @@ for ly = 1:layersCount
 endfor
 
 symbolAccessCounts = ones(1,M*blocksCount);
-for i = 1:1:addressTableRows
-  
-  toAccess = [];
-  for j = 1:1:addressTableColumns
-    if( addressTable(i,j) ~= 0 && symbolAccessCounts(1,addressTable(i,j)) == 1)
-      symbolAccessCounts(1,addressTable(i,j)) = 0;
+for ly = [0,1]
+  for i = 1:1:addressTableRows/layersCount
+    toAccess = [];
+    for j = 1:1:addressTableColumns
+      if( addressTable(ly*slicesPerLayer + i,j) ~= 0 && symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 1)
+        
+        toAccess = [toAccess, addressTable(ly*slicesPerLayer + i,j)];
+      elseif(addressTable(ly*slicesPerLayer + i,j) ~= 0 &&  symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 0)
+        symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) = 0;
+      end
+    endfor     
+    %-- PRINT --%
+    fprintf(fid,sprintf("\t\t\t {1'b %d,5'd %d}:begin\n", ly,i-1));
+    disp(length(toAccess));
+    for k = 1:1:2 * p * blocksCount
+      if( k > length(toAccess))
+        fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = 0; \n",k-1));
+      else
+        fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = muxInWire[%d]; \n",k-1,toAccess(k) - 1));
+      endif
+    endfor
+    fprintf(fid,sprintf("end\n"));
     
-    elseif(addressTable(i,j) ~= 0 &&  symbolAccessCounts(1,addressTable(i,j)) == 0)
-      toAccess = [toAccess, addressTable(i,j)];
-    end
   endfor
-  
-  %-- PRINT --%
-  fprintf(fid,sprintf("\n\t\t\t case %d :\n \t\t\t\t muxOut = {", i -1 ));
-  for k = 1:1:length(toAccess)
-    fprintf(fid,sprintf(" %d,", toAccess(k)-1));
-  endfor
-  fprintf(fid,sprintf("};"));
 endfor
 
+fprintf(fid,sprintf("\t\t\t default:begin\n", ly,i-1));
+for k = 1:1: 2 * p * blocksCount
+  fprintf(fid,sprintf("\t\t\t\t muxOutWire[%d] = 0; \n",k-1));
+endfor
+fprintf(fid,sprintf("\t\t\t end", ly,i-1));
+
+
 fprintf(fid,sprintf("    endcase\n"));
-fprintf(fid,sprintf("end\nendmodule\n"));
+fprintf(fid,sprintf("end\n"));
+fprintf(fid,sprintf("endmodule\n"));
+fprintf(fid,sprintf(""));
+
 fclose(fid);
