@@ -83,27 +83,57 @@ blocksCount = 16;
 offsetsPerCircCount = 2;
 
 % -- GENERATE ADDRESS TABLE -- %
-addressTableRows = layersCount * ceil( M / p);
-addressTableColumns = blocksCount * offsetsPerCircCount * p;
+%addressTableRows = layersCount * ceil( M / p);
+%addressTableColumns = blocksCount * offsetsPerCircCount * p;
 
-addressTable = zeros(addressTableRows,addressTableColumns);
-for ly = 1:layersCount
-  hl = h( (ly-1) * M  + 1: ly*M , :);
-  for slice = 1:1:addressTableRows/2
-    
-    sliceStart = 1 + p*(slice -1);
-    sliceEnd = slice * p;
-    
-    if sliceEnd > 511
-      sliceEnd = 511;  
-    endif
-    addressTable( (ly-1)*addressTableRows/2 + slice, :) = iloc(hl(sliceStart:sliceEnd,:),p,blocksCount,1);
-    
-  endfor
-endfor
+%addressTable = zeros(addressTableRows,addressTableColumns);
+%for ly = 1:layersCount
+%  hl = h( (ly-1) * M  + 1: ly*M , :);
+%  for slice = 1:1:addressTableRows/2
+%    
+%    sliceStart = 1 + p*(slice -1);
+%    sliceEnd = slice * p;
+%    
+%    if sliceEnd > 511
+%      sliceEnd = 511;  
+%    endif
+%    addressTable( (ly-1)*addressTableRows/2 + slice, :) = iloc(hl(sliceStart:sliceEnd,:),p,blocksCount,1);
+%    
+%  endfor
+%endfor
 
-layer_1=addressTable(1:20,:);
-layer_2=addressTable(21:40,:);
+%layer_1=addressTable(1:20,:);
+%layer_2=addressTable(21:40,:);
+
+%------------addressTable------------------------------------------%
+diagloc=[];
+M=511;
+P=26;
+for i=1:1022
+  diagloc = [diagloc;(find(h(i,:)!=0))];
+end
+address = transpose([1:ceil(M/P)]-1);
+[im,jm]=size(diagloc);
+re=diagloc(1:511,:);
+re_2=diagloc(512:1022,:);
+%diag_=[];
+layer_1=[];
+layer_2=[];
+if(mod(M,P)!=0)
+for i=1:1:9
+re=[re;repmat(0,[1 32])];
+re_2=[re_2;repmat(0,[1 32])];
+end
+end
+
+
+for k=1:1:ceil(M/P)
+  layer_1(k,:)=reshape(re((k-1)*P+1:k*P,:)',[1,jm*P]);
+  layer_2(k,:)=reshape(re_2((k-1)*P+1:k*P,:)',[1,jm*P]);
+end
+
+
+%-------------------------------------------------------------------%
 %layer 0
 [im,jm]=size(layer_1);
 second_re=[];
