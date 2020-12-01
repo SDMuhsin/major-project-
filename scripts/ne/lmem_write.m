@@ -233,7 +233,7 @@ fprintf(fid,'%c',transpose(prt));
 %case layer 0
 for cycles=1:1:20
   rd_address=dec2bin(cycles-1,5);
-  prt= sprintf("%c%s:",'0',rd_address);
+  prt= sprintf("6'b%c%s:",'0',rd_address);
   fprintf(fid,'%c',transpose(prt));
   prt=sprintf("begin\n");
   fprintf(fid,'%c',transpose(prt));
@@ -258,7 +258,7 @@ for cycles=1:1:20
 endfor
 
 
-prt= sprintf("011111:");
+prt= sprintf("6'b011111:");
 fprintf(fid,'%c',transpose(prt));
 prt=sprintf("begin\n");
 fprintf(fid,'%c',transpose(prt));
@@ -273,7 +273,7 @@ fprintf(fid,'%c',transpose(prt));
 %case layer 1
 for cycles=1:1:20
   rd_address=dec2bin(cycles-1,5);
-  prt= sprintf("%c%s:",'1',rd_address);
+  prt= sprintf("6'b%c%s:",'1',rd_address);
   fprintf(fid,'%c',transpose(prt));
   prt=sprintf("begin\n");
   fprintf(fid,'%c',transpose(prt));
