@@ -139,8 +139,9 @@ for ly = 1:layersCount
   endfor
 endfor
 
-symbolAccessCounts = zeros(1,M*blocksCount);
 for ly = [0,1]
+
+  symbolAccessCounts = zeros(1,M*blocksCount);
   for i = 1:1:addressTableRows/layersCount
     toAccess = [];
     for j = 1:1:addressTableColumns

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1606572968">
-  <File Type="RDS-PROPCONSTRS" Name="LMemReadWithFF_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="LMemReadWithFF.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="LMemReadWithFF_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="LMemReadWithFF.vds"/>
   <File Type="RDS-UTIL" Name="LMemReadWithFF_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="LMemReadWithFF_utilization_synth.pb"/>
