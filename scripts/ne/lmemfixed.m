@@ -144,14 +144,7 @@ for ly = [0,1]
   for i = 1:1:addressTableRows/layersCount
     toAccess = [];
     for j = 1:1:addressTableColumns
-      if( addressTable(ly*slicesPerLayer + i,j) ~= 0 && symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) == 0)
-        
         toAccess = [toAccess, addressTable(ly*slicesPerLayer + i,j)];
-        symbolAccessCounts(1,addressTable(ly*slicesPerLayer + i,j)) = 1;
-      else 
-        toAccess = [toAccess, 0];
-        
-      endif
     endfor     
     %-- PRINT --%
     fprintf(fid,sprintf("\t\t\t {1'b %d,5'd %d}:begin\n", ly,i-1));
