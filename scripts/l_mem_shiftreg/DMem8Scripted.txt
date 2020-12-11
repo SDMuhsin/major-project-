@@ -1,0 +1,104 @@
+module DMem8Scripted(
+		 muxOut,
+		 dMemIn,
+		 reaccessAddress,
+		 ly,
+		 clk,rst 
+ );
+parameter r = 4;
+parameter c = 3;
+parameter w = 6;
+parameter reaccessAddressWidth = 2;
+input [reaccessAddressWidth-1:0]reaccessAddress;
+input ly;
+input clk,rst;
+input [r*w-1:0]dMemIn;
+wire [w-1:0]dMemInDummy[r-1:0];
+output wire [r*w -1 : 0]muxOut;// r numbers of w bits
+reg [w-1:0]muxOutWire[r-1:0];
+reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs
+genvar k;
+generate
+    for (k=0;k<r;k=k+1)begin:assign_output
+        assign muxOut[ (k+1)*w-1:k*w] = muxOutWire[k];
+        assign dMemInDummy[k] = dMemIn[ (k+1)*w-1:k*w];
+    end
+endgenerate
+integer i;
+integer j;
+always @(posedge clk) begin
+    if (rst) begin
+         for(i=0;i<r;i=i+1)begin
+           for(j=0;j<c;j=j+1)begin
+                fifoOut[i][j] = 0;
+           end
+        end
+    end
+    else begin
+    if(ly==1'b0)begin
+        // Set (i,j)th value = (i,j-1)th value
+        for(i = r-1; i > -1; i=i-1) begin
+            for(j= c-1; j > 0; j=j-1)begin
+                fifoOut[i][j] =  fifoOut[i][j-1];
+            end
+        end
+        // Load Inputs
+        for(i = r-1; i > -1; i=i-1) begin
+            fifoOut[i][0] =  dMemInDummy[i]; 
+        end
+    else begin 
+        // Set (i,j)th value = (i,j)th value
+        for(i = r-1; i > -1; i=i-1) begin
+            for(j= c-1; j > 0; j=j-1)begin
+                fifoOut[i][j] =  fifoOut[i][j-1];
+            end
+        end
+    end
+    end
+end
+always@(*)begin
+case(ly)
+    1'b0: begin 
+       for(i=0;i<r;i=i+1)begin 
+         muxOutWire[i] = 0; 
+       end 
+    end
+    1'b1:begin 
+     case(reaccessAddress)
+
+		 0 : begin 
+			 muxOutWire[ 0 ] = fifoOut[ 0 ][ 1 ]; 
+			 muxOutWire[ 1 ] = fifoOut[ 1 ][ 1 ]; 
+			 muxOutWire[ 2 ] = fifoOut[ 1 ][ 2 ]; 
+			 muxOutWire[ 3 ] = fifoOut[ 3 ][ 1 ]; 
+		 end
+		 1 : begin 
+			 muxOutWire[ 0 ] = fifoOut[ 0 ][ 2 ]; 
+			 muxOutWire[ 1 ] = fifoOut[ 1 ][ 2 ]; 
+			 muxOutWire[ 2 ] = fifoOut[ 2 ][ 2 ]; 
+			 muxOutWire[ 3 ] = fifoOut[ 3 ][ 2 ]; 
+		 end
+		 2 : begin 
+			 muxOutWire[ 0 ] = fifoOut[ 3 ][ 1 ]; 
+			 muxOutWire[ 1 ] = fifoOut[ 2 ][ 2 ]; 
+			 muxOutWire[ 2 ] = fifoOut[ 1 ][ 0 ]; 
+			 muxOutWire[ 3 ] = fifoOut[ 0 ][ 1 ]; 
+		 end
+		 3 : begin 
+			 muxOutWire[ 0 ] = fifoOut[ 3 ][ 2 ]; 
+			 muxOutWire[ 1 ] = fifoOut[ 1 ][ 0 ]; 
+			 muxOutWire[ 2 ] = fifoOut[ 1 ][ 1 ]; 
+			 muxOutWire[ 3 ] = fifoOut[ 0 ][ 2 ]; 
+		 end
+       default:begin        for(i=0;i<r;i=i+1)begin 
+          muxOutWire[i] = 0; 
+        end 
+       end 
+     endcase
+    end
+ default:begin        for(i=0;i<r;i=i+1)begin 
+          muxOutWire[i] = 0; 
+ end 
+endcase
+end
+endmodule

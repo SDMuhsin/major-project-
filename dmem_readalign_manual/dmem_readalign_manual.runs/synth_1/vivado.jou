@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Nov 14 19:47:18 2020
-# Process ID: 14324
+# Start of session at: Fri Dec 11 14:23:44 2020
+# Process ID: 17612
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1
-# Command line: vivado.exe -log DMem511Scripted.vds -mode batch -messageDb vivado.pb -notrace -source DMem511Scripted.tcl
-# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1/DMem511Scripted.vds
+# Command line: vivado.exe -log LMem0to1511Scripted.vds -mode batch -messageDb vivado.pb -notrace -source LMem0to1511Scripted.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1/LMem0to1511Scripted.vds
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source DMem511Scripted.tcl -notrace
+source LMem0to1511Scripted.tcl -notrace

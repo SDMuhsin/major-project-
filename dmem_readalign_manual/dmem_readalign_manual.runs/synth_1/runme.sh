@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log DMem511Scripted.vds -m64 -mode batch -messageDb vivado.pb -notrace -source DMem511Scripted.tcl
+EAStep vivado -log LMem0to1511Scripted.vds -m64 -mode batch -messageDb vivado.pb -notrace -source LMem0to1511Scripted.tcl

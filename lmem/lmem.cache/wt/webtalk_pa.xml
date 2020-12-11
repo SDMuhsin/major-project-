@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Dec 01 18:27:18 2020">
+<application name="pa" timeStamp="Tue Dec 01 22:44:36 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="5de257cc76c04c4d9caacfd84a5e6273" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -28,20 +28,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SimulationRunForTime" value="5" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="LMemReadFF.v, 281, 28" value="1" type="GuiResourceData"/>
-<property name="LMemReadFF.v, 357, 12" value="1" type="GuiResourceData"/>
-<property name="LMemReadFF.v, 45, 143" value="1" type="GuiResourceData"/>
-<property name="LMemReadFF.v, 453, 140" value="1" type="GuiResourceData"/>
-<property name="LMemReadWithFF.v, 108, 244" value="1" type="GuiResourceData"/>
-<property name="LMemReadWithFF.v, 276, 84" value="1" type="GuiResourceData"/>
-<property name="LMemReadWithFF.v, 57, 44, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMemReadWithFF (LMemReadWithFF.v" value="5" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 15, 105" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 180, 219" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 244, 153" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 27, 118" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 27, 97" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 279, 170" value="1" type="GuiResourceData"/>
+<property name="LMemReadFF.v, 433, 52" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMemReadWithFF (LMemReadWithFF.v" value="7" type="GuiResourceData"/>
 <property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem/lmem.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="106" type="GuiMode"/>
+<property name="GuiMode" value="107" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="87" type="TclMode"/>
+<property name="TclMode" value="88" type="TclMode"/>
 </item>
 </section>
 </application>
