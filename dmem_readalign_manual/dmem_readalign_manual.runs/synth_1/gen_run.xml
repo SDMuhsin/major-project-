@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1607676815">
-  <File Type="RDS-PROPCONSTRS" Name="LMem0to1511Scripted_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="LMem0to1511Scripted.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="LMem0to1511Scripted_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="LMem0to1511Scripted.vds"/>
   <File Type="RDS-UTIL" Name="LMem0to1511Scripted_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="LMem0to1511Scripted_utilization_synth.pb"/>

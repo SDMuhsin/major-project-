@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/ScriptedDMem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module DMemScripted
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.srcs/sources_1/new/FIFO_r_c_w.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMem
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

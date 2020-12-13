@@ -31,9 +31,14 @@ function indexes = findIndexesOfAInB (A, B)
   indexes = zeros(length(A),2);
   indexes(indexes==0) = -1;
   for i = 1:1:length(A)
-    for row = 1:1:size(B)(1)
-      for column = 1:1:size(B)(2)
+    for column = 1:1:size(B)(2)
+      for row = 1:1:size(B)(1)
+        row;
+        column;
         if(A(i) == B(row,column))
+          %row
+          %column
+          %A(i)
           indexes(i,1:end) = [row,column] ;
         endif
       endfor
