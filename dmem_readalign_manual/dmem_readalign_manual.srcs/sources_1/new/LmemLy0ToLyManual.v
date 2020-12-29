@@ -74,8 +74,6 @@ reg [w-1:0]muxOutWire[r-1:0];
 
 reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs
 reg [w-1:0] fifoIn[r-1:0];
-
-
 genvar k;
 generate
     for (k=0;k<r;k=k+1)begin:assign_output
