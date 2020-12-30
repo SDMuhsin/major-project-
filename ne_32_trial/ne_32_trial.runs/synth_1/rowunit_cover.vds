@@ -1,0 +1,632 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Dec 30 12:36:51 2020
+# Process ID: 13376
+# Current directory: C:/Users/mani/ne_32_trial/ne_32_trial.runs/synth_1
+# Command line: vivado.exe -log rowunit_cover.vds -mode batch -messageDb vivado.pb -notrace -source rowunit_cover.tcl
+# Log file: C:/Users/mani/ne_32_trial/ne_32_trial.runs/synth_1/rowunit_cover.vds
+# Journal file: C:/Users/mani/ne_32_trial/ne_32_trial.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source rowunit_cover.tcl -notrace
+Command: synth_design -top rowunit_cover -part xc7k160tffv676-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8312 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 273.789 ; gain = 65.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rowunit_cover' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/rowunit_cover.v:23]
+	Parameter Wc bound to: 32 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter ECOMPSIZE bound to: 47 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'RowUnit' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/RowUnit.v:23]
+	Parameter Wc bound to: 32 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter ECOMPSIZE bound to: 47 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'recovunit_ne' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/recovunit_dp.v:24]
+	Parameter Wc bound to: 32 - type: integer 
+	Parameter Wcbits bound to: 5 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wabs bound to: 5 - type: integer 
+	Parameter ECOMPSIZE bound to: 47 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'recovunit_ne' (1#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/recovunit_dp.v:24]
+INFO: [Synth 8-638] synthesizing module 'subtractor_32' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/new/Subtractor_pipelined.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'subtract_2' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/subtract_2.v:23]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'subtract_2' (2#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/subtract_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'subtractor_32' (3#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/new/Subtractor_pipelined.v:23]
+INFO: [Synth 8-638] synthesizing module 'emsggen' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/emsggen.v:22]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Absoluter_32' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/Absoluter_32.v:23]
+	Parameter w bound to: 6 - type: integer 
+	Parameter wc bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Absoluter_adder' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/Absoluter_adder.v:23]
+	Parameter w bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Absoluter_adder' (4#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/Absoluter_adder.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Absoluter_32' (5#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/Absoluter_32.v:23]
+INFO: [Synth 8-638] synthesizing module 'm32VG_pipelined' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/m32VG.v:22]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm16VG_pipelined' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m16VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm8VG_pipelined' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m8VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm4VG_pipelined' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m4VG.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'm2VG_pipelined_2' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/m2VG_pipelined_2.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'm2VG_pipelined_2' (6#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/m2VG_pipelined_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm4VG_pipelined' (7#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m4VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm8VG_pipelined' (8#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m8VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm16VG_pipelined' (9#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/egencopy/egencopy.srcs/sources_1/imports/new/m16VG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'm32VG_pipelined' (10#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/m32VG.v:22]
+INFO: [Synth 8-256] done synthesizing module 'emsggen' (11#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/emsggen.v:22]
+INFO: [Synth 8-638] synthesizing module 'subtractor_32_d' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/subtractor_32.v:23]
+	Parameter W bound to: 6 - type: integer 
+	Parameter Wc bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'subtractor_32_d' (12#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/new/subtractor_32.v:23]
+INFO: [Synth 8-638] synthesizing module 'AdderWc' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/new/AdderWc_pipelined.v:23]
+	Parameter Wc bound to: 32 - type: integer 
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'adderW2' [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/adderW2.v:22]
+	Parameter W bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adderW2' (13#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/adderW2.v:22]
+INFO: [Synth 8-256] done synthesizing module 'AdderWc' (14#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/new/AdderWc_pipelined.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RowUnit' (15#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/RowUnit.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rowunit_cover' (16#1) [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/sources_1/imports/mani/row_processing_unit/row_processing_unit.srcs/sources_1/new/rowunit_cover.v:23]
+WARNING: [Synth 8-3331] design adderW2 has unconnected port clk
+WARNING: [Synth 8-3331] design adderW2 has unconnected port rst
+WARNING: [Synth 8-3331] design subtract_2 has unconnected port clk
+WARNING: [Synth 8-3331] design subtract_2 has unconnected port rst
+WARNING: [Synth 8-3331] design Absoluter_32 has unconnected port clk
+WARNING: [Synth 8-3331] design Absoluter_32 has unconnected port rst
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 311.152 ; gain = 103.133
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 311.152 ; gain = 103.133
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tffv676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/constrs_1/imports/Downloads/design_constr.xdc]
+Finished Parsing XDC File [C:/Users/mani/ne_32_trial/ne_32_trial.srcs/constrs_1/imports/Downloads/design_constr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 641.449 ; gain = 0.961
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 96    
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 32    
++---XORs : 
+	   2 Input      1 Bit         XORs := 32    
++---XORs : 
+	               32 Bit    Wide XORs := 1     
++---Registers : 
+	              192 Bit    Registers := 31    
+	              160 Bit    Registers := 1     
+	               47 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 63    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 64    
+	   3 Input      6 Bit        Muxes := 96    
+	   2 Input      5 Bit        Muxes := 124   
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rowunit_cover 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 4     
+	               47 Bit    Registers := 2     
+Module recovunit_ne 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 32    
+Module subtract_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
++---Muxes : 
+	   3 Input      6 Bit        Muxes := 1     
+Module subtractor_32 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 3     
+Module Absoluter_adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module m2VG_pipelined_2 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m4VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module m8VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+Module m16VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module m32VG_pipelined 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module emsggen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 32    
++---XORs : 
+	               32 Bit    Wide XORs := 1     
++---Registers : 
+	              160 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
+Module subtractor_32_d 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module adderW2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      7 Bit       Adders := 1     
++---Muxes : 
+	   3 Input      6 Bit        Muxes := 1     
+Module AdderWc 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 3     
+Module RowUnit 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 19    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design adderW2 has unconnected port clk
+WARNING: [Synth 8-3331] design adderW2 has unconnected port rst
+WARNING: [Synth 8-3331] design subtract_2 has unconnected port clk
+WARNING: [Synth 8-3331] design subtract_2 has unconnected port rst
+WARNING: [Synth 8-3331] design Absoluter_32 has unconnected port clk
+WARNING: [Synth 8-3331] design Absoluter_32 has unconnected port rst
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 641.449 ; gain = 433.430
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 641.449 ; gain = 433.430
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 641.449 ; gain = 433.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 654.730 ; gain = 446.711
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|emsggen     | signbit_5_reg[31]  | 5      | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|RowUnit     | SUB_OUT_5_reg[191] | 5      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|RowUnit     | D_7_reg[191]       | 7      | 192   | YES          | NO                 | YES               | 192    | 0       | 
+|RowUnit     | REC_7_reg[191]     | 7      | 192   | YES          | NO                 | YES               | 192    | 0       | 
++------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   192|
+|3     |LUT1   |    79|
+|4     |LUT2   |  1070|
+|5     |LUT3   |   890|
+|6     |LUT4   |   324|
+|7     |LUT5   |   215|
+|8     |LUT6   |   615|
+|9     |SRL16E |   608|
+|10    |FDRE   |  4153|
+|11    |IBUF   |   433|
+|12    |OBUF   |   431|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+---------------------+------+
+|      |Instance              |Module               |Cells |
++------+----------------------+---------------------+------+
+|1     |top                   |                     |  9011|
+|2     |  m1                  |RowUnit              |  7284|
+|3     |    rec1              |recovunit_ne__1      |   232|
+|4     |    s1                |subtractor_32        |  1024|
+|5     |      \loop[191].sb1  |subtract_2__1        |    14|
+|6     |      \loop[185].sb1  |subtract_2__2        |    14|
+|7     |      \loop[179].sb1  |subtract_2__3        |    14|
+|8     |      \loop[173].sb1  |subtract_2__4        |    14|
+|9     |      \loop[167].sb1  |subtract_2__5        |    14|
+|10    |      \loop[161].sb1  |subtract_2__6        |    14|
+|11    |      \loop[155].sb1  |subtract_2__7        |    14|
+|12    |      \loop[149].sb1  |subtract_2__8        |    14|
+|13    |      \loop[143].sb1  |subtract_2__9        |    14|
+|14    |      \loop[137].sb1  |subtract_2__10       |    14|
+|15    |      \loop[131].sb1  |subtract_2__11       |    14|
+|16    |      \loop[125].sb1  |subtract_2__12       |    14|
+|17    |      \loop[119].sb1  |subtract_2__13       |    14|
+|18    |      \loop[113].sb1  |subtract_2__14       |    14|
+|19    |      \loop[107].sb1  |subtract_2__15       |    14|
+|20    |      \loop[101].sb1  |subtract_2__16       |    14|
+|21    |      \loop[95].sb1   |subtract_2__17       |    14|
+|22    |      \loop[89].sb1   |subtract_2__18       |    14|
+|23    |      \loop[83].sb1   |subtract_2__19       |    14|
+|24    |      \loop[77].sb1   |subtract_2__20       |    14|
+|25    |      \loop[71].sb1   |subtract_2__21       |    14|
+|26    |      \loop[65].sb1   |subtract_2__22       |    14|
+|27    |      \loop[59].sb1   |subtract_2__23       |    14|
+|28    |      \loop[53].sb1   |subtract_2__24       |    14|
+|29    |      \loop[47].sb1   |subtract_2__25       |    14|
+|30    |      \loop[41].sb1   |subtract_2__26       |    14|
+|31    |      \loop[35].sb1   |subtract_2__27       |    14|
+|32    |      \loop[29].sb1   |subtract_2__28       |    14|
+|33    |      \loop[23].sb1   |subtract_2__29       |    14|
+|34    |      \loop[17].sb1   |subtract_2__30       |    14|
+|35    |      \loop[11].sb1   |subtract_2__31       |    14|
+|36    |      \loop[5].sb1    |subtract_2__32       |    14|
+|37    |    absmin            |emsggen              |  1468|
+|38    |      m1              |Absoluter_32         |   128|
+|39    |        \loop1[0].a   |Absoluter_adder__1   |     4|
+|40    |        \loop1[1].a   |Absoluter_adder__2   |     4|
+|41    |        \loop1[2].a   |Absoluter_adder__3   |     4|
+|42    |        \loop1[3].a   |Absoluter_adder__4   |     4|
+|43    |        \loop1[4].a   |Absoluter_adder__5   |     4|
+|44    |        \loop1[5].a   |Absoluter_adder__6   |     4|
+|45    |        \loop1[6].a   |Absoluter_adder__7   |     4|
+|46    |        \loop1[7].a   |Absoluter_adder__8   |     4|
+|47    |        \loop1[8].a   |Absoluter_adder__9   |     4|
+|48    |        \loop1[9].a   |Absoluter_adder__10  |     4|
+|49    |        \loop1[10].a  |Absoluter_adder__11  |     4|
+|50    |        \loop1[11].a  |Absoluter_adder__12  |     4|
+|51    |        \loop1[12].a  |Absoluter_adder__13  |     4|
+|52    |        \loop1[13].a  |Absoluter_adder__14  |     4|
+|53    |        \loop1[14].a  |Absoluter_adder__15  |     4|
+|54    |        \loop1[15].a  |Absoluter_adder__16  |     4|
+|55    |        \loop1[16].a  |Absoluter_adder__17  |     4|
+|56    |        \loop1[17].a  |Absoluter_adder__18  |     4|
+|57    |        \loop1[18].a  |Absoluter_adder__19  |     4|
+|58    |        \loop1[19].a  |Absoluter_adder__20  |     4|
+|59    |        \loop1[20].a  |Absoluter_adder__21  |     4|
+|60    |        \loop1[21].a  |Absoluter_adder__22  |     4|
+|61    |        \loop1[22].a  |Absoluter_adder__23  |     4|
+|62    |        \loop1[23].a  |Absoluter_adder__24  |     4|
+|63    |        \loop1[24].a  |Absoluter_adder__25  |     4|
+|64    |        \loop1[25].a  |Absoluter_adder__26  |     4|
+|65    |        \loop1[26].a  |Absoluter_adder__27  |     4|
+|66    |        \loop1[27].a  |Absoluter_adder__28  |     4|
+|67    |        \loop1[28].a  |Absoluter_adder__29  |     4|
+|68    |        \loop1[29].a  |Absoluter_adder__30  |     4|
+|69    |        \loop1[30].a  |Absoluter_adder__31  |     4|
+|70    |        \loop1[31].a  |Absoluter_adder      |     4|
+|71    |      m2              |m32VG_pipelined      |  1008|
+|72    |        m1            |m16VG_pipelined__1   |   482|
+|73    |          m1          |m8VG_pipelined__3    |   220|
+|74    |            m1        |m4VG_pipelined__7    |    90|
+|75    |              m1      |m2VG_pipelined_2__15 |    26|
+|76    |              m2      |m2VG_pipelined_2__14 |    26|
+|77    |            m2        |m4VG_pipelined__6    |    90|
+|78    |              m1      |m2VG_pipelined_2__13 |    26|
+|79    |              m2      |m2VG_pipelined_2__12 |    26|
+|80    |          m2          |m8VG_pipelined__2    |   220|
+|81    |            m1        |m4VG_pipelined__5    |    90|
+|82    |              m1      |m2VG_pipelined_2__11 |    26|
+|83    |              m2      |m2VG_pipelined_2__10 |    26|
+|84    |            m2        |m4VG_pipelined__4    |    90|
+|85    |              m1      |m2VG_pipelined_2__9  |    26|
+|86    |              m2      |m2VG_pipelined_2__8  |    26|
+|87    |        m2            |m16VG_pipelined      |   482|
+|88    |          m1          |m8VG_pipelined__1    |   220|
+|89    |            m1        |m4VG_pipelined__3    |    90|
+|90    |              m1      |m2VG_pipelined_2__7  |    26|
+|91    |              m2      |m2VG_pipelined_2__6  |    26|
+|92    |            m2        |m4VG_pipelined__2    |    90|
+|93    |              m1      |m2VG_pipelined_2__5  |    26|
+|94    |              m2      |m2VG_pipelined_2__4  |    26|
+|95    |          m2          |m8VG_pipelined       |   220|
+|96    |            m1        |m4VG_pipelined__1    |    90|
+|97    |              m1      |m2VG_pipelined_2__3  |    26|
+|98    |              m2      |m2VG_pipelined_2__2  |    26|
+|99    |            m2        |m4VG_pipelined       |    90|
+|100   |              m1      |m2VG_pipelined_2__1  |    26|
+|101   |              m2      |m2VG_pipelined_2     |    26|
+|102   |    rec2              |recovunit_ne         |   232|
+|103   |    sub2              |subtractor_32_d      |   832|
+|104   |      \loop[191].sb1  |subtract_2__33       |    14|
+|105   |      \loop[185].sb1  |subtract_2__34       |    14|
+|106   |      \loop[179].sb1  |subtract_2__35       |    14|
+|107   |      \loop[173].sb1  |subtract_2__36       |    14|
+|108   |      \loop[167].sb1  |subtract_2__37       |    14|
+|109   |      \loop[161].sb1  |subtract_2__38       |    14|
+|110   |      \loop[155].sb1  |subtract_2__39       |    14|
+|111   |      \loop[149].sb1  |subtract_2__40       |    14|
+|112   |      \loop[143].sb1  |subtract_2__41       |    14|
+|113   |      \loop[137].sb1  |subtract_2__42       |    14|
+|114   |      \loop[131].sb1  |subtract_2__43       |    14|
+|115   |      \loop[125].sb1  |subtract_2__44       |    14|
+|116   |      \loop[119].sb1  |subtract_2__45       |    14|
+|117   |      \loop[113].sb1  |subtract_2__46       |    14|
+|118   |      \loop[107].sb1  |subtract_2__47       |    14|
+|119   |      \loop[101].sb1  |subtract_2__48       |    14|
+|120   |      \loop[95].sb1   |subtract_2__49       |    14|
+|121   |      \loop[89].sb1   |subtract_2__50       |    14|
+|122   |      \loop[83].sb1   |subtract_2__51       |    14|
+|123   |      \loop[77].sb1   |subtract_2__52       |    14|
+|124   |      \loop[71].sb1   |subtract_2__53       |    14|
+|125   |      \loop[65].sb1   |subtract_2__54       |    14|
+|126   |      \loop[59].sb1   |subtract_2__55       |    14|
+|127   |      \loop[53].sb1   |subtract_2__56       |    14|
+|128   |      \loop[47].sb1   |subtract_2__57       |    14|
+|129   |      \loop[41].sb1   |subtract_2__58       |    14|
+|130   |      \loop[35].sb1   |subtract_2__59       |    14|
+|131   |      \loop[29].sb1   |subtract_2__60       |    14|
+|132   |      \loop[23].sb1   |subtract_2__61       |    14|
+|133   |      \loop[17].sb1   |subtract_2__62       |    14|
+|134   |      \loop[11].sb1   |subtract_2__63       |    14|
+|135   |      \loop[5].sb1    |subtract_2           |    14|
+|136   |    add1              |AdderWc              |  1184|
+|137   |      \label[0].a     |adderW2__1           |    19|
+|138   |      \label[1].a     |adderW2__2           |    19|
+|139   |      \label[2].a     |adderW2__3           |    19|
+|140   |      \label[3].a     |adderW2__4           |    19|
+|141   |      \label[4].a     |adderW2__5           |    19|
+|142   |      \label[5].a     |adderW2__6           |    19|
+|143   |      \label[6].a     |adderW2__7           |    19|
+|144   |      \label[7].a     |adderW2__8           |    19|
+|145   |      \label[8].a     |adderW2__9           |    19|
+|146   |      \label[9].a     |adderW2__10          |    19|
+|147   |      \label[10].a    |adderW2__11          |    19|
+|148   |      \label[11].a    |adderW2__12          |    19|
+|149   |      \label[12].a    |adderW2__13          |    19|
+|150   |      \label[13].a    |adderW2__14          |    19|
+|151   |      \label[14].a    |adderW2__15          |    19|
+|152   |      \label[15].a    |adderW2__16          |    19|
+|153   |      \label[16].a    |adderW2__17          |    19|
+|154   |      \label[17].a    |adderW2__18          |    19|
+|155   |      \label[18].a    |adderW2__19          |    19|
+|156   |      \label[19].a    |adderW2__20          |    19|
+|157   |      \label[20].a    |adderW2__21          |    19|
+|158   |      \label[21].a    |adderW2__22          |    19|
+|159   |      \label[22].a    |adderW2__23          |    19|
+|160   |      \label[23].a    |adderW2__24          |    19|
+|161   |      \label[24].a    |adderW2__25          |    19|
+|162   |      \label[25].a    |adderW2__26          |    19|
+|163   |      \label[26].a    |adderW2__27          |    19|
+|164   |      \label[27].a    |adderW2__28          |    19|
+|165   |      \label[28].a    |adderW2__29          |    19|
+|166   |      \label[29].a    |adderW2__30          |    19|
+|167   |      \label[30].a    |adderW2__31          |    19|
+|168   |      \label[31].a    |adderW2              |    19|
++------+----------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 654.730 ; gain = 446.711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 654.730 ; gain = 116.414
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 654.730 ; gain = 446.711
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 625 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 654.730 ; gain = 446.711
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 654.730 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 30 12:37:46 2020...
