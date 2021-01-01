@@ -34,10 +34,13 @@ lowerR = 32;
   fprintf(fid,sprintf("`timescale 1ns / 1ps \n"));
   fprintf(fid,sprintf("module CombinedQueueCirc_%d(\n",block));
   fprintf(fid,sprintf("        muxOut,\n"));
+  fprintf(fid,sprintf("        unloadMuxOut,\n"));
   fprintf(fid,sprintf("        rxIn,\n"));
   fprintf(fid,sprintf("        ly1In,\n"));
-  fprintf(fid,sprintf("        iter0,\n"));
+  fprintf(fid,sprintf("        inputLoadEn,\n"));
+  fprintf(fid,sprintf("        unloadEn,\n"));
   fprintf(fid,sprintf("        sliceAddress,\n"));
+  fprintf(fid,sprintf("        unloadAddress,\n"));
   fprintf(fid,sprintf("        wrEn,\n"));
   fprintf(fid,sprintf("        chipEn,\n"));
   fprintf(fid,sprintf("        clk,\n"));
@@ -56,8 +59,10 @@ lowerR = 32;
   fprintf(fid,sprintf("wire [w-1:0]ly1InConnector[r-1:0]; // Change #5\n"));
   fprintf(fid,sprintf("output wire [ muxOutSymbols * w - 1 : 0]muxOut;\n"));
   fprintf(fid,sprintf("reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];\n"));
+  fprintf(fid,sprintf("output reg [ lowerR - 1 : 0]unloadMuxOut; // #C\n"));
   fprintf(fid,sprintf("input [4:0]sliceAddress;\n"));
-  fprintf(fid,sprintf("input iter0; // cahnge #10\n"));
+  fprintf(fid,sprintf("input [4:0]unloadAddress;\n"));
+  fprintf(fid,sprintf("input inputLoadEn,unloadEn; // cahnge #10\n"));
   fprintf(fid,sprintf("input chipEn,wrEn;\n"));
   fprintf(fid,sprintf("input clk,rst;\n"));
   fprintf(fid,sprintf("reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs\n"));
@@ -88,7 +93,7 @@ lowerR = 32;
   fprintf(fid,sprintf("else if(chipEn) begin\n"));
   fprintf(fid,sprintf("    if(wrEn)begin\n"));
   fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
-  fprintf(fid,sprintf("            if(iter0)begin\n"));
+  fprintf(fid,sprintf("            if(inputLoadEn)begin\n"));
   fprintf(fid,sprintf("                if(i < lowerR)begin\n"));
   fprintf(fid,sprintf("                    fifoOut[i][0] <= rxInConnector[i];\n"));
   fprintf(fid,sprintf("                end\n"));
@@ -122,13 +127,41 @@ lowerR = 32;
   fprintf(fid,sprintf("    end\n"));
   fprintf(fid,sprintf("end\n"));
   fprintf(fid,sprintf("end\n"));
-  fprintf(fid,sprintf("always@(*)begin\n"));
+  
   
   #Seperate case statement for unload
-    
-  fprintf(fid,sprintf("else\n"));
+  fprintf(fid,sprintf("always@(*)begin\n"));  
+  fprintf(fid,sprintf("if(unloadEn)begin\n"));  
+  fprintf(fid,sprintf("    case(unloadAddress)\n")); 
+ 
+  for unloadAddress = 1:1:size(unloadMuxPattern)(3)
+    fprintf(fid,sprintf("       %d : begin\n",unloadAddress-1));
+    for outSymbolIndex = 1:1:size(unloadMuxPattern)(1)
+      fifoIndices = unloadMuxPattern(outSymbolIndex,1:end,unloadAddress);
+      
+      #if index = -1, not found in fifo, MAXVAL... or 0?
+      if(fifoIndices(1) == -1 || fifoIndices(2) == -1)
+        fprintf(fid,sprintf("              unloadMuxOut[%d] = 1'b0;\n",outSymbolIndex-1));      
+      else
+        fprintf(fid,sprintf("              unloadMuxOut[%d] = fifoOut[%d][%d][5];\n",outSymbolIndex-1,fifoIndices(1)-1,fifoIndices(2)-1));      
+      endif
+    endfor
+    fprintf(fid,sprintf("        end\n"));  
+  endfor
   
-  fprintf(fid,sprintf("case({iter0,sliceAddress})\n"));
+  
+  fprintf(fid,sprintf("        default:begin\n"));  
+  fprintf(fid,sprintf("            for(i = 0; i < lowerR; i=i+1)begin\n"));  
+  fprintf(fid,sprintf("                unloadMuxOut[i] = 1'b0;\n"));  
+  fprintf(fid,sprintf("            end\n"));  
+  fprintf(fid,sprintf("        end\n"));  
+  fprintf(fid,sprintf("    endcase\n"));  
+  fprintf(fid,sprintf("end\n"));  
+  fprintf(fid,sprintf("else begin\n"));
+  fprintf(fid,sprintf("    unloadMuxOut = 0;\n"));
+  fprintf(fid,sprintf("end\n"));
+  
+  fprintf(fid,sprintf("case({unloadEn,sliceAddress})\n"));
   fprintf(fid,sprintf("//iter0 = 0 => not first iteration\n"));
   
   #Script

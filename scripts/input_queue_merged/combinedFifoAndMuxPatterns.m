@@ -31,7 +31,7 @@ function [fifoRows,fifoColumns,fifoLoadInputFilled,fifoLy1Filled,iter0MuxPattern
   # We'll then create a new fifo of
   %clear all;
   retval = 0;
-  block = 1;
+  #block = 1;
   
   
   muxPattern = inputQueueMuxPattern(block); # 52 x 2 x 20

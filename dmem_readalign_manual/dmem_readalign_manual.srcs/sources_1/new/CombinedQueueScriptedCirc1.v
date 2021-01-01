@@ -1,10 +1,13 @@
 `timescale 1ns / 1ps 
 module CombinedQueueCirc_1(
         muxOut,
+        unloadMuxOut,
         rxIn,
         ly1In,
-        iter0,
+        inputLoadEn,
+        unloadEn,
         sliceAddress,
+        unloadAddress,
         wrEn,
         chipEn,
         clk,
@@ -22,8 +25,10 @@ wire [w-1:0]rxInConnector[lowerR-1:0];
 wire [w-1:0]ly1InConnector[r-1:0]; // Change #5
 output wire [ muxOutSymbols * w - 1 : 0]muxOut;
 reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];
+output reg [ lowerR - 1 : 0]unloadMuxOut; // #C
 input [4:0]sliceAddress;
-input iter0; // cahnge #10
+input [4:0]unloadAddress;
+input inputLoadEn,unloadEn; // cahnge #10
 input chipEn,wrEn;
 input clk,rst;
 reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs
@@ -54,7 +59,7 @@ end
 else if(chipEn) begin
     if(wrEn)begin
         for(i = r-1; i > -1; i=i-1) begin
-            if(iter0)begin
+            if(inputLoadEn)begin
                 if(i < lowerR)begin
                     fifoOut[i][0] <= rxInConnector[i];
                 end
@@ -89,7 +94,597 @@ else begin
 end
 end
 always@(*)begin
-case({iter0,sliceAddress})
+if(unloadEn)begin
+    case(unloadAddress)
+       0 : begin
+              unloadMuxOut[0] = fifoOut[14][3][5];
+              unloadMuxOut[1] = fifoOut[15][3][5];
+              unloadMuxOut[2] = fifoOut[16][3][5];
+              unloadMuxOut[3] = fifoOut[17][3][5];
+              unloadMuxOut[4] = fifoOut[18][3][5];
+              unloadMuxOut[5] = fifoOut[19][3][5];
+              unloadMuxOut[6] = fifoOut[20][3][5];
+              unloadMuxOut[7] = fifoOut[21][3][5];
+              unloadMuxOut[8] = fifoOut[22][3][5];
+              unloadMuxOut[9] = fifoOut[23][3][5];
+              unloadMuxOut[10] = fifoOut[24][3][5];
+              unloadMuxOut[11] = fifoOut[25][3][5];
+              unloadMuxOut[12] = fifoOut[0][2][5];
+              unloadMuxOut[13] = fifoOut[1][2][5];
+              unloadMuxOut[14] = fifoOut[2][2][5];
+              unloadMuxOut[15] = fifoOut[3][2][5];
+              unloadMuxOut[16] = fifoOut[4][2][5];
+              unloadMuxOut[17] = fifoOut[5][2][5];
+              unloadMuxOut[18] = fifoOut[6][2][5];
+              unloadMuxOut[19] = fifoOut[7][2][5];
+              unloadMuxOut[20] = fifoOut[8][2][5];
+              unloadMuxOut[21] = fifoOut[9][2][5];
+              unloadMuxOut[22] = fifoOut[10][2][5];
+              unloadMuxOut[23] = fifoOut[11][2][5];
+              unloadMuxOut[24] = fifoOut[12][2][5];
+              unloadMuxOut[25] = fifoOut[13][2][5];
+              unloadMuxOut[26] = fifoOut[14][2][5];
+              unloadMuxOut[27] = fifoOut[15][2][5];
+              unloadMuxOut[28] = fifoOut[16][2][5];
+              unloadMuxOut[29] = fifoOut[17][2][5];
+              unloadMuxOut[30] = fifoOut[18][2][5];
+              unloadMuxOut[31] = fifoOut[19][2][5];
+        end
+       1 : begin
+              unloadMuxOut[0] = fifoOut[20][2][5];
+              unloadMuxOut[1] = fifoOut[21][2][5];
+              unloadMuxOut[2] = fifoOut[22][2][5];
+              unloadMuxOut[3] = fifoOut[23][2][5];
+              unloadMuxOut[4] = fifoOut[24][2][5];
+              unloadMuxOut[5] = fifoOut[25][2][5];
+              unloadMuxOut[6] = fifoOut[0][1][5];
+              unloadMuxOut[7] = fifoOut[1][1][5];
+              unloadMuxOut[8] = fifoOut[2][1][5];
+              unloadMuxOut[9] = fifoOut[3][1][5];
+              unloadMuxOut[10] = fifoOut[4][1][5];
+              unloadMuxOut[11] = fifoOut[5][1][5];
+              unloadMuxOut[12] = fifoOut[6][1][5];
+              unloadMuxOut[13] = fifoOut[7][1][5];
+              unloadMuxOut[14] = fifoOut[8][1][5];
+              unloadMuxOut[15] = fifoOut[9][1][5];
+              unloadMuxOut[16] = fifoOut[10][1][5];
+              unloadMuxOut[17] = fifoOut[11][1][5];
+              unloadMuxOut[18] = fifoOut[12][1][5];
+              unloadMuxOut[19] = fifoOut[13][1][5];
+              unloadMuxOut[20] = fifoOut[14][1][5];
+              unloadMuxOut[21] = fifoOut[15][1][5];
+              unloadMuxOut[22] = fifoOut[16][1][5];
+              unloadMuxOut[23] = fifoOut[17][1][5];
+              unloadMuxOut[24] = fifoOut[18][1][5];
+              unloadMuxOut[25] = fifoOut[19][1][5];
+              unloadMuxOut[26] = fifoOut[20][1][5];
+              unloadMuxOut[27] = fifoOut[21][1][5];
+              unloadMuxOut[28] = fifoOut[22][1][5];
+              unloadMuxOut[29] = fifoOut[23][1][5];
+              unloadMuxOut[30] = fifoOut[24][1][5];
+              unloadMuxOut[31] = fifoOut[25][1][5];
+        end
+       2 : begin
+              unloadMuxOut[0] = fifoOut[0][0][5];
+              unloadMuxOut[1] = fifoOut[1][0][5];
+              unloadMuxOut[2] = fifoOut[2][0][5];
+              unloadMuxOut[3] = fifoOut[3][0][5];
+              unloadMuxOut[4] = fifoOut[4][0][5];
+              unloadMuxOut[5] = fifoOut[5][0][5];
+              unloadMuxOut[6] = fifoOut[6][0][5];
+              unloadMuxOut[7] = fifoOut[7][0][5];
+              unloadMuxOut[8] = fifoOut[8][0][5];
+              unloadMuxOut[9] = fifoOut[9][0][5];
+              unloadMuxOut[10] = fifoOut[10][0][5];
+              unloadMuxOut[11] = fifoOut[11][0][5];
+              unloadMuxOut[12] = fifoOut[12][0][5];
+              unloadMuxOut[13] = fifoOut[13][0][5];
+              unloadMuxOut[14] = fifoOut[14][0][5];
+              unloadMuxOut[15] = fifoOut[15][0][5];
+              unloadMuxOut[16] = fifoOut[16][0][5];
+              unloadMuxOut[17] = fifoOut[35][14][5];
+              unloadMuxOut[18] = fifoOut[36][14][5];
+              unloadMuxOut[19] = fifoOut[37][14][5];
+              unloadMuxOut[20] = fifoOut[38][14][5];
+              unloadMuxOut[21] = fifoOut[39][14][5];
+              unloadMuxOut[22] = fifoOut[40][14][5];
+              unloadMuxOut[23] = fifoOut[41][14][5];
+              unloadMuxOut[24] = fifoOut[42][14][5];
+              unloadMuxOut[25] = fifoOut[43][14][5];
+              unloadMuxOut[26] = fifoOut[44][14][5];
+              unloadMuxOut[27] = fifoOut[45][14][5];
+              unloadMuxOut[28] = fifoOut[46][14][5];
+              unloadMuxOut[29] = fifoOut[47][14][5];
+              unloadMuxOut[30] = fifoOut[48][14][5];
+              unloadMuxOut[31] = fifoOut[49][14][5];
+        end
+       3 : begin
+              unloadMuxOut[0] = fifoOut[50][14][5];
+              unloadMuxOut[1] = fifoOut[51][14][5];
+              unloadMuxOut[2] = fifoOut[26][13][5];
+              unloadMuxOut[3] = fifoOut[27][13][5];
+              unloadMuxOut[4] = fifoOut[28][13][5];
+              unloadMuxOut[5] = fifoOut[29][13][5];
+              unloadMuxOut[6] = fifoOut[30][13][5];
+              unloadMuxOut[7] = fifoOut[31][13][5];
+              unloadMuxOut[8] = fifoOut[32][13][5];
+              unloadMuxOut[9] = fifoOut[33][13][5];
+              unloadMuxOut[10] = fifoOut[34][13][5];
+              unloadMuxOut[11] = fifoOut[35][13][5];
+              unloadMuxOut[12] = fifoOut[36][13][5];
+              unloadMuxOut[13] = fifoOut[37][13][5];
+              unloadMuxOut[14] = fifoOut[38][13][5];
+              unloadMuxOut[15] = fifoOut[39][13][5];
+              unloadMuxOut[16] = fifoOut[40][13][5];
+              unloadMuxOut[17] = fifoOut[41][13][5];
+              unloadMuxOut[18] = fifoOut[42][13][5];
+              unloadMuxOut[19] = fifoOut[43][13][5];
+              unloadMuxOut[20] = fifoOut[44][13][5];
+              unloadMuxOut[21] = fifoOut[45][13][5];
+              unloadMuxOut[22] = fifoOut[46][13][5];
+              unloadMuxOut[23] = fifoOut[47][13][5];
+              unloadMuxOut[24] = fifoOut[48][13][5];
+              unloadMuxOut[25] = fifoOut[49][13][5];
+              unloadMuxOut[26] = fifoOut[50][13][5];
+              unloadMuxOut[27] = fifoOut[51][13][5];
+              unloadMuxOut[28] = fifoOut[26][12][5];
+              unloadMuxOut[29] = fifoOut[27][12][5];
+              unloadMuxOut[30] = fifoOut[28][12][5];
+              unloadMuxOut[31] = fifoOut[29][12][5];
+        end
+       4 : begin
+              unloadMuxOut[0] = fifoOut[30][12][5];
+              unloadMuxOut[1] = fifoOut[31][12][5];
+              unloadMuxOut[2] = fifoOut[32][12][5];
+              unloadMuxOut[3] = fifoOut[33][12][5];
+              unloadMuxOut[4] = fifoOut[34][12][5];
+              unloadMuxOut[5] = fifoOut[35][12][5];
+              unloadMuxOut[6] = fifoOut[36][12][5];
+              unloadMuxOut[7] = fifoOut[37][12][5];
+              unloadMuxOut[8] = fifoOut[38][12][5];
+              unloadMuxOut[9] = fifoOut[39][12][5];
+              unloadMuxOut[10] = fifoOut[40][12][5];
+              unloadMuxOut[11] = fifoOut[41][12][5];
+              unloadMuxOut[12] = fifoOut[42][12][5];
+              unloadMuxOut[13] = fifoOut[43][12][5];
+              unloadMuxOut[14] = fifoOut[44][12][5];
+              unloadMuxOut[15] = fifoOut[45][12][5];
+              unloadMuxOut[16] = fifoOut[46][12][5];
+              unloadMuxOut[17] = fifoOut[47][12][5];
+              unloadMuxOut[18] = fifoOut[48][12][5];
+              unloadMuxOut[19] = fifoOut[49][12][5];
+              unloadMuxOut[20] = fifoOut[50][12][5];
+              unloadMuxOut[21] = fifoOut[51][12][5];
+              unloadMuxOut[22] = fifoOut[26][11][5];
+              unloadMuxOut[23] = fifoOut[27][11][5];
+              unloadMuxOut[24] = fifoOut[28][11][5];
+              unloadMuxOut[25] = fifoOut[29][11][5];
+              unloadMuxOut[26] = fifoOut[30][11][5];
+              unloadMuxOut[27] = fifoOut[31][11][5];
+              unloadMuxOut[28] = fifoOut[32][11][5];
+              unloadMuxOut[29] = fifoOut[33][11][5];
+              unloadMuxOut[30] = fifoOut[34][11][5];
+              unloadMuxOut[31] = fifoOut[35][11][5];
+        end
+       5 : begin
+              unloadMuxOut[0] = fifoOut[36][11][5];
+              unloadMuxOut[1] = fifoOut[37][11][5];
+              unloadMuxOut[2] = fifoOut[38][11][5];
+              unloadMuxOut[3] = fifoOut[39][11][5];
+              unloadMuxOut[4] = fifoOut[40][11][5];
+              unloadMuxOut[5] = fifoOut[41][11][5];
+              unloadMuxOut[6] = fifoOut[42][11][5];
+              unloadMuxOut[7] = fifoOut[43][11][5];
+              unloadMuxOut[8] = fifoOut[44][11][5];
+              unloadMuxOut[9] = fifoOut[45][11][5];
+              unloadMuxOut[10] = fifoOut[46][11][5];
+              unloadMuxOut[11] = fifoOut[47][11][5];
+              unloadMuxOut[12] = fifoOut[48][11][5];
+              unloadMuxOut[13] = fifoOut[49][11][5];
+              unloadMuxOut[14] = fifoOut[50][11][5];
+              unloadMuxOut[15] = fifoOut[51][11][5];
+              unloadMuxOut[16] = fifoOut[26][10][5];
+              unloadMuxOut[17] = fifoOut[27][10][5];
+              unloadMuxOut[18] = fifoOut[28][10][5];
+              unloadMuxOut[19] = fifoOut[29][10][5];
+              unloadMuxOut[20] = fifoOut[30][10][5];
+              unloadMuxOut[21] = fifoOut[31][10][5];
+              unloadMuxOut[22] = fifoOut[32][10][5];
+              unloadMuxOut[23] = fifoOut[33][10][5];
+              unloadMuxOut[24] = fifoOut[34][10][5];
+              unloadMuxOut[25] = fifoOut[35][10][5];
+              unloadMuxOut[26] = fifoOut[36][10][5];
+              unloadMuxOut[27] = fifoOut[37][10][5];
+              unloadMuxOut[28] = fifoOut[38][10][5];
+              unloadMuxOut[29] = fifoOut[39][10][5];
+              unloadMuxOut[30] = fifoOut[40][10][5];
+              unloadMuxOut[31] = fifoOut[41][10][5];
+        end
+       6 : begin
+              unloadMuxOut[0] = fifoOut[42][10][5];
+              unloadMuxOut[1] = fifoOut[43][10][5];
+              unloadMuxOut[2] = fifoOut[44][10][5];
+              unloadMuxOut[3] = fifoOut[45][10][5];
+              unloadMuxOut[4] = fifoOut[46][10][5];
+              unloadMuxOut[5] = fifoOut[47][10][5];
+              unloadMuxOut[6] = fifoOut[48][10][5];
+              unloadMuxOut[7] = fifoOut[49][10][5];
+              unloadMuxOut[8] = fifoOut[50][10][5];
+              unloadMuxOut[9] = fifoOut[51][10][5];
+              unloadMuxOut[10] = fifoOut[26][9][5];
+              unloadMuxOut[11] = fifoOut[27][9][5];
+              unloadMuxOut[12] = fifoOut[28][9][5];
+              unloadMuxOut[13] = fifoOut[29][9][5];
+              unloadMuxOut[14] = fifoOut[30][9][5];
+              unloadMuxOut[15] = fifoOut[31][9][5];
+              unloadMuxOut[16] = fifoOut[32][9][5];
+              unloadMuxOut[17] = fifoOut[33][9][5];
+              unloadMuxOut[18] = fifoOut[34][9][5];
+              unloadMuxOut[19] = fifoOut[35][9][5];
+              unloadMuxOut[20] = fifoOut[36][9][5];
+              unloadMuxOut[21] = fifoOut[37][9][5];
+              unloadMuxOut[22] = fifoOut[38][9][5];
+              unloadMuxOut[23] = fifoOut[39][9][5];
+              unloadMuxOut[24] = fifoOut[40][9][5];
+              unloadMuxOut[25] = fifoOut[41][9][5];
+              unloadMuxOut[26] = fifoOut[42][9][5];
+              unloadMuxOut[27] = fifoOut[43][9][5];
+              unloadMuxOut[28] = fifoOut[44][9][5];
+              unloadMuxOut[29] = fifoOut[45][9][5];
+              unloadMuxOut[30] = fifoOut[46][9][5];
+              unloadMuxOut[31] = fifoOut[47][9][5];
+        end
+       7 : begin
+              unloadMuxOut[0] = fifoOut[48][9][5];
+              unloadMuxOut[1] = fifoOut[49][9][5];
+              unloadMuxOut[2] = fifoOut[50][9][5];
+              unloadMuxOut[3] = fifoOut[51][9][5];
+              unloadMuxOut[4] = fifoOut[26][8][5];
+              unloadMuxOut[5] = fifoOut[27][8][5];
+              unloadMuxOut[6] = fifoOut[28][8][5];
+              unloadMuxOut[7] = fifoOut[29][8][5];
+              unloadMuxOut[8] = fifoOut[30][8][5];
+              unloadMuxOut[9] = fifoOut[31][8][5];
+              unloadMuxOut[10] = fifoOut[32][8][5];
+              unloadMuxOut[11] = fifoOut[33][8][5];
+              unloadMuxOut[12] = fifoOut[34][8][5];
+              unloadMuxOut[13] = fifoOut[35][8][5];
+              unloadMuxOut[14] = fifoOut[36][8][5];
+              unloadMuxOut[15] = fifoOut[37][8][5];
+              unloadMuxOut[16] = fifoOut[38][8][5];
+              unloadMuxOut[17] = fifoOut[39][8][5];
+              unloadMuxOut[18] = fifoOut[40][8][5];
+              unloadMuxOut[19] = fifoOut[41][8][5];
+              unloadMuxOut[20] = fifoOut[42][8][5];
+              unloadMuxOut[21] = fifoOut[43][8][5];
+              unloadMuxOut[22] = fifoOut[44][8][5];
+              unloadMuxOut[23] = fifoOut[45][8][5];
+              unloadMuxOut[24] = fifoOut[46][8][5];
+              unloadMuxOut[25] = fifoOut[47][8][5];
+              unloadMuxOut[26] = fifoOut[48][8][5];
+              unloadMuxOut[27] = fifoOut[49][8][5];
+              unloadMuxOut[28] = fifoOut[50][8][5];
+              unloadMuxOut[29] = fifoOut[51][8][5];
+              unloadMuxOut[30] = fifoOut[26][7][5];
+              unloadMuxOut[31] = fifoOut[27][7][5];
+        end
+       8 : begin
+              unloadMuxOut[0] = fifoOut[28][7][5];
+              unloadMuxOut[1] = fifoOut[29][7][5];
+              unloadMuxOut[2] = fifoOut[30][7][5];
+              unloadMuxOut[3] = fifoOut[31][7][5];
+              unloadMuxOut[4] = fifoOut[32][7][5];
+              unloadMuxOut[5] = fifoOut[33][7][5];
+              unloadMuxOut[6] = fifoOut[34][7][5];
+              unloadMuxOut[7] = fifoOut[35][7][5];
+              unloadMuxOut[8] = fifoOut[36][7][5];
+              unloadMuxOut[9] = fifoOut[37][7][5];
+              unloadMuxOut[10] = fifoOut[38][7][5];
+              unloadMuxOut[11] = fifoOut[39][7][5];
+              unloadMuxOut[12] = fifoOut[40][7][5];
+              unloadMuxOut[13] = fifoOut[41][7][5];
+              unloadMuxOut[14] = fifoOut[42][7][5];
+              unloadMuxOut[15] = fifoOut[43][7][5];
+              unloadMuxOut[16] = fifoOut[44][7][5];
+              unloadMuxOut[17] = fifoOut[45][7][5];
+              unloadMuxOut[18] = fifoOut[46][7][5];
+              unloadMuxOut[19] = fifoOut[47][7][5];
+              unloadMuxOut[20] = fifoOut[48][7][5];
+              unloadMuxOut[21] = fifoOut[49][7][5];
+              unloadMuxOut[22] = fifoOut[50][7][5];
+              unloadMuxOut[23] = fifoOut[51][7][5];
+              unloadMuxOut[24] = fifoOut[26][6][5];
+              unloadMuxOut[25] = fifoOut[27][6][5];
+              unloadMuxOut[26] = fifoOut[28][6][5];
+              unloadMuxOut[27] = fifoOut[29][6][5];
+              unloadMuxOut[28] = fifoOut[30][6][5];
+              unloadMuxOut[29] = fifoOut[31][6][5];
+              unloadMuxOut[30] = fifoOut[32][6][5];
+              unloadMuxOut[31] = fifoOut[33][6][5];
+        end
+       9 : begin
+              unloadMuxOut[0] = fifoOut[34][6][5];
+              unloadMuxOut[1] = fifoOut[35][6][5];
+              unloadMuxOut[2] = fifoOut[36][6][5];
+              unloadMuxOut[3] = fifoOut[37][6][5];
+              unloadMuxOut[4] = fifoOut[38][6][5];
+              unloadMuxOut[5] = fifoOut[39][6][5];
+              unloadMuxOut[6] = fifoOut[40][6][5];
+              unloadMuxOut[7] = fifoOut[41][6][5];
+              unloadMuxOut[8] = fifoOut[42][6][5];
+              unloadMuxOut[9] = fifoOut[43][6][5];
+              unloadMuxOut[10] = fifoOut[44][6][5];
+              unloadMuxOut[11] = fifoOut[45][6][5];
+              unloadMuxOut[12] = fifoOut[46][6][5];
+              unloadMuxOut[13] = fifoOut[47][6][5];
+              unloadMuxOut[14] = fifoOut[48][6][5];
+              unloadMuxOut[15] = fifoOut[49][6][5];
+              unloadMuxOut[16] = fifoOut[50][6][5];
+              unloadMuxOut[17] = fifoOut[51][6][5];
+              unloadMuxOut[18] = fifoOut[26][5][5];
+              unloadMuxOut[19] = fifoOut[27][5][5];
+              unloadMuxOut[20] = fifoOut[28][5][5];
+              unloadMuxOut[21] = fifoOut[29][5][5];
+              unloadMuxOut[22] = fifoOut[30][5][5];
+              unloadMuxOut[23] = fifoOut[31][5][5];
+              unloadMuxOut[24] = fifoOut[32][5][5];
+              unloadMuxOut[25] = fifoOut[33][5][5];
+              unloadMuxOut[26] = fifoOut[34][5][5];
+              unloadMuxOut[27] = fifoOut[35][5][5];
+              unloadMuxOut[28] = fifoOut[36][5][5];
+              unloadMuxOut[29] = fifoOut[37][5][5];
+              unloadMuxOut[30] = fifoOut[38][5][5];
+              unloadMuxOut[31] = fifoOut[39][5][5];
+        end
+       10 : begin
+              unloadMuxOut[0] = fifoOut[40][5][5];
+              unloadMuxOut[1] = fifoOut[41][5][5];
+              unloadMuxOut[2] = fifoOut[42][5][5];
+              unloadMuxOut[3] = fifoOut[43][5][5];
+              unloadMuxOut[4] = fifoOut[44][5][5];
+              unloadMuxOut[5] = fifoOut[45][5][5];
+              unloadMuxOut[6] = fifoOut[46][5][5];
+              unloadMuxOut[7] = fifoOut[47][5][5];
+              unloadMuxOut[8] = fifoOut[48][5][5];
+              unloadMuxOut[9] = fifoOut[49][5][5];
+              unloadMuxOut[10] = fifoOut[50][5][5];
+              unloadMuxOut[11] = fifoOut[51][5][5];
+              unloadMuxOut[12] = fifoOut[26][4][5];
+              unloadMuxOut[13] = fifoOut[27][4][5];
+              unloadMuxOut[14] = fifoOut[28][4][5];
+              unloadMuxOut[15] = fifoOut[29][4][5];
+              unloadMuxOut[16] = fifoOut[30][4][5];
+              unloadMuxOut[17] = fifoOut[31][4][5];
+              unloadMuxOut[18] = fifoOut[32][4][5];
+              unloadMuxOut[19] = fifoOut[33][4][5];
+              unloadMuxOut[20] = fifoOut[34][4][5];
+              unloadMuxOut[21] = fifoOut[35][4][5];
+              unloadMuxOut[22] = fifoOut[36][4][5];
+              unloadMuxOut[23] = fifoOut[37][4][5];
+              unloadMuxOut[24] = fifoOut[38][4][5];
+              unloadMuxOut[25] = fifoOut[39][4][5];
+              unloadMuxOut[26] = fifoOut[40][4][5];
+              unloadMuxOut[27] = fifoOut[41][4][5];
+              unloadMuxOut[28] = fifoOut[42][4][5];
+              unloadMuxOut[29] = fifoOut[43][4][5];
+              unloadMuxOut[30] = fifoOut[44][4][5];
+              unloadMuxOut[31] = fifoOut[45][4][5];
+        end
+       11 : begin
+              unloadMuxOut[0] = fifoOut[46][4][5];
+              unloadMuxOut[1] = fifoOut[47][4][5];
+              unloadMuxOut[2] = fifoOut[48][4][5];
+              unloadMuxOut[3] = fifoOut[49][4][5];
+              unloadMuxOut[4] = fifoOut[50][4][5];
+              unloadMuxOut[5] = fifoOut[51][4][5];
+              unloadMuxOut[6] = fifoOut[26][3][5];
+              unloadMuxOut[7] = fifoOut[27][3][5];
+              unloadMuxOut[8] = fifoOut[28][3][5];
+              unloadMuxOut[9] = fifoOut[29][3][5];
+              unloadMuxOut[10] = fifoOut[30][3][5];
+              unloadMuxOut[11] = fifoOut[31][3][5];
+              unloadMuxOut[12] = fifoOut[32][3][5];
+              unloadMuxOut[13] = fifoOut[33][3][5];
+              unloadMuxOut[14] = fifoOut[34][3][5];
+              unloadMuxOut[15] = fifoOut[35][3][5];
+              unloadMuxOut[16] = fifoOut[36][3][5];
+              unloadMuxOut[17] = fifoOut[37][3][5];
+              unloadMuxOut[18] = fifoOut[38][3][5];
+              unloadMuxOut[19] = fifoOut[39][3][5];
+              unloadMuxOut[20] = fifoOut[40][3][5];
+              unloadMuxOut[21] = fifoOut[41][3][5];
+              unloadMuxOut[22] = fifoOut[42][3][5];
+              unloadMuxOut[23] = fifoOut[43][3][5];
+              unloadMuxOut[24] = fifoOut[44][3][5];
+              unloadMuxOut[25] = fifoOut[45][3][5];
+              unloadMuxOut[26] = fifoOut[46][3][5];
+              unloadMuxOut[27] = fifoOut[47][3][5];
+              unloadMuxOut[28] = fifoOut[48][3][5];
+              unloadMuxOut[29] = fifoOut[49][3][5];
+              unloadMuxOut[30] = fifoOut[50][3][5];
+              unloadMuxOut[31] = fifoOut[51][3][5];
+        end
+       12 : begin
+              unloadMuxOut[0] = fifoOut[26][2][5];
+              unloadMuxOut[1] = fifoOut[27][2][5];
+              unloadMuxOut[2] = fifoOut[28][2][5];
+              unloadMuxOut[3] = fifoOut[29][2][5];
+              unloadMuxOut[4] = fifoOut[30][2][5];
+              unloadMuxOut[5] = fifoOut[31][2][5];
+              unloadMuxOut[6] = fifoOut[32][2][5];
+              unloadMuxOut[7] = fifoOut[33][2][5];
+              unloadMuxOut[8] = fifoOut[34][2][5];
+              unloadMuxOut[9] = fifoOut[35][2][5];
+              unloadMuxOut[10] = fifoOut[36][2][5];
+              unloadMuxOut[11] = fifoOut[37][2][5];
+              unloadMuxOut[12] = fifoOut[38][2][5];
+              unloadMuxOut[13] = fifoOut[39][2][5];
+              unloadMuxOut[14] = fifoOut[40][2][5];
+              unloadMuxOut[15] = fifoOut[41][2][5];
+              unloadMuxOut[16] = fifoOut[42][2][5];
+              unloadMuxOut[17] = fifoOut[43][2][5];
+              unloadMuxOut[18] = fifoOut[44][2][5];
+              unloadMuxOut[19] = fifoOut[45][2][5];
+              unloadMuxOut[20] = fifoOut[46][2][5];
+              unloadMuxOut[21] = fifoOut[47][2][5];
+              unloadMuxOut[22] = fifoOut[48][2][5];
+              unloadMuxOut[23] = fifoOut[49][2][5];
+              unloadMuxOut[24] = fifoOut[50][2][5];
+              unloadMuxOut[25] = fifoOut[51][2][5];
+              unloadMuxOut[26] = fifoOut[26][1][5];
+              unloadMuxOut[27] = fifoOut[27][1][5];
+              unloadMuxOut[28] = fifoOut[28][1][5];
+              unloadMuxOut[29] = fifoOut[29][1][5];
+              unloadMuxOut[30] = fifoOut[30][1][5];
+              unloadMuxOut[31] = fifoOut[31][1][5];
+        end
+       13 : begin
+              unloadMuxOut[0] = fifoOut[32][1][5];
+              unloadMuxOut[1] = fifoOut[33][1][5];
+              unloadMuxOut[2] = fifoOut[34][1][5];
+              unloadMuxOut[3] = fifoOut[35][1][5];
+              unloadMuxOut[4] = fifoOut[36][1][5];
+              unloadMuxOut[5] = fifoOut[37][1][5];
+              unloadMuxOut[6] = fifoOut[38][1][5];
+              unloadMuxOut[7] = fifoOut[39][1][5];
+              unloadMuxOut[8] = fifoOut[40][1][5];
+              unloadMuxOut[9] = fifoOut[41][1][5];
+              unloadMuxOut[10] = fifoOut[42][1][5];
+              unloadMuxOut[11] = fifoOut[43][1][5];
+              unloadMuxOut[12] = fifoOut[44][1][5];
+              unloadMuxOut[13] = fifoOut[45][1][5];
+              unloadMuxOut[14] = fifoOut[46][1][5];
+              unloadMuxOut[15] = fifoOut[47][1][5];
+              unloadMuxOut[16] = fifoOut[48][1][5];
+              unloadMuxOut[17] = fifoOut[49][1][5];
+              unloadMuxOut[18] = fifoOut[50][1][5];
+              unloadMuxOut[19] = fifoOut[51][1][5];
+              unloadMuxOut[20] = fifoOut[26][0][5];
+              unloadMuxOut[21] = fifoOut[27][0][5];
+              unloadMuxOut[22] = fifoOut[28][0][5];
+              unloadMuxOut[23] = fifoOut[29][0][5];
+              unloadMuxOut[24] = fifoOut[30][0][5];
+              unloadMuxOut[25] = fifoOut[31][0][5];
+              unloadMuxOut[26] = fifoOut[32][0][5];
+              unloadMuxOut[27] = fifoOut[33][0][5];
+              unloadMuxOut[28] = fifoOut[34][0][5];
+              unloadMuxOut[29] = fifoOut[35][0][5];
+              unloadMuxOut[30] = fifoOut[36][0][5];
+              unloadMuxOut[31] = fifoOut[37][0][5];
+        end
+       14 : begin
+              unloadMuxOut[0] = fifoOut[38][0][5];
+              unloadMuxOut[1] = fifoOut[39][0][5];
+              unloadMuxOut[2] = fifoOut[40][0][5];
+              unloadMuxOut[3] = fifoOut[41][0][5];
+              unloadMuxOut[4] = fifoOut[42][0][5];
+              unloadMuxOut[5] = fifoOut[8][5][5];
+              unloadMuxOut[6] = fifoOut[9][5][5];
+              unloadMuxOut[7] = fifoOut[10][5][5];
+              unloadMuxOut[8] = fifoOut[11][5][5];
+              unloadMuxOut[9] = fifoOut[12][5][5];
+              unloadMuxOut[10] = fifoOut[13][5][5];
+              unloadMuxOut[11] = fifoOut[14][5][5];
+              unloadMuxOut[12] = fifoOut[15][5][5];
+              unloadMuxOut[13] = fifoOut[16][5][5];
+              unloadMuxOut[14] = fifoOut[17][5][5];
+              unloadMuxOut[15] = fifoOut[18][5][5];
+              unloadMuxOut[16] = fifoOut[19][5][5];
+              unloadMuxOut[17] = fifoOut[20][5][5];
+              unloadMuxOut[18] = fifoOut[21][5][5];
+              unloadMuxOut[19] = fifoOut[22][5][5];
+              unloadMuxOut[20] = fifoOut[23][5][5];
+              unloadMuxOut[21] = fifoOut[24][5][5];
+              unloadMuxOut[22] = fifoOut[25][5][5];
+              unloadMuxOut[23] = fifoOut[0][4][5];
+              unloadMuxOut[24] = fifoOut[1][4][5];
+              unloadMuxOut[25] = fifoOut[2][4][5];
+              unloadMuxOut[26] = fifoOut[3][4][5];
+              unloadMuxOut[27] = fifoOut[4][4][5];
+              unloadMuxOut[28] = fifoOut[5][4][5];
+              unloadMuxOut[29] = fifoOut[6][4][5];
+              unloadMuxOut[30] = fifoOut[7][4][5];
+              unloadMuxOut[31] = fifoOut[8][4][5];
+        end
+       15 : begin
+              unloadMuxOut[0] = fifoOut[9][4][5];
+              unloadMuxOut[1] = fifoOut[10][4][5];
+              unloadMuxOut[2] = fifoOut[11][4][5];
+              unloadMuxOut[3] = fifoOut[12][4][5];
+              unloadMuxOut[4] = fifoOut[13][4][5];
+              unloadMuxOut[5] = fifoOut[14][4][5];
+              unloadMuxOut[6] = fifoOut[15][4][5];
+              unloadMuxOut[7] = fifoOut[16][4][5];
+              unloadMuxOut[8] = fifoOut[17][4][5];
+              unloadMuxOut[9] = fifoOut[18][4][5];
+              unloadMuxOut[10] = fifoOut[19][4][5];
+              unloadMuxOut[11] = fifoOut[20][4][5];
+              unloadMuxOut[12] = fifoOut[21][4][5];
+              unloadMuxOut[13] = 1'b0;
+              unloadMuxOut[14] = 1'b0;
+              unloadMuxOut[15] = 1'b0;
+              unloadMuxOut[16] = 1'b0;
+              unloadMuxOut[17] = 1'b0;
+              unloadMuxOut[18] = 1'b0;
+              unloadMuxOut[19] = 1'b0;
+              unloadMuxOut[20] = 1'b0;
+              unloadMuxOut[21] = 1'b0;
+              unloadMuxOut[22] = 1'b0;
+              unloadMuxOut[23] = 1'b0;
+              unloadMuxOut[24] = 1'b0;
+              unloadMuxOut[25] = 1'b0;
+              unloadMuxOut[26] = 1'b0;
+              unloadMuxOut[27] = 1'b0;
+              unloadMuxOut[28] = 1'b0;
+              unloadMuxOut[29] = 1'b0;
+              unloadMuxOut[30] = 1'b0;
+              unloadMuxOut[31] = 1'b0;
+        end
+       16 : begin
+              unloadMuxOut[0] = 1'b0;
+              unloadMuxOut[1] = 1'b0;
+              unloadMuxOut[2] = 1'b0;
+              unloadMuxOut[3] = 1'b0;
+              unloadMuxOut[4] = 1'b0;
+              unloadMuxOut[5] = 1'b0;
+              unloadMuxOut[6] = 1'b0;
+              unloadMuxOut[7] = 1'b0;
+              unloadMuxOut[8] = 1'b0;
+              unloadMuxOut[9] = 1'b0;
+              unloadMuxOut[10] = 1'b0;
+              unloadMuxOut[11] = 1'b0;
+              unloadMuxOut[12] = 1'b0;
+              unloadMuxOut[13] = 1'b0;
+              unloadMuxOut[14] = 1'b0;
+              unloadMuxOut[15] = 1'b0;
+              unloadMuxOut[16] = 1'b0;
+              unloadMuxOut[17] = 1'b0;
+              unloadMuxOut[18] = 1'b0;
+              unloadMuxOut[19] = 1'b0;
+              unloadMuxOut[20] = 1'b0;
+              unloadMuxOut[21] = 1'b0;
+              unloadMuxOut[22] = 1'b0;
+              unloadMuxOut[23] = 1'b0;
+              unloadMuxOut[24] = 1'b0;
+              unloadMuxOut[25] = 1'b0;
+              unloadMuxOut[26] = 1'b0;
+              unloadMuxOut[27] = 1'b0;
+              unloadMuxOut[28] = 1'b0;
+              unloadMuxOut[29] = 1'b0;
+              unloadMuxOut[30] = 1'b0;
+              unloadMuxOut[31] = 1'b0;
+        end
+        default:begin
+            for(i = 0; i < lowerR; i=i+1)begin
+                unloadMuxOut[i] = 1'b0;
+            end
+        end
+    endcase
+end
+else begin
+    unloadMuxOut = 0;
+end
+case({unloadEn,sliceAddress})
 //iter0 = 0 => not first iteration
        {1'b0,5'd 0}: begin
               muxOutConnector[0] = fifoOut[22][4];
