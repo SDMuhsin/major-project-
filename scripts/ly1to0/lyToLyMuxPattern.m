@@ -23,10 +23,9 @@
 ## Author: sayed <sayed@SDMUHSIN>
 ## Created: 2021-01-04
 
-function [fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern (block,shiftEn,swapLys)
+function [fifo,fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern (block,shiftEn,swapLys)
 
 block = 1;
-shiftEn = 0;
 addressTable = layerAddressMap(block);
 
 if(swapLys)
@@ -56,6 +55,14 @@ fifo = fifoTemp;
 
 #Shift ON
 if(shiftEn)
+  
+  muxPattern = -1 * ones( fifoRows, 2, size(addressTable)(1));
+  for slice = 1:1:size(muxPattern)(3)
+    muxPattern(:,:,slice) = findIndexesOfAInB( addressTable(slice,:,2), fifo);
+    fifo = shiftFifo(fifo);
+    fprintf("Shifting...");
+  end  
+  fprintf("\n");
 else
   muxPattern = -1 * ones( fifoRows, 2, size(addressTable)(1));
   for slice = 1:1:size(muxPattern)(3)

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log L_01_block1_yesshift_scripted.vds -m64 -mode batch -messageDb vivado.pb -notrace -source L_01_block1_yesshift_scripted.tcl" );
+         "-log L_01_block1_noshift_scripted.vds -m64 -mode batch -messageDb vivado.pb -notrace -source L_01_block1_noshift_scripted.tcl" );
 
 
 
