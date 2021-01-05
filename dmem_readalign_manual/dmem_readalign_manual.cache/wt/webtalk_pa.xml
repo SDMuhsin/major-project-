@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Dec 30 14:05:47 2020">
+<application name="pa" timeStamp="Fri Jan 01 13:39:51 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="681df2789abe443a8db54a0483452b57" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -23,23 +23,78 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
 <property name="ReportUtilization" value="5" type="JavaHandler"/>
 <property name="RunSynthesis" value="9" type="JavaHandler"/>
-<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="3" type="JavaHandler"/>
 <property name="SetTopNode" value="9" type="JavaHandler"/>
 <property name="SimulationClose" value="7" type="JavaHandler"/>
 <property name="SimulationRun" value="16" type="JavaHandler"/>
 <property name="SimulationRunAll" value="1" type="JavaHandler"/>
 <property name="SimulationRunForTime" value="33" type="JavaHandler"/>
+<property name="ToggleViewNavigator" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceCommand.PACommandNames_SET_AS_TOP, Set as Top" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, CombinedQueueCirc_1 (CombinedQueueScriptedCirc1.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Run Synthesis], 17, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.StateMonitor_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="CombinedQueue.v, 157, 205" value="2" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 0, 93" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 104, 217" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 106, 58" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 113, 97" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 120, 117" value="2" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 124, 51" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 139, 92" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 139, 97" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 149, 180" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 150, 132" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 157, 113" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 159, 189" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 168, 93" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 177, 69" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 183, 128" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 183, 208" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 190, 205" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 190, 205, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 199, 137" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 203, 68" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 205, 164" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 246, 95" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 277, 163" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 28, 210" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 28, 233" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 290, 154" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 325, 147" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 330, 118" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 342, 120" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 352, 118" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 385, 16" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 52, 61" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 54, 128" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 54, 182" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 56, 225" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 563, 223" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 59, 84" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 61, 226" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 62, 108" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 622, 58" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 622, 58, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 627, 169" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 676, 204" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 676, 204, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 73, 77" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 78, 159" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 78, 172" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 82, 196" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 93, 221" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 98, 211" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, CombinedQueue (CombinedQueue.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, CombinedQueueCirc_1 (CombinedQueueScriptedCirc1.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, DMem_1_circ511_Scripted (DMemCombined.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources], 0, true, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="112" type="GuiMode"/>
+<property name="GuiMode" value="113" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="93" type="TclMode"/>
 </item>

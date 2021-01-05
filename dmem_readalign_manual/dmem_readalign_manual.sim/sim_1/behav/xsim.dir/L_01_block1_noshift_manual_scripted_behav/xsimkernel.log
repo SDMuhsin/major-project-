@@ -1,0 +1,7 @@
+Running: xsim.dir/L_01_block1_noshift_manual_scripted_behav/xsimk.exe -simmode gui -wdb L_01_block1_noshift_manual_scripted_behav.wdb -simrunnum 0 -socket 58197
+Design successfully loaded
+Design Loading Memory Usage: 9548 KB (Peak: 9548 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 10096 KB (Peak: 10096 KB)
+Simulation CPU Usage: 77 ms

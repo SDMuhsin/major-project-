@@ -59,7 +59,7 @@ end
 else if(chipEn) begin
     if(wrEn)begin
         for(i = r-1; i > -1; i=i-1) begin
-            if(inputLoadEn)begin
+            if(iter0)begin
                 if(i < lowerR)begin
                     fifoOut[i][0] <= rxInConnector[i];
                 end
@@ -94,10 +94,11 @@ else begin
 end
 end
 always@(*)begin
+always@(*)begin
 if(unloadEn)begin
     case(unloadAddress)
        0 : begin
-              unloadMuxOut[0] = fifoOut[14][3][5];
+    unloadMuxOut[0] = fifoOut[14][3][5];
               unloadMuxOut[1] = fifoOut[15][3][5];
               unloadMuxOut[2] = fifoOut[16][3][5];
               unloadMuxOut[3] = fifoOut[17][3][5];

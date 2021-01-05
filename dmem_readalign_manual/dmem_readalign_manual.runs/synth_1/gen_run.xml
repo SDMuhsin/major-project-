@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1609317347">
-  <File Type="PA-TCL" Name="CombinedQueueCirc_1.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CombinedQueueCirc_1_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="CombinedQueueCirc_1.tcl"/>
   <File Type="RDS-RDS" Name="CombinedQueueCirc_1.vds"/>
   <File Type="RDS-UTIL" Name="CombinedQueueCirc_1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="CombinedQueueCirc_1_utilization_synth.pb"/>

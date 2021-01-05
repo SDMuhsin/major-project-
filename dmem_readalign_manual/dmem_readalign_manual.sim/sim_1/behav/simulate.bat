@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2016.2\\bin
-call %xv_path%/xsim CombinedQueue_behav -key {Behavioral:sim_1:Functional:CombinedQueue} -tclbatch CombinedQueue.tcl -log simulate.log
+call %xv_path%/xsim L_01_block1_noshift_manual_scripted_behav -key {Behavioral:sim_1:Functional:L_01_block1_noshift_manual_scripted} -tclbatch L_01_block1_noshift_manual_scripted.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

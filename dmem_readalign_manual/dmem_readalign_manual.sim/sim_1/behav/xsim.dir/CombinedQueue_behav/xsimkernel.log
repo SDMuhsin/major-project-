@@ -1,7 +1,0 @@
-Running: xsim.dir/CombinedQueue_behav/xsimk.exe -simmode gui -wdb CombinedQueue_behav.wdb -simrunnum 0 -socket 54109
-Design successfully loaded
-Design Loading Memory Usage: 8832 KB (Peak: 8832 KB)
-Design Loading CPU Usage: 62 ms
-Simulation completed
-Simulation Memory Usage: 17464 KB (Peak: 17464 KB)
-Simulation CPU Usage: 1234 ms
