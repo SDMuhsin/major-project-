@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module L_01_block1_noshift_scripted(
+module L_10_block1_noshift_manual_scripted(
         muxOut,
         ly0In,
         sliceAddress,

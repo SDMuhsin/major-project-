@@ -1,14 +1,14 @@
 block = 1;
 shiftEn = 0;
-
-[fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern(block,shiftEn);
+swapLys = 1;
+[fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern(block,shiftEn,swapLys);
 
 width = 6;
 
-filename = sprintf("L_0to1_block%d_scripted.txt",block);
+filename = sprintf("L_1to0_block%d_scripted.txt",block);
 fid = fopen (filename, "w");
 fprintf(fid,sprintf("`timescale 1ns / 1ps\n"));
-fprintf(fid,sprintf("module L_01_block%d_noshift_manual_scripted(\n",block));
+fprintf(fid,sprintf("module L_10_block%d_noshift_manual_scripted(\n",block));
 fprintf(fid,sprintf("        muxOut,\n"));
 fprintf(fid,sprintf("        ly0In,\n"));
 fprintf(fid,sprintf("        sliceAddress,\n"));
@@ -18,7 +18,7 @@ fprintf(fid,sprintf("        rst\n);\n"));
 
 fprintf(fid,sprintf("parameter w = 6; // Width\n"));
 fprintf(fid,sprintf("parameter r = %d;\n",fifoRows));
-fprintf(fid,sprintf("parameter c = 17;\n ",fifoColumns));
+fprintf(fid,sprintf("parameter c = %d;\n ",fifoColumns));
 fprintf(fid,sprintf("parameter muxOutSymbols = %d;\n",size(muxPattern)(1)));
 fprintf(fid,sprintf("parameter maxVal = 6'b011111;\n"));
 fprintf(fid,sprintf("input [ r * w - 1 : 0 ]ly0In; // Change #3\n"));
@@ -75,7 +75,7 @@ fprintf(fid,sprintf("end\n"));
 
 fprintf(fid,sprintf("always@(*)begin\n"));
 fprintf(fid,sprintf("    case(sliceAddress)\n"));
-  #The case statemetn generation
+  #The case statement generation
 
   for slice = 1:1:size(muxPattern)(3)
     fprintf(fid,sprintf("       %d: begin\n",slice-1));  
@@ -94,7 +94,7 @@ fprintf(fid,sprintf("    case(sliceAddress)\n"));
 
 fprintf(fid,sprintf("       default: begin\n"));
 fprintf(fid,sprintf("             for(i=0;i<muxOutSymbols;i=i+1)begin\n"));
-fprintf(fid,sprintf("              muxOutConnector[i] = 1;\n"));
+fprintf(fid,sprintf("              muxOutConnector[i] = 0;\n"));
 fprintf(fid,sprintf("             end\n"));
 fprintf(fid,sprintf("       end\n"));
 fprintf(fid,sprintf("    endcase\n"));

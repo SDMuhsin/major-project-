@@ -1,15 +1,14 @@
 `timescale 1ns / 1ps
-module L_10_block1_noshift_scripted(
+module L_01_block1_noshift_manual_scripted(
         muxOut,
         ly0In,
         sliceAddress,
         chipEn,
         clk,
         rst
-);
 parameter w = 6; // Width
 parameter r = 52;
-parameter c = 14;
+parameter c = 17;
  parameter muxOutSymbols = 52;
 parameter maxVal = 6'b011111;
 input [ r * w - 1 : 0 ]ly0In; // Change #3
@@ -1144,7 +1143,7 @@ always@(*)begin
        end
        default: begin
              for(i=0;i<muxOutSymbols;i=i+1)begin
-              muxOutConnector[i] = 0;
+              muxOutConnector[i] = 1;
              end
        end
     endcase
