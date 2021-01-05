@@ -10,7 +10,7 @@ module L_01_block1_noshift_scripted(
 parameter w = 6; // Width
 parameter r = 52;
 parameter c = 15;
- parameter muxOutSymbols = 52;
+parameter muxOutSymbols = 52;
 parameter maxVal = 6'b011111;
 input [ r * w - 1 : 0 ]ly0In; // Change #3
 wire [w-1:0]ly0InConnector[r-1:0]; // Change #

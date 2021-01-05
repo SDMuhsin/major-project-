@@ -2,10 +2,10 @@
 # Webtalk v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Jan 05 09:58:56 2021
-# Process ID: 13544
+# Start of session at: Tue Jan 05 11:53:27 2021
+# Process ID: 16980
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav/xsim.dir/L_01_noshift_manual_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav/xsim.dir/L_01_block1_yesshift_scripted_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav/webtalk.log
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------

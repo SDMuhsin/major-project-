@@ -1,10 +1,19 @@
-Unable to capture context for thread 18068 in process 12172, can not generate back trace
-Unable to capture context for thread 8344 in process 12172, can not generate back trace
-Unable to capture context for thread 12544 in process 12172, can not generate back trace
-Unable to capture context for thread 12544 in process 12172, can not generate back trace
+Unable to capture context for thread 3468 in process 16288, can not generate back trace
+Unable to capture context for thread 16872 in process 16288, can not generate back trace
+Exception at PC 0x00007FFD3DBDD759
+Exception at PC 0x00007FFD3DBDD759
+Exception at PC 0x00007FFD3DBDD759
+Exception at PC 0x00007FFD3DBDD759
+Unable to capture context for thread 16056 in process 16288, can not generate back trace
+Unable to capture context for thread 13460 in process 16288, can not generate back trace
+Unable to capture context for thread 11340 in process 16288, can not generate back trace
+Exception at PC 0x00007FFD3DBDD759
+Unable to capture context for thread 11340 in process 16288, can not generate back trace
 Exception at PC 0x00007FFD0452BB93
 Printing stacktrace...
 
+Exception at PC 0x00007FFD3DBDD759
+Exception at PC 0x00007FFD3DBDD759
 Exception at PC 0x00007FFD3DBDD759
 Exception at PC 0x00007FFD3DBDD759
 Exception at PC 0x00007FFD3DBDD759
@@ -33,10 +42,3 @@ Exception at PC 0x00007FFD3DBDD759
 [12] (BaseThreadInitThunk+0x14) [0x00007FFD40067034]
 [13] (RtlUserThreadStart+0x21) [0x00007FFD4019D0D1]
 Done
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759
-Exception at PC 0x00007FFD3DBDD759

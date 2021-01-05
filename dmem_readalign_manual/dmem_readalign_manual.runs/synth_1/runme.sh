@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log CombinedQueueCirc_1.vds -m64 -mode batch -messageDb vivado.pb -notrace -source CombinedQueueCirc_1.tcl
+EAStep vivado -log L_01_block1_yesshift_scripted.vds -m64 -mode batch -messageDb vivado.pb -notrace -source L_01_block1_yesshift_scripted.tcl

@@ -1,0 +1,7 @@
+Running: xsim.dir/L_01_block1_yesshift_scripted_behav/xsimk.exe -simmode gui -wdb L_01_block1_yesshift_scripted_behav.wdb -simrunnum 0 -socket 58431
+Design successfully loaded
+Design Loading Memory Usage: 9540 KB (Peak: 9540 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 18200 KB (Peak: 18200 KB)
+Simulation CPU Usage: 655 ms
