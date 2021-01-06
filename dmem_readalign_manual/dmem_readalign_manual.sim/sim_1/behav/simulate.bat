@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2016.2\\bin
-call %xv_path%/xsim L_10_block1_noshift_wunload_scripted_behav -key {Behavioral:sim_1:Functional:L_10_block1_noshift_wunload_scripted} -tclbatch L_10_block1_noshift_wunload_scripted.tcl -log simulate.log
+call %xv_path%/xsim input_queue_block1_noshift_scripted_behav -key {Behavioral:sim_1:Functional:input_queue_block1_noshift_scripted} -tclbatch input_queue_block1_noshift_scripted.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

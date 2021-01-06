@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1609828712">
-  <File Type="RDS-PROPCONSTRS" Name="L_01_block1_noshift_scripted_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="L_01_block1_noshift_scripted.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="L_01_block1_noshift_scripted_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="L_01_block1_noshift_scripted.vds"/>
   <File Type="RDS-UTIL" Name="L_01_block1_noshift_scripted_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="L_01_block1_noshift_scripted_utilization_synth.pb"/>

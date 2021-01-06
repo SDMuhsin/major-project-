@@ -61,7 +61,7 @@ always@(posedge clk)begin
     end
 end
 always@(*)begin
-    case(loadAddress)
+    case(sliceAddress)
        0: begin
               muxOutConnector[0] = maxVal;
               muxOutConnector[1] = maxVal;

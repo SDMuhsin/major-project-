@@ -24,7 +24,8 @@
 ## Created: 2020-12-29
 
 function [inputPattern,muxPattern] = inputQueueMuxPattern (block)
-  layer0Pattern = layer0AddressMap(block);
+  layer0Pattern = layerAddressMap(block);
+  size(layer0Pattern)
   inputPattern = loadMemAddressMap();
   inputPattern = transpose(inputPattern(1:end,1:end,block));
   
@@ -38,9 +39,10 @@ function [inputPattern,muxPattern] = inputQueueMuxPattern (block)
   inputPattern = ip; % ## THIS IS THE FROZEN FIFO ##
   size(inputPattern)
   muxPattern = zeros(size(layer0Pattern)(2),2,size(layer0Pattern)(1));
+  ly = 1;
   for slice = 1:1:size(layer0Pattern)(1)
     
     size(layer0Pattern);
-    muxPattern(1:end,1:end,slice) = findIndexesOfAInB(layer0Pattern(slice,1:end,block),inputPattern);
+    muxPattern(1:end,1:end,slice) = findIndexesOfAInB(layer0Pattern(slice,1:end,ly),inputPattern);
   endfor
 endfunction
