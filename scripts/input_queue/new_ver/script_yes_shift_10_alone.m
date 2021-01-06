@@ -1,19 +1,20 @@
 clear all;
 
 block = 1;
-shiftEn = 0;
+shiftEn = 1;
 swapLys = 1;
 
 width = 6;
 loadMemAddressMap = loadMemAddressMap()(:,:,block);
-filename = sprintf("input_queue_block%d_noshift_scripted.txt",block);
+filename = sprintf("input_queue_block%d_yesshift_scripted.txt",block);
 fid = fopen (filename, "w");
 fprintf(fid,sprintf("`timescale 1ns / 1ps\n"));
-fprintf(fid,sprintf("module input_queue_block%d_noshift_scripted(\n",block));
+fprintf(fid,sprintf("module input_queue_block%d_yesshift_scripted(\n",block));
 fprintf(fid,sprintf("        muxOut,\n"));
 fprintf(fid,sprintf("        loadIn,\n"));
 fprintf(fid,sprintf("        loadAddress,\n"));
 fprintf(fid,sprintf("        chipEn,\n"));
+fprintf(fid,sprintf("        feedBackEn,\n"));
 fprintf(fid,sprintf("        clk,\n"));
 fprintf(fid,sprintf("        rst\n);\n"));
 
@@ -30,7 +31,7 @@ fprintf(fid,sprintf("parameter maxVal = 6'b011111;\n"));
 fprintf(fid,sprintf("input [ r * w - 1 : 0 ]loadIn; // Change #3\n"));
 fprintf(fid,sprintf("wire [w-1:0]loadInConnector[r-1:0]; // Change #\n"));
 fprintf(fid,sprintf("input [4:0]loadAddress;\n"));
-fprintf(fid,sprintf("input clk,rst,chipEn; // #C\n"));
+fprintf(fid,sprintf("input clk,rst,chipEn,feedBackEn; // #C\n"));
 
 fprintf(fid,sprintf("output wire [ muxOutSymbols * w - 1 : 0]muxOut;\n"));
 fprintf(fid,sprintf("reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];\n"));
@@ -67,7 +68,12 @@ fprintf(fid,sprintf("            end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("        // Input\n"));
 fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
-fprintf(fid,sprintf("            fifoOut[i][0] <= loadInConnector[i];\n"));
+fprintf(fid,sprintf("         if(feedBackEn) begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= fifoOut[i][c-1];\n"));
+fprintf(fid,sprintf("         end\n"));
+fprintf(fid,sprintf("         else begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= loadInConnector[i];\n"));
+fprintf(fid,sprintf("         end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("    end\n"));
 fprintf(fid,sprintf("    else begin\n"));

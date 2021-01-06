@@ -23,7 +23,7 @@
 ## Author: sayed <sayed@SDMUHSIN>
 ## Created: 2020-12-29
 
-function [inputPattern,muxPattern] = inputQueueMuxPattern (block)
+function [inputPattern,muxPattern] = inputQueueMuxPattern (block,shiftEn)
   layer0Pattern = layerAddressMap(block);
   size(layer0Pattern)
   inputPattern = loadMemAddressMap();
@@ -44,5 +44,9 @@ function [inputPattern,muxPattern] = inputQueueMuxPattern (block)
     
     size(layer0Pattern);
     muxPattern(1:end,1:end,slice) = findIndexesOfAInB(layer0Pattern(slice,1:end,ly),inputPattern);
+    
+    if(shiftEn)
+      inputPattern = shiftFifo(inputPattern);
+    endif
   endfor
 endfunction

@@ -10,7 +10,7 @@ module input_queue_block1_noshift_scripted(
 parameter w = 6; // Width
 parameter r = 32;
 parameter c = 17;
- parameter muxOutSymbols = 52;
+parameter muxOutSymbols = 52;
 parameter maxVal = 6'b011111;
 input [ r * w - 1 : 0 ]loadIn; // Change #3
 wire [w-1:0]loadInConnector[r-1:0]; // Change #

@@ -1,0 +1,4 @@
+Running: xsim.dir/input_queue_block1_noshift_scripted_behav/xsimk.exe -simmode gui -wdb input_queue_block1_noshift_scripted_behav.wdb -simrunnum 0 -socket 61954
+Design successfully loaded
+Design Loading Memory Usage: 9608 KB (Peak: 9608 KB)
+Design Loading CPU Usage: 77 ms

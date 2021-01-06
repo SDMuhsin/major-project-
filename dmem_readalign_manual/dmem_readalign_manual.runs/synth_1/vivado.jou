@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Jan 05 12:08:47 2021
-# Process ID: 17452
+# Start of session at: Wed Jan 06 15:41:52 2021
+# Process ID: 17172
 # Current directory: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1
-# Command line: vivado.exe -log L_01_block1_noshift_scripted.vds -mode batch -messageDb vivado.pb -notrace -source L_01_block1_noshift_scripted.tcl
-# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1/L_01_block1_noshift_scripted.vds
+# Command line: vivado.exe -log input_queue_block1_yesshift_scripted.vds -mode batch -messageDb vivado.pb -notrace -source input_queue_block1_yesshift_scripted.tcl
+# Log file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1/input_queue_block1_yesshift_scripted.vds
 # Journal file: C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source L_01_block1_noshift_scripted.tcl -notrace
+source input_queue_block1_yesshift_scripted.tcl -notrace
