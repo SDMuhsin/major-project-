@@ -2,3 +2,6 @@ Running: xsim.dir/input_queue_block1_noshift_scripted_behav/xsimk.exe -simmode g
 Design successfully loaded
 Design Loading Memory Usage: 9608 KB (Peak: 9608 KB)
 Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 10932 KB (Peak: 10932 KB)
+Simulation CPU Usage: 109 ms

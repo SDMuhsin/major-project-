@@ -23,7 +23,7 @@
 ## Author: sayed <sayed@SDMUHSIN>
 ## Created: 2021-01-04
 
-function [fifo,fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern (block,shiftEn,swapLys)
+function [fifoInitial,fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern (block,shiftEn,swapLys)
 
 block = 1;
 addressTable = layerAddressMap(block);
@@ -50,7 +50,7 @@ for i = 1:1:size(fifo)(2)
   fifoTemp(:,i) = fifo(:,size(fifo)(2) - i + 1);
 endfor
 fifo = fifoTemp;
-
+fifoInitial = fifoTemp;
 #Generate Mux Pattern
 
 #Shift ON

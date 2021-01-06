@@ -128,7 +128,7 @@ Kb=14;%(7136+18)/511 = 7154/511 = 14
 msgpart=18+shortcode_syspart;
 msgbuffset=msgpart(1:buffwidth:end);
 msgrequesttablemod=[];
-numofrequests=ceil(511/32)+1
+numofrequests=ceil(511/32)+1;
 unloadrequestmap=(-1)*ones(numofrequests,buffwidth,Kb);
 off1=0;
 pos1=1;
@@ -152,7 +152,7 @@ for i=1:Kb
     pos=find(tmp==offset+511);
     poslast=find(tmp==7136);
     %offset correction
-    tmpmod=mod(tmp-1,511)+1
+    tmpmod=mod(tmp-1,511)+1;
     brkpt=0;
     brkpt=0;
     if(length(pos)!=0)%if 511 multiple present
@@ -172,13 +172,13 @@ for i=1:Kb
       off1=0;
     end
     unloadrequestmap(requestidx,:,i)=tmpmod;%tmp;
-    unloadrequestmap(requestidx,:,i)
+    unloadrequestmap(requestidx,:,i);
     brkpt=0;
     brkpt=0;
   end
   if(off1==1)
     unloadrequestmap(1,:,i+1)=tmpoldmod;%tmpold;
-    unloadrequestmap(1,:,i+1)
+    unloadrequestmap(1,:,i+1);
      brkpt=0;
      brkpt=0;
      

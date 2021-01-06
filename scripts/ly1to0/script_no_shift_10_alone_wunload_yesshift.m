@@ -1,16 +1,16 @@
 clear all;
 block = 1;
-shiftEn = 0;
+shiftEn = 1;
 swapLys = 1;
 [fifo,fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern(block,shiftEn,swapLys);
 unloadRequestMap = unloadRequestMap(block);
 unloadMuxPattern = unloadMuxPattern(fifo,unloadRequestMap,shiftEn);
 width = 6;
 
-filename = sprintf("L_1to0_block%d_wunload_noshift_scripted.txt",block);
+filename = sprintf("L_1to0_block%d_yesshift_wunload_scripted.txt",block);
 fid = fopen (filename, "w");
 fprintf(fid,sprintf("`timescale 1ns / 1ps\n"));
-fprintf(fid,sprintf("module L_10_block%d_noshift_wunload_scripted(\n",block));
+fprintf(fid,sprintf("module L_10_block%d_yesshift_wunload_scripted(\n",block));
 fprintf(fid,sprintf("        muxOut,\n"));
 
 # -- unload
@@ -21,6 +21,7 @@ fprintf(fid,sprintf("        unloadAddress,\n"));
 fprintf(fid,sprintf("        ly0In,\n"));
 fprintf(fid,sprintf("        sliceAddress,\n"));
 fprintf(fid,sprintf("        chipEn,\n"));
+fprintf(fid,sprintf("        feedBackEn,\n"));
 fprintf(fid,sprintf("        clk,\n"));
 fprintf(fid,sprintf("        rst\n);\n"));
 
@@ -39,7 +40,7 @@ fprintf(fid,sprintf("output reg [unloadMuxOutBits - 1:0]unloadMuxOut;\n"));
 fprintf(fid,sprintf("input [4:0]unloadAddress;\n "));
 # unload --
 
-fprintf(fid,sprintf("input clk,rst,chipEn; // #C\n"));
+fprintf(fid,sprintf("input clk,rst,chipEn,feedBackEn; // #C\n"));
 fprintf(fid,sprintf("output wire [ muxOutSymbols * w - 1 : 0]muxOut;\n"));
 fprintf(fid,sprintf("reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];\n"));
 fprintf(fid,sprintf("reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs\n"));
@@ -75,7 +76,12 @@ fprintf(fid,sprintf("            end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("        // Input\n"));
 fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
-fprintf(fid,sprintf("            fifoOut[i][0] <= ly0InConnector[i];\n"));
+fprintf(fid,sprintf("         if(feedBackEn) begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= fifoOut[i][c-1];\n\n"));
+fprintf(fid,sprintf("         end\n"));
+fprintf(fid,sprintf("         else begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= ly0InConnector[i];\n"));
+fprintf(fid,sprintf("         end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("    end\n"));
 fprintf(fid,sprintf("    else begin\n"));

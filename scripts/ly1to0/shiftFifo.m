@@ -15,23 +15,19 @@
 ## <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*- 
-## @deftypefn {} {@var{retval} =} unloadMuxPattern (@var{input1}, @var{input2})
+## @deftypefn {} {@var{retval} =} shiftFifo (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
 ## Author: sayed <sayed@SDMUHSIN>
-## Created: 2021-01-01
+## Created: 2021-01-05
 
-function pattern = unloadMuxPattern (fifo,unloadRequests,shiftEn)
-  pattern = -1 * ones( size(unloadRequests)(2), 2, size(unloadRequests)(1));
-  for i = 1:1:size(unloadRequests)(1)
-      pattern(:,:,i) = findIndexesOfAInB(unloadRequests(i,:),fifo);
-      if (shiftEn)
-        fprintf("UNLOAD SHIFTING \n");
-        fifo = shiftFifo(fifo);
-      endif
-      fifo(1:10);
+function fifo = shiftFifo (fifo)
+  
+  last = fifo(:,end);
+  for i = size(fifo)(2):-1:2
+    fifo(:,i) = fifo(:,i-1);
   endfor
+  fifo(:,1) = last;
 endfunction
-8

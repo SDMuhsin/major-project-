@@ -1,26 +1,19 @@
-clear all;
 block = 1;
-shiftEn = 0;
+shiftEn = 1;
 swapLys = 1;
 [fifo,fifoRows,fifoColumns,muxPattern] = lyToLyMuxPattern(block,shiftEn,swapLys);
-unloadRequestMap = unloadRequestMap(block);
-unloadMuxPattern = unloadMuxPattern(fifo,unloadRequestMap,shiftEn);
+
 width = 6;
 
-filename = sprintf("L_1to0_block%d_wunload_noshift_scripted.txt",block);
+filename = sprintf("L_1to0_block%d_yesshift_scripted.txt",block);
 fid = fopen (filename, "w");
 fprintf(fid,sprintf("`timescale 1ns / 1ps\n"));
-fprintf(fid,sprintf("module L_10_block%d_noshift_wunload_scripted(\n",block));
+fprintf(fid,sprintf("module L_10_block%d_yesshift_scripted(\n",block));
 fprintf(fid,sprintf("        muxOut,\n"));
-
-# -- unload
-fprintf(fid,sprintf("        unloadMuxOut,\n"));
-fprintf(fid,sprintf("        unloadAddress,\n"));
-# unload --
-
 fprintf(fid,sprintf("        ly0In,\n"));
 fprintf(fid,sprintf("        sliceAddress,\n"));
 fprintf(fid,sprintf("        chipEn,\n"));
+fprintf(fid,sprintf("        feedBackEn,\n"));
 fprintf(fid,sprintf("        clk,\n"));
 fprintf(fid,sprintf("        rst\n);\n"));
 
@@ -32,14 +25,8 @@ fprintf(fid,sprintf("parameter maxVal = 6'b011111;\n"));
 fprintf(fid,sprintf("input [ r * w - 1 : 0 ]ly0In; // Change #3\n"));
 fprintf(fid,sprintf("wire [w-1:0]ly0InConnector[r-1:0]; // Change #\n"));
 fprintf(fid,sprintf("input [4:0]sliceAddress;\n"));
+fprintf(fid,sprintf("input clk,rst,chipEn,feedBackEn; // #C\n"));
 
-# -- unload
-fprintf(fid,sprintf("parameter unloadMuxOutBits = 32;\n"));
-fprintf(fid,sprintf("output reg [unloadMuxOutBits - 1:0]unloadMuxOut;\n"));
-fprintf(fid,sprintf("input [4:0]unloadAddress;\n "));
-# unload --
-
-fprintf(fid,sprintf("input clk,rst,chipEn; // #C\n"));
 fprintf(fid,sprintf("output wire [ muxOutSymbols * w - 1 : 0]muxOut;\n"));
 fprintf(fid,sprintf("reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];\n"));
 fprintf(fid,sprintf("reg [w-1:0] fifoOut[r-1:0][c-1:0]; // FIFO Outputs\n"));
@@ -75,7 +62,12 @@ fprintf(fid,sprintf("            end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("        // Input\n"));
 fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
-fprintf(fid,sprintf("            fifoOut[i][0] <= ly0InConnector[i];\n"));
+fprintf(fid,sprintf("         if(feedBackEn) begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= fifoOut[i][c-1];\n\n"));
+fprintf(fid,sprintf("         end\n"));
+fprintf(fid,sprintf("         else begin\n"));
+fprintf(fid,sprintf("              fifoOut[i][0] <= ly0InConnector[i];\n"));
+fprintf(fid,sprintf("         end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("    end\n"));
 fprintf(fid,sprintf("    else begin\n"));
@@ -88,33 +80,6 @@ fprintf(fid,sprintf("    end\n"));
 fprintf(fid,sprintf("end\n"));
 
 fprintf(fid,sprintf("always@(*)begin\n"));
-
-#-- unload case start
-fprintf(fid,sprintf("    case(unloadAddress)\n"));
-for slice = 1:1:size(unloadMuxPattern)(3)
-    fprintf(fid,sprintf("       %d: begin\n",slice-1));  
-    for outSymbolIndex = 1:1:size(unloadMuxPattern)(1)
-      fifoIndices = unloadMuxPattern(outSymbolIndex,1:end,slice);
-      
-      #if index = -1, not found in fifo, MAXVAL... or 0?
-      if(fifoIndices(1) == -1 || fifoIndices(2) == -1)
-        fprintf(fid,sprintf("              unloadMuxOut[%d] = 1'b0;\n",outSymbolIndex-1));      
-      else
-        fprintf(fid,sprintf("              unloadMuxOut[%d] = fifoOut[%d][%d][5];\n",outSymbolIndex-1,fifoIndices(1)-1,fifoIndices(2)-1));      
-      endif
-      
-    endfor
-    fprintf(fid,sprintf("       end\n"));
-endfor
-
-fprintf(fid,sprintf("       default: begin\n"));
-fprintf(fid,sprintf("             for(i=0;i<unloadMuxOutBits;i=i+1)begin\n"));
-fprintf(fid,sprintf("              unloadMuxOut[i] = 0;\n"));
-fprintf(fid,sprintf("             end\n"));
-fprintf(fid,sprintf("       end\n"));
-fprintf(fid,sprintf("    endcase\n"));
-#-- unload case end
-
 fprintf(fid,sprintf("    case(sliceAddress)\n"));
   #The case statement generation
 

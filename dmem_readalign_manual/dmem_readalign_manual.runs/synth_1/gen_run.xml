@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1609927906">
-  <File Type="RDS-PROPCONSTRS" Name="input_queue_block1_yesshift_scripted_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="input_queue_block1_yesshift_scripted.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="input_queue_block1_yesshift_scripted_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="input_queue_block1_yesshift_scripted.vds"/>
   <File Type="RDS-UTIL" Name="input_queue_block1_yesshift_scripted_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="input_queue_block1_yesshift_scripted_utilization_synth.pb"/>
