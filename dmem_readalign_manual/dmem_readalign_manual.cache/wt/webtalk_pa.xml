@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Jan 06 18:30:19 2021">
+<application name="pa" timeStamp="Thu Jan 07 16:49:44 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="681df2789abe443a8db54a0483452b57" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,11 +17,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="16" type="JavaHandler"/>
-<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="AddSources" value="19" type="JavaHandler"/>
+<property name="EditDelete" value="3" type="JavaHandler"/>
 <property name="EditPaste" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="1" type="JavaHandler"/>
-<property name="NewProject" value="1" type="JavaHandler"/>
+<property name="NewProject" value="2" type="JavaHandler"/>
 <property name="OpenFile" value="1" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="1" type="JavaHandler"/>
 <property name="ReportUtilization" value="12" type="JavaHandler"/>
@@ -35,29 +35,56 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ToggleViewNavigator" value="2" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design, Report Utilization], 27, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, LUTRAM ; 222 ; 13400 ; 1.6567165, 1, LUTRAM, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_TABLE, LUTRAM ; 222 ; 13400 ; 1.6567165, 1, LUTRAM, 0, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Logic], 7, false" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Logic], 7, false, false, false, false, false, true" value="2" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory, LUT as Distributed RAM], 6, false" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory, LUT as Distributed RAM], 6, false, false, false, false, false, true" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory, LUT as Shift Register], 5, false" value="7" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory, LUT as Shift Register], 5, false, false, false, false, false, true" value="7" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory], 4" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory], 4, true" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs, LUT as Memory], 4, true, false, false, false, false, true" value="3" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs], 3" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs], 3, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Slice Logic, Slice LUTs], 3, true, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Summary], 1, false" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, [Report Contents, Summary], 1, false, false, false, false, false, true" value="5" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 231, 208" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 262, 55" value="2" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 295, 169" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 304, 110" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 337, 103" value="1" type="GuiResourceData"/>
+<property name="CombinedQueueScriptedCirc1.v, 409, 154" value="1" type="GuiResourceData"/>
+<property name="FINISH, Finish" value="3" type="GuiResourceData"/>
+<property name="L_01_blockn_noshift_wunload_scripted.v, 159, 188" value="1" type="GuiResourceData"/>
+<property name="L_01_blockn_noshift_wunload_scripted.v, 170, 69" value="1" type="GuiResourceData"/>
+<property name="L_01_blockn_noshift_wunload_scripted.v, 42, 109" value="1" type="GuiResourceData"/>
+<property name="L_01_blockn_noshift_wunload_scripted.v, 46, 24" value="1" type="GuiResourceData"/>
+<property name="L_01_blockn_noshift_wunload_scripted.v, 483, 66" value="1" type="GuiResourceData"/>
+<property name="L_10_block1_yesshift_scripted.v, 404, 218" value="1" type="GuiResourceData"/>
+<property name="L_10_block1_yesshift_scripted.v, 417, 149" value="1" type="GuiResourceData"/>
+<property name="L_10_block1_yesshift_wunload_scripted.v, 226, 219" value="1" type="GuiResourceData"/>
+<property name="L_10_block1_yesshift_wunload_scripted.v, 48, 30" value="1" type="GuiResourceData"/>
+<property name="L_10_block1_yesshift_wunload_scripted.v, 88, 210" value="1" type="GuiResourceData"/>
+<property name="L_10_blockn_noshift_wunload_scripted.v, 321, 98" value="1" type="GuiResourceData"/>
+<property name="L_10_blockn_noshift_wunload_scripted.v, 35, 106" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="10" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, L_10_block1_yesshift_scripted" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, L_10_block1_yesshift_wunload_scripted" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="4" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_NEW_PROJECT, New Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, CombinedQueueCirc_1 (CombinedQueueScriptedCirc1.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, L_10_block1_noshift_scripted (L_10_noshift_scripted.v" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, L_10_block1_noshift_wunload_scripted (L_01_blockn_noshift_wunload_scripted.v" value="13" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, L_10_block1_noshift_wunload_scripted (L_10_blockn_noshift_wunload_scripted.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, L_10_block1_yesshift_scripted (L_10_block1_yesshift_scripted.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, L_10_block1_yesshift_wunload_scripted (L_10_block1_yesshift_wunload_scripted.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/dmem_readalign_manual/dmem_readalign_manual.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_EDIT, Edit" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceOtoP.OpenFileAction_OPEN_DIRECTORY, Open Directory" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, L_mem_combinations" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, Also delete the project local file/directory from disk, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SaveProjectUtils_SAVE, Save" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="4" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcMenu_OPEN_SELECTED_SOURCE_FILES, Open File" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="5" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="115" type="GuiMode"/>
+<property name="GuiMode" value="116" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="95" type="TclMode"/>
+<property name="TclMode" value="96" type="TclMode"/>
 </item>
 </section>
 </application>
