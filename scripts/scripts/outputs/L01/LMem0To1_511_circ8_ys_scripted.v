@@ -3,11 +3,13 @@ module LMem0To1_511_circ8_ys_scripted(
         muxOut,
         ly0In,
         wr_en,
+        feedback_en,
         rd_address,
         rd_en,
         clk,
         rst
 );
+input feedback_en;
 parameter w = 6; // DataWidth
 parameter r = 52;
 parameter c = 13;
@@ -59,8 +61,15 @@ always@(posedge clk)begin
             end
         end
         // Input
-        for(i = r-1; i > -1; i=i-1) begin
-            fifoOut[i][0] <= ly0InConnector[i];
+        if(feedback_en) begin
+         for(i = r-1; i > -1; i=i-1) begin
+              fifoOut[i][0] <= fifoOut[i][c-1];
+         end
+        end
+        else begin
+         for(i = r-1; i > -1; i=i-1) begin
+              fifoOut[i][0] <= ly0InConnector[i];
+         end
         end
     end
     else begin

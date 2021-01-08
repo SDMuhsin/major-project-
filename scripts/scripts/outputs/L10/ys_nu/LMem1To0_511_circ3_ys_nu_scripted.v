@@ -3,6 +3,7 @@ module LMem1To0_511_circ3_yesshift_nounload_scripted(
         muxOut,
         ly0In,
         wr_en,
+        feedback_en,
         rd_address,
         rd_en,
         clk,
@@ -23,6 +24,7 @@ input [ADDRESSWIDTH-1:0]rd_address;
 input rd_en;
 input clk,rst; // #C
 
+input feedback_en;
 wire [ADDRESSWIDTH-1:0]rd_address_case;
 wire [w-1:0]ly0InConnector[r-1:0]; // Change #
 reg [w-1:0]muxOutConnector[ muxOutSymbols  - 1 : 0];
@@ -59,8 +61,15 @@ always@(posedge clk)begin
             end
         end
         // Input
-        for(i = r-1; i > -1; i=i-1) begin
-            fifoOut[i][0] <= ly0InConnector[i];
+        if(feedback_en) begin
+         for(i = r-1; i > -1; i=i-1) begin
+              fifoOut[i][0] <= fifoOut[i][c-1];
+         end
+        end
+        else begin
+         for(i = r-1; i > -1; i=i-1) begin
+              fifoOut[i][0] <= ly0InConnector[i];
+         end
         end
     end
     else begin

@@ -1,8 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../../scripts/scripts/outputs/L10/ys_yu/LMem1To0_511_circ0_ys_yu_scripted.v"
-
-# compile glbl module
-verilog xil_defaultlib "glbl.v"
-
-# Do not sort compile order
-nosort

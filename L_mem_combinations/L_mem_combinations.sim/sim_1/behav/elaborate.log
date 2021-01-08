@@ -1,12 +1,12 @@
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a23df93aea6641a480f74876e5a33f3b --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot LMem1To0_511_circ0_ys_yu_scripted_behav xil_defaultlib.LMem1To0_511_circ0_ys_yu_scripted xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a23df93aea6641a480f74876e5a33f3b --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot LMem1To0_511_circ0_combined_ys_yu_scripted_behav xil_defaultlib.LMem1To0_511_circ0_combined_ys_yu_scripted xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.LMem1To0_511_circ0_ys_yu_scripte...
+Compiling module xil_defaultlib.LMem1To0_511_circ0_combined_ys_y...
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot LMem1To0_511_circ0_ys_yu_scripted_behav
+Built simulation snapshot LMem1To0_511_circ0_combined_ys_yu_scripted_behav

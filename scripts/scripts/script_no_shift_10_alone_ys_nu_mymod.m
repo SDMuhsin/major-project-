@@ -43,7 +43,12 @@ fprintf(fid,sprintf("`timescale 1ns / 1ps\n"));
 fprintf(fid,sprintf("module LMem1To0_511_circ%d_yesshift_nounload_scripted(\n",block-1));
 fprintf(fid,sprintf("        muxOut,\n"));
 fprintf(fid,sprintf("        ly0In,\n"));
+
+
 fprintf(fid,sprintf("        wr_en,\n"));
+if(shiftEn)
+fprintf(fid,sprintf("        feedback_en,\n"));
+endif
 fprintf(fid,sprintf("        rd_address,\n"));
 fprintf(fid,sprintf("        rd_en,\n"));
 fprintf(fid,sprintf("        clk,\n"));
@@ -68,6 +73,9 @@ fprintf(fid,sprintf("input wr_en;\n"));
 fprintf(fid,sprintf("input [ADDRESSWIDTH-1:0]rd_address;\n"));
 fprintf(fid,sprintf("input rd_en;\n"));
 fprintf(fid,sprintf("input clk,rst; // #C\n\n"));
+if(shiftEn)
+fprintf(fid,sprintf("input feedback_en;\n"));
+endif
 
 fprintf(fid,sprintf("wire [ADDRESSWIDTH-1:0]rd_address_case;\n"));
 fprintf(fid,sprintf("wire [w-1:0]ly0InConnector[r-1:0]; // Change #\n"));
@@ -104,10 +112,26 @@ fprintf(fid,sprintf("            for(j= c-1; j > 0; j=j-1)begin\n"));
 fprintf(fid,sprintf("                fifoOut[i][j] <=  fifoOut[i][j-1];\n"));
 fprintf(fid,sprintf("            end\n"));
 fprintf(fid,sprintf("        end\n"));
+
 fprintf(fid,sprintf("        // Input\n"));
-fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
-fprintf(fid,sprintf("            fifoOut[i][0] <= ly0InConnector[i];\n"));
-fprintf(fid,sprintf("        end\n"));
+
+if(shiftEn)
+  fprintf(fid,sprintf("        if(feedback_en) begin\n"));
+  fprintf(fid,sprintf("         for(i = r-1; i > -1; i=i-1) begin\n"));
+  fprintf(fid,sprintf("              fifoOut[i][0] <= fifoOut[i][c-1];\n"));
+  fprintf(fid,sprintf("         end\n"));
+  fprintf(fid,sprintf("        end\n"));
+  fprintf(fid,sprintf("        else begin\n"));
+  fprintf(fid,sprintf("         for(i = r-1; i > -1; i=i-1) begin\n"));
+  fprintf(fid,sprintf("              fifoOut[i][0] <= ly0InConnector[i];\n"));
+  fprintf(fid,sprintf("         end\n"));
+  fprintf(fid,sprintf("        end\n"));
+else
+  fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
+  fprintf(fid,sprintf("            fifoOut[i][0] <= ly0InConnector[i];\n"));
+  fprintf(fid,sprintf("        end\n"));
+endif
+
 fprintf(fid,sprintf("    end\n"));
 fprintf(fid,sprintf("    else begin\n"));
 fprintf(fid,sprintf("        for(i=0;i<r;i=i+1)begin\n"));
