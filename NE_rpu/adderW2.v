@@ -27,7 +27,7 @@ input [W-1:0] a, b, c;
 input clk,rst;
 
 reg [W-1:0]a_r,b_r,c_r,sum_1;
-  wire [W+1:0] x,y,z,sum_inter_1,sum_inter_2,sum_2;
+  wire [W+1:0] x,y,z,sum_inter,sum_inter_2,sum_2;
   assign x = {a[W-1],a[W-1],a};
   assign y = {b[W-1],b[W-1],b};
   assign z = {c[W-1],c[W-1],c};
