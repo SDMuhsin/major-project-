@@ -34,8 +34,8 @@ module Absoluter_adder(
     assign sign = in[w-1];
     always @(*)begin
         if(in[w-1])begin
-            if( in[w-2:0] == {1'b1,(w-2){1'b0}}) begin
-                mag = {1'b0,(w-2){1'b1}};
+                if( in[w-2:0] == {1'b1,{(w-2){1'b0}}}) begin
+                        mag = {1'b0,{(w-2){1'b1}}};
             end
             else begin
                 mag = ~in[w-2:0] + 1'b1;
