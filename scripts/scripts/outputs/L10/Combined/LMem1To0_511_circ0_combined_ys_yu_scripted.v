@@ -8,13 +8,13 @@ module LMem1To0_511_circ0_combined_ys_yu_scripted(
         rxIn,
         load_input_en,
         iteration_0_indicator,
-        feedback_en,
         wr_en,
         rd_address,
         rd_en,
         clk,
         rst
 );
+        feedback_en,
 parameter w = 6; // DataWidth
 parameter r = 52;
 parameter r_lower = 32;
@@ -31,6 +31,12 @@ input load_input_en;
 input iteration_0_indicator;
 input [ADDRESSWIDTH-1:0]unloadAddress;
 input feedback_en;
+parameter maxVal = 6'b011111;
+parameter READDISABLEDCASE = 5'd31; // if rd_en is 0 go to a default Address 
+
+output reg [unloadMuxOutBits - 1:0]unloadMuxOut;
+input unload_en;
+input [ADDRESSWIDTH-1:0]unloadAddress;
 output [ muxOutSymbols * w - 1 : 0]muxOut;
 input [ r * w - 1 : 0 ]ly0In; // Change #3
 input [ r_lower * w - 1 : 0 ] rxIn; // Change #3
@@ -59,7 +65,7 @@ generate
 endgenerate
 
 generate
-    for (k=0;k<r_lower;k=k+1)begin:assign_rx
+    for (k=0;k<r_lower;k=k+1)begin:assign_input
         assign rxInConnector[k] = rxIn[(k+1)*w-1:k*w];
     end
 endgenerate
@@ -89,10 +95,10 @@ always@(posedge clk)begin
             end
             else if(load_input_en)begin
                  if(i < r_lower)begin
-                   fifoOut[i][0] = rxInConnector[i];
+                   fifoOut[i][0] = rxIn[i];
                  end
                  else begin
-                   fifoOut[i][0] = maxVal;
+                   fifoOut[i][0] = maxVal
                  end
             end
             else begin
@@ -115,11 +121,7 @@ assign unloadAddress_case = unload_en ? unloadAddress : READDISABLEDCASE;
 
 always@(*)begin
     case(unloadAddress_case)
-       0: begin
-              unloadMuxOut[0] = fifoOut[22][4][w-1];
-              unloadMuxOut[1] = fifoOut[23][4][w-1];
-              unloadMuxOut[2] = fifoOut[24][4][w-1];
-              unloadMuxOut[3] = fifoOut[25][4][w-1];
+fifoOut[25][4][w-1];
               unloadMuxOut[4] = fifoOut[0][3][w-1];
               unloadMuxOut[5] = fifoOut[1][3][w-1];
               unloadMuxOut[6] = fifoOut[2][3][w-1];
@@ -703,10 +705,15 @@ always@(*)begin
        0: begin
          case(rd_address_case)
          0: begin
-              muxOutConnector[0] = fifoOut[22][4];
-              muxOutConnector[1] = fifoOut[23][4];
-              muxOutConnector[2] = fifoOut[24][4];
-              muxOutConnector[3] = fifoOut[25][4];
+              muxOutCo        unloadMuxOut[i] = 0;
+             end
+       end
+    endcase
+    case(iteration_0_indicator)
+       0: begin
+         case(rd_address_case)
+         0: begin
+fifoOut[25][4];
               muxOutConnector[4] = fifoOut[0][3];
               muxOutConnector[5] = fifoOut[1][3];
               muxOutConnector[6] = fifoOut[2][3];
@@ -2885,5 +2892,77 @@ always@(*)begin
            end
       end
  endcase
+end
+endmodule
+                                                                                                                                  12];
+              muxOutConnector[51] = fifoOut[12][12];
+         end
+         19: begin
+              muxOutConnector[0] = fifoOut[28][3];
+              muxOutConnector[1] = fifoOut[29][3];
+              muxOutConnector[2] = fifoOut[30][3];
+              muxOutConnector[3] = fifoOut[31][3];
+              muxOutConnector[4] = fifoOut[0][2];
+              muxOutConnector[5] = fifoOut[1][2];
+              muxOutConnector[6] = fifoOut[2][2];
+              muxOutConnector[7] = fifoOut[3][2];
+              muxOutConnector[8] = fifoOut[4][2];
+              muxOutConnector[9] = fifoOut[5][2];
+              muxOutConnector[10] = fifoOut[6][2];
+              muxOutConnector[11] = fifoOut[7][2];
+              muxOutConnector[12] = fifoOut[8][2];
+              muxOutConnector[13] = fifoOut[9][2];
+              muxOutConnector[14] = fifoOut[10][2];
+              muxOutConnector[15] = fifoOut[11][2];
+              muxOutConnector[16] = fifoOut[12][2];
+              muxOutConnector[17] = fifoOut[31][2];
+              muxOutConnector[18] = fifoOut[31][2];
+              muxOutConnector[19] = fifoOut[31][2];
+              muxOutConnector[20] = fifoOut[31][2];
+              muxOutConnector[21] = fifoOut[31][2];
+              muxOutConnector[22] = fifoOut[31][2];
+              muxOutConnector[23] = fifoOut[31][2];
+              muxOutConnector[24] = fifoOut[31][2];
+              muxOutConnector[25] = fifoOut[31][2];
+              muxOutConnector[26] = fifoOut[13][13];
+              muxOutConnector[27] = fifoOut[14][13];
+              muxOutConnector[28] = fifoOut[15][13];
+              muxOutConnector[29] = fifoOut[16][13];
+              muxOutConnector[30] = fifoOut[17][13];
+              muxOutConnector[31] = fifoOut[18][13];
+              muxOutConnector[32] = fifoOut[19][13];
+              muxOutConnector[33] = fifoOut[20][13];
+              muxOutConnector[34] = fifoOut[21][13];
+              muxOutConnector[35] = fifoOut[22][13];
+              muxOutConnector[36] = fifoOut[23][13];
+              muxOutConnector[37] = fifoOut[24][13];
+              muxOutConnector[38] = fifoOut[25][13];
+              muxOutConnector[39] = fifoOut[26][13];
+              muxOutConnector[40] = fifoOut[27][13];
+              muxOutConnector[41] = fifoOut[28][13];
+              muxOutConnector[42] = fifoOut[29][13];
+              muxOutConnector[43] = fifoOut[31][2];
+              muxOutConnector[44] = fifoOut[31][2];
+              muxOutConnector[45] = fifoOut[31][2];
+              muxOutConnector[46] = fifoOut[31][2];
+              muxOutConnector[47] = fifoOut[31][2];
+              muxOutConnector[48] = fifoOut[31][2];
+              muxOutConnector[49] = fifoOut[31][2];
+              muxOutConnector[50] = fifoOut[31][2];
+              muxOutConnector[51] = fifoOut[31][2];
+         end
+         default: begin
+               for(i=0;i<muxOutSymbols;i=i+1)begin
+                muxOutConnector[i] = 0;
+              end
+         end
+     endcase
+    end
+         default: begin
+               for(i=0;i<muxOutSymbols;i=i+1)begin
+                muxOutConnector[i] = 0;
+              end
+         end
+    endcase
 end
 endmodule
