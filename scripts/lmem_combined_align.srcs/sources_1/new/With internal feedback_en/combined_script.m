@@ -185,6 +185,7 @@ fprintf(fid,sprintf("input clk,rst; // #C\n\n"));
 
 fprintf(fid,sprintf("wire [ADDRESSWIDTH-1:0]rd_address_case;\n"));
 fprintf(fid,sprintf("reg [ w - 1 : 0 ]column_1[ r - 1 : 0 ];\n"));
+fprintf(fid,sprintf("reg chip_en;\n"));
 if(block<=14)
 fprintf(fid,sprintf("wire [ADDRESSWIDTH-1:0]unloadAddress_case;\n"));
 end
@@ -223,7 +224,7 @@ fprintf(fid,sprintf("                fifoOut[i][j] <= 0;\n"));
 fprintf(fid,sprintf("            end\n"));
 fprintf(fid,sprintf("        end\n"));
 fprintf(fid,sprintf("    end\n"));
-fprintf(fid,sprintf("    else if(wr_en) begin\n"));
+fprintf(fid,sprintf("    else if(chip_en) begin\n"));
 fprintf(fid,sprintf("        // Shift\n"));
 fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
 fprintf(fid,sprintf("            for(j= c-1; j > 0; j=j-1)begin\n"));
@@ -251,6 +252,15 @@ fprintf(fid,sprintf("      feedback_en=(unload_en||rd_en);\n"));
 else
 fprintf(fid,sprintf("      feedback_en=rd_en;\n"));
 endif
+fprintf(fid,sprintf("      if(load_input_en)begin\n"));
+fprintf(fid,sprintf("        chip_en=load_input_en;\n"));
+fprintf(fid,sprintf("      end\n"));
+fprintf(fid,sprintf("      else if(wr_en)begin\n"));
+fprintf(fid,sprintf("        chip_en=wr_en;\n"));
+fprintf(fid,sprintf("      end\n"));
+fprintf(fid,sprintf("      else begin\n"));
+fprintf(fid,sprintf("        chip_en=feedback_en;\n"));
+fprintf(fid,sprintf("      end\n"));
 fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
 fprintf(fid,sprintf("            if(feedback_en)begin\n"));
 fprintf(fid,sprintf("                 column_1[i] <= fifoOut[i][c-1];\n"));
