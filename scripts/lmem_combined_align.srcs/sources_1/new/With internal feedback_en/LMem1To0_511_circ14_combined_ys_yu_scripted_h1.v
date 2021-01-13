@@ -102,7 +102,7 @@ end
       end
         for(i = r-1; i > -1; i=i-1) begin
             if(feedback_en)begin
-                 column_1[i] <= fifoOut[i][c-1];
+                 column_1[i] = fifoOut[i][c-1];
             end
             else if(load_input_en)begin
                  if(i < r_lower)begin
@@ -113,7 +113,7 @@ end
                  end
             end
             else begin
-                 column_1[i] <= ly0InConnector[i];
+                 column_1[i] = ly0InConnector[i];
             end
         end
     end
