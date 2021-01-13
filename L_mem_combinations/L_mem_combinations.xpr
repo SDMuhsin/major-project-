@@ -10,12 +10,12 @@
     <Option Name="Part" Val="xc7k70tfbv676-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.cache/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -42,14 +42,14 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ns_yu/LMem1To0_511_ns_yu_circ0_scripted.v">
+      <File Path="$PPRDIR/../scripts/scripts/outputs/L01/LMem0To1_511_circ0_ns_scripted.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ns_nu/LMem1To0_511_circ0_scripted.v">
+      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ys_yu/LMem1To0_511_circ0_ys_yu_scripted.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -65,23 +65,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ys_yu/LMem1To0_511_circ0_ys_yu_scripted.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../scripts/scripts/outputs/L01/LMem0To1_511_circ0_ys_scripted.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../scripts/scripts/outputs/L01/LMem0To1_511_circ0_ns_scripted.v">
+      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ns_nu/LMem1To0_511_circ0_scripted.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -105,9 +89,25 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../scripts/scripts/outputs/L01/LMem0To1_511_circ0_ys_scripted.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../scripts/scripts/outputs/L10/ns_yu/LMem1To0_511_ns_yu_circ0_scripted.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="LMem1To0_511_circ0_ns_yu_scripted"/>
+        <Option Name="TopModule" Val="LMem0To1_511_circ0_ns_scripted"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -118,6 +118,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="LMem1To0_511_circ0_combined_ys_yu_scripted"/>
@@ -155,17 +156,13 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7k70tfbv676-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k70tfbv676-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -42,7 +42,7 @@ for start_row = start_row_copy : 1 : size( address_table_ly1)(1)
     mask_fifo_b = covertRowsToFifo(access_mask_ly1(:,:,2),start_row,d);
 
     # Line 29 : Make those symbols which are not post reaccess, 0 (invalid)
-    data_fifo_a( mask_fifo_a == 1 ) = 0;
+    data_fifo_a( mask_fifo_a == 1 ) = 0; # FIFO invalid = 0, request invalid = -1
     data_fifo_b( mask_fifo_b == 1 ) = 0;
      
     # See if those values in these fifos, with access_mask = 2 can fill one row each of ly2_a and ly2_b
@@ -60,21 +60,22 @@ for start_row = start_row_copy : 1 : size( address_table_ly1)(1)
         # if any one symbol in the row is not there is fifo, that row cant be filled
         # We need ensure two things : 
         #   1. The values in fifo that we consider must be second access
-        #      This step is ensured in Line 29 (ctr + f "Line 29")
+        #      This step is ensured in Line 29 (ctrl + f "Line 29")
         #   2. The values in address_table that we consider must be first access
         #      This is in ensured in the following if statements
         
         # ly2_a
         
         # TO DO : Make it use unused FF as well
-        
-        f1d = checkIfElementInMatrix(address_table_ly2(r,c,1),data_fifo_a);
+                # check if required element is present in fifo                  also check if required element is present is unused storage(s)
+        f1d = checkIfElementInMatrix(address_table_ly2(r,c,1),data_fifo_a) ||  checkIfElementInMatrix(address_table_ly2(r,c,1),[unused_a,unused_b]) ;
         if( r <= ly2_first_ends(1,1) && c <= ly2_first_ends(1,2))
           f1 *= f1d; 
         endif
         
         #ly2_b
-        f2d = checkIfElementInMatrix(address_table_ly2(r,c,2),data_fifo_b);
+        # check if required element is present in fifo                  also check if required element is present is unused storage(s)
+        f2d = checkIfElementInMatrix(address_table_ly2(r,c,2),data_fifo_b) || checkIfElementInMatrix(address_table_ly2(r,c,2),[unused_a,unused_b]);
         if( r <= ly2_first_ends(2,1) && c <= ly2_first_ends(2,2))
           f2 *= f2d;
         endif
@@ -102,30 +103,44 @@ for start_row = start_row_copy : 1 : size( address_table_ly1)(1)
     #First, isolate those rows of address_table_ly1 (a) and (b) that have 1's in flags
     used_a = [];
     used_b = [];
+    
+    fprintf("r = %d, \n the used stuff in order (fifo_a, fifo_b) : \n",start_row);
     for i = 1:1:size(flags)(1)
       if(flags(i,1) == 1)
-        used_a = [used_a, address_table_ly2(i,:,1)]
+        used_a = [used_a, address_table_ly2(i,:,1)];
+        fprintf("    %d,", address_table_ly2(i,:,1));
       endif
       if(flags(i,2) == 1)
-        used_b = [used_b, address_table_ly2(i,:,2)]; 
+        used_b = [used_b, address_table_ly2(i,:,2)];
+        fprintf("    %d,", address_table_ly2(i,:,2));
       endif
     endfor
+    fprintf("\n");
     
     #Figure out those elements from first column of fifo_a and fifo_b that are not present in used_a or used_b
     u_a = [];
     u_b = [];
     fprintf("\n fifo_a front stage \n");
-    data_fifo_a(:,end)
+    for i = 1:1:size(data_fifo_a)(1)
+      fprintf(" %d,", data_fifo_a(i,end));  
+      fprintf(" %d,", data_fifo_b(i,end));  
+    endfor
+    fprintf("\n");
     for i = 1:1:size(data_fifo_a)(1)
       
-      if( data_fifo_a(i,end) ~= 0 &&  ~checkIfElementInMatrix( data_fifo_a(i,end), used_a) && ~checkIfElementInMatrix( data_fifo_a(i,end), used_b))  
+      # Store those symbols from front of queue that are not used in this cycle      
+      if(data_fifo_a(i,end) ~= 0 && ~checkIfElementInMatrix(data_fifo_a(i,end), unused_b)&&   ~checkIfElementInMatrix( data_fifo_a(i,end), used_a) && ~checkIfElementInMatrix( data_fifo_a(i,end), used_b) && mask_fifo_a(i,end)==2)  
+        
+        
         u_a = [u_a, data_fifo_a(i,end)]; 
-        fprintf(" %d is unused", data_fifo_a(i,end));
+        fprintf(" %d,", data_fifo_a(i,end));
       endif
-      if( data_fifo_a(i,2) ~= 0 && ~checkIfElementInMatrix( data_fifo_b(i,end), used_b) && ~checkIfElementInMatrix( data_fifo_a(i,end), used_a))
+      if( data_fifo_a(i,2) ~= 0 && ~checkIfElementInMatrix( data_fifo_b(i,end), used_b) && ~checkIfElementInMatrix( data_fifo_b(i,end), used_a) && mask_fifo_b(i,end)==2)
         u_b = [u_b, data_fifo_b(i,end)]; 
+        fprintf(" %d,", data_fifo_b(i,end));
       endif
     endfor
+    fprintf("size of unused = %d \n ", length(u_a) + length(u_b));
     unused_a = [unused_a u_a];
     unused_b = [unused_b u_b];
 endfor

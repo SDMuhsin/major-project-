@@ -23,10 +23,7 @@
 ## Author: sayed <sayed@SDMUHSIN>
 ## Created: 2021-01-01
 
-%Edits: sooraj
-% bug: in unloadrequestmap : it was considering 7136 
-% instead it had to consider 7154.
-function unloadrequestmap = unloadRequestMap_mymod(block)
+function unloadrequestmap = unloadRequestMap (block)
 if(block > 14)
   unloadrequestmap = -1;
   return;
@@ -127,13 +124,11 @@ end
 %end
 
 %--unloading--%
-%generating unloadrequestmap
-%based on transmitting out shortened msg=code(19:7154) = (1:7136) only
 Kb=14;%(7136+18)/511 = 7154/511 = 14
 msgpart=18+shortcode_syspart;
 msgbuffset=msgpart(1:buffwidth:end);
 msgrequesttablemod=[];
-numofrequests=ceil(511/32)+1
+numofrequests=ceil(511/32)+1;
 unloadrequestmap=(-1)*ones(numofrequests,buffwidth,Kb);
 off1=0;
 pos1=1;
@@ -141,12 +136,12 @@ for i=1:Kb
   requestidx=off1;
   offset=(i-1)*511;
   lastval=offset+511;
-  if(lastval<msgpart(1,end)) %Bug: was 7136
+  if(lastval<7136)
     poslast1 = find(msgbuffset>lastval)(1);
     parselist=msgbuffset(pos1:poslast1-1);
     pos1=poslast1;
   else
-    poslast1 = find(msgbuffset<msgpart(1,end))(end); %Bug: was 7136
+    poslast1 = find(msgbuffset<7136)(end);
     parselist=msgbuffset(pos1:poslast1);    
   end
   
@@ -155,9 +150,9 @@ for i=1:Kb
     prt=sprintf("[i , j, reqestidx]=[%d, %d, %d]",i,j,requestidx);  
     tmp=[j:j+buffwidth-1];  %msgpart(1,j+offset:j+offset+buffwidth-1)
     pos=find(tmp==offset+511);
-    poslast=find(tmp==msgpart(1,end)); %Bug: was 7136
+    poslast=find(tmp==7136);
     %offset correction
-    tmpmod=mod(tmp-1,511)+1
+    tmpmod=mod(tmp-1,511)+1;
     brkpt=0;
     brkpt=0;
     if(length(pos)!=0)%if 511 multiple present
@@ -177,13 +172,13 @@ for i=1:Kb
       off1=0;
     end
     unloadrequestmap(requestidx,:,i)=tmpmod;%tmp;
-    unloadrequestmap(requestidx,:,i)
+    unloadrequestmap(requestidx,:,i);
     brkpt=0;
     brkpt=0;
   end
   if(off1==1)
     unloadrequestmap(1,:,i+1)=tmpoldmod;%tmpold;
-    unloadrequestmap(1,:,i+1)
+    unloadrequestmap(1,:,i+1);
      brkpt=0;
      brkpt=0;
      
@@ -196,10 +191,8 @@ for i=1:Kb
   end
 
 end
+
  
 # block i => requestmap(:,:, i )
-%if sys part is 1:7136  (19:7154)
 unloadrequestmap = unloadrequestmap(:,:,block);
-%if sys part is 1:7154
-%unloadrequestmap = unloadrequestmap2(:,:,block);
 endfunction

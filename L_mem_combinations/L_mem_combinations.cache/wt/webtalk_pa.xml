@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sat Jan 09 09:40:02 2021">
+<application name="pa" timeStamp="Wed Jan 13 12:33:06 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="4ef7a3f2f61544fb87ef077a94462d98" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -25,153 +25,24 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SimulationRunForTime" value="6" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="FINISH, Finish" value="12" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_scripted.v, 48, 24" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_scripted.v, 73, 149" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 138, 38" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 175, 167" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 207, 239" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 242, 193" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 308, 174" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 314, 154" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 324, 168" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_nu_scripted.v, 530, 59" value="2" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_scripted.v, 104, 156" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_scripted.v, 142, 217" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_scripted.v, 29, 106" value="1" type="GuiResourceData"/>
-<property name="LMem0To1_511_circ0_ys_scripted.v, 86, 125" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ns_yu_scripted.v, 121, 208" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ns_yu_scripted.v, 157, 263" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ns_yu_scripted.v, 162, 158" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ns_yu_scripted.v, 178, 141" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 105, 250" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 106, 274" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 114, 233" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 115, 357" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 116, 175, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 117, 118" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 120, 97" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 135, 122" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 137, 247" value="2" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 144, 143" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 145, 235" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 152, 282" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 172, 262" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 175, 283" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 188, 479" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 191, 185" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 196, 262" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 205, 160" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 209, 194" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 237, 304" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 252, 259" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 268, 294" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 28, 169" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 281, 242" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 288, 114" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 297, 299" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 327, 311" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 329, 127" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 339, 355" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 340, 194" value="2" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 365, 316" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 366, 245" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 385, 55" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 391, 120" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 42, 330" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 420, 362" value="2" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 437, 159" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 471, 23" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 50, 22" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 539, 146" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 620, 436" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 64, 127" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 68, 248" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 78, 171" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 92, 151" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_combined_ys_yu_scripted.v, 96, 266" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_nu_scripted.v, 118, 46" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_nu_scripted.v, 302, 115" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 101, 193" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 140, 171" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 145, 30" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 245, 140" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 317, 172" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_circ0_ys_yu_scripted.v, 347, 85" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 151, 62" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 174, 26" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 328, 84" value="1" type="GuiResourceData"/>
-<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 49, 85" value="1" type="GuiResourceData"/>
-<property name="NEXT, Next " value="12" type="GuiResourceData"/>
-<property name="PAResourceAtoD.AbstractFileView_RELOAD, Reload" value="10" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, LMem1To0_511_circ0_combined_ns_yu_scripted" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="2" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SET_AS_TOP, Set as Top" value="2" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="6" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem0To1_511_circ0_noshift_nounload_scripted (LMem0To1_511_circ0_scripted.v" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem0To1_511_circ0_ns_scripted (LMem0To1_511_circ0_ns_scripted.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem0To1_511_circ0_yesshift_nounload_scripted (LMem0To1_511_circ0_ys_nu_scripted.v" value="4" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem0To1_511_circ0_ys_scripted (LMem0To1_511_circ0_ys_scripted.v" value="14" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_combined_ns_yu_scripted (LMem1To0_511_circ0_combined_ns_yu_scripted.v" value="4" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_combined_ys_yu_scripted (LMem1To0_511_circ0_combined_ys_yu_scripted.v" value="5" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_noshift_nounload_scripted (LMem1To0_511_circ0_scripted.v" value="4" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 101, 149" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 145, 141, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 178, 188" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 235, 121" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 32, 94" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 347, 23" value="1" type="GuiResourceData"/>
+<property name="LMem1To0_511_ns_yu_circ0_scripted.v, 520, 64" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_ns_yu_scripted (LMem1To0_511_ns_yu_circ0_scripted.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_yesshift_nounload_scripted (LMem1To0_511_circ0_ys_nu_scripted.v" value="8" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_circ0_ys_yu_scripted (LMem1To0_511_circ0_ys_yu_scripted.v" value="9" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, LMem1To0_511_ns_yu_circ0_scripted (LMem1To0_511_ns_yu_circ0_scripted.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 2, false" value="4" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 2, false, false, false, false, false, true" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 2, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 2, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
 <property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files], 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, LMem0To1_511_circ0_ys_scripted (LMem0To1_511_circ0_ys_scripted.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, LMem1To0_511_circ0_combined_ys_yu_scripted (LMem1To0_511_circ0_combined_ys_yu_scripted.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, LMem1To0_511_circ0_ns_yu_scripted (LMem1To0_511_ns_yu_circ0_scripted.v" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, LMem1To0_511_circ0_ys_yu_scripted (LMem1To0_511_circ0_ys_yu_scripted.v" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 13, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, Syntax Error Files, LMem1To0_511_circ0_combined_ys_yu_scripted.v], 13, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1, Syntax Error Files], 12" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Simulation Sources, sim_1], 7" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="13" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_CODE, Code" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 0" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 1" value="5" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_FORCE_VALUE, 2" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_LEADING_EDGE_VALUE, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationForceSettingsDialog_TRAILING_EDGE_VALUE, 1" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS, 10" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="12" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcMenu_IP_HIERARCHY, IP Hierarchy" value="2" type="GuiResourceData"/>
-<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="18" type="GuiResourceData"/>
-<property name="RDIResource.ConfirmSaveTextEditsDialog_NO, No" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, unload case" value="1" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, wr_" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, clk], 12, false, false, false, false, true, false" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, feedback_en], 5, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, feedback_en], 5, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0], [0][16:0][5:0]], 17, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0], [14][16:0][5:0]], 2, true" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0], [1][16:0][5:0], [16][5:0]], 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0], [1][16:0][5:0]], 11" value="2" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0], [1][16:0][5:0]], 16" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, fifoOut[51:0][16:0][5:0]], 8" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, iteration_0_indicator], 3, false, false, false, false, true, false" value="3" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, load_input_en], 2, false, false, false, false, true, false" value="4" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, ly0In[311:0]], 7, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, rd_en], 11, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, rst], 13, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, rxInConnector[31:0][5:0]], 17" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, rxIn[191:0]], 8, true, false, false, false, true, false" value="1" type="GuiResourceData"/>
-<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, wr_en], 9, false, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/L_mem_combinations/L_mem_combinations.xpr, 0" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="116" type="GuiMode"/>
+<property name="GuiMode" value="118" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="96" type="TclMode"/>
+<property name="TclMode" value="98" type="TclMode"/>
 </item>
 </section>
 </application>

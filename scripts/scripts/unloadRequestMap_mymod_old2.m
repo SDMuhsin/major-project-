@@ -23,9 +23,6 @@
 ## Author: sayed <sayed@SDMUHSIN>
 ## Created: 2021-01-01
 
-%Edits: sooraj
-% bug: in unloadrequestmap : it was considering 7136 
-% instead it had to consider 7154.
 function unloadrequestmap = unloadRequestMap_mymod(block)
 if(block > 14)
   unloadrequestmap = -1;
@@ -141,12 +138,12 @@ for i=1:Kb
   requestidx=off1;
   offset=(i-1)*511;
   lastval=offset+511;
-  if(lastval<msgpart(1,end)) %Bug: was 7136
+  if(lastval<7136)
     poslast1 = find(msgbuffset>lastval)(1);
     parselist=msgbuffset(pos1:poslast1-1);
     pos1=poslast1;
   else
-    poslast1 = find(msgbuffset<msgpart(1,end))(end); %Bug: was 7136
+    poslast1 = find(msgbuffset<7136)(end);
     parselist=msgbuffset(pos1:poslast1);    
   end
   
@@ -155,7 +152,7 @@ for i=1:Kb
     prt=sprintf("[i , j, reqestidx]=[%d, %d, %d]",i,j,requestidx);  
     tmp=[j:j+buffwidth-1];  %msgpart(1,j+offset:j+offset+buffwidth-1)
     pos=find(tmp==offset+511);
-    poslast=find(tmp==msgpart(1,end)); %Bug: was 7136
+    poslast=find(tmp==7136);
     %offset correction
     tmpmod=mod(tmp-1,511)+1
     brkpt=0;
@@ -196,10 +193,83 @@ for i=1:Kb
   end
 
 end
+
+%--Modified unloadrequestmap-----%
+%generating unloadrequestmap2
+%based on transmitting out unshortened msg={1:18, 1:7136}
+%because last cycle complete 32 bits are valid.
+%so no need to pack next set circ0 address0 bits.
+%only first 18 bits invalid :may serve as ASM.
+
+Kb=14;%(7136+18)/511 = 7154/511 = 14
+msgpart=[1:18,18+shortcode_syspart];
+msgbuffset=msgpart(1:buffwidth:end);
+msgrequesttablemod=[];
+numofrequests=ceil(511/32)+1
+unloadrequestmap2=(-1)*ones(numofrequests,buffwidth,Kb);
+off1=0;
+pos1=1;
+for i=1:Kb
+  requestidx=off1;
+  offset=(i-1)*511;
+  lastval=offset+511;
+  if(lastval<7136)
+    poslast1 = find(msgbuffset>lastval)(1);
+    parselist=msgbuffset(pos1:poslast1-1);
+    pos1=poslast1;
+  else
+    poslast1 = find(msgbuffset<7136)(end);
+    parselist=msgbuffset(pos1:poslast1);    
+  end
+  
+  for j=parselist%1:buffwidth:(511)%length(msgpart)        
+    requestidx=requestidx+1;
+    prt=sprintf("[i , j, reqestidx]=[%d, %d, %d]",i,j,requestidx)  ;    
+    tmp=[j:j+buffwidth-1] ; %msgpart(1,j+offset:j+offset+buffwidth-1)
+    pos=find(tmp==offset+511);
+    poslast=find(tmp==7136);
+    %offset correction
+    tmpmod=mod(tmp-1,511)+1;
+    brkpt=0;
+    brkpt=0;
+    if(length(pos)!=0)%if 511 multiple present
+      off1=1;
+      tmpold=tmp;
+      %offset correction
+      tmpoldmod=tmpmod;
+      
+      tmpold(1,1:pos)=-1;
+      tmp(1,pos+1:end)=-1;          
+      tmpoldmod(1,1:pos)=-1;
+      tmpmod(1,pos+1:end)=-1;          
+    end    
+    if(length(poslast)!=0)
+      tmp(1,poslast+1:end)=-1;  
+      tmpmod(1,poslast+1:end)=-1;  
+      off1=0;
+    end
+    unloadrequestmap2(requestidx,:,i)=tmpmod;%tmp;
+    unloadrequestmap2(requestidx,:,i);
+    brkpt=0;
+    brkpt=0;
+  end
+  if(off1==1)
+    unloadrequestmap2(1,:,i+1)=tmpoldmod;%tmpold;
+    unloadrequestmap2(1,:,i+1);
+     brkpt=0;
+     brkpt=0;
+     
+  else
+     "finished"
+     unloadrequestmap2(:,:,i);
+     brkpt=0;
+     brkpt=0;
+     break;
+  end
+
+end
+%----------------%
  
 # block i => requestmap(:,:, i )
-%if sys part is 1:7136  (19:7154)
-unloadrequestmap = unloadrequestmap(:,:,block);
-%if sys part is 1:7154
-%unloadrequestmap = unloadrequestmap2(:,:,block);
+unloadrequestmap = unloadrequestmap2(:,:,block);
 endfunction
