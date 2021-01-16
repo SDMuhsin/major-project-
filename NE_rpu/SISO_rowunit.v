@@ -40,7 +40,7 @@ clk,rst
     parameter ADDRDEPTH = 20;//ceil(Z/P) = ceil(511/26)
     parameter Wabs=W-1;
     parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
-    parameter PIPESTAGES=9;
+    parameter PIPESTAGES=11;
     
     output reg[(Wc*(W))-1:0] updLLR_regout;
     output reg[(Wc*(W))-1:0] Dout_regout;
