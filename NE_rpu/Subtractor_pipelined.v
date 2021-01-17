@@ -34,6 +34,7 @@ module subtractor_32 (sub18, L, E,clk,rst);
     
     genvar i;
     generate for(i=Wc*W-1;i>=0;i=i-W) begin : loop
+        defparam sb1.W=W;
         subtract_2 sb1(sub18_wire[i:i-W+1],L_reg[i:i-W+1],E_reg[i:i-W+1],clk,rst);
         end
     endgenerate
