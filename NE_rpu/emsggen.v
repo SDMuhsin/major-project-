@@ -35,6 +35,7 @@ input clk,rst;
     wire [w-2:0]min1,min2;
     wire [(w-1)*wc-1:0] abs;
     reg [(w-1)*wc-1:0] abs_1;
+    wire [(w-1)*wc-1:0] absnormL;
     wire [w-2:0]pos;
     wire [2*(w-1)+5+wc-1:0] etemp;
     wire signparity;
@@ -44,8 +45,11 @@ input clk,rst;
     defparam m1.wc=wc,m1.w=w;
     Absoluter_32 m1(signbit,abs,x,clk,rst);
     
+    defparam m3.Wc=wc,m3.W=w;
+    NormaliserWc m3(absnormL, abs_1, clk,rst);
+    
     defparam m2.Wc=wc,m2.W=w;
-    m32VG_pipelined m2(min1,min2,pos,abs_1,clk,rst);
+    m32VG_pipelined m2(min1,min2,pos,absnormL,clk,rst);
     
     reg [wc-1:0]signbit_1,signbit_2,signbit_3,signbit_4,signbit_5;
     wire [2*(w-1)+wabs+wc-1:0]ecomp_wire;
