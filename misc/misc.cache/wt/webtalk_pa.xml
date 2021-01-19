@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri Jan 15 08:54:37 2021">
+<application name="pa" timeStamp="Sun Jan 17 16:56:37 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="309a0ddea58d4a66af6dee76a50ecae8" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,76 +17,67 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="1" type="JavaHandler"/>
+<property name="AddSources" value="3" type="JavaHandler"/>
+<property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="BACK,  Back" value="1" type="GuiResourceData"/>
-<property name="E_mem_ne_bram.v, 172, 127" value="3" type="GuiResourceData"/>
 <property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="9" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_rowunit (SISO_rowunit.v" value="8" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, Create New Project" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, misc" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="3" type="GuiResourceData"/>
-<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, rdaddress" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 111, 434" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 119, 111" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 119, 468" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 138, 185" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 140, 321" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 167, 320" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 178, 467" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 193, 105" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 200, 297" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 201, 169" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 212, 258" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 217, 230" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 218, 467" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 220, 273" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 220, 467" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 223, 76" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 229, 468" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 238, 161" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 240, 123" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 241, 460" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 253, 178" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 260, 173" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 260, 173, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 268, 169" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 268, 169, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 280, 180" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 286, 183" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 290, 236" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 306, 150" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 331, 187" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 331, 187, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 335, 183" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 335, 183, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 370, 400" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 443, 177" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 443, 177, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 491, 179" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 491, 179, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 522, 180" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 522, 180, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 57, 281" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 573, 178" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 573, 178, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 575, 187" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 575, 187, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 688, 458" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 79, 181" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 79, 181, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 84, 167" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 84, 167, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="Subtractor_pipelined.v, 226, 71" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="2" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, t" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_RowUnit_tb (SISO_RowUnit_tb.v" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_rowunit (SISO_rowunit.v" value="4" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/misc/misc.xpr, 0" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="4" type="GuiResourceData"/>
+<property name="RDIResourceCommand.RDICommands_DELETE, Remove File from Project..." value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 100, 388" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 104, 401" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 120, 304" value="2" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 145, 413, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 145, 414" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 157, 369" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 159, 385" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 173, 377" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 173, 389" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 173, 389, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 177, 424" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 177, 424, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 186, 397" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 186, 397, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 252, 44" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 257, 234" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 262, 140" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 275, 214" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 283, 256" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 284, 248" value="2" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 284, 258" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 286, 210" value="2" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 287, 329" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 292, 283" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 295, 327" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 296, 365" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 298, 241" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 303, 328" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 305, 294" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 308, 328" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 324, 380" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 52, 237" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 58, 232" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 59, 262" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 597, 276" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 89, 439" value="1" type="GuiResourceData"/>
+<property name="SISO_RowUnit_tb.v, 98, 370" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 156, 87" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="122" type="GuiMode"/>
+<property name="GuiMode" value="125" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="101" type="TclMode"/>
+<property name="TclMode" value="104" type="TclMode"/>
 </item>
 </section>
 </application>
