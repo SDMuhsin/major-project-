@@ -26,7 +26,7 @@ input clk,rst;
     parameter w=6;
     parameter wabs=w-1;
     parameter wc=32;
-    output reg [2*(w-1)+wabs+wc-1:0]ecomp;
+    output [2*(w-1)+wabs+wc-1:0]ecomp;
     //output [2*(w-1)+wabs+wc-1:0]ecomp;
     input [w*wc-1:0] x;
     //0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17;
@@ -35,14 +35,21 @@ input clk,rst;
     wire [w-2:0]min1,min2;
     wire [(w-1)*wc-1:0] abs;
     reg [(w-1)*wc-1:0] abs_1;
+    wire [(w-1)*wc-1:0] absnormL;
     wire [w-2:0]pos;
     wire [2*(w-1)+5+wc-1:0] etemp;
     wire signparity;
     wire [wc-1:0] updatedsign;
     reg [wc-1:0]updated_sign_reg;
     
+    defparam m1.wc=wc,m1.w=w;
     Absoluter_32 m1(signbit,abs,x,clk,rst);
-    m32VG_pipelined m2(min1,min2,pos,abs_1,clk,rst);
+    
+    defparam m3.Wc=wc,m3.W=w;
+    NormaliserWc m3(absnormL, abs_1, clk,rst);
+    
+    defparam m2.Wc=wc,m2.W=w;
+    m32VG_pipelined m2(min1,min2,pos,absnormL,clk,rst);
     
     reg [wc-1:0]signbit_1,signbit_2,signbit_3,signbit_4,signbit_5;
     wire [2*(w-1)+wabs+wc-1:0]ecomp_wire;
@@ -62,7 +69,7 @@ input clk,rst;
     always@(posedge clk)
     begin
     if(rst)begin
-        //updated_sign_reg<=0;
+        updated_sign_reg<=0;
         
         abs_1<=0;
         signbit_1 <= 0;
@@ -70,10 +77,10 @@ input clk,rst;
         signbit_3 <= 0;
         signbit_4 <= 0;
         signbit_5 <= 0;
-        ecomp<=0;
+        //ecomp<=0;
     end
     else begin
-        //updated_sign_reg<=updatedsign;
+        updated_sign_reg<=updatedsign;
         
         abs_1<=abs;
         signbit_1 <= signbit;
@@ -81,9 +88,9 @@ input clk,rst;
         signbit_3 <= signbit_2;
         signbit_4 <= signbit_3;
         signbit_5 <= signbit_4;
-        ecomp<=ecomp_wire;
+        //ecomp<=ecomp_wire;
     end
     end
-    assign ecomp_wire={min1,min2,pos,updatedsign};
-    //assign ecomp={min1,min2,pos,updatedsign};
+    //assign ecomp_wire={min1,min2,pos,updated_sign_reg};
+    assign ecomp={min1,min2,pos,updated_sign_reg};
 endmodule

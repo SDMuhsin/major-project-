@@ -42,8 +42,8 @@ clk,rst
     parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
     parameter PIPESTAGES=11;
     
-    output reg[(Wc*(W))-1:0] updLLR_regout;
-    output reg[(Wc*(W))-1:0] Dout_regout;
+    output [(Wc*(W))-1:0] updLLR_regout;
+    output [(Wc*(W))-1:0] Dout_regout;
     output [(ADDRWIDTH+1+1)-1:0] Dmem_rden_layer_address;
     output wrlayer;
     output [ADDRWIDTH-1:0]wraddress;
@@ -57,12 +57,16 @@ clk,rst
     
     input clk, rst;  
     
+    wire wrlayer_wire;
+    wire [ADDRWIDTH-1:0]wraddress_wire;
+    wire wren_wire;
     wire wr_E, rd_E;
     wire[(ADDRWIDTH+1)-1:0] E_RA;
     wire[(ADDRWIDTH+1)-1:0] E_WA;
     wire[ECOMPSIZE-1:0] Ecomp_wr_datain;
     wire[ECOMPSIZE-1:0] Emem_rd_dataout;
     reg[ECOMPSIZE-1:0] Ecomp_in;
+    wire forwarded_rcu_en;
     
     reg [(ADDRWIDTH+1+1)-1:0]wren_layer_address_reg[PIPESTAGES-1:0];
 
@@ -77,21 +81,38 @@ clk,rst
     
     //input-output
     //Regd outputs
+    //assign {wren_wire,wrlayer_wire,wraddress_wire} = wren_layer_address_reg[PIPESTAGES-1];
     assign {wren,wrlayer,wraddress} = wren_layer_address_reg[PIPESTAGES-1];
-    
-    always@(posedge clk)
+        
+    /*always@(posedge clk)
     begin
-      if(!rst)
+      if(rst)
       begin
+        wren<=0;
+        wrlayer<=0;
+        wraddress<=0;
         updLLR_regout<=0;
         Dout_regout<=0;
       end
       else
       begin
+      wren<=wren_wire;
+      wrlayer<=wrlayer_wire;
+      wraddress<=wraddress_wire;
+      if(forwarded_rcu_en) begin
         updLLR_regout<=updLLR_out;
         Dout_regout<=D_out;
+        end
+        else begin
+        updLLR_regout<=0;
+        Dout_regout<=0;
+        end
       end
-    end
+    end*/
+    
+    assign updLLR_regout=forwarded_rcu_en?updLLR_out:0;
+    assign Dout_regout=forwarded_rcu_en?D_out:0;
+    
     //regd inputs 
     reg rdlayer;
     reg [ADDRWIDTH-1:0]rdaddress;
@@ -101,7 +122,7 @@ clk,rst
     reg [(Wc*(W))-1:0] D_reaccess_in;
     always@(posedge clk)
     begin
-      if(!rst)
+      if(rst)
       begin
         D_reaccess_in<=0;
         Lmemout<=0;
@@ -125,7 +146,7 @@ clk,rst
     //Address Queue
     always@(posedge clk)
     begin
-      if(!rst)
+      if(rst)
       begin
         wren_layer_address_reg[0]<=0;
       end
@@ -140,7 +161,7 @@ clk,rst
     generate for(stageidx=0;stageidx<=PIPESTAGES-2;stageidx=stageidx+1) begin: stageidx_addrQ_loop
       always@(posedge clk)
       begin
-        if(!rst)
+        if(rst)
         begin
           wren_layer_address_reg[stageidx+1]<=0;
         end
@@ -155,7 +176,7 @@ clk,rst
     
     always@(posedge clk)
     begin
-      if(!rst)
+      if(rst)
       begin
         Lmemreg[0]<=0;
       end
@@ -167,7 +188,7 @@ clk,rst
     
     assign {rd_E,E_RA} = {rden_E,rdlayer,rdaddress};
     assign {wr_E,E_WA} = wren_layer_address_reg[8];
-    assign Ecomp_wr_datain = REC_2_OUT;
+    assign Ecomp_wr_datain = E_COMP;
     
     defparam e_memory.DEPTH=ADDRDEPTH*LAYERS, e_memory.ADDRWIDTH=ADDRWIDTH+1;
     defparam e_memory.ECOMPSIZE=ECOMPSIZE;
@@ -198,7 +219,7 @@ clk,rst
     SUB_OUT_REG[3]<=0;
     SUB_OUT_REG[4]<=0;
     SUB_OUT_REG[5]<=0;
-    SUB_OUT_REG[6]<=0;
+    //SUB_OUT_REG[6]<=0;
     
     end
     else begin
@@ -208,7 +229,7 @@ clk,rst
     SUB_OUT_REG[3]<=SUB_OUT_REG[2];
     SUB_OUT_REG[4]<=SUB_OUT_REG[3];
     SUB_OUT_REG[5]<=SUB_OUT_REG[4];
-    SUB_OUT_REG[6]<=SUB_OUT_REG[5];    
+    //SUB_OUT_REG[6]<=SUB_OUT_REG[5];    
     
     end    
     end   
@@ -224,7 +245,7 @@ clk,rst
     REC_1_OUT_REG[5] <= 0;
     REC_1_OUT_REG[6] <= 0;
     REC_1_OUT_REG[7] <= 0;
-    REC_1_OUT_REG[8] <= 0;
+    //REC_1_OUT_REG[8] <= 0;
     
     end
     
@@ -237,30 +258,39 @@ clk,rst
     REC_1_OUT_REG[5] <= REC_1_OUT_REG[4];
     REC_1_OUT_REG[6] <= REC_1_OUT_REG[5];
     REC_1_OUT_REG[7] <= REC_1_OUT_REG[6];
-    REC_1_OUT_REG[8] <= REC_1_OUT_REG[7];
+    //REC_1_OUT_REG[8] <= REC_1_OUT_REG[7];
     
     end    
     end  
     
       //Recover unit
       //recovunit_ne rec1(REC_1_OUT,Ecomp_in);
+      defparam rec1.Wc=Wc, rec1.W=W;
       recovunit_ne rec1(REC_1_OUT,Emem_rd_dataout);
     
       //To subtractor      
       //subtractor_32 s1(SUB_OUT ,Lmemreg[1],REC_1_OUT,clk,rst);
+      defparam s1.Wc=Wc, s1.W=W;
       subtractor_32 s1(SUB_OUT ,Lmemreg[0],REC_1_OUT,clk,rst);
             
       //Emsggen
+      defparam absmin.wc=Wc, absmin.w=W;
       emsggen absmin(E_COMP, SUB_OUT, clk, rst);
       assign Dmem_rden_layer_address = wren_layer_address_reg[7];
       
       //recover unit
+      defparam rec2.Wc=Wc, rec2.W=W;
       recovunit_ne rec2(REC_2_OUT,E_COMP);
       
       //subtractor for D calculation
-      subtractor_32_d sub2(D_out,REC_2_OUT,REC_1_OUT_REG[8],clk,rst); 
+      defparam sub2.Wc=Wc, sub2.W=W;
+      subtractor_32_d sub2(D_out,REC_2_OUT,REC_1_OUT_REG[7],clk,rst); 
       
       //adder
-      AdderWc add1(updLLR_out,SUB_OUT_REG[6],REC_2_OUT,D_reaccess_in,clk,rst);      
+      defparam add1.Wc=Wc, add1.W=W;
+      AdderWc add1(updLLR_out,SUB_OUT_REG[5],REC_2_OUT,D_reaccess_in,clk,rst);  
       
+      assign forwarded_rcu_en=wren_layer_address_reg[10][ADDRWIDTH+1];
+            
+
 endmodule
