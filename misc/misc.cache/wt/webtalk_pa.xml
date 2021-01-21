@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sun Jan 17 16:56:37 2021">
+<application name="pa" timeStamp="Tue Jan 19 14:18:40 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="309a0ddea58d4a66af6dee76a50ecae8" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,67 +17,67 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="3" type="JavaHandler"/>
+<property name="AddSources" value="5" type="JavaHandler"/>
 <property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="1" type="JavaHandler"/>
+<property name="RunSchematic" value="3" type="JavaHandler"/>
+<property name="RunSynthesis" value="3" type="JavaHandler"/>
+<property name="SetTopNode" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="FINISH, Finish" value="2" type="GuiResourceData"/>
-<property name="NEXT, Next " value="2" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, t" value="1" type="GuiResourceData"/>
-<property name="PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, Hierarchy Update" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_RowUnit_tb (SISO_RowUnit_tb.v" value="3" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_rowunit (SISO_rowunit.v" value="4" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="2" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, C:/Users/sayed/Desktop/Programing/major project/major-project-/misc/misc.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.PAViews_CODE, Code" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, Add Files" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="4" type="GuiResourceData"/>
-<property name="RDIResourceCommand.RDICommands_DELETE, Remove File from Project..." value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 100, 388" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 104, 401" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 120, 304" value="2" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 145, 413, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 145, 414" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 157, 369" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 159, 385" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 173, 377" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 173, 389" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 173, 389, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 177, 424" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 177, 424, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 186, 397" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 186, 397, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 252, 44" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 257, 234" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 262, 140" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 275, 214" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 283, 256" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 284, 248" value="2" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 284, 258" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 286, 210" value="2" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 287, 329" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 292, 283" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 295, 327" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 296, 365" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 298, 241" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 303, 328" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 305, 294" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 308, 328" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 324, 380" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 52, 237" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 58, 232" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 59, 262" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 597, 276" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 89, 439" value="1" type="GuiResourceData"/>
-<property name="SISO_RowUnit_tb.v, 98, 370" value="1" type="GuiResourceData"/>
-<property name="SISO_rowunit.v, 156, 87" value="1" type="GuiResourceData"/>
+<property name="E_mem_ne_bram.v, 84, 173" value="2" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SCHEMATIC, Schematic" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, SISO_rowunit_cover (SISO_rowunit_cover.v" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Open Synthesized Design, Report Timing Summary], 22, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Synthesis, Run Synthesis], 17, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths, clk, Setup 36.495 ns], 7, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths, clk, Setup 36.495 ns], 7, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths, clk], 6" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, [Root, Intra-Clock Paths], 5" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.NetlistSchMenuAndMouse_EXPAND_COLLAPSE, Expand/Collapse" value="4" type="GuiResourceData"/>
+<property name="PAResourceItoN.NetlistSchMenuAndMouse_REPORT_TIMING, Report Timing" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.NetlistSchMenuAndMouse_VIEW, View" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_SCHEMATIC, Schematic" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathMenu_SET_FALSE_PATH, Set False Path" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathMenu_SET_MAXIMUM_DELAY, Set Maximum Delay" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathMenu_SET_MULTICYCLE_PATH, Set Multicycle Path" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathReportTableView_DESCRIPTION, Destination ; m1/REC_1_OUT_REG_reg[0][100]/D   (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@20.000ns period=40.000ns}" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathReportTableView_DESCRIPTION, Name ; Path 1, 0, Path 1, 1, false, false, false, true, false" value="4" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathReportTableView_DESCRIPTION, Source ; m1/e_memory/emem_reg/CLKARDCLK   (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@20.000ns period=40.000ns}" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PathReportTableView_FLOORPLANNING, Floorplanning" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SchMenuAndMouse_EXPAND_CONE, Expand Cone" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight" value="4" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SelectMenu_MARK, Mark" value="4" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 36.495075 ; 2 ; 35 ; m1/e_memory/emem_reg/CLKARDCLK ; m1/REC_1_OUT_REG_reg[0][100]/D ; 3.361571 ; 2.186 ; 1.1755714 ; 40.0 ; clk ; clk ; , 0, 36.495075, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 36.495075 ; 2 ; 35 ; m1/e_memory/emem_reg/CLKARDCLK ; m1/REC_1_OUT_REG_reg[0][100]/D ; 3.361571 ; 2.186 ; 1.1755714 ; 40.0 ; clk ; clk ; , 0, 36.495075, 1, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, Path 1 ; 36.495075 ; 2 ; 35 ; m1/e_memory/emem_reg/CLKARDCLK ; m1/REC_1_OUT_REG_reg[0][100]/D ; 3.361571 ; 2.186 ; 1.1755714 ; 40.0 ; clk ; clk ; , 0, Path 1, 0, false, false, false, true, false" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, Emem_rd_dataout" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, emem_rd_dataout, true" value="1" type="GuiResourceData"/>
+<property name="RDIResource.HTable_SET_ELIDING_FOR_TABLE_CELLS, Elide Setting" value="2" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 161, 308" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 185, 300" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 190, 298" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 209, 310" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 231, 242" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 256, 311" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 286, 44" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 300, 190" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 344, 467" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 361, 346" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 386, 90" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 386, 90, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit.v, 430, 170" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit_cover.v, 171, 338" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit_cover.v, 174, 181" value="1" type="GuiResourceData"/>
+<property name="SISO_rowunit_cover.v, 368, 201" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="125" type="GuiMode"/>
+<property name="GuiMode" value="126" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="104" type="TclMode"/>
+<property name="TclMode" value="105" type="TclMode"/>
 </item>
 </section>
 </application>

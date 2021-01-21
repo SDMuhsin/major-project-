@@ -65,6 +65,7 @@ clk,rst
     wire[(ADDRWIDTH+1)-1:0] E_WA;
     wire[ECOMPSIZE-1:0] Ecomp_wr_datain;
     wire[ECOMPSIZE-1:0] Emem_rd_dataout;
+    reg [ECOMPSIZE-1:0] Emem_rd_dataout_delay_1;
     reg[ECOMPSIZE-1:0] Ecomp_in;
     wire forwarded_rcu_en;
     
@@ -266,7 +267,10 @@ clk,rst
       //Recover unit
       //recovunit_ne rec1(REC_1_OUT,Ecomp_in);
       defparam rec1.Wc=Wc, rec1.W=W;
-      recovunit_ne rec1(REC_1_OUT,Emem_rd_dataout);
+      always@(posedge clk)begin
+        Emem_rd_dataout_delay_1 <= Emem_rd_dataout;
+      end
+      recovunit_ne rec1(REC_1_OUT,Emem_rd_dataout_delay_1);
     
       //To subtractor      
       //subtractor_32 s1(SUB_OUT ,Lmemreg[1],REC_1_OUT,clk,rst);
