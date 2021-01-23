@@ -30,7 +30,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   
   L = cdwrd;
   E = zeros( lys*z , 1 + 1 + 1 + Wc);
-  D = zeros( lys*z, Wc);
+  D = zeros( 1, 8176);
   for iteration = 1:1:max_iterns
      
      # At the beginning of an iteration, we have :
