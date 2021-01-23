@@ -13,4 +13,7 @@ function [abs_q,sign_q] = func_module_absoluter (q)
   for i = 2:1:size(sign_q)(2)
       flip = xor(flip,sign_q);
   endfor
+  if(flip)
+    sign_q = xor(sign_q,1);
+  endif
 endfunction
