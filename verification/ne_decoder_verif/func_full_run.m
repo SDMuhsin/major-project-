@@ -6,6 +6,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   Wc = 32;
   z = 511;
   p = 26;
+  blocks = 16;
   max_slices = ceil(z/p);
   #-------------------------
   
@@ -30,14 +31,18 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   
   L = cdwrd;
   E = zeros( lys*z , 1 + 1 + 1 + Wc);
-  D = zeros( lys*z, Wc);
+  D = zeros( 1, blocks * z);
+  
+  filename = sprintf("./test/test.txt");
+  fid = fopen(filename,"wt");
+  
   for iteration = 1:1:max_iterns
      
      # At the beginning of an iteration, we have :
      # L : 1x8176
      # E : 1022 x 32
      # D : 1x8176
-     L(1:10)
+     
      cnt = 0;
      for ly = 1:1:lys
       
@@ -56,6 +61,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
         # Outputs of p RCUs
         # Update a certain ammount of symbols of L, max 26 x 32 symbols
         # E -> update a 26 x 32 chunk
+        
         
         for row = rows_global
           
@@ -80,7 +86,11 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           E_in = E(row,:); # 1 x (1 + 1 + 1 + 32)
           L_in = symbols;
           D_in = D(symbol_indices);
-
+          
+          printtxt=sprintf('%s\n', bin2hex(L_in));
+          fprintf(fid,'%c',transpose(printtxt));
+  
+          
           rec_1_out = func_module_recover(E_in); # 1 x 32
           
           Q = func_saturate(L_in - rec_1_out);
@@ -96,7 +106,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           L_out = func_saturate( Q_abs + rec_2_out + D_in );
           D_out = func_saturate( rec_2_out - rec_1_out);
           
-          if(iteration == 1 &&  sum(L_in) ~= length(rec_2_out) * rec_2_out(1) &&row < 513 )
+          if(iteration == 99 &&  sum(L_in) ~= length(rec_2_out) * rec_2_out(1) &&row < 513 )
             fprintf("iteration = %d, row = %d \n",iteration,row);
             symbol_indices
             L_in
@@ -126,17 +136,18 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
                cnt += 1;
             else
               fprintf("This shouldn't happen, reaccess_mask");
-            endif
-            
-          endfor   
+            endif  
+          endfor
+          
           #Update E
           E(row,:) = E_out;
         endfor # row end
         if(iteration == 100)
-        fprintf(" iter = %d, L_in = %d, L_out = %d, rec_2_out - rec_1_out = %d - %d \n",iteration, L_in(1),L_out(1),rec_2_out(1),rec_1_out(1));      
+          fprintf(" iter = %d, L_in = %d, L_out = %d, rec_2_out - rec_1_out = %d - %d \n",iteration, L_in(1),L_out(1),rec_2_out(1),rec_1_out(1));      
         endif
       endfor #slice end
      endfor#layer end
   cnt
   endfor#iteration end
+  fclose(fid);
 endfunction
