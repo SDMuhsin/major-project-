@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SISO_rowunit(
+module SISO_rowunit2(
 updLLR_regout,
 Dout_regout, 
 wrlayer,wraddress,wren, 

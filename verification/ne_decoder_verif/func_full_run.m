@@ -61,6 +61,13 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
       fid_Ein = fopen(fname_Ein,'wt');
       fname_Din = sprintf('./outputs/D_in_iter%d_ly%d.txt',iteration,ly);
       fid_Din = fopen(fname_Din,'wt');
+      
+      fname_Lout = sprintf('./outputs/L_out_iter%d_ly%d.txt',iteration,ly);
+      fid_Lout = fopen(fname_Lout,'wt');
+      fname_Eout = sprintf('./outputs/E_out_iter%d_ly%d.txt',iteration,ly);
+      fid_Eout = fopen(fname_Eout,'wt');
+      fname_Dout = sprintf('./outputs/D_out_iter%d_ly%d.txt',iteration,ly);
+      fid_Dout = fopen(fname_Dout,'wt');
       # ---------------- #
       
       for slice = 1:1:max_slices
@@ -165,6 +172,10 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           fprintf(fid_Lin,"%s\n", func_conv_symbol2bin( L_in ));
           fprintf(fid_Ein,"%s\n", func_conv_symbol2bin( E_in ));
           fprintf(fid_Din,"%s\n", func_conv_symbol2bin( D_in ));
+          
+          fprintf(fid_Lout,"%s\n", func_conv_symbol2bin( L_out ));
+          fprintf(fid_Eout,"%s\n", func_conv_symbol2bin( E_out ));
+          fprintf(fid_Dout,"%s\n", func_conv_symbol2bin( D_out ));
           # ---------------------------- #
           
         endfor # row end
@@ -179,6 +190,9 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
      fclose(fid_Lin);
      fclose(fid_Ein);
      fclose(fid_Din);
+     fclose(fid_Lout);
+     fclose(fid_Eout);
+     fclose(fid_Dout);
      # ----------------- #
   endfor#iteration end
   fclose(fid);
