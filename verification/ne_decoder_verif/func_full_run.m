@@ -38,13 +38,12 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   fid = fopen(filename,"wt");
   
 
-  D = zeros( 1, 8176);
 
   for iteration = 1:1:max_iterns
      
      # At the beginning of an iteration, we have :
      # L : 1x8176
-     # E : 1022 x 32
+     # E : 1022 x 35
      # D : 1x8176
      
     
@@ -56,18 +55,18 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
       # -- OPEN FILES -- #
       # These are printed for every slice or for every row #
       fname_Lin = sprintf('./outputs/L_in_iter%d_ly%d.txt',iteration,ly);
-      fid_Lin = fopen(fname_Lin,'wt');
+      fid_Lin = fopen(fname_Lin,'w+');
       fname_Ein = sprintf('./outputs/E_in_iter%d_ly%d.txt',iteration,ly);
-      fid_Ein = fopen(fname_Ein,'wt');
+      fid_Ein = fopen(fname_Ein,'w+');
       fname_Din = sprintf('./outputs/D_in_iter%d_ly%d.txt',iteration,ly);
-      fid_Din = fopen(fname_Din,'wt');
+      fid_Din = fopen(fname_Din,'w+');
       
       fname_Lout = sprintf('./outputs/L_out_iter%d_ly%d.txt',iteration,ly);
-      fid_Lout = fopen(fname_Lout,'wt');
+      fid_Lout = fopen(fname_Lout,'w+');
       fname_Eout = sprintf('./outputs/E_out_iter%d_ly%d.txt',iteration,ly);
-      fid_Eout = fopen(fname_Eout,'wt');
+      fid_Eout = fopen(fname_Eout,'w+');
       fname_Dout = sprintf('./outputs/D_out_iter%d_ly%d.txt',iteration,ly);
-      fid_Dout = fopen(fname_Dout,'wt');
+      fid_Dout = fopen(fname_Dout,'w+');
       # ---------------- #
       
       for slice = 1:1:max_slices
@@ -157,24 +156,24 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
                L(symbol_indices(i)) = L_out(i);
             else
               fprintf("This shouldn't happen, reaccess_mask");
-            endif  
+            endif
+            
           endfor
           
           #Update E
           E(row,:) = E_out;
           
-          if(row == 510)
-          fprintf("\n D_in, D_in bits \n");
-            size(D_in)
-            size(func_conv_symbol2bin(D_in))
+          if(row == 510 || row <10|| size(E_out) ~= 35 || size(E_in) ~= 35  ) 
+            fprintf("riw = %d ; min(E_out) = %d, min(E_in) = %d\n",row,min(E_out),min(E_in));
           endif
+          
           # -- print to file, per row -- #
           fprintf(fid_Lin,"%s\n", func_conv_symbol2bin( L_in ));
-          fprintf(fid_Ein,"%s\n", func_conv_symbol2bin( E_in ));
+          fprintf(fid_Ein,"%s\n", func_conv_etobin(E_in) );
           fprintf(fid_Din,"%s\n", func_conv_symbol2bin( D_in ));
           
           fprintf(fid_Lout,"%s\n", func_conv_symbol2bin( L_out ));
-          fprintf(fid_Eout,"%s\n", func_conv_symbol2bin( E_out ));
+          fprintf(fid_Eout,"%s\n", func_conv_etobin(E_out));
           fprintf(fid_Dout,"%s\n", func_conv_symbol2bin( D_out ));
           # ---------------------------- #
           

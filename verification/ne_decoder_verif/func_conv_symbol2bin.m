@@ -3,9 +3,10 @@ function tg = func_conv_symbol2bin (symbols, w = 6)
   # This should convert to 2's compliment representation that we use
   # We can expect that the symbols are already quantized...
   # Output should be a single string ...
-  # MSB to the left.. 1 => 000001
+  # MSB to te the left.. 1 => 000001
   
   tg = "";
+  
   for i = 1:1:size(symbols)(2)
     t = "";
     

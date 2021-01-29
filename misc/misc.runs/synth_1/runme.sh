@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log SISO_rowunit_cover.vds -m64 -mode batch -messageDb vivado.pb -notrace -source SISO_rowunit_cover.tcl
+EAStep vivado -log m32VG_pipelined.vds -m64 -mode batch -messageDb vivado.pb -notrace -source m32VG_pipelined.tcl

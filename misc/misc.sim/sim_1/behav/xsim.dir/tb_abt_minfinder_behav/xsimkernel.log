@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_abt_minfinder_behav/xsimk.exe -simmode gui -wdb tb_abt_minfinder_behav.wdb -simrunnum 0 -socket 55772
+Design successfully loaded
+Design Loading Memory Usage: 9952 KB (Peak: 9952 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 31428 KB (Peak: 31428 KB)
+Simulation CPU Usage: 343 ms

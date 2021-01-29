@@ -112,10 +112,13 @@ always #10 clk = ~clk;
 always @(posedge clk) cnt = cnt + 1'b1;
 always @(updLLR_regout)begin
     if( updLLR_regout == L_out[0] )begin
+        
         $display("clk %d DING \n",cnt);
+        
     end
     else begin
         $display(" clk %d : (  %d %d \n",cnt,updLLR_regout[5:0],L_out[0][5:0] );
+        
     end
 end
 endmodule

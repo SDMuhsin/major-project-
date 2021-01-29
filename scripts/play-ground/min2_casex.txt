@@ -1,0 +1,98 @@
+casex(min2_onehot)
+	 32'b1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[31];
+	 end
+	 32'b01xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[30];
+	 end
+	 32'b001xxxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[29];
+	 end
+	 32'b0001xxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[28];
+	 end
+	 32'b00001xxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[27];
+	 end
+	 32'b000001xxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[26];
+	 end
+	 32'b0000001xxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[25];
+	 end
+	 32'b00000001xxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[24];
+	 end
+	 32'b000000001xxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[23];
+	 end
+	 32'b0000000001xxxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[22];
+	 end
+	 32'b00000000001xxxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[21];
+	 end
+	 32'b000000000001xxxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[20];
+	 end
+	 32'b0000000000001xxxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[19];
+	 end
+	 32'b00000000000001xxxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[18];
+	 end
+	 32'b000000000000001xxxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[17];
+	 end
+	 32'b0000000000000001xxxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[16];
+	 end
+	 32'b00000000000000001xxxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[15];
+	 end
+	 32'b000000000000000001xxxxxxxxxxxxxx: begin
+		 min2 = inp_sep[14];
+	 end
+	 32'b0000000000000000001xxxxxxxxxxxxx: begin
+		 min2 = inp_sep[13];
+	 end
+	 32'b00000000000000000001xxxxxxxxxxxx: begin
+		 min2 = inp_sep[12];
+	 end
+	 32'b000000000000000000001xxxxxxxxxxx: begin
+		 min2 = inp_sep[11];
+	 end
+	 32'b0000000000000000000001xxxxxxxxxx: begin
+		 min2 = inp_sep[10];
+	 end
+	 32'b00000000000000000000001xxxxxxxxx: begin
+		 min2 = inp_sep[9];
+	 end
+	 32'b000000000000000000000001xxxxxxxx: begin
+		 min2 = inp_sep[8];
+	 end
+	 32'b0000000000000000000000001xxxxxxx: begin
+		 min2 = inp_sep[7];
+	 end
+	 32'b00000000000000000000000001xxxxxx: begin
+		 min2 = inp_sep[6];
+	 end
+	 32'b000000000000000000000000001xxxxx: begin
+		 min2 = inp_sep[5];
+	 end
+	 32'b0000000000000000000000000001xxxx: begin
+		 min2 = inp_sep[4];
+	 end
+	 32'b00000000000000000000000000001xxx: begin
+		 min2 = inp_sep[3];
+	 end
+	 32'b000000000000000000000000000001xx: begin
+		 min2 = inp_sep[2];
+	 end
+	 32'b0000000000000000000000000000001x: begin
+		 min2 = inp_sep[1];
+	 end
+	 32'b00000000000000000000000000000001: begin
+		 min2 = inp_sep[0];
+	 end
+endcase

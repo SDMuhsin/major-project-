@@ -1,0 +1,163 @@
+casex(min1_onehot)
+	1: begin
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[31];
+		 min2_onehot = c2[31];
+		 index = 31; 
+	 end
+	 32'b01xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[30];
+		 min2_onehot = c2[30];
+		 index = 30; 
+	 end
+	 32'b001xxxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[29];
+		 min2_onehot = c2[29];
+		 index = 29; 
+	 end
+	 32'b0001xxxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[28];
+		 min2_onehot = c2[28];
+		 index = 28; 
+	 end
+	 32'b00001xxxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[27];
+		 min2_onehot = c2[27];
+		 index = 27; 
+	 end
+	 32'b000001xxxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[26];
+		 min2_onehot = c2[26];
+		 index = 26; 
+	 end
+	 32'b0000001xxxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[25];
+		 min2_onehot = c2[25];
+		 index = 25; 
+	 end
+	 32'b00000001xxxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[24];
+		 min2_onehot = c2[24];
+		 index = 24; 
+	 end
+	 32'b000000001xxxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[23];
+		 min2_onehot = c2[23];
+		 index = 23; 
+	 end
+	 32'b0000000001xxxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[22];
+		 min2_onehot = c2[22];
+		 index = 22; 
+	 end
+	 32'b00000000001xxxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[21];
+		 min2_onehot = c2[21];
+		 index = 21; 
+	 end
+	 32'b000000000001xxxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[20];
+		 min2_onehot = c2[20];
+		 index = 20; 
+	 end
+	 32'b0000000000001xxxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[19];
+		 min2_onehot = c2[19];
+		 index = 19; 
+	 end
+	 32'b00000000000001xxxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[18];
+		 min2_onehot = c2[18];
+		 index = 18; 
+	 end
+	 32'b000000000000001xxxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[17];
+		 min2_onehot = c2[17];
+		 index = 17; 
+	 end
+	 32'b0000000000000001xxxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[16];
+		 min2_onehot = c2[16];
+		 index = 16; 
+	 end
+	 32'b00000000000000001xxxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[15];
+		 min2_onehot = c2[15];
+		 index = 15; 
+	 end
+	 32'b000000000000000001xxxxxxxxxxxxxx: begin
+		 min1 = inp_sep[14];
+		 min2_onehot = c2[14];
+		 index = 14; 
+	 end
+	 32'b0000000000000000001xxxxxxxxxxxxx: begin
+		 min1 = inp_sep[13];
+		 min2_onehot = c2[13];
+		 index = 13; 
+	 end
+	 32'b00000000000000000001xxxxxxxxxxxx: begin
+		 min1 = inp_sep[12];
+		 min2_onehot = c2[12];
+		 index = 12; 
+	 end
+	 32'b000000000000000000001xxxxxxxxxxx: begin
+		 min1 = inp_sep[11];
+		 min2_onehot = c2[11];
+		 index = 11; 
+	 end
+	 32'b0000000000000000000001xxxxxxxxxx: begin
+		 min1 = inp_sep[10];
+		 min2_onehot = c2[10];
+		 index = 10; 
+	 end
+	 32'b00000000000000000000001xxxxxxxxx: begin
+		 min1 = inp_sep[9];
+		 min2_onehot = c2[9];
+		 index = 9; 
+	 end
+	 32'b000000000000000000000001xxxxxxxx: begin
+		 min1 = inp_sep[8];
+		 min2_onehot = c2[8];
+		 index = 8; 
+	 end
+	 32'b0000000000000000000000001xxxxxxx: begin
+		 min1 = inp_sep[7];
+		 min2_onehot = c2[7];
+		 index = 7; 
+	 end
+	 32'b00000000000000000000000001xxxxxx: begin
+		 min1 = inp_sep[6];
+		 min2_onehot = c2[6];
+		 index = 6; 
+	 end
+	 32'b000000000000000000000000001xxxxx: begin
+		 min1 = inp_sep[5];
+		 min2_onehot = c2[5];
+		 index = 5; 
+	 end
+	 32'b0000000000000000000000000001xxxx: begin
+		 min1 = inp_sep[4];
+		 min2_onehot = c2[4];
+		 index = 4; 
+	 end
+	 32'b00000000000000000000000000001xxx: begin
+		 min1 = inp_sep[3];
+		 min2_onehot = c2[3];
+		 index = 3; 
+	 end
+	 32'b000000000000000000000000000001xx: begin
+		 min1 = inp_sep[2];
+		 min2_onehot = c2[2];
+		 index = 2; 
+	 end
+	 32'b0000000000000000000000000000001x: begin
+		 min1 = inp_sep[1];
+		 min2_onehot = c2[1];
+		 index = 1; 
+	 end
+	 32'b00000000000000000000000000000001: begin
+		 min1 = inp_sep[0];
+		 min2_onehot = c2[0];
+		 index = 0; 
+	 end
+endcase
