@@ -241,7 +241,7 @@ assign rd_address_0to1 =rd_address;
 
 integer i_r;
 always@(posedge clk) begin
-if(rst)
+  if(!rst)
 begin
     for(i_r=0;i_r<=Nb-1;i_r=i_r+1) begin: Nb16_0
      lmem_data_out_0to1_reg_p1[i_r]<=0;
