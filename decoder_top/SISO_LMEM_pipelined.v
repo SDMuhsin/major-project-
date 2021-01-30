@@ -178,7 +178,7 @@ clk,rst
     //--------------------------------------//
       
     assign {rd_E,E_RA} = {rden_E,rdlayer,rdaddress};
-    assign {wr_E,E_WA} = wren_layer_address_reg[8];
+    assign {wr_E,E_WA} = wren_layer_address_reg[7];
     assign Ecomp_wr_datain = E_COMP;
     
    /*always@(posedge clk)
