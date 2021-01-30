@@ -272,7 +272,21 @@ clk,rst
     end    
     end    
         
-      //Recover unit
+    reg [Wc*W-1:0]REC_2_OUT_REG;
+    
+    always@(posedge clk) begin
+    
+    if(!rst) begin
+    REC_2_OUT_REG <= 0;
+    end
+    
+    else begin
+    REC_2_OUT_REG <= REC_2_OUT;
+    
+    end    
+    end  
+    
+    //Recover unit
       //recovunit_ne rec1(REC_1_OUT,Ecomp_in);
       defparam rec1.Wc=Wc, rec1.W=W;
       recovunit_ne rec1(REC_1_OUT,Emem_rd_dataout_reg);
@@ -293,11 +307,11 @@ clk,rst
       
       //subtractor for D calculation
       defparam sub2.Wc=Wc, sub2.W=W;
-      subtractor_32_d sub2(D_out,REC_2_OUT,REC_1_OUT_REG[7],clk,rst); 
+    subtractor_32_d sub2(D_out,REC_2_OUT_REG,REC_1_OUT_REG[7],clk,rst); 
       
       //adder
       defparam add1.Wc=Wc, add1.W=W;
-      AdderWc add1(updLLR_out,SUB_OUT_REG[6],REC_2_OUT,D_reaccess_in,clk,rst);  
+    AdderWc add1(updLLR_out,SUB_OUT_REG[6],REC_2_OUT_REG,D_reaccess_in,clk,rst);  
       
       assign forwarded_rcu_en=wren_layer_address_reg[11][ADDRWIDTH+1];
             
