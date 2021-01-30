@@ -22,15 +22,16 @@
 
 module readtest9b( );
 parameter nofb=192;
+parameter nofb_ecomp = 47;
 parameter lines=511;
 
 reg [nofb-1:0]L_in[lines-1:0];
 reg [nofb-1:0]D_in[lines-1:0];
-reg [nofb-1:0]E_in[lines-1:0];
+reg [nofb_ecomp-1:0]E_in[lines-1:0];
 
 reg [nofb-1:0]L_out[lines-1:0];
 reg [nofb-1:0]D_out[lines-1:0];
-reg [nofb-1:0]E_out[lines-1:0];
+reg [nofb_ecomp-1:0]E_out[lines-1:0];
 
 integer i;
 
@@ -38,13 +39,13 @@ integer i;
 initial 
 begin
    
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\L_in_iter1_ly2.txt",L_in);//if less no of bits are specified it will pad 0 at begining
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\D_in_iter1_ly2.txt",D_in);//if less no of bits are specified it will pad 0 at begining
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\E_in_iter1_ly2.txt",E_in);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\L_in_iter1_ly1.txt",L_in);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\D_in_iter1_ly1.txt",D_in);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\E_in_iter1_ly1.txt",E_in);//if less no of bits are specified it will pad 0 at begining
     
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\L_out_iter1_ly2.txt",L_out);//if less no of bits are specified it will pad 0 at begining
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\D_out_iter1_ly2.txt",D_out);//if less no of bits are specified it will pad 0 at begining
-    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\E_out_iter1_ly2.txt",E_out);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\L_out_iter1_ly1.txt",L_out);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\D_out_iter1_ly1.txt",D_out);//if less no of bits are specified it will pad 0 at begining
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\E_out_iter1_ly1.txt",E_out);//if less no of bits are specified it will pad 0 at begining
     
 end
 
@@ -76,7 +77,7 @@ reg [(Wc*(W))-1:0] Lmemout_regin;
 reg [(Wc*(W))-1:0] D_reaccess_in_regin;
 reg clk,rst;
 
-SISO_rowunit2 siso(updLLR_regout,Dout_regout,wrlayer,wraddress,wren,Dmem_rden_layer_address, 
+SISO_rowunit_pipe rcu(updLLR_regout,Dout_regout,wrlayer,wraddress,wren,Dmem_rden_layer_address, 
 rdlayer_regin,rdaddress_regin,rden_LLR_regin,rden_E_regin, 
 Lmemout_regin,
 D_reaccess_in_regin,
@@ -86,13 +87,13 @@ integer cnt;
 initial begin
     cnt = 0;
     
-    rst = 1;
+    rst = 0;
     clk = 0;
     #1;
     clk = 1;
     #1;
     clk = 0;
-    rst = 0;
+    rst = 1;
     
     rdlayer_regin = 0;
     rdaddress_regin = 0;
@@ -110,7 +111,7 @@ end
 
 always #10 clk = ~clk;
 always @(posedge clk) cnt = cnt + 1'b1;
-always @(updLLR_regout)begin
+always @(posedge clk)begin
     if( updLLR_regout == L_out[0] )begin
         
         $display("clk %d DING \n",cnt);
@@ -118,6 +119,15 @@ always @(updLLR_regout)begin
     end
     else begin
         $display(" clk %d : (  %d %d \n",cnt,updLLR_regout[5:0],L_out[0][5:0] );
+        
+        $display(" Into RCU L_in %b", Lmemout_regin);
+        $display(" RCU L_in after one FF %b", rcu.Lmemout);
+        $display(" RCU SUB_OUT %b", rcu.SUB_OUT);
+        $display(" RCU SUB_OUT_REG[6] %b", rcu.SUB_OUT_REG[6]);
+        $display(" updLLROut %b", rcu.updLLR_out);
+        $display(" from RCU %b", updLLR_regout);
+        $display(" from txt %b", L_out[0]);
+            
         
     end
 end

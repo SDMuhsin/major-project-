@@ -36,6 +36,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   
   filename = sprintf("./test/test.txt");
   fid = fopen(filename,"wt");
+  fprintf(fid, "%s \n", num2str(zeros(511,192)))
   
 
 
@@ -106,6 +107,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           
           E_in = func_saturate(E(row,:)); # 1 x (1 + 1 + 1 + 32)
           L_in = func_saturate(symbols);
+          assert(size(L_in)(2),32);
           D_in = func_saturate(D(symbol_indices));
           
           printtxt=sprintf('%s\n', bin2hex(L_in));
@@ -127,19 +129,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           L_out = func_saturate( Q_abs + rec_2_out + D_in );
           D_out = func_saturate( rec_2_out - rec_1_out);
           
-          if(iteration == 99 &&  sum(L_in) ~= length(rec_2_out) * rec_2_out(1) &&row < 513 )
-            fprintf("iteration = %d, row = %d \n",iteration,row);
-            symbol_indices
-            L_in
-            D_in
-            rec_1_out
-            Q_abs
-            Q_sign
-            rec_2_out
-            L_out
-            D_out
-          endif
-        
+
           # Update to global L 1x8176, global E 1022x32, global D 1x8176
           # Iterate accross all 32 symbols
           for i = 1:1:size(symbol_indices)(2)
@@ -162,9 +152,15 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           
           #Update E
           E(row,:) = E_out;
-          
-          if(row == 510 || row <10|| size(E_out) ~= 35 || size(E_in) ~= 35  ) 
-            fprintf("riw = %d ; min(E_out) = %d, min(E_in) = %d\n",row,min(E_out),min(E_in));
+            
+
+          if( row > 2009 ||  size(E_out) ~= 35 || size(E_in) ~= 35  ) 
+            fprintf("iteration = %d ; row = %d \n", iteration, row);
+            
+            assert(size(D_in)(2),32)
+            assert( size ( func_conv_symbol2bin( D_in ) )(2), 192);
+
+            
           endif
           
           # -- print to file, per row -- #
@@ -175,17 +171,35 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           fprintf(fid_Lout,"%s\n", func_conv_symbol2bin( L_out ));
           fprintf(fid_Eout,"%s\n", func_conv_etobin(E_out));
           fprintf(fid_Dout,"%s\n", func_conv_symbol2bin( D_out ));
-          # ---------------------------- #
           
+          fflush(fid);     
+          fflush(fid_Din);
+          fflush(fid_Lin);
+          fflush(fid_Ein);
+          fflush(fid_Dout);
+          fflush(fid_Lout);
+          fflush(fid_Eout);
+     
+          # ---------------------------- #
+          # TEMP stuff
+          if(iteration == 1 && ly == 1 && row == 1)
+            L_in
+            size(L_in)
+            E_in
+            D_in
+            
+            L_out
+            E_out
+            D_out
+          endif
         endfor # row end
-        
-        if(iteration == 100)
-          fprintf(" iter = %d, L_in = %d, L_out = %d, rec_2_out - rec_1_out = %d - %d \n",iteration, L_in(1),L_out(1),rec_2_out(1),rec_1_out(1));      
-        endif
+
       endfor #slice end
      endfor#layer end
      
      # -- Close files -- #
+     
+     fclose(fid);
      fclose(fid_Lin);
      fclose(fid_Ein);
      fclose(fid_Din);
@@ -194,5 +208,5 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
      fclose(fid_Dout);
      # ----------------- #
   endfor#iteration end
-  fclose(fid);
+  
 endfunction
