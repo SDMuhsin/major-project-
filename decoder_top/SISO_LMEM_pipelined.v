@@ -294,7 +294,7 @@ clk,rst
       //To subtractor      
       //subtractor_32 s1(SUB_OUT ,Lmemreg[1],REC_1_OUT,clk,rst);
       defparam s1.Wc=Wc, s1.W=W;
-      subtractor_32 s1(SUB_OUT ,Lmemout,REC_1_OUT,clk,rst);
+    subtractor_32 s1(SUB_OUT ,Lmemout,REC_1_OUT_REG[0],clk,rst);
             
       //Emsggen
       defparam absmin.wc=Wc, absmin.w=W;
