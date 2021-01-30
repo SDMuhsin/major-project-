@@ -254,7 +254,7 @@ clk,rst
     REC_1_OUT_REG[5] <= 0;
     REC_1_OUT_REG[6] <= 0;
     REC_1_OUT_REG[7] <= 0;
-    //REC_1_OUT_REG[8] <= 0;
+    REC_1_OUT_REG[8] <= 0;
     
     end
     
@@ -267,7 +267,7 @@ clk,rst
     REC_1_OUT_REG[5] <= REC_1_OUT_REG[4];
     REC_1_OUT_REG[6] <= REC_1_OUT_REG[5];
     REC_1_OUT_REG[7] <= REC_1_OUT_REG[6];
-    //REC_1_OUT_REG[8] <= REC_1_OUT_REG[7];
+    REC_1_OUT_REG[8] <= REC_1_OUT_REG[7];
     
     end    
     end    
@@ -307,7 +307,7 @@ clk,rst
       
       //subtractor for D calculation
       defparam sub2.Wc=Wc, sub2.W=W;
-    subtractor_32_d sub2(D_out,REC_2_OUT_REG,REC_1_OUT_REG[7],clk,rst); 
+    subtractor_32_d sub2(D_out,REC_2_OUT_REG,REC_1_OUT_REG[8],clk,rst); 
       
       //adder
       defparam add1.Wc=Wc, add1.W=W;
