@@ -89,7 +89,7 @@ clk,rst
         
     always@(posedge clk)
     begin
-      if(rst)
+        if(!rst)
       begin
         wren<=0;
         wrlayer<=0;
