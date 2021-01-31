@@ -43,7 +43,7 @@ clk,rst
     parameter PIPESTAGES=13;
     
     output reg [(Wc*(W))-1:0] updLLR_regout;
-    output reg [(Wc*(W))-1:0] Dout_regout;
+    output [(Wc*(W))-1:0] Dout_regout;
     output [(ADDRWIDTH+1+1)-1:0] Dmem_rden_layer_address;
     output reg wrlayer;
     output reg [ADDRWIDTH-1:0]wraddress;
@@ -84,7 +84,7 @@ clk,rst
     
     //input-output
     //Regd outputs
-    assign {wren_wire,wrlayer_wire,wraddress_wire} = wren_layer_address_reg[10];
+    assign {wren_wire,wrlayer_wire,wraddress_wire} = wren_layer_address_reg[11];
     //assign {wren,wrlayer,wraddress} = wren_layer_address_reg[PIPESTAGES-2];
         
     always@(posedge clk)
@@ -95,7 +95,7 @@ clk,rst
         wrlayer<=0;
         wraddress<=0;
         updLLR_regout<=0;
-        Dout_regout<=0;
+        //Dout_regout<=0;
       end
       else
       begin
@@ -104,17 +104,17 @@ clk,rst
       wraddress<=wraddress_wire;
       if(forwarded_rcu_en) begin
         updLLR_regout<=updLLR_out;
-        Dout_regout<=D_out;
+        //Dout_regout<=D_out;
         end
         else begin
         updLLR_regout<=0;
-        Dout_regout<=0;
+        //Dout_regout<=0;
         end
       end
     end
     
     //assign updLLR_regout=forwarded_rcu_en?updLLR_out:0;
-    //assign Dout_regout=forwarded_rcu_en?D_out:0;
+    assign Dout_regout=forwarded_rcu_en?D_out:0;
     
     //regd inputs 
     reg rdlayer;
@@ -178,7 +178,7 @@ clk,rst
     //--------------------------------------//
       
     assign {rd_E,E_RA} = {rden_E,rdlayer,rdaddress};
-    assign {wr_E,E_WA} = wren_layer_address_reg[8];
+    assign {wr_E,E_WA} = wren_layer_address_reg[9];
     assign Ecomp_wr_datain = E_COMP;
     
    /*always@(posedge clk)
@@ -299,7 +299,7 @@ clk,rst
       //Emsggen
       defparam absmin.wc=Wc, absmin.w=W;
       emsggen absmin(E_COMP, SUB_OUT, clk, rst);
-      assign Dmem_rden_layer_address = wren_layer_address_reg[8];
+    assign Dmem_rden_layer_address = wren_layer_address_reg[9];
       
       //recover unit
       defparam rec2.Wc=Wc, rec2.W=W;
@@ -313,7 +313,7 @@ clk,rst
       defparam add1.Wc=Wc, add1.W=W;
     AdderWc add1(updLLR_out,SUB_OUT_REG[6],REC_2_OUT_REG,D_reaccess_in,clk,rst);  
       
-      assign forwarded_rcu_en=wren_layer_address_reg[11][ADDRWIDTH+1];
+    assign forwarded_rcu_en=wren_layer_address_reg[11][ADDRWIDTH+1];
             
 
 endmodule
