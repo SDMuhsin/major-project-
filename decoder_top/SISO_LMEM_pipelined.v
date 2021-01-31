@@ -51,9 +51,9 @@ clk,rst
     input rdlayer_regin;
     input [ADDRWIDTH-1:0]rdaddress_regin;
     input rden_LLR_regin;
-    input rden_E;
-    input [(Wc*(W))-1:0] Lmemout;
-    input [(Wc*(W))-1:0] D_reaccess_in;
+    input rden_E_regin;
+    input [(Wc*(W))-1:0] Lmemout_regin;
+    input [(Wc*(W))-1:0] D_reaccess_in_regin;
     
     input clk, rst;  
     
