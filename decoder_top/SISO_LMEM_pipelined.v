@@ -104,7 +104,7 @@ clk,rst
       wraddress<=wraddress_wire;
       if(forwarded_rcu_en) begin
         updLLR_regout<=updLLR_out;
-        Dout_regout<=D_out;
+        //Dout_regout<=D_out;
         end
         else begin
         updLLR_regout<=0;
