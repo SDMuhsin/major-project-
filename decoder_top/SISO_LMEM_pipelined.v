@@ -299,7 +299,7 @@ clk,rst
       //Emsggen
       defparam absmin.wc=Wc, absmin.w=W;
       emsggen absmin(E_COMP, SUB_OUT, clk, rst);
-      assign Dmem_rden_layer_address = wren_layer_address_reg[7];
+    assign Dmem_rden_layer_address = wren_layer_address_reg[8];
       
       //recover unit
       defparam rec2.Wc=Wc, rec2.W=W;
