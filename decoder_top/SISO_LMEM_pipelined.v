@@ -25,9 +25,9 @@ updLLR_regout,
 Dout_regout, 
 wrlayer,wraddress,wren, 
 Dmem_rden_layer_address, 
-rdlayer_regin,rdaddress_regin,rden_LLR_regin,rden_E_regin, 
-Lmemout_regin,
-D_reaccess_in_regin,
+rdlayer_regin,rdaddress_regin,rden_LLR_regin,rden_E, 
+Lmemout,
+D_reaccess_in,
 clk,rst
     );
     
@@ -51,9 +51,9 @@ clk,rst
     input rdlayer_regin;
     input [ADDRWIDTH-1:0]rdaddress_regin;
     input rden_LLR_regin;
-    input rden_E_regin;
-    input [(Wc*(W))-1:0] Lmemout_regin;
-    input [(Wc*(W))-1:0] D_reaccess_in_regin;
+    input rden_E;
+    input [(Wc*(W))-1:0] Lmemout;
+    input [(Wc*(W))-1:0] D_reaccess_in;
     
     input clk, rst;  
     
@@ -120,28 +120,28 @@ clk,rst
     reg rdlayer;
     reg [ADDRWIDTH-1:0]rdaddress;
     reg rden_LLR;
-    reg rden_E;
+    /*reg rden_E;
     reg [(Wc*(W))-1:0] Lmemout, Lmemreg[1:0];
-    reg [(Wc*(W))-1:0] D_reaccess_in;
+    reg [(Wc*(W))-1:0] D_reaccess_in;*/
     always@(posedge clk)
     begin
       if(!rst)
       begin
-        D_reaccess_in<=0;
-        Lmemout<=0;
+        //D_reaccess_in<=0;
+        //Lmemout<=0;
         rdlayer<=0;
         rdaddress<=0;
         rden_LLR<=0;
-        rden_E<=0;
+        //rden_E<=0;
       end
       else
       begin
-        D_reaccess_in<=D_reaccess_in_regin;
-        Lmemout<=Lmemout_regin;
+        //D_reaccess_in<=D_reaccess_in_regin;
+        //Lmemout<=Lmemout_regin;
         rdlayer<=rdlayer_regin;
         rdaddress<=rdaddress_regin;
         rden_LLR<=rden_LLR_regin;
-        rden_E<=rden_E_regin;
+        //rden_E<=rden_E_regin;
       end
     end
     
