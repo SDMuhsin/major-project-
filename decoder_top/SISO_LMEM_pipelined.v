@@ -95,7 +95,7 @@ clk,rst
         wrlayer<=0;
         wraddress<=0;
         updLLR_regout<=0;
-        Dout_regout<=0;
+        //Dout_regout<=0;
       end
       else
       begin
@@ -108,7 +108,7 @@ clk,rst
         end
         else begin
         updLLR_regout<=0;
-        Dout_regout<=0;
+        //Dout_regout<=0;
         end
       end
     end
@@ -299,7 +299,7 @@ clk,rst
       //Emsggen
       defparam absmin.wc=Wc, absmin.w=W;
       emsggen absmin(E_COMP, SUB_OUT, clk, rst);
-      assign Dmem_rden_layer_address = wren_layer_address_reg[8];
+      assign Dmem_rden_layer_address = wren_layer_address_reg[7];
       
       //recover unit
       defparam rec2.Wc=Wc, rec2.W=W;
@@ -307,7 +307,7 @@ clk,rst
       
       //subtractor for D calculation
       defparam sub2.Wc=Wc, sub2.W=W;
-    subtractor_32_d sub2(D_out,REC_2_OUT_REG,REC_1_OUT_REG[8],clk,rst); 
+    subtractor_32_d sub2(Dout_regout,REC_2_OUT_REG,REC_1_OUT_REG[8],clk,rst); 
       
       //adder
       defparam add1.Wc=Wc, add1.W=W;
