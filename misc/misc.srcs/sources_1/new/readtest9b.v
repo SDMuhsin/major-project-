@@ -94,16 +94,22 @@ task display_integers;
        one = inp[ (i+1)*W - 1 -: W];
        
        t = 0;
-       //$write(" |%b", one);
+       $write(" | ");//, one);
        for(j = 0; j < W; j = j + 1)begin
         if(j == W - 1)begin
             t = t - (2 ** (j-2) ) * one[j];
+        end
+        else if(j == 0)begin
+            t = t + 0.25 * one[j];
+        end
+        else if(j == 1)begin
+            t = t + 0.5 * one[j];
         end
         else begin
             t = t + (2 ** (j-2) ) * one[j];
         end
        end 
-       $write("  %2.2f  ",t);
+       $write("  %2.2f| ",t);
         
     end
     $write("\n");
@@ -151,21 +157,74 @@ always @(posedge clk)begin
         
     end
     else begin
-        $display(" clk %d : (  %d %d \n",cnt,updLLR_regout[5:0],L_out[0][5:0] );
+        $display(" clk %d \n",cnt );
         
-        $display(" Into RCU L_in %b", Lmemout_regin);
-        $display(" RCU L_in after one FF %b", rcu.Lmemout);
-        $display(" RCU SUB_OUT %b", rcu.SUB_OUT);
-        $display(" RCU SUB_OUT_REG[6] %b", rcu.SUB_OUT_REG[6]);
-        $display(" updLLROut %b", rcu.updLLR_out);
+        //$display(" Into RCU L_in %b", Lmemout_regin);
+        //$display(" RCU L_in after one FF %b", rcu.Lmemout);
+        //$display(" RCU SUB_OUT %b", rcu.SUB_OUT);
+        //$display(" RCU SUB_OUT_REG[6] %b", rcu.SUB_OUT_REG[6]);
+        //$display(" updLLROut %b", rcu.updLLR_out);
         //$display(" from RCU %b", updLLR_regout);
         //$display(" from txt %b", L_out[0]);
+        $write("L_in from txt, into RCU :");
+        display_integers(L_in[0]);
+        //$display("%b",L_in[0]);
+        $write("L_in taken from     RCU :");
+        display_integers(rcu.Lmemout);
+        $write("ECOMP taken from    RCU : %b \n", rcu.E_COMP);
+        
+        $write("REC_1_out from      RCU :");
+        display_integers(rcu.REC_1_OUT);  
+        $write("Q            , from RCU :");
+        display_integers(rcu.SUB_OUT); 
+        $write("REC_2_out from      RCU :");
+        display_integers(rcu.REC_2_OUT); 
         
         $write(" L_out from txt : ");
         display_integers(L_out[0]);
         $write(" L_out from RCU : "); 
         display_integers(updLLR_regout);
     end
+end
+
+// Test subtractor
+reg [Wc*W - 1:0]s_a,s_b;
+wire [Wc*W - 1:0]s_out;
+subtractor_32 s(s_out,s_a,s_b,clk,rst);
+
+reg [W-1:0]s_a_w,s_b_w;
+wire [W-1:0]s_out_w;
+subtract_2 s1(s_out_w,s_a_w,s_b_w);
+
+initial begin
+    s_a = 0;
+    s_b = 0;
+    s_a_w = 0;
+    s_b_w = 6'b111111;
+end
+always@(posedge clk)begin
+    /*$display("SUBTRACTOR START");
+    $display("%b \n %b \n %b",s_a,s_b,s_out);
+    $write("Input to subtractor a :");
+    display_integers(s_a);
+    
+    $write("Input to subtractor b :");
+    display_integers(s_b);
+    
+    $write("Output from subtractor:");
+    display_integers(s_out);
+    
+    //$display(" a = %b",s_a_w);
+    //$display(" b = %b",s_b_w);
+    //$display(" o = %b",s_out_w);
+    
+    $display("SUBTRACTOR END");
+    
+    s_a = s_a + $random;
+    s_b = s_b + $random;
+    
+    s_a_w = s_a_w + $random;
+    s_b_w = s_b_w + $random;*/
 end
 endmodule
 

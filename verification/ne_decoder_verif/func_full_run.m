@@ -36,7 +36,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   
   filename = sprintf("./test/test.txt");
   fid = fopen(filename,"wt");
-  fprintf(fid, "%s \n", num2str(zeros(511,192)))
+  
   
 
 
@@ -126,7 +126,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           
           #fprintf(" --Q = %d, min(Q) = %d, m1 = %d, E_out = %d \n",Q_abs(1),min(Q_abs),m1,E_out(1));
           rec_2_out = func_module_recover(E_out);
-          L_out = func_saturate( Q_abs + rec_2_out + D_in );
+          L_out = func_saturate( Q + rec_2_out + D_in );
           D_out = func_saturate( rec_2_out - rec_1_out);
           
 
@@ -183,14 +183,14 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           # ---------------------------- #
           # TEMP stuff
           if(iteration == 1 && ly == 1 && row == 1)
-            L_in
-            size(L_in)
-            E_in
-            D_in
+            fprintf(fid,"L_in   :%s\n",num2str(L_in));
+            fprintf(fid,"Q      :%s\n",num2str(Q));
+            fprintf(fid,"Q_abs  :%s\n",num2str(Q_abs));
+            fprintf(fid,"Q_sgn  :%s\n",num2str(Q_sign));
+            fprintf(fid,"E_out  :%s\n",num2str(E_out));
+            fprintf(fid,"rec_2  :%s\n",num2str(rec_2_out));
+            fprintf(fid,"L_out  :%s\n",num2str(L_out));
             
-            L_out
-            E_out
-            D_out
           endif
         endfor # row end
 

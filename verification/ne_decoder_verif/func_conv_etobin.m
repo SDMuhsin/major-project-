@@ -7,6 +7,10 @@ function retval = func_conv_etobin (e)
     fprintf("ASSERTION ERROR, E has negative values\m");
   endif
   
+  e(3) = e(3) -1 ;
+  if(e(3) < 0)
+    fprintf("ASSERTION ERROR e(3) < 0 );
+  endif
   e_1_bin = func_conv_symbol2bin(e(1:3),5);
   e_2_bin = bin2str(e(4:end),1);
   if( size(e_1_bin)(2) ~= 15)
