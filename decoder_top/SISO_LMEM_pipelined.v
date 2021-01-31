@@ -43,7 +43,7 @@ clk,rst
     parameter PIPESTAGES=13;
     
     output reg [(Wc*(W))-1:0] updLLR_regout;
-    output reg [(Wc*(W))-1:0] Dout_regout;
+    output [(Wc*(W))-1:0] Dout_regout;
     output [(ADDRWIDTH+1+1)-1:0] Dmem_rden_layer_address;
     output reg wrlayer;
     output reg [ADDRWIDTH-1:0]wraddress;
@@ -114,7 +114,7 @@ clk,rst
     end
     
     //assign updLLR_regout=forwarded_rcu_en?updLLR_out:0;
-    //assign Dout_regout=forwarded_rcu_en?D_out:0;
+    assign Dout_regout=forwarded_rcu_en?D_out:0;
     
     //regd inputs 
     reg rdlayer;
@@ -307,13 +307,13 @@ clk,rst
       
       //subtractor for D calculation
       defparam sub2.Wc=Wc, sub2.W=W;
-    subtractor_32_d sub2(Dout_regout,REC_2_OUT_REG,REC_1_OUT_REG[8],clk,rst); 
+    subtractor_32_d sub2(D_out,REC_2_OUT_REG,REC_1_OUT_REG[8],clk,rst); 
       
       //adder
       defparam add1.Wc=Wc, add1.W=W;
     AdderWc add1(updLLR_out,SUB_OUT_REG[6],REC_2_OUT_REG,D_reaccess_in,clk,rst);  
       
-      assign forwarded_rcu_en=wren_layer_address_reg[11][ADDRWIDTH+1];
+    assign forwarded_rcu_en=wren_layer_address_reg[10][ADDRWIDTH+1];
             
 
 endmodule
