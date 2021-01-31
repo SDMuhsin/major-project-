@@ -21,6 +21,7 @@
 
 
 module readtest9b( );
+
 parameter nofb=192;
 parameter nofb_ecomp = 47;
 parameter lines=511;
@@ -77,6 +78,38 @@ reg [(Wc*(W))-1:0] Lmemout_regin;
 reg [(Wc*(W))-1:0] D_reaccess_in_regin;
 reg clk,rst;
 
+task display_integers;
+    input [Wc*W-1:0]inp;
+    begin:stuff
+    
+    
+    integer i;
+    integer j;
+    real t;
+    reg [W-1:0]one;
+    
+    
+    $write("LIST : ");
+    for(i=0;i<Wc;i=i+1)begin:display_loop
+       one = inp[ (i+1)*W - 1 -: W];
+       
+       t = 0;
+       //$write(" |%b", one);
+       for(j = 0; j < W; j = j + 1)begin
+        if(j == W - 1)begin
+            t = t - (2 ** (j-2) ) * one[j];
+        end
+        else begin
+            t = t + (2 ** (j-2) ) * one[j];
+        end
+       end 
+       $write("  %2.2f  ",t);
+        
+    end
+    $write("\n");
+    end
+endtask
+
 SISO_rowunit_pipe rcu(updLLR_regout,Dout_regout,wrlayer,wraddress,wren,Dmem_rden_layer_address, 
 rdlayer_regin,rdaddress_regin,rden_LLR_regin,rden_E_regin, 
 Lmemout_regin,
@@ -125,10 +158,13 @@ always @(posedge clk)begin
         $display(" RCU SUB_OUT %b", rcu.SUB_OUT);
         $display(" RCU SUB_OUT_REG[6] %b", rcu.SUB_OUT_REG[6]);
         $display(" updLLROut %b", rcu.updLLR_out);
-        $display(" from RCU %b", updLLR_regout);
-        $display(" from txt %b", L_out[0]);
-            
+        //$display(" from RCU %b", updLLR_regout);
+        //$display(" from txt %b", L_out[0]);
         
+        $write(" L_out from txt : ");
+        display_integers(L_out[0]);
+        $write(" L_out from RCU : "); 
+        display_integers(updLLR_regout);
     end
 end
 endmodule
