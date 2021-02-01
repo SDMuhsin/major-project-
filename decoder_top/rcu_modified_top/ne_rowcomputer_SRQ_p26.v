@@ -35,7 +35,7 @@ parameter ADDRDEPTH = 20;                       //ceil(Z/P) = ceil(511/26)
 parameter EMEMDEPTH=ADDRDEPTH*LAYERS;           //for LUT RAM //512;//for BRAM ineffcient//
 parameter Wabs=W-1;
 parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
-parameter RCU_PIPESTAGES=12;
+parameter RCU_PIPESTAGES=13;
 
 //Agen controller
 //configurable
