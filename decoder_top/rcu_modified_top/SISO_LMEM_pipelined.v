@@ -120,7 +120,8 @@ clk,rst
     end
     
     //assign updLLR_regout=forwarded_rcu_en?updLLR_out:0;
-    assign Dout_regout=forwarded_rcu_en?D_out:0;
+    //assign Dout_regout=forwarded_rcu_en?D_out:0;
+    assign Dout_regout=D_out;
     assign {wren_d,wrlayer_d,wraddress_d}={wren_wire,wrlayer_wire,wraddress_wire};
     
     //regd inputs 
