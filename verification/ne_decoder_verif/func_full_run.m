@@ -31,17 +31,18 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
   
   L = cdwrd;
   E = zeros( lys*z , 1 + 1 + 1 + Wc);
-
+  E(1:end,3) = 1; # Matlab index from 1->32 changed to 0->31 later
+  
   D = zeros( 1, blocks * z);
   
-  filename = sprintf("./test/test.txt");
-  fid = fopen(filename,"wt");
+
   
   
 
 
   for iteration = 1:1:max_iterns
-     
+     filename = sprintf("./test/test.txt");
+     fid = fopen(filename,"wt");
      # At the beginning of an iteration, we have :
      # L : 1x8176
      # E : 1022 x 35
@@ -68,6 +69,9 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
       fid_Eout = fopen(fname_Eout,'w+');
       fname_Dout = sprintf('./outputs/D_out_iter%d_ly%d.txt',iteration,ly);
       fid_Dout = fopen(fname_Dout,'w+');
+      
+      # -Intermediate lists to be printed
+      
       # ---------------- #
       
       for slice = 1:1:max_slices
@@ -105,7 +109,8 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           # 6. L_out = Q + Recover(E_out) + D_in
           # 7. D_out = Recover(E_out) - E
           
-          E_in = func_saturate(E(row,:)); # 1 x (1 + 1 + 1 + 32)
+         
+          E_in = E(row,:); # 1 x (1 + 1 + 1 + 32)
           L_in = func_saturate(symbols);
           assert(size(L_in)(2),32);
           D_in = func_saturate(D(symbol_indices));
@@ -162,7 +167,24 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
 
             
           endif
-          
+                    # TEMP stuff
+          if(iteration == 2 && ly == 1 && row == 1)
+            fprintf("row = %d",row);
+            fprintf("----\n");
+            L_in
+            E_in
+            rec_1_out
+            D_in
+            
+            fprintf("---\n");
+            Q
+            E_out
+            rec_2_out
+            D_out
+            L_out
+            fprintf("---\n");
+
+          endif
           # -- print to file, per row -- #
           fprintf(fid_Lin,"%s\n", func_conv_symbol2bin( L_in ));
           fprintf(fid_Ein,"%s\n", func_conv_etobin(E_in) );
@@ -181,17 +203,7 @@ function [hlut,E,L,D] = func_full_run ( cdwrd, max_iterns)
           fflush(fid_Eout);
      
           # ---------------------------- #
-          # TEMP stuff
-          if(iteration == 1 && ly == 1 && row == 1)
-            fprintf(fid,"L_in   :%s\n",num2str(L_in));
-            fprintf(fid,"Q      :%s\n",num2str(Q));
-            fprintf(fid,"Q_abs  :%s\n",num2str(Q_abs));
-            fprintf(fid,"Q_sgn  :%s\n",num2str(Q_sign));
-            fprintf(fid,"E_out  :%s\n",num2str(E_out));
-            fprintf(fid,"rec_2  :%s\n",num2str(rec_2_out));
-            fprintf(fid,"L_out  :%s\n",num2str(L_out));
-            
-          endif
+
         endfor # row end
 
       endfor #slice end

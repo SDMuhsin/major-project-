@@ -29,10 +29,10 @@
 
 module E_mem_ne_bram(DOUT, DIN, WR_ADDRESS, RD_ADDRESS, wr, rd, clk, rst);
 
-parameter DEPTH = 512;//12;//12*2=24.
-parameter ADDRWIDTH = 9;//4;//4+1//LYRWIDTH=4, ROWWIDTH=1.//2**4 = 16 > 12
+parameter DEPTH = 512; //12;//12*2=24.
+parameter ADDRWIDTH = 9; //4;//4+1//LYRWIDTH=4, ROWWIDTH=1.//2**4 = 16 > 12
 parameter Wc=32;
-parameter Wcbits = 5;//2**5 = 32 > 18
+parameter Wcbits = 5; //2**5 = 32 > 18
 parameter W=6;//8;
 
 parameter Wabs=W-1;
@@ -46,13 +46,11 @@ input wr, rd, clk, rst;
 
 reg [ECOMPSIZE-1:0] emem[DEPTH-1:0];
 
-/*integer i;
+integer i;
 initial begin
-
- for(i=0;i<ECOMPSIZE;i=i+1) begin:l1
-    emem[i][DEPTH-1:0]=0;
- end
-end*/
+    emem[0] = 47'b0011000110000010010111010010000111110010111101;
+ 
+end
 
 always@(posedge clk)
 begin
@@ -66,7 +64,7 @@ end
 always@(posedge clk)
 begin
   if(!rst)
-    DOUT<=0;
+    DOUT<= 0;
   else
     DOUT <= (rd) ? emem[RD_ADDRESS] : 0;
 end

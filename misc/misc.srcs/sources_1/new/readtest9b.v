@@ -171,12 +171,14 @@ always @(posedge clk)begin
         //$display("%b",L_in[0]);
         $write("L_in taken from     RCU :");
         display_integers(rcu.Lmemout);
-        $write("ECOMP taken from    RCU : %b \n", rcu.E_COMP);
+        
         
         $write("REC_1_out from      RCU :");
         display_integers(rcu.REC_1_OUT);  
         $write("Q            , from RCU :");
         display_integers(rcu.SUB_OUT); 
+        
+        $write("ECOMP taken from    RCU : %b \n", rcu.E_COMP);
         $write("REC_2_out from      RCU :");
         display_integers(rcu.REC_2_OUT); 
         
