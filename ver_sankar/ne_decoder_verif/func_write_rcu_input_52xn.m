@@ -43,7 +43,7 @@ function retval = func_write_rcu_output_52xn (cdwrd,blocks = 16)
   fclose(fiddd);
 endfunction
 #}
-function retval = func_write_rcu_input_52xn (cdwrd,blocks = 16)
+function symbols = func_write_rcu_input_52xn (cdwrd,blocks = 16)
   
 circSize=511;
 circulantsLUT=[0, 176 0, 176;

@@ -1,11 +1,10 @@
-
-function retval = func_write_l10_input_32x16 (cdwrd,blocks=16)
+function symbols = func_write_l10_input_32x16 (cdwrd,blocks=16)
   # Get pattern from unloadRequestMap_mymod
   # for block = 1:16, unload_map_i : 17 x 32
   # we want : unload_map  : 17 x (32 * 16)
     len=8176;
 
-  load_mem = loadMemAddressMap()
+  load_mem = loadMemAddressMap();
     load_mem(load_mem<0)=-8176;
   pattern = load_mem(:,:,1);
   

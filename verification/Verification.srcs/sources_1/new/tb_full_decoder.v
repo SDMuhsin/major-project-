@@ -84,11 +84,7 @@ module tb_full_decoder(
         unloadAddress = 0;
         unload_en = 0;
         
-        @(posedge clk) begin #0.2;  rst = 1; loaden = 1;end
-        
-        
-        
-        
+        @(posedge clk) begin #0.2;  rst = 1; loaden = 1; counter = -1;end
         @(posedge clk) #0.2 start = 0;
     end
     
@@ -111,13 +107,14 @@ module tb_full_decoder(
         
         $display("rd_data_regout %b",dut.bitnodemem.rd_data_regout[q:0]);
         $display("reference      %b",L_in_26x32[input_test_line][q:0]);
+        $display("reference      %b",L_in_26x32[input_test_line]^dut.bitnodemem.rd_data_regout);
         $display("rd_en %b, loaden %b, wr_en %b, wr_layer %b, firstprocessing_indicate %b", dut.rd_en, dut.loaden,  dut.wr_en, dut.wr_layer, dut.firstprocessing_indicate);
         $display("rd_address     %b",dut.bitnodemem.rd_address);
         //$display("load_data           %b", load_data[10:0]);
         //$display("l10  rd_data_regout %b", dut.rd_data_regout[10:0]);
         //$display("l10  L_in_26x32[%d] %b",input_test_line, L_in_26x32[input_test_line][10:0]);
         
-        if(counter == 17 + 3)begin
+        if(counter == 17 )begin
             loaden = 0;
             start = 1;
             

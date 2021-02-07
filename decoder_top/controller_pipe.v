@@ -137,6 +137,7 @@ begin
              end
       LYR1 : begin
                ns=(count<ROWDEPTH-1) ? ps : LYR1WAIT;
+               ns=(count<ROWDEPTH-1) ? ps : LYR1WAIT;
                nextready=0;
                nextrd=(count<ROWDEPTH-1) ? 1 : 0;
                nextitr=itr;

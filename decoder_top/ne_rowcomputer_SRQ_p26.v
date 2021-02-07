@@ -132,13 +132,13 @@ loaden_reg<=loaden;
 end
 end*/
 
-defparam controller.MAXITRS=MAXITRS, controller.ROWDEPTH=ROWDEPTH, controller.PIPESTAGES=PIPESTAGES, controller.P=P, controller.Z=Z;
 defparam controller.ROWWIDTH=ROWWIDTH, controller.PIPECOUNTWIDTH=PIPECOUNTWIDTH, controller.ITRWIDTH=ITRWIDTH;
 ne_AddrGenFSM_pipe controller(SISOready,firstprocessing_indicate,LYRindex,rowaddress,rden_E,rd_L,rcu_en,loaden,start,clk,rst);
 
 //Bit Node Memory or LLR memory (Lmem) instance
 defparam bitnodemem.W=W, bitnodemem.maxVal=maxVal;
-Lmem_SRQtype_combined_ns_reginout2pipe bitnodemem(unload_HDout_vec_regout,rd_data_regout,unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
+Lmem_SRQtype_combined_ns_reginout_pipeV1 bitnodemem(unload_HDout_vec_regout,rd_data_regout,unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
+//Lmem_SRQtype_combined_ns_reginout2pipe 
 
 //Intermediate value(D) memory instance 
 defparam dmem.W=W;
