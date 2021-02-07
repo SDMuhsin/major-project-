@@ -132,7 +132,7 @@ loaden_reg<=loaden;
 end
 end*/
 
-defparam controller_.MAXITRS=MAXITRS, controller.ROWDEPTH=ROWDEPTH, controller.PIPESTAGES=PIPESTAGES, controller.P=P, controller.Z=Z;
+defparam controller.MAXITRS=MAXITRS, controller.ROWDEPTH=ROWDEPTH, controller.PIPESTAGES=PIPESTAGES, controller.P=P, controller.Z=Z;
 defparam controller.ROWWIDTH=ROWWIDTH, controller.PIPECOUNTWIDTH=PIPECOUNTWIDTH, controller.ITRWIDTH=ITRWIDTH;
 ne_AddrGenFSM_pipe controller(SISOready,firstprocessing_indicate,LYRindex,rowaddress,rden_E,rd_L,rcu_en,loaden,start,clk,rst);
 

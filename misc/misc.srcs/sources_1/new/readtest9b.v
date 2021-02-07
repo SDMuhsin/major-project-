@@ -39,7 +39,7 @@ integer i;
 
 initial 
 begin
-   
+    
     $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\L_in_iter1_ly1.txt",L_in);//if less no of bits are specified it will pad 0 at begining
     $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\D_in_iter1_ly1.txt",D_in);//if less no of bits are specified it will pad 0 at begining
     $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\outputs\\E_in_iter1_ly1.txt",E_in);//if less no of bits are specified it will pad 0 at begining

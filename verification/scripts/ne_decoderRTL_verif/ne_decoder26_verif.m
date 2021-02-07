@@ -276,6 +276,7 @@ while itr < MaxItrs
   %--------Print Lout as Adder3in output results (Mainly verify the updated part (updllrDsymblist) only)--------------%
   %---------Print Dout as SubD output results (Mainly verify the first access (Dsymbtowritelist) results only)------------%
 %------Collecting the symbols for the row---------%  
+    #fprintf(" [COLLECTING STUFF TO PRINT] slice = %d ",sliceaddress);
     Lwclist=[Lwclist,Lwc];
     Eprevlist=[Eprevlist,E_prev];
     Qwclist=[Qwclist,Qwc];
@@ -291,13 +292,15 @@ while itr < MaxItrs
 %----one 26 set of 32 symbols are collected in the lists: now print them to file.---%    
    if(file_printing_en)
     if((itr==ITR2CHK-1)&&(lyr==LYR2CHK)&&(sliceaddress==SLICE2CHK))
-      abs_en=0;print_en=1;hex_en=1;bin_en=0; %print one long hex characters of all symbols in first line.
+      abs_en=0;print_en=1;hex_en=0;bin_en=1; %print one long hex characters of all symbols in first line.
       %abs_en=0;print_en=1;hex_en=0;bin_en=1; %print binary bits of each symbol in each line
       size(Lwclist)
+      fprintf("[ PRINT] size(Lwclist");
       prte=0;
     else
       abs_en=0;print_en=0;hex_en=0;bin_en=0;
     end
+    
     filename=sprintf("Lwclist_itr%d_lyr%d_slice%d.txt",itr+1,lyr,sliceaddress);
     prt=function_fprint_LLR_ne(filename,Lwclist,resolution,num_bits,abs_en,print_en,hex_en,bin_en);
     
