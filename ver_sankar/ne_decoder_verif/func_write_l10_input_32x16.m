@@ -1,4 +1,4 @@
-function symbols = func_write_l10_input_32x16 (cdwrd,blocks=16)
+function [pattern,symbols] = func_write_l10_input_32x16 (cdwrd,blocks=16)
   # Get pattern from unloadRequestMap_mymod
   # for block = 1:16, unload_map_i : 17 x 32
   # we want : unload_map  : 17 x (32 * 16)

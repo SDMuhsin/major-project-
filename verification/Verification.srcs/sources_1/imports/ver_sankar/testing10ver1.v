@@ -86,9 +86,34 @@ parameter nofb=3072;
 parameter lines=17;
 reg [nofb-1:0]membb[lines-1:0];
 reg [4992-1:0]membout[20-1:0];
-  
+ 
+ task display_real;
+    input [W-1:0]one;
+    begin:stuff
     
     
+    integer i;
+    integer j;
+    real t;
+    t = 0;
+        for(j = 0; j < W; j = j + 1)begin
+         if(j == W - 1)begin
+            t = t - (2 ** (j-2) ) * one[j];
+            end
+          else if(j == 0)begin
+            t = t + 0.25 * one[j];
+            end
+          else if(j == 1)begin
+            t = t + 0.5 * one[j];
+          end
+          else begin
+            t = t + (2 ** (j-2) ) * one[j];
+          end
+       end
+       
+   $write(" %2.2f ", t); 
+   end
+endtask    
     //Bit Node Memory or LLR memory (Lmem) instance
 defparam bitnodemem.W=W, bitnodemem.maxVal=maxVal;
 //Lmem_SRQtype_withfedbackshift_reginout bitnodemem(unload_HDout_vec_regout,rd_data_regout,unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
@@ -96,7 +121,11 @@ Lmem_SRQtype_combined_ns_reginout_pipeV1 bitnodemem(unload_HDout_vec_regout,rd_d
 
 
  integer i,j,f1,f2;
- parameter test_line = 0;
+ parameter fifo_r = 52;
+ parameter fifo_c = 17;
+ parameter test_line = 5;
+
+integer ri,ci;
     initial begin
     clk=1'b0;
     rst = 1'b0;
@@ -121,23 +150,57 @@ firstprocessing_indicate=1'b1;
     
     for(i=0;i<17;i=i+1)
         begin
-        
+                
         load_data=membb[i];
-        #20;
+        
+        
+        $display(" --------------------- ");
+        
+        $write("%b \n",load_data[ (13+1)*w*52 - 1  -: 52*w]);
+        
+        $display(" --------------------- ");
+        for(ri = 0; ri < 32; ri = ri+1)begin
+        $write("row %d :",ri);
+        display_real(load_data[ (ri+1)*W - 1  + 5*52 -:W]);
+        $write(":");
+        for(ci = 0; ci < fifo_c; ci = ci + 1)begin
+            $write("|");
+            display_real(bitnodemem.lmemcirc_10_5.fifoOut[ri][ci]);
+            $write("|");
         end
+        $write("\n");
+        end
+        $display(" --------------------- ");
+        #20;
+    end
 
 
  rd_address=test_line;
   loaden=1'b0;
    rd_en=1'b1;
 #200
-$display("%h",membout[test_line]);
-$display("%h",rd_data_regout);
-$display("%b",rd_data_regout^membout[test_line ]);
+//$display("%h",membout[test_line]);
+//$display("%h",rd_data_regout);
+//$display("%b",rd_data_regout^membout[test_line ]);
 
+//$display(" --- LMEM internal --- ");
+//$display(" -- l10_13 rd_address_case %b", bitnodemem.lmemcirc_10_13.rd_address_case);
+//$display(" -- l10_13 fifoOut[0][0]", bitnodemem.lmemcirc_10_13.fifoOut[0][0]);
 
+// Display entire fifo
 f1 = $fopen("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\ver_sankar\\ne_decoder_verif\\outputs\\from_tb_codeword_32x16.txt","w");
 f2 = $fopen("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\ver_sankar\\ne_decoder_verif\\outputs\\from_script_codeword_32x16.txt","w");
+$display(" --------------------- ");
+        for(ri = 0; ri < 52; ri = ri+1)begin
+        $write("row %d :",ri);
+        for(ci = 0; ci < fifo_c; ci = ci + 1)begin
+            $write("|-%d- ", ci);
+            display_real(bitnodemem.lmemcirc_10_0.fifoOut[ri][ci]);
+            $write(" |");
+        end
+        $write("\n");
+        end
+        $display(" --------------------- ");
 $fwrite(f1,"%b",rd_data_regout);
 $fwrite(f2,"%b",membout[test_line]);
 
