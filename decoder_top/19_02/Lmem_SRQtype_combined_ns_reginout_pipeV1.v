@@ -36,8 +36,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Lmem_SRQtype_combined_ns_reginout_pipeV1(unload_HDout_vec_regout,rd_data_regout,unload_en_regin,unloadAddress_regin,rd_en_regin,rd_address_regin,rd_layer_regin, load_data_regin,loaden_regin, wr_data_regin,wr_en_regin,wr_layer_regin, firstiter_regin, clk,rst);
-//module Lmem_SRQtype_combined_ns_reginout_pipeV1(unload_HDout_vec_regout,rd_data_regout, unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstiter, clk,rst);
+//module Lmem_SRQtype_combined_ns_reginout_pipeV1(unload_HDout_vec_regout,rd_data_regout,unload_en_regin,unloadAddress_regin,rd_en_regin,rd_address_regin,rd_layer_regin, load_data_regin,loaden_regin, wr_data_regin,wr_en_regin,wr_layer_regin, firstiter_regin, clk,rst);
+module Lmem_SRQtype_combined_ns_regout_pipeV1(unload_HDout_vec_regout,rd_data_regout, unload_en,unloadAddress,rd_en,rd_address,rd_layer_reg0, load_data,loaden, wr_data,wr_en,wr_layer, firstiter_reg0, clk,rst);
 parameter W=6;//6;//configurable by user
 parameter maxVal = 6'b011111;
 
@@ -56,88 +56,92 @@ parameter w=W;
 
 //output [(Kb*HDWIDTH)-1:0] unload_HDout_vec;
 //output [(P*Nb*Wt*W)-1:0] rd_data;
-//input unload_en;
-//input [ADDRESSWIDTH-1:0] unloadAddress;
-//input rd_en;
-//input [ADDRESSWIDTH-1:0] rd_address;
-//input rd_layer;
-//input [(32*Nb*W)-1:0] load_data;
-//input loaden;
-//input [(P*Nb*Wt*W)-1:0] wr_data;
-//input wr_en;
-//input wr_layer;
-//input firstiter; //from controller send after fsm start, iff (itr==0), first iter=1.
-//input clk,rst;
+input unload_en;
+input [ADDRESSWIDTH-1:0] unloadAddress;
+input rd_en;
+input [ADDRESSWIDTH-1:0] rd_address;
+   //input rd_layer;
+input rd_layer_reg0;
+input [(32*Nb*W)-1:0] load_data;
+input loaden;
+input [(P*Nb*Wt*W)-1:0] wr_data;
+input wr_en;
+input wr_layer;
+  //input firstiter; //from controller send after fsm start, iff (itr==0), first iter=1.
+input firstiter_reg0; //from controller send after fsm start, iff (itr==0), first iter=1.  
+input clk,rst;
 
 //registered input and output
 output reg [(Kb*HDWIDTH)-1:0] unload_HDout_vec_regout;
 output reg [(P*Nb*Wt*W)-1:0] rd_data_regout;
-input unload_en_regin;
-input [ADDRESSWIDTH-1:0] unloadAddress_regin;
-input rd_en_regin;
-input [ADDRESSWIDTH-1:0] rd_address_regin;
-input rd_layer_regin;
-input [(32*Nb*W)-1:0] load_data_regin;
-input loaden_regin;
-input [(P*Nb*Wt*W)-1:0] wr_data_regin;
-input wr_en_regin;
-input wr_layer_regin;
-input firstiter_regin; //from controller send after fsm start, iff (itr==0), first iter=1.
-input clk,rst;
+//input unload_en_regin;
+//input [ADDRESSWIDTH-1:0] unloadAddress_regin;
+//input rd_en_regin;
+//input [ADDRESSWIDTH-1:0] rd_address_regin;
+//input rd_layer_regin;
+//input [(32*Nb*W)-1:0] load_data_regin;
+//input loaden_regin;
+//input [(P*Nb*Wt*W)-1:0] wr_data_regin;
+//input wr_en_regin;
+//input wr_layer_regin;
+//input firstiter_regin; //from controller send after fsm start, iff (itr==0), first iter=1.
+//input clk,rst;
 
 wire [(Kb*HDWIDTH)-1:0] unload_HDout_vec;
 wire [(P*Nb*Wt*W)-1:0] rd_data;
-reg unload_en;
-reg [ADDRESSWIDTH-1:0] unloadAddress;
-reg rd_en;
-reg [ADDRESSWIDTH-1:0] rd_address;
-reg rd_layer, rd_layer_reg0, rd_layer_reg1;
-reg [(32*Nb*W)-1:0] load_data;
-reg loaden;
-reg [(P*Nb*Wt*W)-1:0] wr_data;
-reg wr_en;
-reg wr_layer;
-reg firstiter, firstiter_reg0;
+//reg unload_en;
+//reg [ADDRESSWIDTH-1:0] unloadAddress;
+//reg rd_en;
+//reg [ADDRESSWIDTH-1:0] rd_address;
+//reg rd_layer_reg0;
+reg rd_layer, rd_layer_reg1;
+//reg [(32*Nb*W)-1:0] load_data;
+//reg loaden;
+//reg [(P*Nb*Wt*W)-1:0] wr_data;
+//reg wr_en;
+//reg wr_layer;
+//reg  firstiter_reg0;
+reg firstiter;
 
 always@(posedge clk)
 begin
-  if(!rst)
+  if(rst)
   begin
     unload_HDout_vec_regout <= 0;
     rd_data_regout <=0;
-    unload_en <=0;
-    unloadAddress <=0;
-    rd_en <=0;
-    rd_address <=0;
-    rd_layer <=0;
-    load_data <=0;
-    loaden <=0;
-    wr_data <=0;
-    wr_en <=0;
-    wr_layer <=0;
-    firstiter <=0;    
+//    unload_en <=0;
+//    unloadAddress <=0;
+//    rd_en <=0;
+//    rd_address <=0;
+//    rd_layer_reg0<=0;
+//    load_data <=0;
+//    loaden <=0;
+//    wr_data <=0;
+//    wr_en <=0;
+//    wr_layer <=0;
+//    firstiter_reg0<=0;   
     //pipe_registers version 1
-    firstiter_reg0<=0;
-    rd_layer_reg0<=0;
+    firstiter <=0; 
+    rd_layer <=0;
     rd_layer_reg1<=0;    
   end
   else
   begin
     unload_HDout_vec_regout <= unload_HDout_vec;
     rd_data_regout<=rd_data;
-    unload_en<= unload_en_regin;
-    unloadAddress<=unloadAddress_regin;
-    rd_en<=rd_en_regin;
-    rd_address<=rd_address_regin;
+//    unload_en<= unload_en_regin;
+//    unloadAddress<=unloadAddress_regin;
+//    rd_en<=rd_en_regin;
+//    rd_address<=rd_address_regin;
     //rd_layer<=rd_layer_regin;
-    rd_layer_reg0<=rd_layer_regin;
-    load_data<=load_data_regin;
-    loaden<=loaden_regin;
-    wr_data<=wr_data_regin;
-    wr_en<=wr_en_regin;
-    wr_layer<=wr_layer_regin;
+//    rd_layer_reg0<=rd_layer_regin;
+//    load_data<=load_data_regin;
+//    loaden<=loaden_regin;
+//    wr_data<=wr_data_regin;
+//    wr_en<=wr_en_regin;
+//    wr_layer<=wr_layer_regin;
     //firstiter<=firstiter_regin;
-    firstiter_reg0<=firstiter_regin;  
+//    firstiter_reg0<=firstiter_regin;  
     //pipe_registers 
     firstiter<=firstiter_reg0;
 
@@ -166,44 +170,43 @@ wire [ADDRESSWIDTH-1:0] rd_address_0to1, rd_address_1to0, rd_address_loadto0;
 //aligning according to row calculation unit
 //LLR to Row Calculation Unit = {LLR_25, LLR_24, ...., LLR_2, LLR_1, LLR_0}.
 // LLR_# is of width= NbxWtxW = 16x2xW=32xW.
-
 wire [(Nb*Wt*W)-1:0] wr_data_arr[P-1:0];
 wire [(Nb*Wt*W)-1:0] rd_data_arr_0to1[P-1:0];
 wire [(Nb*Wt*W)-1:0] rd_data_arr_1to0[P-1:0];
 //Pipe regs: 
-reg [(P*Wt*W)-1:0] rd_data_arr_0to1_reg0[P-1:0],rd_data_arr_0to1_reg1[P-1:0]; //use only reg1 if pipeversion 2, for pipeversion1 use both
-reg [(P*Wt*W)-1:0] rd_data_arr_1to0_reg0[P-1:0];
+reg [(Nb*Wt*W)-1:0] rd_data_arr_0to1_reg0[P-1:0],rd_data_arr_0to1_reg1[P-1:0]; //use only reg1 if pipeversion 2, for pipeversion1 use both
+reg [(Nb*Wt*W)-1:0] rd_data_arr_1to0_reg0[P-1:0];
 
-/*
-wire [(P*Wt*W)-1:0] wr_data_arr[Nb-1:0];
-wire [(P*Wt*W)-1:0] rd_data_arr_0to1[Nb-1:0];
-wire [(P*Wt*W)-1:0] rd_data_arr_1to0[Nb-1:0];
-//Pipe regs: 
-reg [(P*Wt*W)-1:0] rd_data_arr_0to1_reg0[Nb-1:0],rd_data_arr_0to1_reg1[Nb-1:0]; //use only reg1 if pipeversion 2, for pipeversion1 use both
-reg [(P*Wt*W)-1:0] rd_data_arr_1to0_reg0[Nb-1:0];
-*/
 //Splitting bit vector data to individual data to be fed to each circulant
-
 genvar j_p, i_nb;
 generate 
-
-
-
-    for(j_p=0;j_p<=P-1;j_p=j_p+1) begin: p26_loop
+  for(j_p=0;j_p<=P-1;j_p=j_p+1) begin: p26_loop
     assign wr_data_arr[j_p] = wr_data[((j_p+1)*(Nb*Wt*W))-1:(j_p*(Nb*Wt*W))];
     
     //aligning according to Mem circuits
     //LLR to/fro memciruits = MLLR_15, MLLR_14, ..., MLLR_2, MLLR_1, MLLR_0
     // MLLR_# is of width = PxWtxW = 26x2xW=52xW.
-    
-    
-        for(i_nb=0;i_nb<=Nb-1;i_nb=i_nb+1) begin: Nb16_loop
-      //assign dmem_data_in[i_nb][((j_p+1)*Wt*W)-1:(j_p*Wt*W)] = wr_data_arr[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt*W)];
-      //assign rd_data_arr[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt*W)] = dmem_data_out[i_nb][((j_p+1)*Wt*W)-1:(j_p*Wt*W)];
-             assign rd_data_arr_1to0[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt)*W] = {lmem_data_out_1to0[i_nb][((j_p+1+26)*W)-1:((j_p+26)*W)],lmem_data_out_1to0[i_nb][((j_p+1)*W)-1:((j_p)*W)]}; 
-            assign rd_data_arr_0to1[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt)*W] = {lmem_data_out_0to1[i_nb][((j_p+1+26)*W)-1:((j_p+26)*W)],lmem_data_out_0to1[i_nb][((j_p+1)*W)-1:((j_p)*W)]}; 
-      //assign rd_data_arr[j_p][((i_nb+1)*W)-1:(i_nb)*W] = dmem_data_out[i_nb][((j_p+1)*W)-1:((j_p)*W)];
-      //assign rd_data_arr[j_p][((i_nb+1)*W)-1:(i_nb)*W] = {dmem_data_out[i_nb][((j_p+1+26)*W)-1:((j_p+26)*W)],dmem_data_out[i_nb][((j_p+1)*W)-1:((j_p)*W)]};  
+    //--------------------Bug in interconnection pattern--------------------//
+    // Correct pattern in detail:
+    // lmem_data_in[i_nb]: {m51, m50, m49, ..., m28, m27, m26,| m25, m24, m23, ..., m2, m1, m0}
+    // wr_data_arr[j_p]: {rcu_jp_31, rcu_jp_30, rcu_jp_29, rcu_jp_28, ..., rcu_jp_4, rcu_jp_3, rcu_jp_2, rcu_jp_1, rcu_jp_0}
+    // connection: m0 <-> rcu_0_0 ; m1<-> rcu_1_0 ; ... ; m25<-> rcu_25_0 ; 
+    // m26<-> rcu_0_1 ; m27<-> rcu_1_1 ; ... ; m51<-> rcu_25_1.
+    for(i_nb=0;i_nb<=Nb-1;i_nb=i_nb+1) begin: Nb16_loop
+      assign lmem_data_in[i_nb][((j_p+1)*W)-1:((j_p)*W)] = wr_data_arr[j_p][(((i_nb*2)+1)*W)-1:((i_nb*2)*W)];
+      assign lmem_data_in[i_nb][((j_p+P+1)*W)-1:((j_p+P)*W)] = wr_data_arr[j_p][(((i_nb*2)+2)*W)-1:(((i_nb*2)+1)*W)];
+      
+      //assign lmem_data_in[i_nb][((j_p+1)*Wt*W)-1:(j_p*Wt*W)] = wr_data_arr[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt*W)];
+      
+      assign rd_data_arr_1to0[j_p][(((i_nb*2)+1)*W)-1:((i_nb*2)*W)] = lmem_data_out_1to0[i_nb][((j_p+1)*W)-1:((j_p)*W)]; 
+      assign rd_data_arr_1to0[j_p][(((i_nb*2)+2)*W)-1:(((i_nb*2)+1)*W)]= lmem_data_out_1to0[i_nb][((j_p+P+1)*W)-1:((j_p+P)*W)]; 
+      
+      //assign rd_data_arr_1to0[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt*W)] = lmem_data_out_1to0[i_nb][((j_p+1)*Wt*W)-1:(j_p*Wt*W)] ; 
+      
+      assign rd_data_arr_0to1[j_p][(((i_nb*2)+1)*W)-1:((i_nb*2)*W)] = lmem_data_out_0to1[i_nb][((j_p+1)*W)-1:((j_p)*W)];
+      assign rd_data_arr_0to1[j_p][(((i_nb*2)+2)*W)-1:(((i_nb*2)+1)*W)] = lmem_data_out_0to1[i_nb][((j_p+P+1)*W)-1:((j_p+P)*W)];
+      
+      //assign rd_data_arr_0to1[j_p][((i_nb+1)*Wt*W)-1:(i_nb*Wt*W)] = lmem_data_out_0to1[i_nb][((j_p+1)*Wt*W)-1:(j_p*Wt*W)];
     end
     
     //Same as assigning rd_data_arr_1to0 with lmem_data_out_1to0_reg
@@ -230,54 +233,11 @@ generate
   end
 endgenerate
 
-
-genvar j, i, k;
-generate 
-for(i=0;i<=Nb-1;i=i+1) begin: Nb16_loop2
-    for(j=0;j<=P-1;j=j+1) begin: p26_loop2
-
-        assign {lmem_data_in[i][((j+1+26)*W)-1:((j+26)*W)],lmem_data_in[i][((j+1)*W)-1:(j*W)]} = wr_data_arr[j][((i+1)*Wt*W)-1:(i*Wt*W)];    
-     
-    end
-  end
-endgenerate
-/*
-  
-    for(i_nb=0;i_nb<=Nb-1;i_nb=i_nb+1) begin: Nb16_loop
-     assign lmem_data_in[i_nb] = wr_data[((i_nb+1)*(P*Wt*W))-1:(i_nb*(P*Wt*W))];
-     
-      assign rd_data_arr_1to0[i_nb] = lmem_data_out_1to0[i_nb] ; 
-      assign rd_data_arr_0to1[i_nb] = lmem_data_out_0to1[i_nb];  
-     
-         always@(posedge clk)
-    begin
-      if(!rst)
-      begin
-        rd_data_arr_1to0_reg0[i_nb]<=0;
-        rd_data_arr_0to1_reg0[i_nb]<=0;//for pipeversion1 only, comment for pipeversion2//before firstiter mux reg
-        rd_data_arr_0to1_reg1[i_nb]<=0;//for pipeversion1, for pipeversion2//after first iter mux  reg
-      end
-      else
-      begin
-        rd_data_arr_1to0_reg0[i_nb]<=rd_data_arr_1to0[i_nb];
-        rd_data_arr_0to1_reg0[i_nb]<=rd_data_arr_0to1[i_nb];//for pipeversion1 only, comment for pipeversion2
-        rd_data_arr_0to1_reg1[i_nb]<=rd_data_arr_0to1_reg0[i_nb];//for pipeversion1 //rd_data_arr_0to1[j_p];//for pipeverison2
-      end
-      
-      
-    end//always
-    
-    assign rd_data[((i_nb+1)*(P*Wt*W))-1:(i_nb*(P*Wt*W))] = rd_layer ? rd_data_arr_0to1_reg1[i_nb] : rd_data_arr_1to0_reg0[i_nb];//lyr1:lyr0  
-    end//forloop16
-    
-
-endgenerate
-*/
 genvar l_nb;
 generate 
  // to Lmem: loadllr15, loadllr14, ..., loadllr0
  // loadllr of width 32xW
-  for(l_nb=0;l_nb<=Nb-1;l_nb=l_nb+1) begin: Nb16_loop3
+  for(l_nb=0;l_nb<=Nb-1;l_nb=l_nb+1) begin: Nb16_loop2
     assign lmem_loaddata_in[l_nb] = load_data[((l_nb+1)*32*W)-1:(l_nb*32*W)];
   end
 endgenerate

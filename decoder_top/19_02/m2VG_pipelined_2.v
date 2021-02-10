@@ -43,7 +43,7 @@ module m2VG_pipelined_2(
     wire cp_wire;
     
     always@(posedge clk) begin
-            if(!rst)begin
+            if(rst)begin
                 min1_1 <= 0;
                 min2_1 <= 0;
                 cp_1 <= 0;
