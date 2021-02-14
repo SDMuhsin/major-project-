@@ -82,7 +82,7 @@ reg wr_layer;
 reg firstprocessing_indicate; //from controller send after fsm start, iff (itr==0), first iter=1.
 reg clk,rst;
 
-  parameter nofb=4992;
+parameter nofb=4992;
 parameter lines=20;
 reg [nofb-1:0]membb[lines-1:0];
 reg [4992-1:0]membout[20-1:0];
@@ -96,27 +96,33 @@ Lmem_SRQtype_combined_ns_regout_pipeV1 bitnodemem(unload_HDout_vec_regout,rd_dat
 
 
     integer i,j;
-    initial begin
+ 
+ initial begin
     clk=1'b0;
     rst = 1'b0;
     loaden=1'b0;
     load_data=0;
     rd_en=0;
     rd_address=0;
-    rd_layer=0;
+    
+    rd_layer=1; // CH_GE
+    
     unload_en=1'b0;
     unloadAddress=0;
-wr_data=0;
-wr_en=0;
-wr_layer=1;
-firstprocessing_indicate=0;
-    $readmemb("C:\\NOTC\\layer1_codeword_20x26x2x16.txt",membb);
-    $readmemb("C:\\NOTC\\layer0_codeword_20x26x2x16.txt",membout);
+    
+    wr_data=0;
+    wr_en=1;
+    wr_layer=0; // CH_GE 
+    firstprocessing_indicate=0;
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\kal\\ne_verfication\\Scripts\\outputs\\L1_in_scripted.txt",membout);
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\kal\\ne_verfication\\Scripts\\outputs\\L0_out_scripted.txt",membb);
     
   #20
     rst = 1'b1;
-wr_en=1'b1;
-wr_layer=1'b1;
+    wr_en=1'b1;
+    
+    wr_layer=1'b0; // CH_GE
+    rd_layer=1; // CH_GE
     
     for(i=0;i<20;i=i+1)
         begin
@@ -126,13 +132,15 @@ wr_layer=1'b1;
         end
 
 wr_en=1'b0;
- rd_address=17;
-  loaden=1'b0;
-   rd_en=1'b1;
+rd_address=14;
+loaden=1'b0;
+rd_en=1'b1;
+
 #200
-$display("%b",membout[17]);
+$display("%b",membout[14]);
 $display("%b",rd_data_regout);
-if(rd_data_regout==membout[17])
+$display("%b", membout[14] ^ rd_data_regout);
+if(rd_data_regout==membout[14])
         $display("success");
 
 

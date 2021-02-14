@@ -32,7 +32,7 @@ function indexes = findIndexesOfAInB (A, B)
   indexes(indexes==0) = -1;
   size(indexes);
   for i = 1:1:length(A)
-    for column = 1:1:size(B)(2)
+    for column = size(B)(2):-1:1
       for row = 1:1:size(B)(1)
         row;
         column;

@@ -92,7 +92,7 @@ reg [4992-1:0]membout[20-1:0];
     //Bit Node Memory or LLR memory (Lmem) instance
 defparam bitnodemem.W=W, bitnodemem.maxVal=maxVal;
 //Lmem_SRQtype_withfedbackshift_reginout bitnodemem(unload_HDout_vec_regout,rd_data_regout,unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
-Lmem_SRQtype_combined_ns_reginout_pipeV1 bitnodemem(unload_HDout_vec_regout,rd_data_regout, unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
+Lmem_SRQtype_combined_ns_regout_pipeV1 bitnodemem(unload_HDout_vec_regout,rd_data_regout, unload_en,unloadAddress,rd_en,rd_address,rd_layer, load_data,loaden, wr_data,wr_en,wr_layer, firstprocessing_indicate, clk,rst);
 
 
     integer i,j;
@@ -110,8 +110,8 @@ wr_data=0;
 wr_en=0;
 wr_layer=0;
 firstprocessing_indicate=0;
-    $readmemb("C:\\NOTC\\input_codeword_17x32x16.txt",membb);
-    $readmemb("C:\\NOTC\\output_codeword_20x26x2x16.txt",membout);
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\input_codeword_17x32x16.txt",membb);
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\layer0_codeword_20x26x2x16.txt",membout);
     
   #20
     rst = 1'b1;
@@ -126,14 +126,14 @@ firstprocessing_indicate=1'b1;
         end
 
 
- rd_address=3;
+ rd_address=0;
   loaden=1'b0;
    rd_en=1'b1;
 #200
-$display("%h",membout[3]);
+$display("%h",membout[0]);
 $display("%h",rd_data_regout);
-$display("%b",rd_data_regout^membout[3]);
-if(rd_data_regout==membout[3])
+$display("%h",rd_data_regout^membout[0]);
+if(rd_data_regout==membout[0])
 $display("success");
 
 

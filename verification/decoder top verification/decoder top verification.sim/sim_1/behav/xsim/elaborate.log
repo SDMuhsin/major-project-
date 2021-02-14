@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a0233310f02a4a63844a940a9f918d0c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_full_decoder_behav xil_defaultlib.tb_full_decoder xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a0233310f02a4a63844a940a9f918d0c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot rowcomputer_tb_behav xil_defaultlib.rowcomputer_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -76,6 +76,6 @@ Compiling module xil_defaultlib.AdderW_3in_pipelined(W=6)
 Compiling module xil_defaultlib.AdderWc_3in_pipelined(W=6)
 Compiling module xil_defaultlib.SISONorm_withD_pipeV3_ne_default
 Compiling module xil_defaultlib.ne_rowcomputer_pipeV3_SRQ_p26_de...
-Compiling module xil_defaultlib.tb_full_decoder
+Compiling module xil_defaultlib.rowcomputer_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_full_decoder_behav
+Built simulation snapshot rowcomputer_tb_behav

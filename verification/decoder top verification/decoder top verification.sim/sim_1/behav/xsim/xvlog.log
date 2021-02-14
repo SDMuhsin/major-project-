@@ -136,5 +136,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/m
 INFO: [VRFC 10-311] analyzing module recovunit_ne
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/decoder_top/19_02/subtractorW.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module subtractorW
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.srcs/sources_1/new/tb_full_decoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_full_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/sayed/Desktop/Programing/major project/major-project-/lmem_veri_inp-0_1-0_0-1_1_unload/kal/ne_verfication/rowcomputer_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rowcomputer_tb

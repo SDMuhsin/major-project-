@@ -77,32 +77,32 @@ assign rd_address_case = rd_en ? rd_address : READDISABLEDCASE;
 always@(*)begin
     case(rd_address_case)
        0: begin
-              muxOutConnector[0] = fifoOut[15][10];
-              muxOutConnector[1] = fifoOut[16][10];
-              muxOutConnector[2] = fifoOut[17][10];
-              muxOutConnector[3] = fifoOut[18][10];
-              muxOutConnector[4] = fifoOut[19][10];
-              muxOutConnector[5] = fifoOut[20][10];
-              muxOutConnector[6] = fifoOut[21][10];
-              muxOutConnector[7] = fifoOut[22][10];
-              muxOutConnector[8] = fifoOut[23][10];
-              muxOutConnector[9] = fifoOut[24][10];
-              muxOutConnector[10] = fifoOut[25][10];
-              muxOutConnector[11] = fifoOut[0][9];
-              muxOutConnector[12] = fifoOut[1][9];
-              muxOutConnector[13] = fifoOut[2][9];
-              muxOutConnector[14] = fifoOut[3][9];
-              muxOutConnector[15] = fifoOut[4][9];
-              muxOutConnector[16] = fifoOut[5][9];
-              muxOutConnector[17] = fifoOut[6][9];
-              muxOutConnector[18] = fifoOut[7][9];
-              muxOutConnector[19] = fifoOut[8][9];
-              muxOutConnector[20] = fifoOut[9][9];
-              muxOutConnector[21] = fifoOut[10][9];
-              muxOutConnector[22] = fifoOut[11][9];
-              muxOutConnector[23] = fifoOut[12][9];
-              muxOutConnector[24] = fifoOut[13][9];
-              muxOutConnector[25] = fifoOut[14][9];
+              muxOutConnector[0] = fifoOut[42][1];
+              muxOutConnector[1] = fifoOut[43][1];
+              muxOutConnector[2] = fifoOut[44][1];
+              muxOutConnector[3] = fifoOut[45][1];
+              muxOutConnector[4] = fifoOut[46][1];
+              muxOutConnector[5] = fifoOut[47][1];
+              muxOutConnector[6] = fifoOut[48][1];
+              muxOutConnector[7] = fifoOut[49][1];
+              muxOutConnector[8] = fifoOut[50][1];
+              muxOutConnector[9] = fifoOut[51][1];
+              muxOutConnector[10] = fifoOut[26][0];
+              muxOutConnector[11] = fifoOut[27][0];
+              muxOutConnector[12] = fifoOut[28][0];
+              muxOutConnector[13] = fifoOut[29][0];
+              muxOutConnector[14] = fifoOut[30][0];
+              muxOutConnector[15] = fifoOut[31][0];
+              muxOutConnector[16] = fifoOut[32][0];
+              muxOutConnector[17] = fifoOut[33][0];
+              muxOutConnector[18] = fifoOut[34][0];
+              muxOutConnector[19] = fifoOut[35][0];
+              muxOutConnector[20] = fifoOut[36][0];
+              muxOutConnector[21] = fifoOut[37][0];
+              muxOutConnector[22] = fifoOut[38][0];
+              muxOutConnector[23] = fifoOut[39][0];
+              muxOutConnector[24] = fifoOut[40][0];
+              muxOutConnector[25] = fifoOut[41][0];
               muxOutConnector[26] = fifoOut[8][4];
               muxOutConnector[27] = fifoOut[9][4];
               muxOutConnector[28] = fifoOut[10][4];
@@ -131,7 +131,7 @@ always@(*)begin
               muxOutConnector[51] = fifoOut[7][3];
        end
        1: begin
-              muxOutConnector[0] = fifoOut[15][9];
+              muxOutConnector[0] = fifoOut[42][0];
               muxOutConnector[1] = fifoOut[16][9];
               muxOutConnector[2] = fifoOut[17][9];
               muxOutConnector[3] = fifoOut[18][9];
@@ -327,7 +327,7 @@ always@(*)begin
               muxOutConnector[31] = fifoOut[13][0];
               muxOutConnector[32] = fifoOut[14][0];
               muxOutConnector[33] = fifoOut[15][0];
-              muxOutConnector[34] = fifoOut[26][10];
+              muxOutConnector[34] = fifoOut[16][0];
               muxOutConnector[35] = fifoOut[27][10];
               muxOutConnector[36] = fifoOut[28][10];
               muxOutConnector[37] = fifoOut[29][10];
@@ -618,7 +618,7 @@ always@(*)begin
        end
        10: begin
               muxOutConnector[0] = fifoOut[15][0];
-              muxOutConnector[1] = fifoOut[26][10];
+              muxOutConnector[1] = fifoOut[16][0];
               muxOutConnector[2] = fifoOut[27][10];
               muxOutConnector[3] = fifoOut[28][10];
               muxOutConnector[4] = fifoOut[29][10];
@@ -814,23 +814,23 @@ always@(*)begin
               muxOutConnector[32] = fifoOut[50][2];
               muxOutConnector[33] = fifoOut[51][2];
               muxOutConnector[34] = fifoOut[26][1];
-              muxOutConnector[35] = fifoOut[0][10];
-              muxOutConnector[36] = fifoOut[1][10];
-              muxOutConnector[37] = fifoOut[2][10];
-              muxOutConnector[38] = fifoOut[3][10];
-              muxOutConnector[39] = fifoOut[4][10];
-              muxOutConnector[40] = fifoOut[5][10];
-              muxOutConnector[41] = fifoOut[6][10];
-              muxOutConnector[42] = fifoOut[7][10];
-              muxOutConnector[43] = fifoOut[8][10];
-              muxOutConnector[44] = fifoOut[9][10];
-              muxOutConnector[45] = fifoOut[10][10];
-              muxOutConnector[46] = fifoOut[11][10];
-              muxOutConnector[47] = fifoOut[12][10];
-              muxOutConnector[48] = fifoOut[13][10];
-              muxOutConnector[49] = fifoOut[14][10];
-              muxOutConnector[50] = fifoOut[15][10];
-              muxOutConnector[51] = fifoOut[16][10];
+              muxOutConnector[35] = fifoOut[27][1];
+              muxOutConnector[36] = fifoOut[28][1];
+              muxOutConnector[37] = fifoOut[29][1];
+              muxOutConnector[38] = fifoOut[30][1];
+              muxOutConnector[39] = fifoOut[31][1];
+              muxOutConnector[40] = fifoOut[32][1];
+              muxOutConnector[41] = fifoOut[33][1];
+              muxOutConnector[42] = fifoOut[34][1];
+              muxOutConnector[43] = fifoOut[35][1];
+              muxOutConnector[44] = fifoOut[36][1];
+              muxOutConnector[45] = fifoOut[37][1];
+              muxOutConnector[46] = fifoOut[38][1];
+              muxOutConnector[47] = fifoOut[39][1];
+              muxOutConnector[48] = fifoOut[40][1];
+              muxOutConnector[49] = fifoOut[41][1];
+              muxOutConnector[50] = fifoOut[42][1];
+              muxOutConnector[51] = fifoOut[43][1];
        end
        14: begin
               muxOutConnector[0] = fifoOut[51][7];
@@ -859,31 +859,31 @@ always@(*)begin
               muxOutConnector[23] = fifoOut[48][6];
               muxOutConnector[24] = fifoOut[49][6];
               muxOutConnector[25] = fifoOut[50][6];
-              muxOutConnector[26] = fifoOut[17][10];
-              muxOutConnector[27] = fifoOut[18][10];
-              muxOutConnector[28] = fifoOut[19][10];
-              muxOutConnector[29] = fifoOut[20][10];
-              muxOutConnector[30] = fifoOut[21][10];
-              muxOutConnector[31] = fifoOut[22][10];
-              muxOutConnector[32] = fifoOut[23][10];
-              muxOutConnector[33] = fifoOut[24][10];
-              muxOutConnector[34] = fifoOut[25][10];
-              muxOutConnector[35] = fifoOut[0][9];
-              muxOutConnector[36] = fifoOut[1][9];
-              muxOutConnector[37] = fifoOut[2][9];
-              muxOutConnector[38] = fifoOut[3][9];
-              muxOutConnector[39] = fifoOut[4][9];
-              muxOutConnector[40] = fifoOut[5][9];
-              muxOutConnector[41] = fifoOut[6][9];
-              muxOutConnector[42] = fifoOut[7][9];
-              muxOutConnector[43] = fifoOut[8][9];
-              muxOutConnector[44] = fifoOut[9][9];
-              muxOutConnector[45] = fifoOut[10][9];
-              muxOutConnector[46] = fifoOut[11][9];
-              muxOutConnector[47] = fifoOut[12][9];
-              muxOutConnector[48] = fifoOut[13][9];
-              muxOutConnector[49] = fifoOut[14][9];
-              muxOutConnector[50] = fifoOut[15][9];
+              muxOutConnector[26] = fifoOut[44][1];
+              muxOutConnector[27] = fifoOut[45][1];
+              muxOutConnector[28] = fifoOut[46][1];
+              muxOutConnector[29] = fifoOut[47][1];
+              muxOutConnector[30] = fifoOut[48][1];
+              muxOutConnector[31] = fifoOut[49][1];
+              muxOutConnector[32] = fifoOut[50][1];
+              muxOutConnector[33] = fifoOut[51][1];
+              muxOutConnector[34] = fifoOut[26][0];
+              muxOutConnector[35] = fifoOut[27][0];
+              muxOutConnector[36] = fifoOut[28][0];
+              muxOutConnector[37] = fifoOut[29][0];
+              muxOutConnector[38] = fifoOut[30][0];
+              muxOutConnector[39] = fifoOut[31][0];
+              muxOutConnector[40] = fifoOut[32][0];
+              muxOutConnector[41] = fifoOut[33][0];
+              muxOutConnector[42] = fifoOut[34][0];
+              muxOutConnector[43] = fifoOut[35][0];
+              muxOutConnector[44] = fifoOut[36][0];
+              muxOutConnector[45] = fifoOut[37][0];
+              muxOutConnector[46] = fifoOut[38][0];
+              muxOutConnector[47] = fifoOut[39][0];
+              muxOutConnector[48] = fifoOut[40][0];
+              muxOutConnector[49] = fifoOut[41][0];
+              muxOutConnector[50] = fifoOut[42][0];
               muxOutConnector[51] = fifoOut[16][9];
        end
        15: begin
@@ -1105,21 +1105,21 @@ always@(*)begin
        19: begin
               muxOutConnector[0] = fifoOut[51][2];
               muxOutConnector[1] = fifoOut[26][1];
-              muxOutConnector[2] = fifoOut[0][10];
-              muxOutConnector[3] = fifoOut[1][10];
-              muxOutConnector[4] = fifoOut[2][10];
-              muxOutConnector[5] = fifoOut[3][10];
-              muxOutConnector[6] = fifoOut[4][10];
-              muxOutConnector[7] = fifoOut[5][10];
-              muxOutConnector[8] = fifoOut[6][10];
-              muxOutConnector[9] = fifoOut[7][10];
-              muxOutConnector[10] = fifoOut[8][10];
-              muxOutConnector[11] = fifoOut[9][10];
-              muxOutConnector[12] = fifoOut[10][10];
-              muxOutConnector[13] = fifoOut[11][10];
-              muxOutConnector[14] = fifoOut[12][10];
-              muxOutConnector[15] = fifoOut[13][10];
-              muxOutConnector[16] = fifoOut[14][10];
+              muxOutConnector[2] = fifoOut[27][1];
+              muxOutConnector[3] = fifoOut[28][1];
+              muxOutConnector[4] = fifoOut[29][1];
+              muxOutConnector[5] = fifoOut[30][1];
+              muxOutConnector[6] = fifoOut[31][1];
+              muxOutConnector[7] = fifoOut[32][1];
+              muxOutConnector[8] = fifoOut[33][1];
+              muxOutConnector[9] = fifoOut[34][1];
+              muxOutConnector[10] = fifoOut[35][1];
+              muxOutConnector[11] = fifoOut[36][1];
+              muxOutConnector[12] = fifoOut[37][1];
+              muxOutConnector[13] = fifoOut[38][1];
+              muxOutConnector[14] = fifoOut[39][1];
+              muxOutConnector[15] = fifoOut[40][1];
+              muxOutConnector[16] = fifoOut[41][1];
               muxOutConnector[17] = maxVal;
               muxOutConnector[18] = maxVal;
               muxOutConnector[19] = maxVal;
@@ -1156,6 +1156,7 @@ always@(*)begin
               muxOutConnector[50] = maxVal;
               muxOutConnector[51] = maxVal;
        end
+
        default: begin
              for(i=0;i<muxOutSymbols;i=i+1)begin
               muxOutConnector[i] = 0;

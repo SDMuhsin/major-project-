@@ -86,7 +86,22 @@ reg start;
 reg clk,rst;
 
 ne_rowcomputer_pipeV3_SRQ_p26 dut(decoder_ready,unload_HDout_vec_regout, unload_en, unloadAddress, load_data, loaden, start, clk,rst);
+// -- LOAD references
+parameter inpt_frm_intrfc_symbls=32*16;
+parameter lnpt_frm_intrfc_lns=17;
+parameter l10_op_i0_symbls = 52;
+parameter l10_op_i0_lns = 20;
 
+reg [inpt_frm_intrfc_symbls*W-1:0]inpt_frm_intrfc[lnpt_frm_intrfc_lns-1:0];
+reg [l10_op_i0_symbls*W*Nb-1:0]l10_op_i0[l10_op_i0_lns-1:0];
+
+initial begin
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\input_codeword_17x32x16.txt",inpt_frm_intrfc);
+    $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\layer0_codeword_20x26x2x16.txt",l10_op_i0);
+end
+// --
+
+//-- Initialize inputs
 integer counter;
 integer i;
 initial begin
@@ -106,7 +121,11 @@ initial begin
     loaden = 1;
     load_data = 0;
     
-    for(i=0;i<17;i=i+1)@(posedge clk); // wait for 17 clock cycles
+    for(i=0;i<17;i=i+1)begin
+        load_data = inpt_frm_intrfc[i];
+        @(posedge clk); // wait for 17 clock cycles
+        #0.004;
+    end
     
     #0.01;
     start = 1;
@@ -114,12 +133,50 @@ initial begin
     @(posedge clk) #0.01 start = 0;
 end
 always #10 clk = ~clk;
-always @(posedge clk) #0.01 counter = counter + 1;
+always @(posedge clk) #5 counter = counter + 1;
 
+// All cycle display stuff
 always @(posedge clk)begin
-    $display(" clk %d", counter);
+    #0.003;
+    
+    $display(" \n clk %d", counter);
     $display(" loaden = %b, start = %b ", loaden, start);
     $display(" rd_address = %d ", dut.rd_address);
-    $display(" rd_data_regout = %d ", dut.rd_address);
 end
+
+
+// Assertions
+integer rd_address_l10_out;
+
+// Check output of lmem_10 's output for rd_address = 0 to 19
+// Note that lmem has 3 output FFs
+wire check_l10_input_to_ly0_op;
+parameter check_l10_input_to_ly0_start_clock = 21;
+parameter check_l10_input_to_ly0_check_duration = 20;
+assign check_l10_input_to_ly0_op = counter >= check_l10_input_to_ly0_start_clock && counter < check_l10_input_to_ly0_start_clock + check_l10_input_to_ly0_check_duration ? 1 : 0;
+always@(posedge clk) rd_address_l10_out <= counter == check_l10_input_to_ly0_start_clock ? 0 : rd_address_l10_out;
+
+
+always @(posedge clk) begin
+    #0.005;
+    $display(" --- ASSERTIONS START --- ");
+    $display(" STATE : ", dut.controller.ps);
+    $display("Into lmem rd_en = %b, rd_layer = %b, loaden = %b, wr_en = %b, first? = %b", dut.rd_en, dut.rd_layer, dut.loaden, dut.wr_en, dut.firstprocessing_indicate);
+    
+    
+    if(counter == 21)begin
+        rd_address_l10_out = 0;
+    end
+    if(check_l10_input_to_ly0_op)begin
+        if(dut.rd_data_regout == l10_op_i0[ rd_address_l10_out])begin
+                $display("[ASSERTION][L10 Input -> Layer 0 ][muxOut check][ rd_adress %d] SUCCESS",rd_address_l10_out);
+        end
+        else begin
+                $display("[ASSERTION][L10 Input -> Layer 0 ][muxOut check][ rd_adress %d] FAILED",rd_address_l10_out);
+        end
+        rd_address_l10_out = rd_address_l10_out + 1;
+    end
+    $display(" --- ASSERTION END    --- ");
+end 
+
 endmodule

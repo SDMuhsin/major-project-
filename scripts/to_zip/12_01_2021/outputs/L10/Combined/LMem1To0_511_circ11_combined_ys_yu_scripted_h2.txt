@@ -1044,15 +1044,15 @@
               muxOutConnector[14] = fifoOut[18][1];
               muxOutConnector[15] = fifoOut[19][1];
               muxOutConnector[16] = fifoOut[20][1];
-              muxOutConnector[17] = fifoOut[31][2];
-              muxOutConnector[18] = fifoOut[31][2];
-              muxOutConnector[19] = fifoOut[31][2];
-              muxOutConnector[20] = fifoOut[31][2];
-              muxOutConnector[21] = fifoOut[31][2];
-              muxOutConnector[22] = fifoOut[31][2];
-              muxOutConnector[23] = fifoOut[31][2];
-              muxOutConnector[24] = fifoOut[31][2];
-              muxOutConnector[25] = fifoOut[31][2];
+              muxOutConnector[17] = fifoOut[2][1];
+              muxOutConnector[18] = fifoOut[2][1];
+              muxOutConnector[19] = fifoOut[2][1];
+              muxOutConnector[20] = fifoOut[2][1];
+              muxOutConnector[21] = fifoOut[2][1];
+              muxOutConnector[22] = fifoOut[2][1];
+              muxOutConnector[23] = fifoOut[2][1];
+              muxOutConnector[24] = fifoOut[2][1];
+              muxOutConnector[25] = fifoOut[2][1];
               muxOutConnector[26] = fifoOut[11][10];
               muxOutConnector[27] = fifoOut[12][10];
               muxOutConnector[28] = fifoOut[13][10];
@@ -1070,15 +1070,15 @@
               muxOutConnector[40] = fifoOut[25][10];
               muxOutConnector[41] = fifoOut[26][10];
               muxOutConnector[42] = fifoOut[27][10];
-              muxOutConnector[43] = fifoOut[31][2];
-              muxOutConnector[44] = fifoOut[31][2];
-              muxOutConnector[45] = fifoOut[31][2];
-              muxOutConnector[46] = fifoOut[31][2];
-              muxOutConnector[47] = fifoOut[31][2];
-              muxOutConnector[48] = fifoOut[31][2];
-              muxOutConnector[49] = fifoOut[31][2];
-              muxOutConnector[50] = fifoOut[31][2];
-              muxOutConnector[51] = fifoOut[31][2];
+              muxOutConnector[43] = fifoOut[2][1];
+              muxOutConnector[44] = fifoOut[2][1];
+              muxOutConnector[45] = fifoOut[2][1];
+              muxOutConnector[46] = fifoOut[2][1];
+              muxOutConnector[47] = fifoOut[2][1];
+              muxOutConnector[48] = fifoOut[2][1];
+              muxOutConnector[49] = fifoOut[2][1];
+              muxOutConnector[50] = fifoOut[2][1];
+              muxOutConnector[51] = fifoOut[2][1];
          end
          default: begin
                for(i=0;i<muxOutSymbols;i=i+1)begin

@@ -11,7 +11,7 @@ block = 1;
 for block=1:16
 
 if(ver_wr_en)
-shiftEn = 1; # Shifting enabled
+shiftEn = 0; # Shifting enabled
 
 if(modemem =="Layer0toLayer1")
 swapLys = 0;
@@ -146,7 +146,7 @@ fprintf(fid,sprintf("      end\n"));
   fprintf(fid,sprintf("      for(i = r-1; i > -1; i=i-1) begin\n"));
   fprintf(fid,sprintf("        column_1[i] = ly0InConnector[i];\n"));
   fprintf(fid,sprintf("      end\n"));
-  fprintf(fid,sprintf("    end\n"));
+  fprintf(fid,sprintf("   end\n"));
 #else
 #  fprintf(fid,sprintf("        for(i = r-1; i > -1; i=i-1) begin\n"));
 #  fprintf(fid,sprintf("            column_1[i] <= ly0InConnector[i];\n"));
