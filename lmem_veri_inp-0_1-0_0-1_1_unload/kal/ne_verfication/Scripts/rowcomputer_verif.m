@@ -37,11 +37,14 @@
   #L = cdwrd;
   L=c1;
   E = zeros( lys*z , 1 + 1 + 1 + Wc);
+  E(1:end,3) = ones(1,1022);
   D = zeros( 1, blocks * z);
   ly=1;
   iteration=1;
     Lin_array_slice=[];
     L_array_slice=[]; 
+for iter = 1:1:2
+  fprintf("iteration %d \n",iter-1);
 for ly = 1:1:lys
       fprintf("ly = %d,",ly);
     # -- OPEN FILES -- #
@@ -49,22 +52,27 @@ for ly = 1:1:lys
       fname_dummy = sprintf('./test/dummy.txt',ly-1);
       fid_dummy = fopen(fname_dummy,'wt');
       
-      fname_Lin = sprintf('./outputs/L%d_in_scripted.txt',ly-1);
+      fname_Lin = sprintf('./outputs/L_%d_%d_in_scripted.txt',iter-1,ly-1);
       fid_Lin = fopen(fname_Lin,'wt');
-      fname_Ein = sprintf('./outputs/E%d_in_scripted.txt',ly-1);
+      fname_Ein = sprintf('./outputs/E_%d_%d_in_scripted.txt',iter-1,ly-1);
       fid_Ein = fopen(fname_Ein,'wt');
-      fname_Din = sprintf('./outputs/D%d_in_scripted.txt',ly-1);
+      fname_Din = sprintf('./outputs/D_%d_%d_in_scripted.txt',iter-1,ly-1);
       fid_Din = fopen(fname_Din,'wt');
       
-      fname_Lout = sprintf('./outputs/L%d_out_scripted.txt',ly-1);
+      fname_Lout = sprintf('./outputs/L_%d_%d_out_scripted.txt',iter-1,ly-1);
       fid_Lout = fopen(fname_Lout,'wt');
-      fname_Eout = sprintf('./outputs/E%d_out_scripted.txt',ly-1);
+      fname_Eout = sprintf('./outputs/E_%d_%d_out_scripted.txt',iter-1,ly-1);
       fid_Eout = fopen(fname_Eout,'wt');
-      fname_Dout = sprintf('./outputs/D%d_out_scripted.txt',ly-1);
+      fname_Dout = sprintf('./outputs/D_%d_%d_out_scripted.txt',iter-1,ly-1);
       fid_Dout = fopen(fname_Dout,'wt');
+
+      
   # ---------------- #
     #slice=11;
     for slice = 1:1:20
+        
+        
+        
         fprintf("%d,",slice);
         #Gather all rows involved in this slice
         #slice=1;
@@ -81,17 +89,27 @@ for ly = 1:1:lys
         L_array=[];
         E_array=[];
         D_array=[];
+        
+        
+        
         # Outputs of p RCUs
         # Update a certain ammount of symbols of L, max 26 x 32 symbols
-        # E -> update a 26 x 32 chunk
+        # E -> update a 26 x 47 chunk
         #row=10;
+        
+        E_in_26x35 = zeros(26,35);
+        E_in_26x35(1:end,3) = 1;
+        
+        E_out_26x35 = zeros(26,35);
+        E_out_26x35(1:end,3) = 1;
+        i_d = 26;
         for row = rows_global
         #for row = 1:1:26
           
           symbol_indices = offset_indices(row,:);
           symbols = L(symbol_indices);
           #symbols=symbol_row(row,:);
-          E_in = func_saturate(E(row,:)); # 1 x (1 + 1 + 1 + 32)
+          E_in = E(row,:); # 1 x (1 + 1 + 1 + 32)
           L_in = func_saturate(symbols);
           D_in = func_saturate(D(symbol_indices));
           Lin_array=[Lin_array L_in];
@@ -147,7 +165,10 @@ for ly = 1:1:lys
               fprintf("This shouldn't happen, reaccess_mask");
             endif
             
+            
           endfor
+          
+          
           
           #Update E
           E(row,:) = E_out;
@@ -155,15 +176,31 @@ for ly = 1:1:lys
           E_array=[E_array E_out];
           D_array=[D_array D_out];  
 
-          if( row > 2009 ||  size(E_out) ~= 35 || size(E_in) ~= 35  ) 
-            #fprintf("iteration = %d ; row = %d \n", iteration, row);
-            
-            assert(size(D_in)(2),32)
-            assert( size ( func_conv_symbol2bin( D_in ) )(2), 192);
-
-            
-          endif
+          
+          assert(size(D_in)(2),32)
+          assert( size ( func_conv_symbol2bin( D_in ) )(2), 192);
+          
+          
+          E_in_26x35(i_d,:) = E_in;
+          E_out_26x35(i_d,:) = E_out;
+          
+          i_d -= 1;
         endfor
+        
+        # Write 26x47 E to file
+        # -- 26 rows of 47 bit E for each slice
+        fname_E_ls_out = sprintf('./outputs/E_out_i%d_l%d_s%d_scripted.txt',iter-1,ly-1,slice-1);
+        fid_E_ls_out = fopen(fname_E_ls_out,'wt');
+        fname_E_ls_in = sprintf('./outputs/E_in_i%d_l%d_s%d_scripted.txt',iter-1,ly-1,slice-1);
+        fid_E_ls_in = fopen(fname_E_ls_in,'wt');
+        # --
+        for id = 1:1:26
+          fprintf( fid_E_ls_out, "%s\n", func_conv_e2bin(E_out_26x35(id,:)));  
+          fprintf( fid_E_ls_in, "%s\n", func_conv_e2bin(E_in_26x35(id,:)));  
+        endfor
+        
+        fclose(fid_E_ls_out);
+        fclose(fid_E_ls_in);
         
         L_array=fliplr(L_array);
         Lin_array=fliplr(Lin_array);
@@ -237,6 +274,8 @@ for ly = 1:1:lys
       fprintf("\n");
       endfor
  endfor
+ 
+ endfor # iteration
     #fprintf(fid_Lout,sprintf(L_array_slice));
 fclose(fid_dummy);
 fclose(fid_Lin);

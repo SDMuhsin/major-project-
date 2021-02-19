@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sat Feb 13 10:28:40 2021" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Feb 16 19:51:34 2021" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "385244ac-8b52-4daa-8214-136ca724145e" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "a0233310f02a4a63844a940a9f918d0c" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "73" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "127" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "2750 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "20.58_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "52612_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 4181169753 -regid "" -xml C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "35.83_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "52356_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2404499707 -regid "" -xml C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/decoder top verification/decoder top verification.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_wsiso_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

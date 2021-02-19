@@ -7,7 +7,7 @@ parameter ADDRESSWIDTH = 5;
 //Non-configurable
 parameter Nb = 16;//16*511=8176 codeword
 
-parameter CYCLECOUNTWIDTH = 8;//maxcycles=(8160+32)/32)=256, width=ceil(log2(256))=8
+parameter CYCLECOUNTWIDTH = 9;//maxcycles=(8160+32)/32)=256, width=ceil(log2(256))=8
 
 output reg[Nb-1:0] wr_en_vec;
 output [(Nb*ADDRESSWIDTH)-1:0] wr_address_vec;

@@ -6,13 +6,13 @@ function [pattern,symbols] = func_write_l10_input_32x16 (cdwrd,fn = "input_codew
     len=8176;
 
   load_mem = loadMemAddressMap();
-    load_mem(load_mem<0)=-100000;
+    load_mem(load_mem<0)=-8176;
   pattern = load_mem(:,:,1);
   
   for i = 2:1:size(load_mem)(3)
     pattern = [pattern, load_mem(:,:,i)+(i-1)*511];
   endfor
-  pattern(pattern<0) = -1;
+  pattern(pattern<=0) = -1;
 size(pattern)(2)
   #Convert this to symbol list_in_columns
   symbols = zeros(size(pattern));
@@ -26,7 +26,7 @@ size(pattern)(2)
         endif
       endfor
   endfor
-  pattern = flip(pattern,2);
+  #pattern = flip(pattern,2);
   symbols=flip(symbols,2);
   # Write this to file in structure 17x(32*16)
   filename = sprintf( strcat( "./outputs/", fn) );

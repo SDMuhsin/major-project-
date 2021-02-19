@@ -69,7 +69,7 @@ verilog xil_defaultlib  \
 "../../../../../../decoder_top/19_02/normaliserW.v" \
 "../../../../../../decoder_top/19_02/recovunit_dp.v" \
 "../../../../../../decoder_top/19_02/subtractorW.v" \
-"../../../../../../lmem_veri_inp-0_1-0_0-1_1_unload/kal/ne_verfication/rowcomputer_tb.v" \
+"../../../../../../lmem_veri_inp-0_1-0_0-1_1_unload/kalv2/ne_verfication/rowcomputer_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

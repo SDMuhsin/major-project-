@@ -119,22 +119,37 @@ module tb_decoder_wsiso(
         
     end
     
+    /*always@(dut.inputintf.inputfifo.nb_loop[15].submem.WA)begin
+        $display("|WA|      %d",dut.inputintf.inputfifo.nb_loop[15].submem.WA);
+    end*/
+    always@(dut.inputintf.inputfifo.cyclecount)begin
+        $display("|CC| %d",dut.inputintf.inputfifo.cyclecount);
+        $display("|CCWA|      %d",dut.inputintf.inputfifo.nb_loop[15].submem.WA);
+    end
+    
     // Displays
     always@(posedge in_clk)begin
         #0.001;
         
-        if(counter_in == 257)begin
+        if(counter_in == 259)begin
             code_valid = 0;
         end
         $display("\n\n IN_CLK = %d", counter_in);
         $display(" start = %b | loaden = %b | inputintf.inputfifo.ps = %b | inputintf.inputfifo.wr_en = %b", dut.start, dut.loaden, dut.inputintf.inputfifo.ps, dut.inputintf.inputfifo.wr_en);
          $display("      dut.cdwrd_in  = %b", dut.Codeword_in);
+         $display("      EMEM [12] %d", dut.inputintf.inputfifo.nb_loop[12].submem.WA);
+         $display("      EMEM [13] %d", dut.inputintf.inputfifo.nb_loop[13].submem.WA);
+         $display("      EMEM [14] %d", dut.inputintf.inputfifo.nb_loop[14].submem.WA);
+         $display("      EMEM [15] %d", dut.inputintf.inputfifo.nb_loop[15].submem.WA);
         //$display(" loader.ps = %b ( 1 for counting) ", dut.inputintf.loader.ps);
         //$display(" loader.addr_count = %d( should start coutning to 17 ) ", dut.inputintf.loader.addr_count);
     end
     
     integer load_counter ;
     integer check_load;
+    integer f;
+    reg [1200:0]fn;
+    integer i3;
     initial begin
         check_load = 0;
     end
@@ -143,7 +158,11 @@ module tb_decoder_wsiso(
         check_load = 1;
         $display(" LOADEN SET");
         $display("      dut.load_data = %b", dut.load_data);
-        $display("      [0] RA %b", dut.inputintf.inputfifo.nb_loop[2].submem.RA);
+        
+        $write("%b", dut.inputintf.inputfifo.nb_loop[15].submem.Lmemreg[16]);
+        $write("%b", dut.inputintf.inputfifo.nb_loop[14].submem.Lmemreg[16]);
+        $write("%b", dut.inputintf.inputfifo.nb_loop[13].submem.Lmemreg[16]);
+        $write("\n");
     end
     always@(negedge dut.loaden)begin
         check_load = 0;
@@ -153,7 +172,7 @@ module tb_decoder_wsiso(
         if(counter_in == 256)begin
             counter = 0;
         end
-        if(check_load && counter_in < 260 )begin
+        if(check_load && counter_in < 262 )begin
             $display("\n      CLK = %d", counter);
             $display("      loader.addr_count = %d( should start coutning to 17 ) ", dut.inputintf.loader.addr_count);
             $display("      loader_counter ", load_counter);
@@ -163,13 +182,29 @@ module tb_decoder_wsiso(
             if( inp_17x512[ load_counter ] == dut.load_data)begin
                 $display(" MATCH on address count" , load_counter);
             end
-            else begin $display(" NO MATCH on address count" , load_counter); end
-            $display("      start = %b | loaden = %b | inputintf.inputfifo.ps = %b | inputintf.inputfifo.wr_en = %b", dut.start, dut.loaden, dut.inputintf.inputfifo.ps, dut.inputintf.inputfifo.wr_en);
-            $display("      loader.ps = %b ( 1 for counting) ", dut.inputintf.loader.ps);
-            $display("[0] RA %b", dut.inputintf.inputfifo.nb_loop[2].submem.RA);
+            else begin 
+                $display(" NO MATCH on address count" , load_counter);
+                
+                // Write these cases to file for analysis
+                if(load_counter < 17)begin
+                    $sformat(fn,"C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\from_tb_load17x32_%0d_ref.txt", load_counter  );
+                    f = $fopen(fn ,"w");
+                    $fwrite(f,"%b",inp_17x512[ load_counter ]);
+                    $fclose(f);
+                    
+                    $sformat(fn,"C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\from_tb_load17x32_%0d_op.txt", load_counter  );
+                    f = $fopen(fn ,"w");
+                    $fwrite(f,"%b",dut.load_data);
+                    $fclose(f);
+                end
+                                 
+            end
+            //$display("      start = %b | loaden = %b | inputintf.inputfifo.ps = %b | inputintf.inputfifo.wr_en = %b", dut.start, dut.loaden, dut.inputintf.inputfifo.ps, dut.inputintf.inputfifo.wr_en);
+            //$display("      loader.ps = %b ( 1 for counting) ", dut.inputintf.loader.ps);
+            //$display("[0] RA %b", dut.inputintf.inputfifo.nb_loop[2].submem.RA);
             #0.001;
             load_counter = load_counter + 1;
+        
         end
     end
-    
 endmodule

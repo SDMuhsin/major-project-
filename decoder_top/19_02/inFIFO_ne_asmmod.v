@@ -28,7 +28,7 @@ parameter FIFODEPTH = 32;//17;
 parameter NB=16;
 parameter DW=32*W;
 parameter MAXCYCLES = 256;//maxcycles=(8160+32)/32)=256, includng first ASM=257.
-parameter CYCLECOUNTWIDTH = 8;//width=ceil(log2(256))=8
+parameter CYCLECOUNTWIDTH = 9;//width=ceil(log2(256))=8  | BUG : NEEDS to run upto 256 | FIX : width changed from 8->9 
 parameter ASMBITS = 1;//2;//64 symbols = 2 x 32 symbols, skip first ASM only
 output reg load_fsm_start;
 output[(NB*DW)-1:0] DOUT_nb;
@@ -101,9 +101,10 @@ begin
 //                 wr_en_fsm = 0;
 //               end    
     WRITING: begin
-               ns = (cyclecount==MAXCYCLES-1) ? INIT : (wr_en ? ps : INIT);  
-               nextindex =  (cyclecount==MAXCYCLES-1) ? 0 : cyclecount+1;              
-               nextloadfsmstart = (cyclecount==MAXCYCLES-1) ? 1 : 0; 
+               // | BUG : cyclecount needs to run till 256 | Fix : changed  == MAXCYCLES -1 to just == MAXCYCLES  
+               ns = (cyclecount==MAXCYCLES) ? INIT : (wr_en ? ps : INIT);   
+               nextindex =  (cyclecount==MAXCYCLES) ? 0 : cyclecount+1;              
+               nextloadfsmstart = (cyclecount==MAXCYCLES) ? 1 : 0; 
                selector_en = wr_en;         
              end                        
     default: begin

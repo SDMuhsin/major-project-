@@ -73,7 +73,7 @@ parameter W=6;
 parameter LAYERS=2;
 parameter ADDRESSWIDTH = 5;//2^5 = 32 > 20
 parameter ADDRDEPTH = 20;//ceil(Z/P) = ceil(511/26)
-parameter EMEMDEPTH=ADDRDEPTH*LAYERS; //for LUT RAM //512;//for BRAM ineffcient//
+parameter EMEMDEPTH= 52;//ADDRDEPTH*LAYERS; //for LUT RAM //512;//for BRAM ineffcient//
 parameter Wabs=W-1;
 parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
 parameter RCU_PIPESTAGES=13;//12;//adding 1 more stage for Lmem write
