@@ -36,7 +36,7 @@ module tb_decoder_wsiso(
     parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
     parameter RCU_PIPESTAGES=13;//11;
     //configurable
-    parameter MAXITRS = 10;
+    parameter MAXITRS = 2;
     parameter ITRWIDTH = 4;//2**4 = 16 > 9
     parameter Z=511;
     parameter P=26;
@@ -86,11 +86,17 @@ module tb_decoder_wsiso(
     
     reg [input_width-1:0]inp_257x32[input_lines-1:0];
     reg [16*32*W-1:0]inp_17x512[inp_intf_out_lines-1:0];
+    reg [32-1:0]op_223x32[223-1:0];
+    reg [Kb*HDWIDTH-1:0]unload_17x448[17-1:0];
     
     integer i1;
+    integer op_counter;
     initial begin
-        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\input_257x32.txt",inp_257x32);
-        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\lmem_veri_inp-0_1-0_0-1_1_unload\\outputs\\input_codeword_17x32x16.txt",inp_17x512);
+        op_counter = 0;
+        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\rowcomputer_p26 verification\\scripts\\outputs\\input_257x32.txt",inp_257x32);
+        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\rowcomputer_p26 verification\\scripts\\outputs\\input_codeword_17x32x16.txt",inp_17x512);
+        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\rowcomputer_p26 verification\\scripts\\outputs\\op_223x32.txt",op_223x32);
+        $readmemb("C:\\Users\\sayed\\Desktop\\Programing\\major project\\major-project-\\verification\\ne_decoder_verif\\rowcomputer_p26 verification\\scripts\\outputs\\unload_17x448.txt",unload_17x448);
         #0.1;
         Codeword_in = 0;
         code_valid = 0;
@@ -135,6 +141,7 @@ module tb_decoder_wsiso(
             code_valid = 0;
         end
         $display("\n\n IN_CLK = %d", counter_in);
+        /*
         $display(" start = %b | loaden = %b | inputintf.inputfifo.ps = %b | inputintf.inputfifo.wr_en = %b", dut.start, dut.loaden, dut.inputintf.inputfifo.ps, dut.inputintf.inputfifo.wr_en);
          $display("      dut.cdwrd_in  = %b", dut.Codeword_in);
          $display("      EMEM [12] %d", dut.inputintf.inputfifo.nb_loop[12].submem.WA);
@@ -142,7 +149,7 @@ module tb_decoder_wsiso(
          $display("      EMEM [14] %d", dut.inputintf.inputfifo.nb_loop[14].submem.WA);
          $display("      EMEM [15] %d", dut.inputintf.inputfifo.nb_loop[15].submem.WA);
         //$display(" loader.ps = %b ( 1 for counting) ", dut.inputintf.loader.ps);
-        //$display(" loader.addr_count = %d( should start coutning to 17 ) ", dut.inputintf.loader.addr_count);
+        //$display(" loader.addr_count = %d( should start coutning to 17 ) ", dut.inputintf.loader.addr_count);*/
     end
     
     integer load_counter ;
@@ -150,35 +157,40 @@ module tb_decoder_wsiso(
     integer f;
     reg [1200:0]fn;
     integer i3;
+    integer display_op;
     initial begin
         check_load = 0;
     end
     always@(posedge dut.loaden)begin
+        display_op = 0;
         load_counter = 0;
         check_load = 1;
         $display(" LOADEN SET");
-        $display("      dut.load_data = %b", dut.load_data);
+        /*$display("      dut.load_data = %b", dut.load_data);
         
         $write("%b", dut.inputintf.inputfifo.nb_loop[15].submem.Lmemreg[16]);
         $write("%b", dut.inputintf.inputfifo.nb_loop[14].submem.Lmemreg[16]);
         $write("%b", dut.inputintf.inputfifo.nb_loop[13].submem.Lmemreg[16]);
-        $write("\n");
+        $write("\n");*/
     end
     always@(negedge dut.loaden)begin
+        $display("LOADEN DISABLED");
         check_load = 0;
     end
     always @(posedge clk)begin
-        
+        //$display("\n      CLK = %d , load_en %b, dut.controller.ps %d, ns %d, controller.start %b, dut.start %b", counter, dut.decodecore.loaden, dut.decodecore.controller.ps,dut.decodecore.controller.ps, dut.decodecore.controller.start, dut.start);
+        #0.1
+        //$display("controller.ps %b, controller.ns %b,  controller.loaden %b, controller.rst %b, controller.clk %b, controller.start", dut.decodecore.controller.ps, dut.decodecore.controller.ns, dut.decodecore.controller.loaden, dut.decodecore.controller.rst, dut.decodecore.controller.clk, dut.decodecore.controller.start);
         if(counter_in == 256)begin
             counter = 0;
         end
         if(check_load && counter_in < 262 )begin
-            $display("\n      CLK = %d", counter);
+            /*$display("\n      CLK = %d", counter);
             $display("      loader.addr_count = %d( should start coutning to 17 ) ", dut.inputintf.loader.addr_count);
             $display("      loader_counter ", load_counter);
             $display("      dut.load_data = %b", dut.load_data);
             $display("      reference[2]  = %b", inp_17x512[load_counter ]);
-            $display("      xor           = %b", inp_17x512[ load_counter ] ^ dut.load_data);
+            $display("      xor           = %b", inp_17x512[ load_counter ] ^ dut.load_data);*/
             if( inp_17x512[ load_counter ] == dut.load_data)begin
                 $display(" MATCH on address count" , load_counter);
             end
@@ -204,7 +216,67 @@ module tb_decoder_wsiso(
             //$display("[0] RA %b", dut.inputintf.inputfifo.nb_loop[2].submem.RA);
             #0.001;
             load_counter = load_counter + 1;
-        
+            
+
         end
     end
+    
+    
+    
+    always @(dut.unload_en, dut.decoder_ready)begin
+        $display("decoder_ready = %b, unload_en = %b", dut.decoder_ready, dut.unload_en);
+    end
+
+    
+    integer i4;
+    always @(posedge out_clk)begin
+        if(datavalid && op_counter < 223)begin
+            
+            //$display("%d DATAVALID %b HDOUT %b", $time, datavalid, HD_out);
+            if(HD_out == op_223x32[op_counter])begin
+                $display("Final 32 bit output SUCCESS on count (%3d/222)",op_counter);
+            end
+            else begin
+                $display("Final 32 bit output FAIL    on count (%3d/222)",op_counter);
+                $display("%b\n%b\n%b", op_223x32[op_counter], HD_out, op_223x32[op_counter] ^ HD_out);
+                
+                for(i4=0; i4 < 16; i4 = i4+1)begin  
+                    $display("BRAM 0 Lmemreg %d %b", i4, dut.outintf.outputfifo.kb_loop[0].submem.Lmemreg[i4]);
+                end 
+                for(i4=0; i4 < 16; i4 = i4+1)begin  
+                    $display("BRAM 1 Lmemreg %d %b", i4, dut.outintf.outputfifo.kb_loop[1].submem.Lmemreg[i4]);
+                end 
+            end
+            op_counter = op_counter + 1;
+        end
+    end
+    
+    integer check_unload;
+    integer check_unload_counter;
+    initial begin        check_unload = 0;    check_unload_counter = 0;end
+    
+    always@(posedge clk)begin
+        if(dut.decoder_ready && check_unload == 0)begin
+            $display("%d Decoder ready, checking unload out", $time);
+            check_unload = 1;
+        end
+        
+        if(check_unload)begin
+            #0.1
+            //$display("%d UNLOAD OUT %b", dut.unloadAddress, dut.unload_HDout_vec_regout);
+            if( check_unload_counter < 18 && check_unload_counter > 0)begin
+                if(dut.unload_HDout_vec_regout == unload_17x448[check_unload_counter-1])begin
+                    $display("SUCCESS on count %d",check_unload_counter-1);
+                    $display("%d BRAM ALL WA %d, wr_en", $time,dut.outintf.WA_regout,dut.outintf.wr_en);
+                end
+                else begin
+                    $display("FAIL on count %d",check_unload_counter-1);
+                    
+                end
+                
+            end
+            check_unload_counter = check_unload_counter + 1;
+        end
+    end
+    
 endmodule

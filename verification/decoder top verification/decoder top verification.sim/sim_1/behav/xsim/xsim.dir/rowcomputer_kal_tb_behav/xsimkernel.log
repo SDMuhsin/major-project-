@@ -1,0 +1,7 @@
+Running: xsim.dir/rowcomputer_kal_tb_behav/xsimk.exe -simmode gui -wdb rowcomputer_kal_tb_behav.wdb -simrunnum 0 -socket 57159
+Design successfully loaded
+Design Loading Memory Usage: 32212 KB (Peak: 32212 KB)
+Design Loading CPU Usage: 187 ms
+Simulation completed
+Simulation Memory Usage: 70232 KB (Peak: 70232 KB)
+Simulation CPU Usage: 5078 ms

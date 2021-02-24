@@ -56,7 +56,7 @@ parameter RCU_PIPESTAGES=13;
 
 //Agen controller
 //configurable
-parameter MAXITRS = 10;
+parameter MAXITRS = 2;
 parameter ITRWIDTH = 4;//2**4 = 16 > 9
 //non-configurable
 parameter Z=511;

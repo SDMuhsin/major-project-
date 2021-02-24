@@ -98,7 +98,7 @@ assign UNLOADADDRESS_VEC = UNLOADADDRESS;
 
 defparam outputfifo.KB=KB, outputfifo.HDDW=HDDW;
 defparam outputfifo.ADDRESSWIDTH=ADDRESSWIDTH,outputfifo.FIFODEPTH=FIFODEPTH; 
-outFIFO_ne outputfifo(datavalid,unload_fsm_start_fedback,HD_out,WRDIN_VEC,WA_regout,wr_en_regout,fifo_rd_start,clk,out_clk,rst);
+outFIFO_ne outputfifo(datavalid,unload_fsm_start_fedback,HD_out,WRDIN_VEC,  WA,wr_en  ,fifo_rd_start,clk,out_clk,rst);
 
 //clk domain crossing signal: rd_start(output of loadunloadfsm clocked by "clk") --> rd_start(FSM start signal input clocked by "out_clk").
 defparam loader.ADDRESSWIDTH=ADDRESSWIDTH, loader.LOADCOUNT=UNLOADCOUNT;

@@ -48,18 +48,18 @@
 
     # -- OPEN FILES -- #
       # These are printed for every slice or for every row #
-      fname_Lin = sprintf('./outputs/L%d_iter%d_in_scripted.txt',ly-1,iteration);
+      fname_Lin = sprintf('./outputs/L%d_iter%d_in_scripted.txt',ly-1,iteration-1);
       fid_Lin = fopen(fname_Lin,'wt');
-      fname_Ein = sprintf('./outputs/E%d_iter%d_in_scripted.txt',ly-1,iteration);
+      fname_Ein = sprintf('./outputs/E%d_iter%d_in_scripted.txt',ly-1,iteration-1);
       fid_Ein = fopen(fname_Ein,'wt');
-      fname_Din = sprintf('./outputs/D%d_iter%d_in_scripted.txt',ly-1,iteration);
+      fname_Din = sprintf('./outputs/D%d_iter%d_in_scripted.txt',ly-1,iteration-1);
       fid_Din = fopen(fname_Din,'wt');
       
-      fname_Lout = sprintf('./outputs/L%d_iter%d_out_scripted.txt',ly-1,iteration);
+      fname_Lout = sprintf('./outputs/L%d_iter%d_out_scripted.txt',ly-1,iteration-1);
       fid_Lout = fopen(fname_Lout,'wt');
-      fname_Eout = sprintf('./outputs/E%d_iter%d_out_scripted.txt',ly-1,iteration);
+      fname_Eout = sprintf('./outputs/E%d_iter%d_out_scripted.txt',ly-1,iteration-1);
       fid_Eout = fopen(fname_Eout,'wt');
-      fname_Dout = sprintf('./outputs/D%d_iter%d_out_scripted.txt',ly-1,iteration);
+      fname_Dout = sprintf('./outputs/D%d_iter%d_out_scripted.txt',ly-1,iteration-1);
       fid_Dout = fopen(fname_Dout,'wt');
   # ---------------- #
     #slice=11;
@@ -246,6 +246,11 @@
         fprintf(fid_Din,sprintf(Din_write));
         fprintf(fid_Din,sprintf("\n"));
         
+        fflush(fid_Lout);
+        fflush(fid_Lin);
+        fflush(fid_Dout);
+        fflush(fid_Din);
+        
         #fprintf(fid_Eout,sprintf("\n"));
         #fprintf(fid_Dout,sprintf("\n"));
         if(slice<20)
@@ -262,3 +267,6 @@
     fclose(fid_Eout);
     fclose(fid_Din);
     fclose(fid_Dout);
+    assert(size(c1)(2),size(L)(2));
+    func_write_unload_17x448(L);
+    func_write_op_223x32(L);

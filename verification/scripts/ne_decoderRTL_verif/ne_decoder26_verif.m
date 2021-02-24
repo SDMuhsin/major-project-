@@ -183,7 +183,7 @@ startrows_lyr2=[512:26:1022];
 stoprows_lyr2=[512+26-1:26:1022,1022];
 while itr < MaxItrs  
  for lyr = 1:2  
-%--------RCU + Lmem + Dmem operations--------%
+ %--------RCU + Lmem + Dmem operations--------%
   Dout = zeros(1,n);
   for sliceaddress=1:20
     if(lyr==1)

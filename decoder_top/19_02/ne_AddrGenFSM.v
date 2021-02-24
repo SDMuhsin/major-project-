@@ -88,7 +88,7 @@ begin
   end  
 end
 
-always@(ps, ready, rd, itr, lyr, pipecount, count, start)
+always@(ps, ready, rd, itr, lyr, pipecount, count, start, loaden)
 begin
   if(loaden) //loaden logic for next state/control/other signals
   begin

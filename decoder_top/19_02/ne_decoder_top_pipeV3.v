@@ -36,7 +36,7 @@ parameter Wabs=W-1;
 parameter ECOMPSIZE = (2*Wabs)+Wcbits+Wc;
 parameter RCU_PIPESTAGES=13;//11;
 //configurable
-parameter MAXITRS = 10;
+parameter MAXITRS = 2;
 parameter ITRWIDTH = 4;//2**4 = 16 > 9
 //non-configurable
 parameter Z=511;
