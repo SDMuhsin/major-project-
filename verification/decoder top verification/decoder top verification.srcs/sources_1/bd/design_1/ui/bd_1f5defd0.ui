@@ -1,0 +1,22 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "PinnedBlocks":"/ne_decoder_top_pipeV3_0|/fifo_generator_0|/uart_transmitter1_0|",
+   "PinnedPorts":"Codeword_in|datavalid|din|din_0|",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port datavalid -pg 1 -lvl 4 -x 1270 -y 80 -defaultsOSRD
+preplace portBus Codeword_in -pg 1 -lvl 0 -x -60 -y 70 -defaultsOSRD
+preplace portBus din -pg 1 -lvl 0 -x -60 -y 50 -defaultsOSRD
+preplace portBus din_0 -pg 1 -lvl 0 -x -60 -y 110 -defaultsOSRD
+preplace inst ne_decoder_top_pipeV3_0 -pg 1 -lvl 1 -x 430 -y 100 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 780 -y 150 -defaultsOSRD
+preplace inst uart_transmitter1_0 -pg 1 -lvl 3 -x 1110 -y 130 -defaultsOSRD
+preplace netloc Codeword_in_1 1 0 1 -40 50n
+preplace netloc ne_decoder_top_pipeV3_0_datavalid 1 1 1 580 90n
+preplace netloc ne_decoder_top_pipeV3_0_HD_out 1 1 1 590 90n
+preplace netloc fifo_generator_0_dout 1 1 2 590 290 960J
+levelinfo -pg 1 -60 430 780 1110 1270
+pagesize -pg 1 -db -bbox -sgen -240 -260 1380 300
+"
+}
+0

@@ -1,0 +1,154 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xcvu9p-flga2104-2L-e",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1"
+    },
+    "design_tree": {
+      "ne_decoder_top_pipeV3_0": "",
+      "fifo_generator_0": "",
+      "uart_transmitter1_0": ""
+    },
+    "ports": {
+      "Codeword_in": {
+        "direction": "I",
+        "left": "191",
+        "right": "0"
+      },
+      "datavalid": {
+        "direction": "O"
+      },
+      "din": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "din_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ne_decoder_top_pipeV3_0": {
+        "vlnv": "xilinx.com:module_ref:ne_decoder_top_pipeV3:1.0",
+        "xci_name": "design_1_ne_decoder_top_pipeV3_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ne_decoder_top_pipeV3",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "out_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "datavalid": {
+            "direction": "O"
+          },
+          "HD_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "Codeword_in": {
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          },
+          "code_valid": {
+            "direction": "I"
+          }
+        }
+      },
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "design_1_fifo_generator_0_1",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "32"
+          },
+          "Output_Data_Width": {
+            "value": "8"
+          },
+          "asymmetric_port_width": {
+            "value": "true"
+          }
+        }
+      },
+      "uart_transmitter1_0": {
+        "vlnv": "xilinx.com:module_ref:uart_transmitter1:1.0",
+        "xci_name": "design_1_uart_transmitter1_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_transmitter1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Tx_DV": {
+            "direction": "I"
+          },
+          "i_Tx_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_Tx_Active": {
+            "direction": "O"
+          },
+          "o_Tx_Serial": {
+            "direction": "O"
+          },
+          "o_Tx_Done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Codeword_in_1": {
+        "ports": [
+          "Codeword_in",
+          "ne_decoder_top_pipeV3_0/Codeword_in"
+        ]
+      },
+      "ne_decoder_top_pipeV3_0_datavalid": {
+        "ports": [
+          "ne_decoder_top_pipeV3_0/datavalid",
+          "fifo_generator_0/wr_en"
+        ]
+      },
+      "ne_decoder_top_pipeV3_0_HD_out": {
+        "ports": [
+          "ne_decoder_top_pipeV3_0/HD_out",
+          "fifo_generator_0/din"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "uart_transmitter1_0/i_Tx_Byte"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1F93818E28482DD2",
+      "device": "xcvu9p-flga2104-2L-e",
+      "name": "dummy_design",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "uart_transmitter1_0": "",
+      "dumy_gen_32_0": "",
+      "fifo_generator_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "dummy_design_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "in_1": {
+        "direction": "I",
+        "left": "191",
+        "right": "0"
+      },
+      "o_Tx_Serial": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "uart_transmitter1_0": {
+        "vlnv": "xilinx.com:module_ref:uart_transmitter1:1.0",
+        "xci_name": "dummy_design_uart_transmitter1_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_transmitter1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "dummy_design_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "i_Tx_DV": {
+            "direction": "I"
+          },
+          "i_Tx_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_Tx_Active": {
+            "direction": "O"
+          },
+          "o_Tx_Serial": {
+            "direction": "O"
+          },
+          "o_Tx_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "dumy_gen_32_0": {
+        "vlnv": "xilinx.com:module_ref:dumy_gen_32:1.0",
+        "xci_name": "dummy_design_dumy_gen_32_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dumy_gen_32",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "dummy_design_clk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "datavalid": {
+            "direction": "O"
+          },
+          "in": {
+            "direction": "I",
+            "left": "191",
+            "right": "0"
+          }
+        }
+      },
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "dummy_design_fifo_generator_0_0",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "512"
+          }
+        }
+      }
+    },
+    "nets": {
+      "dumy_gen_32_0_out": {
+        "ports": [
+          "dumy_gen_32_0/out",
+          "fifo_generator_0/din"
+        ]
+      },
+      "dumy_gen_32_0_datavalid": {
+        "ports": [
+          "dumy_gen_32_0/datavalid",
+          "fifo_generator_0/wr_en",
+          "uart_transmitter1_0/i_Tx_DV"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "uart_transmitter1_0/i_Tx_Byte"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "dumy_gen_32_0/clk",
+          "fifo_generator_0/clk",
+          "uart_transmitter1_0/i_Clock"
+        ]
+      },
+      "in_1_1": {
+        "ports": [
+          "in_1",
+          "dumy_gen_32_0/in"
+        ]
+      },
+      "uart_transmitter1_0_o_Tx_Serial": {
+        "ports": [
+          "uart_transmitter1_0/o_Tx_Serial",
+          "o_Tx_Serial"
+        ]
+      }
+    }
+  }
+}

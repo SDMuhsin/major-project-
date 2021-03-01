@@ -1,0 +1,45 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port default_250mhz_clk1_0 -pg 1 -lvl 0 -x -20 -y 50 -defaultsOSRD
+preplace port o_Tx_Active -pg 1 -lvl 3 -x 850 -y 440 -defaultsOSRD
+preplace port o_Tx_Serial -pg 1 -lvl 3 -x 850 -y 460 -defaultsOSRD
+preplace port transmit_Ready -pg 1 -lvl 3 -x 850 -y 480 -defaultsOSRD
+preplace port transmit_en -pg 1 -lvl 0 -x -20 -y 470 -defaultsOSRD
+preplace port start -pg 1 -lvl 0 -x -20 -y 240 -defaultsOSRD
+preplace port outfifo_full -pg 1 -lvl 3 -x 850 -y 120 -defaultsOSRD
+preplace port locked -pg 1 -lvl 3 -x 850 -y 100 -defaultsOSRD
+preplace port in_clk -pg 1 -lvl 3 -x 850 -y 60 -defaultsOSRD
+preplace port out_clk -pg 1 -lvl 3 -x 850 -y 140 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -20 -y 220 -defaultsOSRD
+preplace inst stimulus_DUT_cover_0 -pg 1 -lvl 1 -x 200 -y 360 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 90 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 2 -x 650 -y 290 -defaultsOSRD
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x 200 -y 240 -defaultsOSRD
+preplace inst outfifo_uarttx_contr_0 -pg 1 -lvl 1 -x 200 -y 520 -defaultsOSRD
+preplace netloc fifo_generator_0_empty 1 0 2 30 180 390J
+preplace netloc fifo_generator_0_dout 1 0 2 20 640 440J
+preplace netloc outfifo_uarttx_contr_0_outfifo_rden 1 1 1 420 340n
+preplace netloc Net 1 0 3 30 620 380 140 NJ
+preplace netloc outfifo_uarttx_contr_0_o_Tx_Active 1 1 2 410J 440 NJ
+preplace netloc outfifo_uarttx_contr_0_o_Tx_Serial 1 1 2 430J 460 NJ
+preplace netloc outfifo_uarttx_contr_0_transmit_Ready 1 1 2 450J 480 NJ
+preplace netloc transmit_en_1 1 0 1 0J 470n
+preplace netloc stimulus_DUT_cover_0_outpvalid 1 1 1 370 260n
+preplace netloc stimulus_DUT_cover_0_y 1 1 1 360 240n
+preplace netloc start_1 1 0 1 0J 240n
+preplace netloc clk_wiz_0_in_clk 1 0 3 20 10 350 60 NJ
+preplace netloc fifo_generator_0_full 1 1 2 440 120 NJ
+preplace netloc stimulus_DUT_cover_0_outfiforst 1 1 1 390 340n
+preplace netloc clk_wiz_0_locked 1 0 3 10 630 400 100 NJ
+preplace netloc reset_inv_0_Res 1 0 2 30 170 350J
+preplace netloc reset_1 1 0 1 10 220n
+preplace netloc default_250mhz_clk1_0_1 1 0 1 0 50n
+levelinfo -pg 1 -20 200 650 850
+pagesize -pg 1 -db -bbox -sgen -230 0 1000 670
+"
+}
+{
+   "da_board_cnt":"3"
+}

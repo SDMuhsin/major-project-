@@ -1,0 +1,37 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Feb 27 08:52:30 2021
+| Host         : Sdmuhsin running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu9p-flga2104-2L-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'uarttx_outfifo_design_fifo_generator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of uarttx_outfifo_design_fifo_generator_0_0 (xilinx.com:ip:fifo_generator:13.2 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Feb 27 08:52:30 2021
+| Host         : Sdmuhsin running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu9p-flga2104-2L-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'uarttx_outfifo_design_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of uarttx_outfifo_design_clk_wiz_0_0 (xilinx.com:ip:clk_wiz:6.0 (Rev. 3)) to Vivado generation flows.
+

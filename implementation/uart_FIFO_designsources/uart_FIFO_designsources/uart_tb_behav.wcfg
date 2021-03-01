@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="acc_synth_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="acc_synth_tb" />
+            <top_module name="glbl" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="603355000000fs"></ZoomStartTime>
+      <ZoomEndTime time="603837000001fs"></ZoomEndTime>
+      <Cursor1Time time="605165000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="65" />
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/clk_wiz_0/in_clk" type="logic">
+      <obj_property name="ElementShortName">in_clk</obj_property>
+      <obj_property name="ObjectShortName">in_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/clk_wiz_0/out_clk" type="logic">
+      <obj_property name="ElementShortName">out_clk</obj_property>
+      <obj_property name="ObjectShortName">out_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/clk_wiz_0/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/clk_wiz_0/clk_in1" type="logic">
+      <obj_property name="ElementShortName">clk_in1</obj_property>
+      <obj_property name="ObjectShortName">clk_in1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/allrst" type="logic">
+      <obj_property name="ElementShortName">allrst</obj_property>
+      <obj_property name="ObjectShortName">allrst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/clk_in1" type="logic">
+      <obj_property name="ElementShortName">clk_in1</obj_property>
+      <obj_property name="ObjectShortName">clk_in1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/locked" type="logic">
+      <obj_property name="ElementShortName">locked</obj_property>
+      <obj_property name="ObjectShortName">locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/o_Tx_Active" type="logic">
+      <obj_property name="ElementShortName">o_Tx_Active</obj_property>
+      <obj_property name="ObjectShortName">o_Tx_Active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/o_Tx_Serial" type="logic">
+      <obj_property name="ElementShortName">o_Tx_Serial</obj_property>
+      <obj_property name="ObjectShortName">o_Tx_Serial</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/outfifo_full" type="logic">
+      <obj_property name="ElementShortName">outfifo_full</obj_property>
+      <obj_property name="ObjectShortName">outfifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/transmit_Ready" type="logic">
+      <obj_property name="ElementShortName">transmit_Ready</obj_property>
+      <obj_property name="ObjectShortName">transmit_Ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/transmit_en" type="logic">
+      <obj_property name="ElementShortName">transmit_en</obj_property>
+      <obj_property name="ObjectShortName">transmit_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/outpvalid" type="logic">
+      <obj_property name="ElementShortName">outpvalid</obj_property>
+      <obj_property name="ObjectShortName">outpvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/y" type="array">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/in_clk" type="logic">
+      <obj_property name="ElementShortName">in_clk</obj_property>
+      <obj_property name="ObjectShortName">in_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/x" type="array">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/inpvalid" type="logic">
+      <obj_property name="ElementShortName">inpvalid</obj_property>
+      <obj_property name="ObjectShortName">inpvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/rom_rd_address" type="array">
+      <obj_property name="ElementShortName">rom_rd_address[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_rd_address[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/W" type="array">
+      <obj_property name="ElementShortName">W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/Wc" type="array">
+      <obj_property name="ElementShortName">Wc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Wc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/DEPTH" type="array">
+      <obj_property name="ElementShortName">DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/ADDRESSWIDTH" type="array">
+      <obj_property name="ElementShortName">ADDRESSWIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESSWIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/DW" type="array">
+      <obj_property name="ElementShortName">DW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/stimulus_DUT_cover_0/inst/READDEFAULTCASE" type="array">
+      <obj_property name="ElementShortName">READDEFAULTCASE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">READDEFAULTCASE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/o_Tx_Active" type="logic">
+      <obj_property name="ElementShortName">o_Tx_Active</obj_property>
+      <obj_property name="ObjectShortName">o_Tx_Active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/o_Tx_Serial" type="logic">
+      <obj_property name="ElementShortName">o_Tx_Serial</obj_property>
+      <obj_property name="ObjectShortName">o_Tx_Serial</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/transmit_Ready" type="logic">
+      <obj_property name="ElementShortName">transmit_Ready</obj_property>
+      <obj_property name="ObjectShortName">transmit_Ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/outfifo_rden" type="logic">
+      <obj_property name="ElementShortName">outfifo_rden</obj_property>
+      <obj_property name="ObjectShortName">outfifo_rden</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/i_Tx_Byte" type="array">
+      <obj_property name="ElementShortName">i_Tx_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_Tx_Byte[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/outfifo_empty" type="logic">
+      <obj_property name="ElementShortName">outfifo_empty</obj_property>
+      <obj_property name="ObjectShortName">outfifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/transmit_en" type="logic">
+      <obj_property name="ElementShortName">transmit_en</obj_property>
+      <obj_property name="ObjectShortName">transmit_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/out_clk" type="logic">
+      <obj_property name="ElementShortName">out_clk</obj_property>
+      <obj_property name="ObjectShortName">out_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/i_Clock" type="logic">
+      <obj_property name="ElementShortName">i_Clock</obj_property>
+      <obj_property name="ObjectShortName">i_Clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/i_Tx_DV" type="logic">
+      <obj_property name="ElementShortName">i_Tx_DV</obj_property>
+      <obj_property name="ObjectShortName">i_Tx_DV</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/o_Tx_Done" type="logic">
+      <obj_property name="ElementShortName">o_Tx_Done</obj_property>
+      <obj_property name="ObjectShortName">o_Tx_Done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/ps" type="array">
+      <obj_property name="ElementShortName">ps[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ps[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/ns" type="array">
+      <obj_property name="ElementShortName">ns[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ns[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/CLK_FREQ_FPGA" type="array">
+      <obj_property name="ElementShortName">CLK_FREQ_FPGA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_FREQ_FPGA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/INIT" type="array">
+      <obj_property name="ElementShortName">INIT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/CLRREAD" type="array">
+      <obj_property name="ElementShortName">CLRREAD[1:0]</obj_property>
+      <obj_property name="ObjectShortName">CLRREAD[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/dut/uarttx_outfifo_design_i/outfifo_uarttx_contr_0/inst/TXMIT2" type="array">
+      <obj_property name="ElementShortName">TXMIT2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TXMIT2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/i_Clock" type="logic">
+      <obj_property name="ElementShortName">i_Clock</obj_property>
+      <obj_property name="ObjectShortName">i_Clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/i_Rx_Serial" type="logic">
+      <obj_property name="ElementShortName">i_Rx_Serial</obj_property>
+      <obj_property name="ObjectShortName">i_Rx_Serial</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/o_Rx_DV" type="logic">
+      <obj_property name="ElementShortName">o_Rx_DV</obj_property>
+      <obj_property name="ObjectShortName">o_Rx_DV</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/o_Rx_Byte" type="array">
+      <obj_property name="ElementShortName">o_Rx_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Rx_Byte[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Rx_Data_R" type="logic">
+      <obj_property name="ElementShortName">r_Rx_Data_R</obj_property>
+      <obj_property name="ObjectShortName">r_Rx_Data_R</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Rx_Data" type="logic">
+      <obj_property name="ElementShortName">r_Rx_Data</obj_property>
+      <obj_property name="ObjectShortName">r_Rx_Data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Clock_Count" type="array">
+      <obj_property name="ElementShortName">r_Clock_Count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_Clock_Count[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Bit_Index" type="array">
+      <obj_property name="ElementShortName">r_Bit_Index[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_Bit_Index[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Rx_Byte" type="array">
+      <obj_property name="ElementShortName">r_Rx_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_Rx_Byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_Rx_DV" type="logic">
+      <obj_property name="ElementShortName">r_Rx_DV</obj_property>
+      <obj_property name="ObjectShortName">r_Rx_DV</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/r_SM_Main" type="array">
+      <obj_property name="ElementShortName">r_SM_Main[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_SM_Main[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/CLK_FREQ_FPGA" type="array">
+      <obj_property name="ElementShortName">CLK_FREQ_FPGA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_FREQ_FPGA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/BAUDRATE" type="array">
+      <obj_property name="ElementShortName">BAUDRATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BAUDRATE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/CLKS_PER_BIT" type="array">
+      <obj_property name="ElementShortName">CLKS_PER_BIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKS_PER_BIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/s_IDLE" type="array">
+      <obj_property name="ElementShortName">s_IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/s_RX_START_BIT" type="array">
+      <obj_property name="ElementShortName">s_RX_START_BIT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RX_START_BIT[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/s_RX_DATA_BITS" type="array">
+      <obj_property name="ElementShortName">s_RX_DATA_BITS[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RX_DATA_BITS[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/s_RX_STOP_BIT" type="array">
+      <obj_property name="ElementShortName">s_RX_STOP_BIT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_RX_STOP_BIT[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/acc_synth_tb/UART_RX_INST/s_CLEANUP" type="array">
+      <obj_property name="ElementShortName">s_CLEANUP[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_CLEANUP[2:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,42 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port default_250mhz_clk1 -pg 1 -lvl 0 -x -380 -y -220 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -380 -y -200 -defaultsOSRD
+preplace port start -pg 1 -lvl 0 -x -380 -y -60 -defaultsOSRD
+preplace port o_Tx_Active -pg 1 -lvl 4 -x 780 -y 120 -defaultsOSRD
+preplace port o_Tx_Serial -pg 1 -lvl 4 -x 780 -y 140 -defaultsOSRD
+preplace port transmit_Ready -pg 1 -lvl 4 -x 780 -y 170 -defaultsOSRD
+preplace port full -pg 1 -lvl 4 -x 780 -y -50 -defaultsOSRD
+preplace port transmit_en -pg 1 -lvl 0 -x -380 -y 150 -defaultsOSRD
+preplace inst outfifo_uarttx_contr_0 -pg 1 -lvl 2 -x 160 -y 150 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 3 -x 560 -y 20 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 160 -y -210 -defaultsOSRD
+preplace inst ne_stimulus_DUT_cover_0 -pg 1 -lvl 1 -x -160 -y -40 -defaultsOSRD
+preplace netloc reset_1 1 0 2 NJ -200 NJ
+preplace netloc clk_wiz_0_in_clk 1 0 3 -340 -140 -50J -100 330
+preplace netloc clk_wiz_0_clk 1 0 3 -350 -150 -40J -110 310
+preplace netloc clk_wiz_0_out_clk 1 0 3 -350 60 -40J -30 320
+preplace netloc clk_wiz_0_clk_out4 1 1 2 -10 40 370
+preplace netloc ne_stimulus_DUT_cover_0_y 1 1 2 NJ -20 350
+preplace netloc ne_stimulus_DUT_cover_0_outpvalid 1 1 2 -50J -10 N
+preplace netloc fifo_generator_0_dout 1 1 2 0 50 N
+preplace netloc fifo_generator_0_empty 1 1 2 -20 30 N
+preplace netloc outfifo_uarttx_contr_0_outfifo_rden 1 2 1 320 70n
+preplace netloc clk_wiz_0_locked 1 0 3 -340 70 -30 20 340
+preplace netloc ne_stimulus_DUT_cover_0_outfiforst 1 1 2 NJ -60 360
+preplace netloc start_1 1 0 1 -360 -80n
+preplace netloc outfifo_uarttx_contr_0_o_Tx_Active 1 2 2 370J 170 740
+preplace netloc outfifo_uarttx_contr_0_o_Tx_Serial 1 2 2 340 180 750J
+preplace netloc outfifo_uarttx_contr_0_transmit_Ready 1 2 2 310 190 760J
+preplace netloc fifo_generator_0_full 1 2 2 380 -130 740J
+preplace netloc transmit_en_1 1 0 2 NJ 150 N
+preplace netloc default_250mhz_clk1_1 1 0 2 NJ -220 NJ
+levelinfo -pg 1 -380 -160 160 560 780
+pagesize -pg 1 -db -bbox -sgen -570 -310 930 250
+"
+}
+{
+   "da_board_cnt":"2"
+}
