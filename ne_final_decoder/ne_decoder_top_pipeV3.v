@@ -79,6 +79,7 @@ parameter DW=32*W;
 // for 50 iterations, expected Tclk=2ns, Toutclk-31.8924 so ratio is 15.9. so setting values 10 to 16.
 // should configure this parameter from top module at th time of block design according to clock periods in use.
 parameter OUTCLKSYNC_WAITCYCLES=20;
+parameter INCLKSYNC_WAITCYCLES=4;
 //parameter ADDRESSWIDTH=5;//5bits to address 32 locations > 17, but is made same as that of decodercore ADDRESSWIDTH.
 //parameter FIFODEPTH=32;//17; //same as input intf FIFODEPTH
 //Non-configurable parameters:
@@ -136,7 +137,7 @@ assign WRDIN_VEC=unload_HDout_vec_regout;
 
 //input interface
 
-defparam inputintf.W=W, inputintf.ADDRESSWIDTH=ADDRESSWIDTH, inputintf.FIFODEPTH=FIFODEPTH;
+defparam inputintf.W=W, inputintf.ADDRESSWIDTH=ADDRESSWIDTH, inputintf.FIFODEPTH=FIFODEPTH, inputintf.CLKSYNC_WAITCYCLES=INCLKSYNC_WAITCYCLES;
 InputInterface_ne inputintf(decodestart,load_en_out, ,DOUT_LOAD_VEC,Codeword_in,code_valid,inclk,clk,rst);
 
 //decoder core RCU stages=13
