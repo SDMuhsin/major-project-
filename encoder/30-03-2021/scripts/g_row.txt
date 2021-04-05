@@ -1,0 +1,12 @@
+# Created by Octave 5.1.0, Sun Mar 28 15:21:00 2021 GMT <unknown@LAPTOP-TUSS95IQ>
+# name: g_row
+# type: galois
+# m: 1
+# prim: 3
+# ndims: 2
+ 3 5
+ 1 1 1 0 1
+ 1 1 0 0 1
+ 1 0 0 1 1
+
+

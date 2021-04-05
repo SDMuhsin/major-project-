@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../encoder/30-03-2021/srcs/Parity_generation_unit_chaintree.v" \
+"../../../../../../encoder/30-03-2021/srcs/bitreverse.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_enc_addrgen.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_enc_top_v0.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_G_ROM/ne_funcgenROM.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_inputinterface.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_msgmemory.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_outputinterface.v" \
+"../../../../../../encoder/30-03-2021/srcs/ne_parityshifter.v" \
+"../../../../encoder_verification.srcs/sources_1/new/tb_encoder_full.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

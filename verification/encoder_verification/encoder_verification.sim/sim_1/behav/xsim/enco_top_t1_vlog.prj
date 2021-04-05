@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../encoder/30-03-2021/srcs/Parity_generation_unit_chaintree.v" \
+"../../../../../../encoder/30-03-2021/srcs/paritywithgenerate.v" \
+"../../../../../../encoder/30-03-2021/srcs/enco_top_t1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

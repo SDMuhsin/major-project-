@@ -1,0 +1,17 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/Parity_generation_unit_chaintree.v,1617100468,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/bitreverse.v,,Parity_generation_unit_chaintree,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/bitreverse.v,1617047586,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_enc_addrgen.v,,bitreverse,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/enco_top_t1.v,1616497126,verilog,,,,enco_top_t1,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_G_ROM/ne_funcgenROM.v,1616961660,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_inputinterface.v,,ne_funcgenROM,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_enc_addrgen.v,1617450182,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_enc_top_v0.v,,ne_enc_addrgen,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_enc_top_v0.v,1617527435,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_G_ROM/ne_funcgenROM.v,,ne_enc_top_v0,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_inputinterface.v,1617368066,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_msgmemory.v,,ne_inputinterface,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_msgmemory.v,1617098356,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_outputinterface.v,,ne_msgmemory,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_outputinterface.v,1617529115,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_parityshifter.v,,ne_outputinterface,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/ne_parityshifter.v,1617107368,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/encoder_verification/encoder_verification.srcs/sources_1/new/tb_encoder_full.v,,ne_parityshifter,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/paritywithgenerate.v,1616835444,verilog,,C:/Users/sayed/Desktop/Programing/major project/major-project-/encoder/30-03-2021/srcs/enco_top_t1.v,,parityshift2,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/encoder_verification/encoder_verification.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Users/sayed/Desktop/Programing/major project/major-project-/verification/encoder_verification/encoder_verification.srcs/sources_1/new/tb_encoder_full.v,1617528030,verilog,,,,tb_encoder_full,,,,,,,,
